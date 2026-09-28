@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вираж — Студия тонирования и автоэлектроники в Новокуйбышевске</title>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              amber: '#f59e0b',
+              orange: '#f97316',
+              accent: '#fbbf24',
+              gold: '#eab308'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Геометрическая сетка и акцентные линии на чистом CSS */
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    }
+    .radial-glow {
+      background: radial-gradient(circle at 50% -10%, rgba(245, 158, 11, 0.14) 0%, rgba(249, 115, 22, 0.04) 45%, transparent 75%);
+    }
+    .dark-card-gradient {
+      background: linear-gradient(180deg, rgba(24, 24, 27, 0.85) 0%, rgba(15, 15, 18, 0.95) 100%);
+    }
+    /* Кастомная стилизация скроллбара */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-amber-500 selection:text-black min-h-screen relative pb-20 md:pb-0">
+
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[480px] radial-glow pointer-events-none z-0"></div>
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-zinc-950/85 border-b border-zinc-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-10">
+      
+      <!-- Логотип студии Вираж -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-zinc-950 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="shield-check" class="w-5 h-5 stroke-[2.5]"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight uppercase font-mono text-white flex items-center gap-1.5">
+            ВИРАЖ<span class="text-amber-400 text-xs px-1.5 py-0.5 rounded bg-amber-400/10 border border-amber-400/30">STUDIO</span>
+          </span>
+          <span class="text-[9px] tracking-wider uppercase text-zinc-400 font-medium">Тонирование &bull; Автоэлектроника &bull; Новокуйбышевск</span>
+        </div>
+      </a>
+
+      <!-- Бейдж рабочего статуса -->
+      <div class="hidden md:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span>Сейчас открыто <span class="text-zinc-500">&bull;</span> до 19:00</span>
+      </div>
+
+      <!-- Контакты и кнопки прямого перехода -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/79626050005?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%82%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%BB%D0%B8%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D1%83" 
+           target="_blank" rel="noopener noreferrer" 
+           class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-emerald-950/40 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/40 text-xs font-bold transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a href="tel:+79626050005" class="flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-amber-400 border border-amber-500/30 font-semibold text-xs sm:text-sm transition-all hover:border-amber-400 shadow-sm">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span class="hidden lg:inline">+7 (962) 605-00-05</span>
+          <span class="lg:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-16 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Левая колонка Hero: Заголовки, бейджи доверия и факты -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Бейдж доверия Яндекс Карты -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs sm:text-sm font-medium">
+            <span class="flex items-center text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400 mr-1"></i>
+              <strong class="font-bold">4.5</strong>
+            </span>
+            <span class="text-zinc-600">&bull;</span>
+            <span class="text-zinc-300">Яндекс Карты</span>
+            <span class="text-zinc-600">&bull;</span>
+            <span class="text-zinc-400">38 оценок автолюбителей</span>
+          </div>
+
+          <!-- Рубленый заголовок Swiss Style -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+            Профессиональная тонировка авто <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-orange-500">в Новокуйбышевске</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed">
+            Безупречная оклейка без разбора дверных карт и заломов плёнки. Сертифицированные материалы, гарантия на работу и надежная защита от перегрева салона.
+          </p>
+
+          <!-- Быстрые факты -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300">
+              <i data-lucide="shield" class="w-4 h-4 text-amber-400 shrink-0"></i>
+              <span>Гарантия без пузырей</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300">
+              <i data-lucide="award" class="w-4 h-4 text-amber-400 shrink-0"></i>
+              <span>Опыт мастеров 15+ лет</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300">
+              <i data-lucide="clock-check" class="w-4 h-4 text-amber-400 shrink-0"></i>
+              <span>Точно ко времени</span>
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="flex flex-wrap items-center gap-4 pt-3">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-zinc-950 font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-amber-500/20 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Рассчитать стоимость</span>
+            </button>
+            <a href="https://wa.me/79626050005" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 font-semibold text-sm transition-all flex items-center gap-2">
+              <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+              <span>Консультация в WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div id="calculator-section" class="lg:col-span-5">
+          <div class="p-6 sm:p-7 rounded-2xl dark-card-gradient border border-zinc-800 backdrop-blur shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-36 h-36 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-amber-400 font-bold">Интерактивный расчет</div>
+                <h3 class="text-lg font-bold text-white">Калькулятор тонировки</h3>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-400">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Зона тонировки -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">1. Выберите зону оклейки</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <button type="button" onclick="setZone('rear_hemisphere', 5000, 6000, 7000)" id="btn-zone-rear_hemisphere" class="calc-zone-btn active py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all text-left bg-amber-400/10 border-amber-400 text-amber-400">
+                  <div class="font-bold">Задняя</div>
+                  <div class="text-[10px] opacity-80">Полусфера</div>
+                </button>
+                <button type="button" onclick="setZone('windshield', 6000, 6000, 7000)" id="btn-zone-windshield" class="calc-zone-btn py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all text-left bg-zinc-950/60 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <div class="font-bold">Лобовое</div>
+                  <div class="text-[10px] opacity-80">Хамелеон/ГОСТ</div>
+                </button>
+                <button type="button" onclick="setZone('all_around', 8000, 9500, 11000)" id="btn-zone-all_around" class="calc-zone-btn py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all text-left bg-zinc-950/60 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <div class="font-bold">Вкруг</div>
+                  <div class="text-[10px] opacity-80">Без лобового</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Шаг 2: Класс автомобиля -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">2. Класс автомобиля</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <button type="button" onclick="setCarClass('lada')" id="btn-car-lada" class="calc-car-btn active py-2.5 px-2.5 rounded-xl text-xs font-medium border transition-all bg-amber-400/10 border-amber-400 text-amber-400 flex flex-col items-center justify-center text-center">
+                  <span class="font-bold">Lada / РФ</span>
+                  <span class="text-[10px] text-zinc-400">Гранта, Веста</span>
+                </button>
+                <button type="button" onclick="setCarClass('sedan')" id="btn-car-sedan" class="calc-car-btn py-2.5 px-2.5 rounded-xl text-xs font-medium border transition-all bg-zinc-950/60 border-zinc-800 text-zinc-400 hover:border-zinc-700 flex flex-col items-center justify-center text-center">
+                  <span class="font-bold">Иномарка</span>
+                  <span class="text-[10px] text-zinc-400">Седан / Хэтчбек</span>
+                </button>
+                <button type="button" onclick="setCarClass('suv')" id="btn-car-suv" class="calc-car-btn py-2.5 px-2.5 rounded-xl text-xs font-medium border transition-all bg-zinc-950/60 border-zinc-800 text-zinc-400 hover:border-zinc-700 flex flex-col items-center justify-center text-center">
+                  <span class="font-bold">Кроссовер</span>
+                  <span class="text-[10px] text-zinc-400">SUV / Джип</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Включено в стоимость -->
+            <div class="bg-zinc-950/70 p-3.5 rounded-xl border border-zinc-800/80 mb-5 text-xs text-zinc-300 space-y-1.5">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Оклейка без демонтажа карт дверей и уплотнителей</span>
+              </div>
+              <div class="flex items-center gap-2 text-zinc-400">
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                <span id="calc-film-desc">Плёнка металлокерамика на выбор: 5%, 15%, 35%, 50%</span>
+              </div>
+            </div>
+
+            <!-- Итог калькулятора -->
+            <div class="flex items-baseline justify-between pt-1 pb-5">
+              <div>
+                <span class="text-xs uppercase tracking-wider text-zinc-400 block">Ориентировочная цена:</span>
+                <span class="text-[11px] text-zinc-400">Точный расчет без скрытых надбавок</span>
+              </div>
+              <div class="text-right">
+                <span id="calc-total" class="text-3xl font-extrabold font-mono text-amber-400">5 000</span>
+                <span class="text-base font-semibold text-zinc-400 font-mono ml-1">₽</span>
+              </div>
+            </div>
+
+            <!-- Кнопки записи с передачей данных -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <button onclick="bookCalculatedViaModal()" class="py-3 px-3 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-zinc-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-amber-500/20 active:scale-95 flex items-center justify-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>Забронировать</span>
+              </button>
+              <button onclick="bookCalculatedViaWhatsApp()" class="py-3 px-3 rounded-xl bg-zinc-950 border border-emerald-500/40 hover:bg-emerald-950/30 text-emerald-400 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>В WhatsApp</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-y border-zinc-800 bg-zinc-900/35 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <div class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold mb-2">Стандарты студии</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Почему автомобили доверяют «Виражу»</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Преимущество 1 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-amber-400/50 transition-colors group">
+            <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-400 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="check-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Работа без пузырей и дефектов</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Точная подгонка плёнки с идеальной термоусадкой. Оклеиваем стекла без снятия дверных обшивок и повреждения штатных клипс и электропроводки.
+            </p>
+          </div>
+
+          <!-- Преимущество 2 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-amber-400/50 transition-colors group">
+            <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-400 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="history" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">15 лет опыта мастеров</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Работаем с автомобилями любого класса: от классических моделей ВАЗ и Lada до свежего немецкого, японского и китайского премиум-сегмента.
+            </p>
+          </div>
+
+          <!-- Преимущество 3 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-amber-400/50 transition-colors group">
+            <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-400 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="sun-medium" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Оригинальные плёнки</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Широкий выбор светопропускаемости (5%, 15%, 35%, 50%), долговечные металлизированные, атермальные и хамелеон-серии с честным светопропусканием.
+            </p>
+          </div>
+
+          <!-- Преимущество 4 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-amber-400/50 transition-colors group">
+            <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-400 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Комплексный подход</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Не нужно ездить по разным сервисам: делаем тонировку, устанавливаем сигнализации с автозапуском, оклеиваем бронепленкой и делаем антихром в одном боксе.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold mb-2">Прозрачный прайс</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Услуги тонирования и автоэлектроники</h2>
+        </div>
+        <p class="text-sm text-zinc-400 mt-2 md:mt-0">Точную стоимость мастер называет до начала работ без доплат</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        
+        <!-- Услуга 1: Тонировка Lada -->
+        <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-between hover:border-zinc-700 transition-all">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="car-front" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Тонировка задней полусферы (Lada)</h3>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~1.5 часа</span>
+                <span>&bull;</span>
+                <span>Премиум металлик</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right pl-4">
+            <span class="text-xs text-zinc-400">от</span>
+            <div class="text-xl font-bold font-mono text-amber-400">5 000 ₽</div>
+            <button onclick="openModal('Тонировка задней полусферы Lada (от 5 000 ₽)')" class="text-xs text-zinc-400 hover:text-white underline mt-1">Записаться</button>
+          </div>
+        </div>
+
+        <!-- Услуга 2: Тонировка Иномарка -->
+        <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-between hover:border-zinc-700 transition-all">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="shield-alert" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Тонировка задних стекол (Иномарка)</h3>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~2 часа</span>
+                <span>&bull;</span>
+                <span>Без разбора дверей</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right pl-4">
+            <span class="text-xs text-zinc-400">от</span>
+            <div class="text-xl font-bold font-mono text-amber-400">6 000 ₽</div>
+            <button onclick="openModal('Тонировка задних стекол Иномарка (от 6 000 ₽)')" class="text-xs text-zinc-400 hover:text-white underline mt-1">Записаться</button>
+          </div>
+        </div>
+
+        <!-- Услуга 3: Лобовое стекло Хамелеон -->
+        <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-between hover:border-zinc-700 transition-all">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="sparkle" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Тонировка лобового (в т.ч. Хамелеон Lada)</h3>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~1 час</span>
+                <span>&bull;</span>
+                <span>Атермальный барьер</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right pl-4">
+            <span class="text-xs text-zinc-400">от</span>
+            <div class="text-xl font-bold font-mono text-amber-400">6 000 ₽</div>
+            <button onclick="openModal('Тонировка лобового / Хамелеон (от 6 000 ₽)')" class="text-xs text-zinc-400 hover:text-white underline mt-1">Записаться</button>
+          </div>
+        </div>
+
+        <!-- Услуга 4: Сигнализации с автозапуском -->
+        <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-between hover:border-zinc-700 transition-all">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="key-round" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Установка сигнализации с автозапуском</h3>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~3-5 часов</span>
+                <span>&bull;</span>
+                <span>Под ключ по марке авто</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right pl-4">
+            <span class="text-xs text-zinc-400">расчет</span>
+            <div class="text-base font-bold font-mono text-amber-400">под ключ</div>
+            <button onclick="openModal('Установка автосигнализации с автозапуском')" class="text-xs text-zinc-400 hover:text-white underline mt-1">Узнать цену</button>
+          </div>
+        </div>
+
+        <!-- Услуга 5: Оклейка бронепленкой -->
+        <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-between hover:border-zinc-700 transition-all">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Оклейка бронепленкой (кузов / оптика)</h3>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> от 2 часов</span>
+                <span>&bull;</span>
+                <span>Защита от сколов и пескоструя</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right pl-4">
+            <span class="text-xs text-zinc-400">полиуретан</span>
+            <div class="text-base font-bold font-mono text-amber-400">индивид.</div>
+            <button onclick="openModal('Бронирование кузова / фар пленкой')" class="text-xs text-zinc-400 hover:text-white underline mt-1">Записаться</button>
+          </div>
+        </div>
+
+        <!-- Услуга 6: Антихром и винил -->
+        <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-between hover:border-zinc-700 transition-all">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="paint-brush" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Антихром элементов кузова и винил</h3>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> от 1.5 часов</span>
+                <span>&bull;</span>
+                <span>Глянец / матовый стиль</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right pl-4">
+            <span class="text-xs text-zinc-400">по объему</span>
+            <div class="text-base font-bold font-mono text-amber-400">расчет</div>
+            <button onclick="openModal('Антихром и стайлинг винилом')" class="text-xs text-zinc-400 hover:text-white underline mt-1">Записаться</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-t border-zinc-800 bg-zinc-900/30 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold mb-1">Репутация</div>
+            <h2 class="text-3xl font-extrabold text-white">Реальные отзывы автолюбителей</h2>
+          </div>
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <span class="text-sm font-bold text-white">4.5 / 5.0</span>
+            <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">Яндекс Карты</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Отзыв 1: Алина -->
+          <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 flex flex-col justify-between hover:border-zinc-700 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400">Знаток города 4 ур.</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6">
+                «Отличный сервис по тонировке! Работу выполнили быстро и аккуратно — без пузырей и дефектов. Еще поставили сигнализацию с автозапуском, все работает идеально! Советую всем это место, спасибо за отличный результат!»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-900 text-xs">
+              <span class="font-bold text-white">Алина</span>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Проверенный отзыв
+              </span>
+            </div>
+          </div>
+
+          <!-- Отзыв 2: Камиль Д. -->
+          <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 flex flex-col justify-between hover:border-zinc-700 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400">Знаток города 3 ур.</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6">
+                «Отличное место, ребята профессионалы, по всем вопросам езжу туда, потому что делают все: тонировку, сигнализации, защитные пленки, винил, антихром, и тд, все это делал на разных машинах. Рекомендую ездить только туда 👍»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-900 text-xs">
+              <span class="font-bold text-white">Камиль Д.</span>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Проверенный отзыв
+              </span>
+            </div>
+          </div>
+
+          <!-- Отзыв 3: Антон -->
+          <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 flex flex-col justify-between hover:border-zinc-700 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400">Знаток города 5 ур.</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6">
+                «Всё на высшем уровне 👍 ребят профи своего дела 🔥 однозначно рекомендую 10000% ездию к ним на протяжении 15 лет 🔥 очень большой выбор тонировки так же броне пленка сигнализация и многое другое так что езжайте не пожалеете 👍»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-900 text-xs">
+              <span class="font-bold text-white">Антон</span>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Проверенный отзыв
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Контактная карточка -->
+        <div class="lg:col-span-5 p-8 rounded-2xl bg-zinc-900/90 border border-zinc-800">
+          <div class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold mb-2">Локация студии</div>
+          <h2 class="text-2xl font-extrabold text-white mb-6">Ждем вас в Новокуйбышевске</h2>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs text-zinc-400 block font-semibold uppercase">Точный адрес</span>
+                <span class="text-base text-zinc-100 font-medium">Самарская область, г. Новокуйбышевск, 1-я Промышленная улица</span>
+                <span class="text-xs text-zinc-400 block mt-0.5">Удобный заезд, просторный чистый бокс с кондиционированием</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+                <i data-lucide="clock-4" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs text-zinc-400 block font-semibold uppercase">График работы</span>
+                <span class="text-base text-zinc-100 font-medium">Ежедневно: с 09:00 до 19:00</span>
+                <span class="text-xs text-emerald-400 block mt-0.5">Прием автомобилей строго по предварительной записи</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-zinc-950 border border-zinc-800 flex items-center justify-center text-amber-400 shrink-0">
+                <i data-lucide="phone-outgoing" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs text-zinc-400 block font-semibold uppercase">Телефон мастера / консультация</span>
+                <a href="tel:+79626050005" class="text-lg text-amber-400 font-mono font-bold hover:underline block">
+                  +7 (962) 605-00-05
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Мессенджеры -->
+          <div class="mt-8 pt-6 border-t border-zinc-800">
+            <span class="text-xs text-zinc-400 uppercase font-mono block mb-3">Прямая связь:</span>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="https://wa.me/79626050005?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B5" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-emerald-500/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>WhatsApp</span>
+              </a>
+              <button onclick="openModal('Запись на консультацию')" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-amber-400/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+                <span>Записаться</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Навигация и текстовая схема -->
+        <div class="lg:col-span-7 p-8 rounded-2xl bg-zinc-950 border border-zinc-800">
+          <div class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold mb-2">Навигация</div>
+          <h3 class="text-2xl font-extrabold text-white mb-6">Как проехать в бокс</h3>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="font-mono text-xl font-bold text-amber-400 w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">1</div>
+              <div>
+                <h4 class="text-base font-bold text-white">Заезд с 1-й Промышленной</h4>
+                <p class="text-sm text-zinc-400 mt-1">Двигайтесь по улице 1-я Промышленная до указателя автокомплекса. Чистый асфальтированный заезд в любое время года.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="font-mono text-xl font-bold text-amber-400 w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">2</div>
+              <div>
+                <h4 class="text-base font-bold text-white">Парковка перед боксом</h4>
+                <p class="text-sm text-zinc-400 mt-1">Свободная площадка перед въездными воротами. Вы можете оставить автомобиль или подождать в зоне клиента.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="font-mono text-xl font-bold text-amber-400 w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center shrink-0">3</div>
+              <div>
+                <h4 class="text-base font-bold text-white">Осмотр и выбор светопропускаемости</h4>
+                <p class="text-sm text-zinc-400 mt-1">Мастер при вас покажет образцы плёнок на стекле (5%, 15%, 35%, Хамелеон) и согласует итоговый вид перед нанесением.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Адрес и быстрое копирование -->
+          <div class="mt-8 pt-6 border-t border-zinc-900 flex flex-wrap items-center justify-between gap-4">
+            <div class="text-xs font-mono text-zinc-400">
+              Адрес для навигатора: <span class="text-zinc-200">Новокуйбышевск, 1-я Промышленная ул.</span>
+            </div>
+            <button onclick="copyAddress('Самарская область, Новокуйбышевск, 1-я Промышленная улица')" class="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700/80 text-xs font-medium flex items-center gap-2 transition-all">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span id="copy-btn-text">Скопировать адрес</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-zinc-800 bg-zinc-950 text-zinc-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-400/20 border border-amber-400/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-200 uppercase tracking-wider font-mono">Студия «Вираж»</span>
+          <p class="text-[11px] text-zinc-400">Тонирование, бронирование кузова и автоэлектроника в Новокуйбышевске</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-zinc-400 space-y-1">
+        <div>Информация на сайте носит справочный характер и не является офертой.</div>
+        <div>&copy; 2026 Студия «Вираж». Профессиональная оклейка и автоэлектроника.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79626050005" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-zinc-950 font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/20 active:scale-95">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Позвонить</span>
+    </a>
+    <a href="https://wa.me/79626050005" target="_blank" rel="noopener noreferrer" class="py-3 px-3.5 rounded-xl bg-zinc-900 border border-emerald-500/40 text-emerald-400 font-semibold text-xs active:scale-95 flex items-center justify-center gap-1.5" aria-label="WhatsApp">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button onclick="openModal('Быстрая запись')" class="py-3 px-3.5 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs active:scale-95 flex items-center justify-center gap-1.5" aria-label="Записаться">
+      <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+      <span>Запись</span>
+    </button>
+  </aside>
+
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-zinc-900 border border-zinc-800 p-6 sm:p-7 shadow-2xl">
+      
+      <!-- Закрыть -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-amber-400 font-mono font-bold">Студия «Вираж»</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Запись на обслуживание</h3>
+        <p class="text-xs text-zinc-400 mt-1">Оставьте контакт — мастер перезвонит для согласования точного времени заезда</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Сергей" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-amber-400 focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (962) 605-00-05" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-amber-400 focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Марка авто и выбранная услуга</label>
+          <input type="text" id="modal-notes" placeholder="Например: Lada Vesta, задняя полусфера 5%" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-amber-400 focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-zinc-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-amber-500/20 active:scale-95">
+            Подтвердить запись
+          </button>
+        </div>
+        
+        <p class="text-[10px] text-zinc-500 text-center">Нажимая кнопку, вы подтверждаете согласие на звонок мастера</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast всплывающее уведомление -->
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 border border-amber-400/40 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка отправлена!</div>
+        <div id="toast-desc" class="text-xs text-zinc-400">Мастер перезвонит вам в течение 10 минут.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Инициализация векторных иконок Lucide
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
+
+    // Состояние калькулятора тонировки
+    // Базовая сетка цен студии Вираж
+    const pricingMatrix = {
+      rear_hemisphere: {
+        lada: 5000,
+        sedan: 6000,
+        suv: 7000
+      },
+      windshield: {
+        lada: 6000,
+        sedan: 6000,
+        suv: 7000
+      },
+      all_around: {
+        lada: 8000,
+        sedan: 9500,
+        suv: 11000
+      }
+    };
+
+    let calcState = {
+      zoneKey: 'rear_hemisphere',
+      zoneName: 'Задняя полусфера',
+      carKey: 'lada',
+      carName: 'Lada / РФ'
+    };
+
+    function updateCalculator() {
+      const price = pricingMatrix[calcState.zoneKey][calcState.carKey];
+      const totalEl = document.getElementById('calc-total');
+      if (totalEl) {
+        totalEl.textContent = price.toLocaleString('ru-RU');
+      }
+
+      // Обновление описания
+      const filmDesc = document.getElementById('calc-film-desc');
+      if (filmDesc) {
+        if (calcState.zoneKey === 'windshield') {
+          filmDesc.textContent = 'Атермальная защита / Хамелеон с защитой от ультрафиолета 99%';
+        } else if (calcState.zoneKey === 'all_around') {
+          filmDesc.textContent = 'Круговая оклейка стекол (любая светопропускаемость на выбор: 5%, 15%, 35%)';
+        } else {
+          filmDesc.textContent = 'Плёнка металлокерамика на выбор: 5%, 15%, 35%, 50%';
+        }
+      }
+    }
+
+    function setZone(key) {
+      calcState.zoneKey = key;
+      if (key === 'rear_hemisphere') calcState.zoneName = 'Задняя полусфера';
+      if (key === 'windshield') calcState.zoneName = 'Лобовое стекло / Хамелеон';
+      if (key === 'all_around') calcState.zoneName = 'Вкруг (без лобового)';
+
+      document.querySelectorAll('.calc-zone-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-400/10', 'border-amber-400', 'text-amber-400');
+        btn.classList.add('bg-zinc-950/60', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const current = document.getElementById('btn-zone-' + key);
+      if (current) {
+        current.classList.remove('bg-zinc-950/60', 'border-zinc-800', 'text-zinc-400');
+        current.classList.add('bg-amber-400/10', 'border-amber-400', 'text-amber-400');
+      }
+
+      updateCalculator();
+    }
+
+    function setCarClass(key) {
+      calcState.carKey = key;
+      if (key === 'lada') calcState.carName = 'Lada / РФ';
+      if (key === 'sedan') calcState.carName = 'Иномарка (Седан/Хэтчбек)';
+      if (key === 'suv') calcState.carName = 'Кроссовер / Внедорожник';
+
+      document.querySelectorAll('.calc-car-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-400/10', 'border-amber-400', 'text-amber-400');
+        btn.classList.add('bg-zinc-950/60', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const current = document.getElementById('btn-car-' + key);
+      if (current) {
+        current.classList.remove('bg-zinc-950/60', 'border-zinc-800', 'text-zinc-400');
+        current.classList.add('bg-amber-400/10', 'border-amber-400', 'text-amber-400');
+      }
+
+      updateCalculator();
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Бронирование из калькулятора через WhatsApp с предзаполненным сообщением
+    function bookCalculatedViaWhatsApp() {
+      const price = pricingMatrix[calcState.zoneKey][calcState.carKey].toLocaleString('ru-RU');
+      const text = `Здравствуйте! Хочу записаться в «Вираж» на тонировку:%0A- Зона: ${calcState.zoneName}%0A- Автомобиль: ${calcState.carName}%0A- Расчетная цена: ~${price} ₽.%0AПодскажите свободное время?`;
+      window.open(`https://wa.me/79626050005?text=${text}`, '_blank');
+    }
+
+    // Бронирование через модальное окно
+    function bookCalculatedViaModal() {
+      const price = pricingMatrix[calcState.zoneKey][calcState.carKey].toLocaleString('ru-RU');
+      const serviceTitle = `Тонировка: ${calcState.zoneName} (${calcState.carName}, ~${price} ₽)`;
+      openModal(serviceTitle);
+    }
+
+    // Управление модальным окном
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Запись на услугу';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // Отправка формы без перезагрузки
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка успешно принята!', 'Мастер студии свяжется с вами в течение 10 минут.');
+    }
+
+    // Всплывающие уведомления
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.remove('translate-y-4');
+        }, 10);
+
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 300);
+        }, 4000);
+      }
+    }
+
+    // Копирование адреса через fallback execCommand
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Адрес скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

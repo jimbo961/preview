@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автомоечный комплекс «PREMIUM» — Сызрань | ул. Карла Маркса, 110А</title>
+  <meta name="description" content="Премиальная 2-х и 3-х фазная автомойка и детейлинг в Сызрани: бережный уход за ЛКП без царапин, обновленные боксы, комфортная зона ожидания с кофе на ул. Карла Маркса, 110А.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              teal: '#14b8a6',
+              emerald: '#10b981',
+              metallic: '#94a3b8',
+              dark: '#0a0a0c',
+              panel: '#12141a',
+              card: '#161922'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Геометрическая сетка в стиле высокотехнологичного детейлинга */
+    .bg-tech-grid {
+      background-size: 38px 38px;
+      background-image: 
+        linear-gradient(to right, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+    }
+    /* Градиентное свечение металлик-циан */
+    .radial-cyan-glow {
+      background: radial-gradient(circle at 50% -10%, rgba(6, 182, 212, 0.18) 0%, rgba(16, 185, 129, 0.05) 45%, transparent 75%);
+    }
+    .premium-glass-card {
+      background: linear-gradient(180deg, rgba(20, 24, 32, 0.95) 0%, rgba(12, 14, 18, 0.98) 100%);
+    }
+    /* Кастомный гладкий темный скроллбар */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #06b6d4;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0c] text-zinc-100 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen relative pb-20 md:pb-0">
+
+  <div class="fixed inset-0 bg-tech-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[600px] radial-cyan-glow pointer-events-none z-0"></div>
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0a0a0c]/90 border-b border-zinc-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-10">
+
+      <!-- Логотип PREMIUM Detailing Car Wash -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400 via-teal-500 to-emerald-600 flex items-center justify-center text-black font-black shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform border border-cyan-300/40">
+          <i data-lucide="sparkles" class="w-6 h-6 stroke-[2.3]"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5 leading-tight mb-1">
+            <span class="text-base sm:text-lg font-black tracking-wider uppercase font-mono text-white">
+              PREMIUM <span class="text-cyan-400">CAR WASH</span>
+            </span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-sans font-bold tracking-widest uppercase">SYZRAN</span>
+          </div>
+          <span class="text-[9px] tracking-wider uppercase text-zinc-400 font-medium">Детейлинг-мойка &bull; ул. Карла Маркса, 110А</span>
+        </div>
+      </a>
+
+      <!-- Статус локации и график -->
+      <div class="hidden lg:flex items-center gap-5 text-xs text-zinc-300">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Открыто до 20:00 &bull; Карла Маркса, 110А</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <i data-lucide="coffee" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span>Уютная зона ожидания</span>
+        </div>
+      </div>
+
+      <!-- Кнопка быстрого звонка -->
+      <div class="flex items-center gap-3">
+        <a href="tel:+79297100888" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-cyan-300 border border-cyan-500/30 font-semibold text-xs sm:text-sm transition-all hover:border-cyan-400 shadow-sm">
+          <i data-lucide="phone-call" class="w-4 h-4 text-cyan-400"></i>
+          <span class="hidden md:inline whitespace-nowrap">+7 (929) 710-08-88</span>
+          <span class="md:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-14 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Левая колонка: УТП и презентация -->
+        <div class="lg:col-span-6 space-y-6">
+
+          <!-- Бейдж доверия с картами -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-medium">
+            <span class="flex items-center text-cyan-400">
+              <i data-lucide="star" class="w-4 h-4 fill-cyan-400 mr-1"></i>
+              <strong class="font-bold">★ 4.2 на Яндекс Картах</strong>
+            </span>
+            <span class="text-zinc-600">&bull;</span>
+            <span class="text-zinc-300">Обновленные боксы</span>
+            <span class="text-zinc-600">&bull;</span>
+            <span class="text-zinc-400">Сызрань</span>
+          </div>
+
+          <!-- Главный заголовок -->
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Бережная 2-х и 3-х фазная мойка и детейлинг <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400">в Сызрани</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base text-zinc-400 leading-relaxed max-w-xl">
+            Профессиональный деликатный уход за кузовом без царапин и голограмм. Свежий ремонт боксов, сертифицированная немецкая химия и уютная комната отдыха со свежим кофе на ул. Карла Маркса, 110А.
+          </p>
+
+          <!-- Быстрые фишки комплекса -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="layers" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span>Мойка в 3 фазы</span>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="coffee" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span>Кофе-зона ожидания</span>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span>Ежедневно 08:00–20:00</span>
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/25 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-black"></i>
+              <span>Рассчитать мойку</span>
+            </button>
+            <button onclick="openModal('Быстрая запись на мойку')" class="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-cyan-400"></i>
+              <span>Забронировать бокс</span>
+            </button>
+          </div>
+
+        </div>
+
+        <div id="calculator-section" class="lg:col-span-6">
+          <div class="p-6 sm:p-7 rounded-2xl premium-glass-card border border-zinc-800 backdrop-blur shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-cyan-400 font-bold">Конфигуратор комплекса</div>
+                <h3 class="text-lg font-bold text-white">Калькулятор мойки и ухода</h3>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400">
+                <i data-lucide="sliders" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Тип авто -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                1. Выберите тип автомобиля:
+              </label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-cyan-500/15 border-cyan-500 text-cyan-300">
+                  <i data-lucide="car" class="w-4 h-4"></i>
+                  <span>Седан / Хэтчбек</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="car-front" class="w-4 h-4"></i>
+                  <span>Кроссовер</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="truck" class="w-4 h-4"></i>
+                  <span>Внедорожник / Минивэн</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Шаг 2: Услуги комплекса -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                2. Выберите необходимые услуги:
+              </label>
+              <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+
+                <!-- Опция 1: 2-х фазная детейлинг-мойка кузова -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-wash2" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-cyan-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">2-х фазная детейлинг-мойка кузова</div>
+                      <div class="text-[10px] text-zinc-400">Первичный бесконтактный состав, ручная мойка шампунем и сушка турбосушкой</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-wash2" class="text-xs font-mono font-bold text-cyan-400 whitespace-nowrap shrink-0">800&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 2: 3-х фазная мойка с консервацией блеска -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-wash3" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-cyan-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">3-х фазная мойка с консервацией блеска</div>
+                      <div class="text-[10px] text-zinc-400">Нанесение горячего защитного воска/полимерного консерванта ЛКП</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-wash3" class="text-xs font-mono font-bold text-cyan-400 whitespace-nowrap shrink-0">1&nbsp;200&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 3: Мойка подкапотного пространства диэлектриком -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-engine" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-cyan-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Мойка подкапотного пространства диэлектриком</div>
+                      <div class="text-[10px] text-zinc-400">Деликатная чистка кистями, безопасный диэлектрический гель и консервация</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-engine" class="text-xs font-mono font-bold text-cyan-400 whitespace-nowrap shrink-0">1&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 4: Глубокая очистка дисков и чернение шин -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-wheels" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-cyan-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Глубокая очистка дисков и чернение шин</div>
+                      <div class="text-[10px] text-zinc-400">Удаление металлической стружки, нагара колодок и кондиционер резины</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-wheels" class="text-xs font-mono font-bold text-cyan-400 whitespace-nowrap shrink-0">1&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 5: Комплексная уборка салона с сушкой -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-interior" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-cyan-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Комплексная уборка салона с сушкой</div>
+                      <div class="text-[10px] text-zinc-400">Пылесос, влажная уборка пластика, чистка стекол изнутри и очистка ковриков</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-interior" class="text-xs font-mono font-bold text-cyan-400 whitespace-nowrap shrink-0">1&nbsp;800&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 6: Защитное покрытие антидождь на полусферу -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-aquapel" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-cyan-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Защитное покрытие «Антидождь» на полусферу</div>
+                      <div class="text-[10px] text-zinc-400">Глубокая обезжирка и гидрофобный слой на лобовое и передние боковые стёкла</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-aquapel" class="text-xs font-mono font-bold text-cyan-400 whitespace-nowrap shrink-0">1&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Итог и действия -->
+            <div class="pt-3 border-t border-zinc-800">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-zinc-400 block font-semibold">Ориентировочная стоимость:</span>
+                  <span class="text-[11px] text-zinc-500">Честный расчет автомоечного комплекса «PREMIUM»</span>
+                </div>
+                <div class="text-right whitespace-nowrap shrink-0">
+                  <span id="calc-grand-total" class="text-3xl font-extrabold font-mono text-cyan-400 whitespace-nowrap shrink-0">800&nbsp;₽</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a href="tel:+79297100888" class="py-3 px-3 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-cyan-400/50 text-cyan-300 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Позвонить администратору</span>
+                </a>
+                <button onclick="openModalWithCalculatedData()" class="py-3 px-3 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="calendar-check" class="w-4 h-4 text-black"></i>
+                  <span>Забронировать бокс</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-y border-zinc-800 bg-[#0d0f14]/80 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Стандарты обслуживания</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Почему выбирают «PREMIUM»</h2>
+          </div>
+          <p class="text-sm text-zinc-400 mt-2 md:mt-0">Сызрань, ул. Карла Маркса, 110А &bull; Забота о вашем автомобиле</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Преимущество 1 -->
+          <div class="p-6 rounded-2xl bg-[#12151d] border border-cyan-500/30 flex flex-col justify-between group shadow-lg shadow-cyan-500/5 hover:border-cyan-400 transition-all">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-500/40 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Обновленные боксы</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Свежий качественный ремонт, профессиональное яркое бестеневое освещение для контроля чистоты каждого миллиметра кузова.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-cyan-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> Идеальная чистота
+            </div>
+          </div>
+
+          <!-- Преимущество 2 -->
+          <div class="p-6 rounded-2xl bg-[#12151d] border border-zinc-800 hover:border-cyan-400/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="coffee" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Уютная комната отдыха</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Комфортная зона ожидания с мягкими диванами, ароматным кофе, ТВ и быстрым Wi-Fi, пока ваш автомобиль бережно приводят в порядок.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Комфорт ожидания
+            </div>
+          </div>
+
+          <!-- Преимущество 3 -->
+          <div class="p-6 rounded-2xl bg-[#12151d] border border-zinc-800 hover:border-cyan-400/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="droplet" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Деликатная мойка</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Только безопасные крупнопористые губки, микрофибровые варежки и сушка турбосушкой горячим воздухом без механического трения.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Без царапин и паутины
+            </div>
+          </div>
+
+          <!-- Преимущество 4 -->
+          <div class="p-6 rounded-2xl bg-[#12151d] border border-zinc-800 hover:border-cyan-400/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="sparkle" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Премиальная автохимия</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Применяем исключительно профессиональные pH-нейтральные шампуни и защитные воски от ведущих европейских брендов.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Сертифицировано
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-1">Репутация автомойки</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Отзывы клиентов из Яндекс Карт</h2>
+        </div>
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800">
+          <div class="flex text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400 opacity-40"></i>
+          </div>
+          <span class="text-sm font-bold text-white">4.2</span>
+          <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">Яндекс Карты &bull; Сызрань</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Отзыв: One T. -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-[#0e1017] border border-cyan-500/30 flex flex-col justify-between hover:border-cyan-400 transition-colors shadow-lg shadow-cyan-500/5">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">Проверенный гость</span>
+            </div>
+            <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+              «Сделали отличный ремонт, всё изменилось в лучшую сторону, есть удобная комната ожидания. Качество мойки на высоте, мойщики стараются на совесть!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+            <div>
+              <span class="font-bold text-white block">One T.</span>
+              <span class="text-[11px] text-zinc-500">Знаток города</span>
+            </div>
+            <span class="text-zinc-400 flex items-center gap-1">
+              <i data-lucide="check-check" class="w-3.5 h-3.5 text-cyan-400"></i> Яндекс Карты
+            </span>
+          </div>
+        </div>
+
+        <!-- Отзыв: Алёна Ч. -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-[#0e1017] border border-zinc-800 flex flex-col justify-between hover:border-cyan-400/50 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">Регулярный клиент</span>
+            </div>
+            <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+              «Хорошая автомойка, замечательный сервис и удобное расположение на Карла Маркса.»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+            <div>
+              <span class="font-bold text-white block">Алёна Ч.</span>
+              <span class="text-[11px] text-zinc-500">Постоянный гость студии</span>
+            </div>
+            <span class="text-zinc-400 flex items-center gap-1">
+              <i data-lucide="check-check" class="w-3.5 h-3.5 text-cyan-400"></i> Яндекс Карты
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-t border-zinc-800 bg-[#090b10] py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Карточка контактов -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-[#0d0f16] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Локация автомоечного комплекса</div>
+            <h2 class="text-2xl font-extrabold text-white mb-6">PREMIUM Car Wash</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Адрес комплекса</span>
+                  <span class="text-base text-zinc-100 font-medium">Самарская область, г. Сызрань, ул. Карла Маркса, 110А</span>
+                  <span class="text-xs text-zinc-500 block mt-0.5">Удобный асфальтированный заезд в боксы с главной дороги</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400 shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Режим работы</span>
+                  <span class="text-base text-zinc-100 font-medium">Ежедневно: с 08:00 до 20:00</span>
+                  <span class="text-xs text-cyan-400 block mt-0.5">Живая очередь и предварительное бронирование</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-cyan-400 shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Телефон администратора</span>
+                  <a href="tel:+79297100888" class="text-lg text-cyan-400 font-mono font-bold hover:underline block whitespace-nowrap">
+                    +7 (929) 710-08-88
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Действия вызова и записи -->
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <span class="text-xs text-zinc-400 uppercase font-mono block mb-3">Свяжитесь с нами прямо сейчас:</span>
+              <div class="grid grid-cols-2 gap-3">
+                <button onclick="openModal('Запись через администратора')" class="py-2.5 px-4 rounded-xl bg-cyan-950/40 border border-cyan-500/40 hover:bg-cyan-900/40 text-cyan-300 flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="calendar" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Записаться</span>
+                </button>
+                <a href="tel:+79297100888" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-cyan-400/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Позвонить</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Схема проезда и ориентиры -->
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#0d0f16] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Навигация</div>
+            <h3 class="text-2xl font-extrabold text-white mb-6">Как добраться до комплекса «PREMIUM»</h3>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-cyan-400 w-8 h-8 rounded-lg bg-cyan-400/10 flex items-center justify-center shrink-0">1</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Движение по улице Карла Маркса</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Ориентируйтесь на перекресток в районе строения 110А. Комплекс заметен с проезжей части благодаря брендированной вывеске.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-cyan-400 w-8 h-8 rounded-lg bg-cyan-400/10 flex items-center justify-center shrink-0">2</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Въезд в чистые обновленные боксы</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Широкие ворота и ровный асфальтированный заезд. Администратор на посту распределит ваш авто в свободный освещенный бокс.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-cyan-400 w-8 h-8 rounded-lg bg-cyan-400/10 flex items-center justify-center shrink-0">3</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Ожидание в комфорте</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Отдыхайте в уютном зале с кондиционером и кофе. Контроль процесса мойки доступен через обзорное стекло зоны клиентов.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Копирование адреса -->
+            <div class="mt-8 pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-zinc-400">
+                Адрес: <span class="text-zinc-200">г. Сызрань, ул. Карла Маркса, 110А</span>
+              </div>
+              <button onclick="copyAddress('Самарская область, Сызрань, ул. Карла Маркса, 110А')" class="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Скопировать адрес для навигатора</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-zinc-800 bg-[#08090d] text-zinc-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-200 uppercase tracking-wider font-mono">Автомоечный комплекс «PREMIUM»</span>
+          <p class="text-[11px] text-zinc-500">Деликатная автомойка и детейлинг &bull; Сызрань, ул. Карла Маркса, 110А</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-zinc-500 space-y-1">
+        <div>Информация носит ознакомительный характер и не является публичной офертой.</div>
+        <div>&copy; 2026 Автомоечный комплекс «PREMIUM». Бережная чистота и защита вашего авто.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#0a0a0c]/95 backdrop-blur-md border-t border-zinc-800 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79297100888" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-cyan-500/25 active:scale-95">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Позвонить</span>
+    </a>
+    <button onclick="openModal('Быстрая запись с мобильного')" class="flex-1 py-3 px-3 rounded-xl bg-zinc-900 border border-cyan-500/40 text-cyan-300 font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
+      <i data-lucide="calendar" class="w-4 h-4 text-cyan-400"></i>
+      <span>Записаться</span>
+    </button>
+  </aside>
+
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-[#0f121a] border border-zinc-800 p-6 sm:p-7 shadow-2xl">
+
+      <!-- Кнопка закрытия -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-cyan-400 font-mono font-bold">Комплекс «PREMIUM»</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Запись на Карла Маркса, 110А</h3>
+        <p class="text-xs text-zinc-400 mt-1">Оставьте заявку — администратор подтвердит свободное время бокса</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Алексей" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-cyan-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (929) 710-08-88" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-cyan-500 focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Автомобиль и услуги</label>
+          <input type="text" id="modal-notes" placeholder="Например: Kia Sportage, 3-х фазная мойка и салон" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-cyan-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 active:scale-95">
+            Подтвердить бронирование
+          </button>
+        </div>
+
+        <p class="text-[10px] text-zinc-500 text-center">Администратор свяжется с вами в течение 5–10 минут</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 border border-cyan-500/40 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
+        <div id="toast-desc" class="text-xs text-zinc-400">Администратор «PREMIUM» свяжется с вами для подтверждения времени.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Инициализация иконок Lucide
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Базовые тарифы для седана/хэтчбека
+    const basePrices = {
+      'wash2': 800,
+      'wash3': 1200,
+      'engine': 1500,
+      'wheels': 1000,
+      'interior': 1800,
+      'aquapel': 1500
+    };
+
+    // Коэффициенты по классам авто
+    const categoryMultipliers = {
+      sedan: 1.0,
+      crossover: 1.25,
+      suv: 1.45
+    };
+
+    const categoryNames = {
+      sedan: 'Седан / Хэтчбек',
+      crossover: 'Кроссовер',
+      suv: 'Внедорожник / Минивэн'
+    };
+
+    let currentCategory = 'sedan';
+
+    function selectCarCategory(category) {
+      currentCategory = category;
+
+      // Обновление стилей кнопок типов авто
+      document.querySelectorAll('.car-type-btn').forEach(btn => {
+        btn.classList.remove('bg-cyan-500/15', 'border-cyan-500', 'text-cyan-300');
+        btn.classList.add('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const activeBtn = document.getElementById('car-btn-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+        activeBtn.classList.add('bg-cyan-500/15', 'border-cyan-500', 'text-cyan-300');
+      }
+
+      updateIndividualPriceLabels();
+      calculateTotal();
+    }
+
+    function updateIndividualPriceLabels() {
+      const mult = categoryMultipliers[currentCategory];
+      for (const [key, basePrice] of Object.entries(basePrices)) {
+        const label = document.getElementById(`price-label-${key}`);
+        if (label) {
+          const calculated = Math.round(basePrice * mult);
+          label.innerHTML = `${calculated.toLocaleString('ru-RU')}&nbsp;₽`;
+        }
+      }
+    }
+
+    function calculateTotal() {
+      const mult = categoryMultipliers[currentCategory];
+      let total = 0;
+
+      if (document.getElementById('srv-wash2')?.checked) total += basePrices['wash2'] * mult;
+      if (document.getElementById('srv-wash3')?.checked) total += basePrices['wash3'] * mult;
+      if (document.getElementById('srv-engine')?.checked) total += basePrices['engine'] * mult;
+      if (document.getElementById('srv-wheels')?.checked) total += basePrices['wheels'] * mult;
+      if (document.getElementById('srv-interior')?.checked) total += basePrices['interior'] * mult;
+      if (document.getElementById('srv-aquapel')?.checked) total += basePrices['aquapel'] * mult;
+
+      const roundedTotal = Math.round(total);
+      const totalEl = document.getElementById('calc-grand-total');
+      if (totalEl) {
+        totalEl.innerHTML = `${roundedTotal.toLocaleString('ru-RU')}&nbsp;₽`;
+      }
+      return roundedTotal;
+    }
+
+    function getSelectedServicesList() {
+      const list = [];
+      if (document.getElementById('srv-wash2')?.checked) list.push('2-х фазная мойка');
+      if (document.getElementById('srv-wash3')?.checked) list.push('3-х фазная мойка с консервацией');
+      if (document.getElementById('srv-engine')?.checked) list.push('Мойка ДВС диэлектриком');
+      if (document.getElementById('srv-wheels')?.checked) list.push('Очистка дисков и чернение');
+      if (document.getElementById('srv-interior')?.checked) list.push('Уборка салона с сушкой');
+      if (document.getElementById('srv-aquapel')?.checked) list.push('Антидождь');
+      return list;
+    }
+
+    function openModalWithCalculatedData() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const summary = `${car}: ${services.join(', ')} (~${total.toLocaleString('ru-RU')} ₽)`;
+      openModal(summary);
+    }
+
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Запись на Карла Маркса, 110А';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка принята!', 'Администратор «PREMIUM» свяжется с вами в течение 5–10 минут.');
+    }
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('translate-y-4'), 10);
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 4000);
+      }
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Адрес скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

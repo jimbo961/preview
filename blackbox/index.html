@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackBox Detailing & Tint — Тонирование и детейлинг в Новокуйбышевске</title>
+  <meta name="description" content="Премиальная тонировка стекол, оклейка бронепленкой, полировка кузова и химчистка салона в Новокуйбышевске на ул. Егорова, 23. Рейтинг 5.0 на Яндекс Картах.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            box: {
+              violet: '#8b5cf6',
+              indigo: '#6366f1',
+              cyan: '#06b6d4',
+              surface: '#0f0f13',
+              border: '#1f1f28'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Геометрическая сетка в эстетике BlackBox */
+    .bg-blackbox-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    }
+    /* Глубокое фиолетово-индиго свечение */
+    .radial-blackbox-glow {
+      background: radial-gradient(circle at 50% -10%, rgba(139, 92, 246, 0.18) 0%, rgba(99, 102, 241, 0.06) 45%, transparent 75%);
+    }
+    .blackbox-card {
+      background: linear-gradient(180deg, rgba(20, 20, 26, 0.88) 0%, rgba(12, 12, 16, 0.98) 100%);
+    }
+    /* Кастомный скроллбар */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+  </style>
+</head>
+<body class="bg-[#09090b] text-zinc-100 font-sans antialiased selection:bg-violet-600 selection:text-white min-h-screen relative pb-20 md:pb-0">
+
+  <!-- Background Grid & Neon Ambiance -->
+  <div class="fixed inset-0 bg-blackbox-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[560px] radial-blackbox-glow pointer-events-none z-0"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#09090b]/90 border-b border-zinc-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-10">
+      
+      <!-- Логотип BlackBox -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-600 via-indigo-600 to-purple-800 flex items-center justify-center text-white shadow-lg shadow-violet-500/20 group-hover:scale-105 transition-transform border border-violet-400/30">
+          <i data-lucide="box" class="w-6 h-6 stroke-[2.2]"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5 leading-tight mb-1">
+            <span class="text-xl font-black tracking-wider uppercase font-mono text-white">
+              BLACK<span class="text-violet-400">BOX</span>
+            </span>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-violet-500/15 text-violet-300 border border-violet-500/30 font-sans font-bold">STUDIO</span>
+          </div>
+          <span class="text-[9px] tracking-wider uppercase text-zinc-400 font-medium">Тонирование &bull; Детейлинг &bull; Бронепленка</span>
+        </div>
+      </a>
+
+      <!-- Статус локации и адрес -->
+      <div class="hidden lg:flex items-center gap-5 text-xs text-zinc-300">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Работаем на Егорова, 23 &bull; боксы открыты</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-violet-400"></i>
+          <span>Новокуйбышевск</span>
+        </div>
+      </div>
+
+      <!-- Кнопки звонка и Telegram -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="https://t.me/blackbox_detailing" 
+           target="_blank" rel="noopener noreferrer" 
+           class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-indigo-950/40 text-indigo-300 border border-indigo-500/30 hover:bg-indigo-900/40 text-xs font-bold transition-all shadow-sm">
+          <i data-lucide="send" class="w-4 h-4 text-violet-400"></i>
+          <span>Telegram</span>
+        </a>
+        <a href="tel:+79277320858" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-violet-300 border border-violet-500/30 font-semibold text-xs sm:text-sm transition-all hover:border-violet-400 shadow-sm">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span class="hidden md:inline whitespace-nowrap">+7 (927) 732-08-58</span>
+          <span class="md:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-14 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        
+        <!-- Левая часть: Заголовки и УТП -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Бейдж доверия Яндекс Карты -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs sm:text-sm font-medium">
+            <span class="flex items-center text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400 mr-1"></i>
+              <strong class="font-bold">5.0</strong>
+            </span>
+            <span class="text-zinc-600">&bull;</span>
+            <span class="text-zinc-300">Яндекс Карты</span>
+            <span class="text-zinc-600">&bull;</span>
+            <span class="text-zinc-400">28 проверенных оценок</span>
+          </div>
+
+          <!-- Заголовок -->
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.14]">
+            Профессиональная тонировка и детейлинг авто <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-300 to-purple-400">в Новокуйбышевске</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base text-zinc-400 leading-relaxed max-w-xl">
+            Безупречная оклейка плёнкой без заломов и пыли, восстановительная полировка и премиальный уход за кузовом. Работаем на ул. Егорова, 23 с гарантией качества на все виды услуг.
+          </p>
+
+          <!-- Быстрые факты -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Оклейка без пыли и заломов</span>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="sun-dim" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Защита от нагрева салона</span>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Материалы Ultra-Black</span>
+            </div>
+          </div>
+
+          <!-- Кнопки CTA -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-violet-500/20 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Рассчитать стоимость</span>
+            </button>
+            <a href="https://t.me/blackbox_detailing" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold text-sm transition-all flex items-center gap-2">
+              <i data-lucide="send" class="w-4 h-4 text-violet-400"></i>
+              <span>Написать в Telegram</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Правая часть: Калькулятор BlackBox -->
+        <div id="calculator-section" class="lg:col-span-6">
+          <div class="p-6 sm:p-7 rounded-2xl blackbox-card border border-zinc-800 backdrop-blur shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-violet-400 font-bold">Интерактивный конфигуратор</div>
+                <h3 class="text-lg font-bold text-white">Калькулятор BlackBox Studio</h3>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400">
+                <i data-lucide="sliders" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Выбор класса авто -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                1. Выберите категорию автомобиля:
+              </label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-violet-600/15 border-violet-500 text-violet-300">
+                  <i data-lucide="car" class="w-4 h-4"></i>
+                  <span>Седан / Хэтчбек</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="car-front" class="w-4 h-4"></i>
+                  <span>Кроссовер</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="shield" class="w-4 h-4"></i>
+                  <span>Внедорожник</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Шаг 2: Выбор опций -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                2. Выберите необходимые услуги:
+              </label>
+              <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+                
+                <!-- Опция 1: Тонировка задней полусферы -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-tint-rear" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Тонировка задней полусферы</div>
+                      <div class="text-[10px] text-zinc-400">Премиум-пленка Ultra-Black (5%, 15%, 20%, 35%)</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-tint-rear" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">4&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 2: Тонировка лобового / полоса -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-windshield" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Тонировка лобового / солнцезащитная полоса</div>
+                      <div class="text-[10px] text-zinc-400">Атермальная защита, защита от слепящего солнца</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-windshield" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">1&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 3: Восстановительная полировка -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-polish" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Глубокая восстановительная полировка</div>
+                      <div class="text-[10px] text-zinc-400">Удаление паутины, голограмм и притертостей до зеркального блеска</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-polish" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">5&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 4: Антигравийная бронепленка -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-ppf" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Антигравийная защита зон риска (бронепленка)</div>
+                      <div class="text-[10px] text-zinc-400">Полиуретановый щит: капот, бампер, оптика, зеркала</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-ppf" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">8&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 5: Химчистка интерьера -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-clean" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Комплексная детейлинг-химчистка салона</div>
+                      <div class="text-[10px] text-zinc-400">Чистка кожи, текстиля, пластика, устранение посторонних запахов</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-clean" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">2&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Итог и действия -->
+            <div class="pt-3 border-t border-zinc-800">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-zinc-400 block font-semibold">Итоговая смета:</span>
+                  <span class="text-[11px] text-zinc-500">Точный расчёт без скрытых доплат</span>
+                </div>
+                <div class="text-right whitespace-nowrap shrink-0">
+                  <span id="calc-grand-total" class="text-3xl font-extrabold font-mono text-violet-400 whitespace-nowrap shrink-0">4&nbsp;500&nbsp;₽</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <button onclick="bookCalculatedTelegram()" class="py-3 px-3 rounded-xl bg-indigo-950/70 border border-indigo-500/40 hover:bg-indigo-900/40 text-indigo-300 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="send" class="w-4 h-4 text-violet-400"></i>
+                  <span>В Telegram мастеру</span>
+                </button>
+                <button onclick="openModalWithCalculatedData()" class="py-3 px-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-violet-500/20 active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="calendar" class="w-4 h-4"></i>
+                  <span>Записаться онлайн</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Секция популярных услуг -->
+    <section class="border-y border-zinc-800 bg-[#0d0d12]/60 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-2">Направления студии</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Популярные услуги BlackBox</h2>
+          </div>
+          <p class="text-sm text-zinc-400 mt-2 md:mt-0">Индивидуальный подбор степени затемнения и материалов под ваш автомобиль</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Услуга 1: Тонирование -->
+          <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-zinc-800 hover:border-violet-500/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="shield" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Тонирование стекол по ГОСТ и Ultra-Black</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Премиальные американские и корейские пленки. Защита от посторонних глаз, комфорт в салоне и отражение до 99% ультрафиолета без пузырей.
+              </p>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 pb-4 border-b border-zinc-800/80">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~1.5–2 часа</span>
+                <span>&bull;</span>
+                <span>5%, 15%, 35%</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-zinc-400 block uppercase">Стоимость</span>
+                <span class="text-xl font-bold font-mono text-violet-400 whitespace-nowrap shrink-0">от&nbsp;4&nbsp;500&nbsp;₽</span>
+              </div>
+              <button onclick="openModal('Тонирование стекол Ultra-Black (от 4 500 ₽)')" class="text-xs px-3.5 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold transition-all">
+                Записаться
+              </button>
+            </div>
+          </div>
+
+          <!-- Услуга 2: Бронирование зон риска -->
+          <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-violet-500/40 relative flex flex-col justify-between group shadow-lg shadow-violet-500/5">
+            <span class="absolute top-4 right-4 text-[10px] font-mono px-2 py-0.5 rounded bg-violet-500/10 text-violet-300 border border-violet-500/30 uppercase font-bold">Защита кузова</span>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-violet-950/60 border border-violet-500/40 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="shield-alert" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Бронирование фар и зон риска полиуретаном</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Толстый самозатягивающийся полиуретановый слой (PPF). Надежный барьер от сколов, летящего гравия, пескоструя и дорожных химикатов.
+              </p>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 pb-4 border-b border-zinc-800/80">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~1 день</span>
+                <span>&bull;</span>
+                <span>Срок до 7 лет</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-zinc-400 block uppercase">Стоимость</span>
+                <span class="text-xl font-bold font-mono text-violet-400 whitespace-nowrap shrink-0">от&nbsp;8&nbsp;000&nbsp;₽</span>
+              </div>
+              <button onclick="openModal('Бронирование зон риска полиуретаном (от 8 000 ₽)')" class="text-xs px-3.5 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold transition-all shadow-sm">
+                Записаться
+              </button>
+            </div>
+          </div>
+
+          <!-- Услуга 3: Восстановительная полировка -->
+          <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-zinc-800 hover:border-violet-500/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Восстановительная полировка кузова</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Многоэтапное устранение царапин, потускнения и круговых рисок после щеток моек. Возвращение глубокого насыщенного зеркального блеска.
+              </p>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 pb-4 border-b border-zinc-800/80">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~1 день</span>
+                <span>&bull;</span>
+                <span>Замер ЛКП</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-zinc-400 block uppercase">Стоимость</span>
+                <span class="text-xl font-bold font-mono text-violet-400 whitespace-nowrap shrink-0">от&nbsp;5&nbsp;000&nbsp;₽</span>
+              </div>
+              <button onclick="openModal('Восстановительная полировка кузова (от 5 000 ₽)')" class="text-xs px-3.5 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold transition-all">
+                Записаться
+              </button>
+            </div>
+          </div>
+
+          <!-- Услуга 4: Химчистка интерьера -->
+          <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-zinc-800 hover:border-violet-500/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="spray-can" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Детейлинг-химчистка интерьера</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Тщательная очистка кресел, ковролина, дверных карт и потолка с применением деликатной химии. Удаление въевшихся пятен и антибактериальная сушка.
+              </p>
+              <div class="flex items-center gap-3 text-xs text-zinc-400 pb-4 border-b border-zinc-800/80">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ~4-8 часов</span>
+                <span>&bull;</span>
+                <span>Сухой салон</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-zinc-400 block uppercase">Стоимость</span>
+                <span class="text-xl font-bold font-mono text-violet-400 whitespace-nowrap shrink-0">от&nbsp;2&nbsp;000&nbsp;₽</span>
+              </div>
+              <button onclick="openModal('Детейлинг-химчистка салона (от 2 000 ₽)')" class="text-xs px-3.5 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold transition-all">
+                Записаться
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Социальное доказательство: Отзывы Яндекс Карты -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-1">Репутация студии</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Реальные отзывы клиентов с Яндекс Карт</h2>
+        </div>
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800">
+          <div class="flex text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <span class="text-sm font-bold text-white">5.0 / 5.0</span>
+          <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">28 оценок</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Отзыв 1: Виктория -->
+        <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-zinc-800 flex flex-col justify-between hover:border-violet-500/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] font-mono text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded border border-violet-500/20">Тонировка</span>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-6">
+              «Тонировка выполнена безупречно, быстро и аккуратно, без заломов! Качество работы на высоте, все сделали ровно в оговоренный срок. Очень вежливое и внимательное отношение к машине. Обязательно буду советовать друзьям!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-zinc-900 text-xs">
+            <span class="font-bold text-white">Виктория</span>
+            <span class="text-zinc-400 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Проверенный отзыв
+            </span>
+          </div>
+        </div>
+
+        <!-- Отзыв 2: Тёмик Лёвин -->
+        <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-zinc-800 flex flex-col justify-between hover:border-violet-500/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] font-mono text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded border border-violet-500/20">Тонировка + Броня</span>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-6">
+              «Тонировка без изъянов, сделали просто топ! Сразу же после стекол записался на оклейку бронепленкой. Видно, что у ребят набита рука и они знают каждую тонкость процесса. Настоящие мастера своего дела!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-zinc-900 text-xs">
+            <span class="font-bold text-white">Тёмик Лёвин</span>
+            <span class="text-zinc-400 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Проверенный отзыв
+            </span>
+          </div>
+        </div>
+
+        <!-- Отзыв 3: Александр Ефимов -->
+        <div class="p-6 rounded-2xl bg-[#0b0b0e] border border-zinc-800 flex flex-col justify-between hover:border-violet-500/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] font-mono text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded border border-violet-500/20">Комплекс ухода</span>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-6">
+              «Заезжал на химчистку, мойку и тонировку. Ответственный подход и вежливые мастера. Салон вычистили до состояния нового авто, стекла затонировали идеально. Приятные цены на ул. Егорова, 23, рекомендую студию всем!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-zinc-900 text-xs">
+            <span class="font-bold text-white">Александр Ефимов</span>
+            <span class="text-zinc-400 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Проверенный отзыв
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Контакты и локация -->
+    <section class="border-t border-zinc-800 bg-[#0d0d12]/50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Карточка контактов -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-[#09090c] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-2">Локация студии</div>
+            <h2 class="text-2xl font-extrabold text-white mb-6">Студия «BlackBox»</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Адрес бокса</span>
+                  <span class="text-base text-zinc-100 font-medium">Самарская область, Новокуйбышевск, ул. Егорова, 23</span>
+                  <span class="text-xs text-zinc-500 block mt-0.5">Удобный заезд, парковка для автомобилей клиентов</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">График работы</span>
+                  <span class="text-base text-zinc-100 font-medium">Ежедневно: с 09:00 до 20:00</span>
+                  <span class="text-xs text-emerald-400 block mt-0.5">Работаем по предварительной записи</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Телефон мастера Дмитрия</span>
+                  <a href="tel:+79277320858" class="text-lg text-violet-400 font-mono font-bold hover:underline block whitespace-nowrap">
+                    +7 (927) 732-08-58
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Кнопки мессенджеров -->
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <span class="text-xs text-zinc-400 uppercase font-mono block mb-3">Свяжитесь напрямую:</span>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="https://t.me/blackbox_detailing" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-indigo-950/40 border border-indigo-500/40 hover:bg-indigo-900/40 text-indigo-300 flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="send" class="w-4 h-4 text-violet-400"></i>
+                  <span>Telegram</span>
+                </a>
+                <a href="https://wa.me/79277320858?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20BlackBox%20%D0%BD%D0%B0%20%D0%95%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B0,%2023" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-emerald-500/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Схема проезда и навигация -->
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#09090c] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-2">Навигатор</div>
+            <h3 class="text-2xl font-extrabold text-white mb-6">Как добраться до BlackBox Studio</h3>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-violet-400 w-8 h-8 rounded-lg bg-violet-400/10 flex items-center justify-center shrink-0">1</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Движение по улице Егорова</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Ориентируйтесь на здание №23 по ул. Егорова в г. Новокуйбышевске. Удобный асфальтированный заезд без ям и препятствий.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-violet-400 w-8 h-8 rounded-lg bg-violet-400/10 flex items-center justify-center shrink-0">2</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Въезд на территорию бокса</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Подъезжайте к воротам детейлинг-студии BlackBox. При необходимости наберите мастера Дмитрия: +7 (927) 732-08-58.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-violet-400 w-8 h-8 rounded-lg bg-violet-400/10 flex items-center justify-center shrink-0">3</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Приемка авто и консультация</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Подбираем процент затемнения пленки по образцам, согласовываем точный бюджет и принимаем машину в чистый, обеспыленный бокс.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Копирование адреса -->
+            <div class="mt-8 pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-zinc-400">
+                Адрес: <span class="text-zinc-200">г. Новокуйбышевск, ул. Егорова, 23</span>
+              </div>
+              <button onclick="copyAddress('Самарская область, Новокуйбышевск, ул. Егорова, 23')" class="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Скопировать адрес</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800 bg-[#07070a] text-zinc-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-violet-600/20 border border-violet-500/40 flex items-center justify-center text-violet-400">
+          <i data-lucide="box" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-200 uppercase tracking-wider font-mono">BlackBox Detailing & Tint</span>
+          <p class="text-[11px] text-zinc-500">Студия тонирования и детейлинга &bull; Новокуйбышевск, ул. Егорова, 23</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-zinc-500 space-y-1">
+        <div>Информация на сайте носит ознакомительный характер и не является офертой.</div>
+        <div>&copy; 2026 BlackBox Studio. Безупречный стиль и надежная защита вашего авто.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Мобильная фиксированная панель -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#09090b]/95 backdrop-blur-md border-t border-zinc-800 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79277320858" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-violet-500/20 active:scale-95">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Позвонить</span>
+    </a>
+    <a href="https://t.me/blackbox_detailing" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-indigo-950/60 border border-indigo-500/40 text-indigo-300 font-semibold text-xs active:scale-95 flex items-center justify-center gap-1.5" aria-label="Telegram">
+      <i data-lucide="send" class="w-4 h-4 text-violet-400"></i>
+      <span>Telegram</span>
+    </a>
+    <button onclick="openModal('Быстрая запись')" class="py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs active:scale-95 flex items-center justify-center gap-1.5" aria-label="Записаться">
+      <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i>
+      <span>Запись</span>
+    </button>
+  </aside>
+
+  <!-- Модальное окно онлайн-записи -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-[#0e0e14] border border-zinc-800 p-6 sm:p-7 shadow-2xl">
+      
+      <!-- Кнопка закрытия -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-violet-400 font-mono font-bold">Студия «BlackBox»</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Онлайн-запись на Егорова, 23</h3>
+        <p class="text-xs text-zinc-400 mt-1">Оставьте контакт — мастер Дмитрий свяжется с вами для согласования времени заезда</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Алексей" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-violet-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (927) 732-08-58" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-violet-500 focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Автомобиль и услуги</label>
+          <input type="text" id="modal-notes" placeholder="Например: Toyota Camry, тонировка задней полусферы" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-violet-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-violet-500/20 active:scale-95">
+            Подтвердить запись
+          </button>
+        </div>
+        
+        <p class="text-[10px] text-zinc-500 text-center">Мы свяжемся с вами в течение 10–15 минут для подтверждения брони</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Всплывающее уведомление (Toast) -->
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 border border-violet-500/40 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-violet-600/20 text-violet-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
+        <div id="toast-desc" class="text-xs text-zinc-400">Мастер свяжется с вами в ближайшее время.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Инициализация иконок Lucide
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Базовые тарифы для седана/хэтчбека
+    const basePrices = {
+      'tint-rear': 4500,
+      'windshield': 1500,
+      'polish': 5000,
+      'ppf': 8000,
+      'clean': 2000
+    };
+
+    // Коэффициенты по классам авто
+    const categoryMultipliers = {
+      sedan: 1.0,
+      crossover: 1.2,
+      suv: 1.35
+    };
+
+    const categoryNames = {
+      sedan: 'Седан / Хэтчбек',
+      crossover: 'Кроссовер',
+      suv: 'Внедорожник'
+    };
+
+    let currentCategory = 'sedan';
+
+    function selectCarCategory(category) {
+      currentCategory = category;
+
+      // Обновление кнопок категорий
+      document.querySelectorAll('.car-type-btn').forEach(btn => {
+        btn.classList.remove('bg-violet-600/15', 'border-violet-500', 'text-violet-300');
+        btn.classList.add('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const activeBtn = document.getElementById('car-btn-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+        activeBtn.classList.add('bg-violet-600/15', 'border-violet-500', 'text-violet-300');
+      }
+
+      updateIndividualPriceLabels();
+      calculateTotal();
+    }
+
+    function updateIndividualPriceLabels() {
+      const mult = categoryMultipliers[currentCategory];
+      for (const [key, basePrice] of Object.entries(basePrices)) {
+        const label = document.getElementById(`price-label-${key}`);
+        if (label) {
+          const calculated = Math.round(basePrice * mult);
+          label.innerHTML = `${calculated.toLocaleString('ru-RU')}&nbsp;₽`;
+        }
+      }
+    }
+
+    function calculateTotal() {
+      const mult = categoryMultipliers[currentCategory];
+      let total = 0;
+
+      if (document.getElementById('srv-tint-rear')?.checked) total += basePrices['tint-rear'] * mult;
+      if (document.getElementById('srv-windshield')?.checked) total += basePrices['windshield'] * mult;
+      if (document.getElementById('srv-polish')?.checked) total += basePrices['polish'] * mult;
+      if (document.getElementById('srv-ppf')?.checked) total += basePrices['ppf'] * mult;
+      if (document.getElementById('srv-clean')?.checked) total += basePrices['clean'] * mult;
+
+      const roundedTotal = Math.round(total);
+      const totalEl = document.getElementById('calc-grand-total');
+      if (totalEl) {
+        totalEl.innerHTML = `${roundedTotal.toLocaleString('ru-RU')}&nbsp;₽`;
+      }
+      return roundedTotal;
+    }
+
+    function getSelectedServicesList() {
+      const list = [];
+      if (document.getElementById('srv-tint-rear')?.checked) list.push('Тонировка задней полусферы');
+      if (document.getElementById('srv-windshield')?.checked) list.push('Тонировка лобового / полоса');
+      if (document.getElementById('srv-polish')?.checked) list.push('Восстановительная полировка');
+      if (document.getElementById('srv-ppf')?.checked) list.push('Бронепленка зон риска');
+      if (document.getElementById('srv-clean')?.checked) list.push('Детейлинг-химчистка');
+      return list;
+    }
+
+    function bookCalculatedTelegram() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+
+      let msg = `Здравствуйте, Дмитрий! Хочу записаться в студию «BlackBox» (ул. Егорова, 23):%0A`;
+      msg += `• Автомобиль: ${car}%0A`;
+      msg += `• Выбранные услуги: ${services.length ? services.join(', ') : 'Консультация по месту'}%0A`;
+      msg += `• Расчетная смета: ~${total.toLocaleString('ru-RU')} ₽.%0A`;
+      msg += `Подскажите свободное окно для записи?`;
+
+      window.open(`https://t.me/blackbox_detailing?text=${msg}`, '_blank');
+    }
+
+    function openModalWithCalculatedData() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const summary = `${car}: ${services.join(', ')} (~${total.toLocaleString('ru-RU')} ₽)`;
+      openModal(summary);
+    }
+
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Запись на Егорова, 23';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка принята!', 'Мастер студии BlackBox свяжется с вами в течение 10 минут.');
+    }
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('translate-y-4'), 10);
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 4000);
+      }
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Адрес скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

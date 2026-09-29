@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAX Detailing • Авторский детейлинг кузова в Сызрани | Мастер Максим</title>
+  <meta name="description" content="Авторская полировка кузова, премиальная керамика 9H и жидкое стекло в Сызрани. Мастер Максим. Юго-Западный район, 5-й микрорайон. Телефон: +7 (987) 448-69-00.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            sapphire: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#082f49',
+              glow: '#38bdf8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Геометрическая сетка в эстетике студии полировки */
+    .bg-tech-grid {
+      background-size: 38px 38px;
+      background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+    }
+    /* Сапфирово-кобальтовое радиальное свечение */
+    .radial-sapphire-glow {
+      background: radial-gradient(circle at 50% -15%, rgba(14, 165, 233, 0.18) 0%, rgba(2, 132, 199, 0.06) 45%, transparent 75%);
+    }
+    .glass-panel {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.92) 0%, rgba(9, 9, 11, 0.98) 100%);
+    }
+    /* Кастомный гладкий скроллбар */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+  </style>
+</head>
+<body class="bg-[#09090b] text-zinc-100 font-sans antialiased selection:bg-sky-500 selection:text-black min-h-screen relative pb-20 md:pb-0">
+
+  <div class="fixed inset-0 bg-tech-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[640px] radial-sapphire-glow pointer-events-none z-0"></div>
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#09090b]/90 border-b border-zinc-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-10">
+
+      <!-- Логотип «MAX Detailing • Сызрань» -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-sky-400 via-sky-500 to-blue-700 flex items-center justify-center text-black font-black shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform border border-sky-300/40">
+          <i data-lucide="sparkles" class="w-6 h-6 stroke-[2.3]"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2 leading-tight mb-1">
+            <span class="text-base sm:text-lg font-black tracking-wider uppercase font-mono text-white">
+              MAX <span class="text-sky-400">DETAILING</span>
+            </span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-sky-500/15 text-sky-300 border border-sky-500/30 font-sans font-bold tracking-widest uppercase">СЫЗРАНЬ</span>
+          </div>
+          <span class="text-[9px] tracking-wider uppercase text-zinc-400 font-medium">Авторский детейлинг &bull; Юго-Западный р-н, 5-й мкр</span>
+        </div>
+      </a>
+
+      <!-- Бейдж локации и статуса на десктопе -->
+      <div class="hidden lg:flex items-center gap-5 text-xs text-zinc-300">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Прием по записи &bull; 5-й микрорайон</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-sky-400"></i>
+          <span>Мастер Максим: личный контроль</span>
+        </div>
+      </div>
+
+      <!-- Контакты и связь в шапке -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/79874486900" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-950/40 hover:bg-emerald-900/40 text-emerald-300 border border-emerald-500/40 text-xs font-semibold transition-all">
+          <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a href="tel:+79874486900" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-sky-300 border border-sky-500/30 font-semibold text-xs sm:text-sm transition-all hover:border-sky-400 shadow-sm">
+          <i data-lucide="phone-call" class="w-4 h-4 text-sky-400"></i>
+          <span class="hidden md:inline whitespace-nowrap">+7 (987) 448-69-00</span>
+          <span class="md:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-14 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Левая колонка: Оффер студии Максима -->
+        <div class="lg:col-span-6 space-y-6">
+
+          <!-- Бейджи доверия -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs sm:text-sm font-medium">
+              <span class="flex items-center text-sky-400">
+                <i data-lucide="star" class="w-4 h-4 fill-sky-400 mr-1"></i>
+                <strong class="font-bold">★ 4.3 на Яндекс Картах</strong>
+              </span>
+              <span class="text-zinc-600">&bull;</span>
+              <span class="text-zinc-300">Сызрань</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-sky-400"></i>
+              <span>Работа на результат без спешки</span>
+            </div>
+          </div>
+
+          <!-- Главный заголовок -->
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Авторская полировка и керамическая защита кузова <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-blue-500">в Сызрани</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base text-zinc-400 leading-relaxed max-w-xl">
+            Глубокое восстановление цвета, удаление царапин и паутинки, нанесение премиальной нанокерамики от мастера Максима. Безупречный зеркальный блеск вашего авто без голограмм и пробития лака.
+          </p>
+
+          <!-- Быстрые тезисы -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="sun-medium" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span>Без голограмм</span>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="shield" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span>Керамика 9H в 2 слоя</span>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="user-check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span>Индивидуальный подход</span>
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 via-sky-400 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-sky-500/25 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-black"></i>
+              <span>Рассчитать стоимость ухода</span>
+            </button>
+            <button onclick="openModal('Быстрая запись к мастеру Максиму')" class="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-sky-400"></i>
+              <span>Забронировать бокс</span>
+            </button>
+          </div>
+
+        </div>
+
+        <div id="calculator-section" class="lg:col-span-6">
+          <div class="p-6 sm:p-7 rounded-2xl glass-panel border border-zinc-800 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-sky-400 font-bold">MAX Detailing • Калькулятор</div>
+                <h3 class="text-lg font-bold text-white">Расчет детейлинга кузова</h3>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400">
+                <i data-lucide="sliders" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Класс автомобиля -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                1. Выберите класс автомобиля:
+              </label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-sky-500/15 border-sky-500 text-sky-300">
+                  <i data-lucide="car" class="w-4 h-4"></i>
+                  <span>Седан / Хэтчбек</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="car-front" class="w-4 h-4"></i>
+                  <span>Кроссовер</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="truck" class="w-4 h-4"></i>
+                  <span>Внедорожник</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Шаг 2: Услуги студии -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                2. Выберите услуги для кузова:
+              </label>
+              <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+
+                <!-- Услуга 1: Мягкая восстановительная полировка -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-softpolish" onchange="calculateTotal()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-sky-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Мягкая восстановительная полировка</div>
+                      <div class="text-[10px] text-zinc-400">Устранение паутинки, усиление блеска и глубины цвета без снятия лака</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-softpolish" class="text-xs font-mono font-bold text-sky-400 whitespace-nowrap shrink-0">7&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 2: Глубокая абразивная полировка кузова -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-deeppolish" onchange="calculateTotal()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-sky-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Глубокая абразивная полировка</div>
+                      <div class="text-[10px] text-zinc-400">Удаление до 95% видимых царапин, следов веток и притертостей</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-deeppolish" class="text-xs font-mono font-bold text-sky-400 whitespace-nowrap shrink-0">11&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 3: Защитное покрытие «Жидкое стекло» -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-liquidglass" onchange="calculateTotal()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-sky-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Покрытие «Жидкое стекло»</div>
+                      <div class="text-[10px] text-zinc-400">Яркий гидрофобный эффект, зеркальный мокрый глянец на срок до 1 года</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-liquidglass" class="text-xs font-mono font-bold text-sky-400 whitespace-nowrap shrink-0">6&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 4: Премиальная керамика 9H в 2 слоя -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-ceramic" onchange="calculateTotal()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-sky-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Премиальная керамика 9H в 2 слоя</div>
+                      <div class="text-[10px] text-zinc-400">Максимальная твердость, защита от УФ, птичьего помета, реагентов и солей</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-ceramic" class="text-xs font-mono font-bold text-sky-400 whitespace-nowrap shrink-0">14&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 5: Антидождь на все стекла (Aquapel) -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-aquapel" onchange="calculateTotal()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-sky-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Антидождь на все стекла (Aquapel)</div>
+                      <div class="text-[10px] text-zinc-400">Капли слетают на скорости 60 км/ч, комфорт и безопасность в ливень</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-aquapel" class="text-xs font-mono font-bold text-sky-400 whitespace-nowrap shrink-0">2&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 6: Предпродажная детейлинг-подготовка кузова -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-prep" onchange="calculateTotal()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-sky-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Предпродажная детейлинг-подготовка</div>
+                      <div class="text-[10px] text-zinc-400">Глянцевая полировка, маскировка дефектов и консервация блеска</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-prep" class="text-xs font-mono font-bold text-sky-400 whitespace-nowrap shrink-0">9&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Итоговая смета и кнопки -->
+            <div class="pt-3 border-t border-zinc-800">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-zinc-400 block font-semibold">Ориентировочная сумма:</span>
+                  <span class="text-[11px] text-zinc-500">Прайс мастера Максима (Сызрань)</span>
+                </div>
+                <div class="text-right whitespace-nowrap shrink-0">
+                  <span id="calc-grand-total" class="text-3xl font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">7&nbsp;000&nbsp;₽</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a href="https://wa.me/79874486900" id="calc-whatsapp-btn" target="_blank" rel="noopener noreferrer" class="py-3 px-3 rounded-xl bg-emerald-950/60 border border-emerald-500/50 hover:bg-emerald-900/50 text-emerald-300 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2 shadow-sm">
+                  <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                  <span>Обсудить в WhatsApp</span>
+                </a>
+                <button onclick="openModalWithCalculatedData()" class="py-3 px-3 rounded-xl bg-gradient-to-r from-sky-500 via-sky-400 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-sky-500/25 active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="calendar-check" class="w-4 h-4 text-black"></i>
+                  <span>Обсудить с Максимом</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-y border-zinc-800 bg-[#0c1017]/80 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-sky-400 font-mono font-bold mb-2">Принципы работы MAX Detailing</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Преимущества авторского подхода</h2>
+          </div>
+          <p class="text-sm text-zinc-400 mt-2 md:mt-0">Сызрань &bull; Юго-Западный р-н, 5-й микрорайон &bull; Индивидуальный уход</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Блок 1 -->
+          <div class="p-6 rounded-2xl bg-[#111726] border border-sky-500/30 flex flex-col justify-between group shadow-lg shadow-sky-500/5 hover:border-sky-400 transition-all">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-sky-950/60 border border-sky-500/40 flex items-center justify-center text-sky-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="user-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Личный контроль Максима</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Каждый сантиметр ЛКП полируется лично мастером. Никаких случайных учеников или конвейерной спешки — только аккуратная ручная работа.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-sky-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> 100% ответственность мастера
+            </div>
+          </div>
+
+          <!-- Блок 2 -->
+          <div class="p-6 rounded-2xl bg-[#111726] border border-zinc-800 hover:border-sky-400/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="gauge" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Удаление до 95% дефектов</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Точный замер толщины лакокрасочного покрытия толщиномером. Максимальный срез царапин и рисок при сохранении заводского слоя лака.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Бережное сохранение ЛКП
+            </div>
+          </div>
+
+          <!-- Блок 3 -->
+          <div class="p-6 rounded-2xl bg-[#111726] border border-zinc-800 hover:border-sky-400/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="lightbulb" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Свет Scangrip</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Профессиональные колор-чекеры и рассеянное световое поле исключают голограммы. Результат виден на солнце в точности так же, как в студии.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Чистый зеркальный глянец
+            </div>
+          </div>
+
+          <!-- Блок 4 -->
+          <div class="p-6 rounded-2xl bg-[#111726] border border-zinc-800 hover:border-sky-400/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Стойкость гидрофоба</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Используются оригинальные составы нанокерамики и жидкого стекла. Кузов защищен от реагентов, выгорания на солнце и легко моется.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Гарантия блеска и защиты
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-sky-400 font-mono font-bold mb-2">Прайс-лист услуг</div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Ключевые комплексы детейлинга</h2>
+        </div>
+        <p class="text-sm text-zinc-400 mt-2 md:mt-0">Фиксация стоимости до начала полировочных работ</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Карточка 1: Мягкая восстановительная полировка -->
+        <div class="p-6 rounded-2xl bg-[#0f141f] border border-zinc-800 hover:border-sky-500/60 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <i data-lucide="sparkle" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">1 день</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Восстановительная полировка</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Мягкая полировка пастами премиум-сегмента. Убирает паутинку от частых моек, усиливает глубину цвета и насыщает глянец.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+            <span class="text-xs text-zinc-500">Стоимость:</span>
+            <div class="text-right whitespace-nowrap shrink-0">
+              <span class="text-sm text-zinc-400 font-medium">от </span>
+              <span class="text-lg font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">7&nbsp;000&nbsp;₽</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2: Глубокая абразивная полировка -->
+        <div class="p-6 rounded-2xl bg-[#0f141f] border border-sky-500/40 shadow-lg shadow-sky-500/5 hover:border-sky-400 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-500/40 flex items-center justify-center text-sky-400">
+                <i data-lucide="gem" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[11px] font-mono text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded border border-sky-500/20">Хит сезона</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Глубокая абразивная полировка</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Многостадийная коррекция лака (ротор + эксцентрик). Полное устранение эксплуатационных рисок, притиров и помутнений лака.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+            <span class="text-xs text-zinc-500">Стоимость:</span>
+            <div class="text-right whitespace-nowrap shrink-0">
+              <span class="text-sm text-zinc-400 font-medium">от </span>
+              <span class="text-lg font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">11&nbsp;000&nbsp;₽</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 3: Защитное покрытие «Жидкое стекло» -->
+        <div class="p-6 rounded-2xl bg-[#0f141f] border border-zinc-800 hover:border-sky-500/60 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <i data-lucide="droplets" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">до 12 мес.</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Покрытие «Жидкое стекло»</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Создает гладкий кремнийорганический щит, благодаря которому пыль и дорожная грязь не въедаются в поры лака автомобиля.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+            <span class="text-xs text-zinc-500">Стоимость:</span>
+            <div class="text-right whitespace-nowrap shrink-0">
+              <span class="text-sm text-zinc-400 font-medium">от </span>
+              <span class="text-lg font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">6&nbsp;000&nbsp;₽</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 4: Премиальная нанокерамика 9H -->
+        <div class="p-6 rounded-2xl bg-[#0f141f] border border-zinc-800 hover:border-sky-500/60 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">2-3 года</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Нанокерамика 9H (в 2 слоя)</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Профессиональное запекание под инфракрасными сушками. Максимальная прочность, антистатический эффект и мощнейший гидрофоб.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+            <span class="text-xs text-zinc-500">Стоимость:</span>
+            <div class="text-right whitespace-nowrap shrink-0">
+              <span class="text-sm text-zinc-400 font-medium">от </span>
+              <span class="text-lg font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">14&nbsp;000&nbsp;₽</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 5: Антидождь Aquapel -->
+        <div class="p-6 rounded-2xl bg-[#0f141f] border border-zinc-800 hover:border-sky-500/60 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <i data-lucide="cloud-rain" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">Все стекла</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Антидождь на все стекла</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Оригинальный состав Aquapel. Вода и жидкая дорожная грязь мгновенно скатываются шариками, продлевая ресурс щеток стеклоочистителя.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+            <span class="text-xs text-zinc-500">Стоимость:</span>
+            <div class="text-right whitespace-nowrap shrink-0">
+              <span class="text-sm text-zinc-400 font-medium">от </span>
+              <span class="text-lg font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">2&nbsp;500&nbsp;₽</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 6: Предпродажная подготовка кузова -->
+        <div class="p-6 rounded-2xl bg-[#0f141f] border border-zinc-800 hover:border-sky-500/60 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <i data-lucide="check-circle" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">Комплекс</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Предпродажный детейлинг</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Комплекс быстрых и эффективных процедур: полировка кузова, чернение резины, очистка хрома и нанесение состава для сочного блеска.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+            <span class="text-xs text-zinc-500">Стоимость:</span>
+            <div class="text-right whitespace-nowrap shrink-0">
+              <span class="text-sm text-zinc-400 font-medium">от </span>
+              <span class="text-lg font-extrabold font-mono text-sky-400 whitespace-nowrap shrink-0">9&nbsp;000&nbsp;₽</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-t border-zinc-800 bg-[#0a0d14] py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-sky-400 font-mono font-bold mb-1">Репутация мастера</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Отзывы клиентов на Яндекс Картах</h2>
+          </div>
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800">
+            <div class="flex text-sky-400">
+              <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+              <i data-lucide="star-half" class="w-4 h-4 fill-sky-400"></i>
+            </div>
+            <span class="text-sm font-bold text-white">4.3</span>
+            <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">Яндекс Карты &bull; Сызрань</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Отзыв 1: Максим Тимохин -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#0f1422] border border-sky-500/30 flex flex-col justify-between hover:border-sky-400 transition-colors shadow-lg shadow-sky-500/5">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-sky-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">Проверенный отзыв</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+                «Выполнили глубокую полировку с нанесением керамики и жидкого стекла! Кузов преобразился! Спасибо Максиму за организованность и отличное выполнение работы!»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+              <div>
+                <span class="font-bold text-white block">Максим Тимохин</span>
+                <span class="text-[11px] text-zinc-500">Автолюбитель</span>
+              </div>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-400"></i> Яндекс Карты
+              </span>
+            </div>
+          </div>
+
+          <!-- Отзыв 2: Игорь Зарков -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#0f1422] border border-zinc-800 flex flex-col justify-between hover:border-sky-400/50 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-sky-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">Постоянный клиент</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+                «Рекомендую его. Настоящий спец! После него машина — сверкающий конь. Парень отлично знает свое дело!»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+              <div>
+                <span class="font-bold text-white block">Игорь Зарков</span>
+                <span class="text-[11px] text-zinc-500">Владелец авто</span>
+              </div>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-400"></i> Яндекс Карты
+              </span>
+            </div>
+          </div>
+
+          <!-- Отзыв 3: Алексей Шилов -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#0f1422] border border-zinc-800 flex flex-col justify-between hover:border-sky-400/50 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-sky-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-sky-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">Знаток города</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+                «Максим кудесник! Эффект обалденный. Делал полировку кузова и керамику, результат превзошел ожидания.»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+              <div>
+                <span class="font-bold text-white block">Алексей Шилов</span>
+                <span class="text-[11px] text-zinc-500">Посетитель студии</span>
+              </div>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-400"></i> Яндекс Карты
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-zinc-800 bg-[#080a0f] py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Карточка контактов мастера -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-[#0e131d] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-sky-400 font-mono font-bold mb-2">Локация студии</div>
+            <h2 class="text-2xl font-extrabold text-white mb-6">MAX Detailing</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Адрес бокса</span>
+                  <span class="text-base text-zinc-100 font-medium">Самарская область, г. Сызрань, Юго-Западный район, 5-й микрорайон</span>
+                  <span class="text-xs text-zinc-500 block mt-0.5">Удобный подъезд, охраняемая закрытая территория</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">График работы</span>
+                  <span class="text-base text-zinc-100 font-medium">По предварительной записи</span>
+                  <span class="text-xs text-sky-400 block mt-0.5">Личная консультация и осмотр ЛКП</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-sky-400 shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Прямой телефон мастера</span>
+                  <a href="tel:+79874486900" class="text-lg text-sky-400 font-mono font-bold hover:underline block whitespace-nowrap">
+                    +7 (987) 448-69-00
+                  </a>
+                  <span class="text-xs text-zinc-500">Мастер Максим</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Кнопки звонка и мессенджеров -->
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <span class="text-xs text-zinc-400 uppercase font-mono block mb-3">Связаться напрямую с Максимом:</span>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="https://wa.me/79874486900" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 hover:bg-emerald-900/40 text-emerald-300 flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="tel:+79874486900" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-sky-400/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-sky-400"></i>
+                  <span>Позвонить</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Схема проезда и ориентиры -->
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#0e131d] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-sky-400 font-mono font-bold mb-2">Навигация</div>
+            <h3 class="text-2xl font-extrabold text-white mb-6">Как проехать в студию MAX Detailing</h3>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-sky-400 w-8 h-8 rounded-lg bg-sky-400/10 flex items-center justify-center shrink-0">1</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Заезд в 5-й микрорайон</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Ориентируйтесь на Юго-Западный район Сызрани. Асфальтированный подъезд прямо к воротам бокса.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-sky-400 w-8 h-8 rounded-lg bg-sky-400/10 flex items-center justify-center shrink-0">2</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Личный осмотр с толщиномером</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Максим проводит дефектовку ЛКП под лампами Scangrip и подбирает связку паст под ваш лак.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-sky-400 w-8 h-8 rounded-lg bg-sky-400/10 flex items-center justify-center shrink-0">3</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Выдача готового авто</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Вы получаете автомобиль с идеальным гидрофобом, зеркальным глянцем и рекомендациями по правильному уходу.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Копирование ориентира адреса -->
+            <div class="mt-8 pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-zinc-400">
+                Адрес: <span class="text-zinc-200">г. Сызрань, Юго-Западный р-н, 5-й микрорайон</span>
+              </div>
+              <button onclick="copyAddress('Самарская область, Сызрань, Юго-Западный район, 5-й микрорайон')" class="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Скопировать адрес для навигатора</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-zinc-800 bg-[#07080c] text-zinc-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-400">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-200 uppercase tracking-wider font-mono">MAX Detailing &bull; Мастер Максим</span>
+          <p class="text-[11px] text-zinc-500">Полировка, керамика 9H и жидкое стекло &bull; Сызрань, 5-й мкр</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-zinc-500 space-y-1">
+        <div>Информация носит ознакомительный характер и не является публичной офертой.</div>
+        <div>&copy; 2026 MAX Detailing. Безупречный зеркальный блеск вашего авто.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#09090b]/95 backdrop-blur-md border-t border-zinc-800 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79874486900" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-sky-500 via-sky-400 to-blue-600 text-black font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-sky-500/25 active:scale-95">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Позвонить Максиму</span>
+    </a>
+    <a href="https://wa.me/79874486900" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-3 rounded-xl bg-emerald-950 border border-emerald-500/50 text-emerald-300 font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
+      <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+      <span>Написать в WhatsApp</span>
+    </a>
+  </aside>
+
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-[#0f1422] border border-zinc-800 p-6 sm:p-7 shadow-2xl">
+
+      <!-- Кнопка закрытия -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-sky-400 font-mono font-bold">MAX Detailing • Сызрань</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Запись к мастеру Максиму</h3>
+        <p class="text-xs text-zinc-400 mt-1">Оставьте контакты — Максим лично свяжется с вами для согласования даты</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Максим" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-sky-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (987) 448-69-00" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-sky-500 focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Автомобиль и задачи</label>
+          <input type="text" id="modal-notes" placeholder="Например: Toyota Camry, полировка и керамика 9H" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-sky-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-sky-500 via-sky-400 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-sky-500/25 active:scale-95">
+            Подтвердить бронирование
+          </button>
+        </div>
+
+        <p class="text-[10px] text-zinc-500 text-center">Прямая связь с мастером без посредников</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 border border-sky-500/40 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
+        <div id="toast-desc" class="text-xs text-zinc-400">Максим свяжется с вами для уточнения деталей.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Базовые тарифы для седана/хэтчбека
+    const basePrices = {
+      'softpolish': 7000,
+      'deeppolish': 11000,
+      'liquidglass': 6000,
+      'ceramic': 14000,
+      'aquapel': 2500,
+      'prep': 9000
+    };
+
+    // Коэффициенты по классам авто
+    const categoryMultipliers = {
+      sedan: 1.0,
+      crossover: 1.25,
+      suv: 1.45
+    };
+
+    const categoryNames = {
+      sedan: 'Седан / Хэтчбек',
+      crossover: 'Кроссовер',
+      suv: 'Внедорожник'
+    };
+
+    let currentCategory = 'sedan';
+
+    function selectCarCategory(category) {
+      currentCategory = category;
+
+      document.querySelectorAll('.car-type-btn').forEach(btn => {
+        btn.classList.remove('bg-sky-500/15', 'border-sky-500', 'text-sky-300');
+        btn.classList.add('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const activeBtn = document.getElementById('car-btn-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+        activeBtn.classList.add('bg-sky-500/15', 'border-sky-500', 'text-sky-300');
+      }
+
+      updateIndividualPriceLabels();
+      calculateTotal();
+    }
+
+    function updateIndividualPriceLabels() {
+      const mult = categoryMultipliers[currentCategory];
+      for (const [key, basePrice] of Object.entries(basePrices)) {
+        const label = document.getElementById(`price-label-${key}`);
+        if (label) {
+          const calculated = Math.round(basePrice * mult);
+          label.innerHTML = `${calculated.toLocaleString('ru-RU')}&nbsp;₽`;
+        }
+      }
+    }
+
+    function calculateTotal() {
+      const mult = categoryMultipliers[currentCategory];
+      let total = 0;
+
+      if (document.getElementById('srv-softpolish')?.checked) total += basePrices['softpolish'] * mult;
+      if (document.getElementById('srv-deeppolish')?.checked) total += basePrices['deeppolish'] * mult;
+      if (document.getElementById('srv-liquidglass')?.checked) total += basePrices['liquidglass'] * mult;
+      if (document.getElementById('srv-ceramic')?.checked) total += basePrices['ceramic'] * mult;
+      if (document.getElementById('srv-aquapel')?.checked) total += basePrices['aquapel'] * mult;
+      if (document.getElementById('srv-prep')?.checked) total += basePrices['prep'] * mult;
+
+      const roundedTotal = Math.round(total);
+      const totalEl = document.getElementById('calc-grand-total');
+      if (totalEl) {
+        totalEl.innerHTML = `${roundedTotal.toLocaleString('ru-RU')}&nbsp;₽`;
+      }
+
+      updateWhatsAppLink(roundedTotal);
+      return roundedTotal;
+    }
+
+    function getSelectedServicesList() {
+      const list = [];
+      if (document.getElementById('srv-softpolish')?.checked) list.push('Восстановительная полировка');
+      if (document.getElementById('srv-deeppolish')?.checked) list.push('Глубокая абразивная полировка');
+      if (document.getElementById('srv-liquidglass')?.checked) list.push('Жидкое стекло');
+      if (document.getElementById('srv-ceramic')?.checked) list.push('Керамика 9H (2 слоя)');
+      if (document.getElementById('srv-aquapel')?.checked) list.push('Антидождь Aquapel');
+      if (document.getElementById('srv-prep')?.checked) list.push('Предпродажная подготовка');
+      return list;
+    }
+
+    function updateWhatsAppLink(total) {
+      const btn = document.getElementById('calc-whatsapp-btn');
+      if (!btn) return;
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const text = encodeURIComponent(`Здравствуйте, Максим! Хочу записаться на детейлинг в MAX Detailing (Сызрань).\nКузов: ${car}\nВыбранные услуги: ${services.join(', ') || 'Консультация'}\nОриентировочная стоимость: ${total.toLocaleString('ru-RU')} ₽.`);
+      btn.href = `https://wa.me/79874486900?text=${text}`;
+    }
+
+    function openModalWithCalculatedData() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const summary = `${car}: ${services.join(', ')} (~${total.toLocaleString('ru-RU')} ₽)`;
+      openModal(summary);
+    }
+
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Запись к мастеру Максиму';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка принята!', 'Максим свяжется с вами в течение короткого времени.');
+    }
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('translate-y-4'), 10);
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 4000);
+      }
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Ориентир скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

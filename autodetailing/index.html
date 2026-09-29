@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoDetailing • Щепетильный детейлинг и вечерняя мойка в Сызрани | ул. Ленина, 30</title>
+  <meta name="description" content="Щепетильный детейлинг, деликатная мойка двигателя диэлектриком, химчистка и полировка в центре Сызрани. Ул. Ленина, 30. Работаем ежедневно с 16:00 до 00:00. Телефон: +7 (924) 232-69-97.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            violet: {
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+            },
+            purple: {
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+            },
+            indigo: {
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Тонкая геометрическая сетка детейлинг-бокса */
+    .bg-tech-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+    }
+    /* Благородное вечернее неоновое свечение */
+    .radial-violet-glow {
+      background: radial-gradient(circle at 50% -8%, rgba(139, 92, 246, 0.20) 0%, rgba(99, 102, 241, 0.07) 45%, transparent 75%);
+    }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(20, 18, 30, 0.85) 0%, rgba(13, 12, 20, 0.95) 100%);
+    }
+    /* Кастомный гладкий скроллбар */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0f;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #272738;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8b5cf6;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0f] text-zinc-100 font-sans antialiased selection:bg-violet-600 selection:text-white min-h-screen relative pb-20 md:pb-0">
+
+  <!-- Декоративные фоновые подложки -->
+  <div class="fixed inset-0 bg-tech-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[640px] radial-violet-glow pointer-events-none z-0"></div>
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0a0a0f]/90 border-b border-zinc-800/80 transition-all pt-5 pb-3 sm:py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] sm:h-20 flex items-center justify-between relative z-10">
+
+      <!-- Логотип «AutoDetailing • Syzran» -->
+      <a href="#" class="flex items-center gap-3 group py-1">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-violet-500 via-purple-600 to-indigo-700 flex items-center justify-center text-white font-black shadow-lg shadow-violet-600/30 group-hover:scale-105 transition-transform border border-violet-400/30 shrink-0">
+          <i data-lucide="sparkles" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.3]"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5 sm:gap-2 leading-tight mb-1">
+            <span class="text-sm sm:text-base md:text-lg font-black tracking-wider uppercase font-mono text-white">
+              AUTO<span class="text-violet-400">DETAILING</span>
+            </span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-violet-500/15 text-violet-300 border border-violet-500/30 font-sans font-bold tracking-widest uppercase">SYZRAN</span>
+          </div>
+          <span class="text-[10px] tracking-wider uppercase text-zinc-400 font-medium line-clamp-1 sm:line-clamp-none">Вечерний детейлинг & мойка • ул. Ленина, 30</span>
+        </div>
+      </a>
+
+      <!-- Бейдж вечернего графика и статус на десктопе -->
+      <div class="hidden lg:flex items-center gap-5 text-xs text-zinc-300">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
+          </span>
+          <span class="font-medium text-zinc-200">Вечерний приём: 16:00 &ndash; 00:00 ежедневно</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-violet-400"></i>
+          <span>Центр города • ул. Ленина, 30</span>
+        </div>
+      </div>
+
+      <!-- Контакты и кнопка звонка в шапке -->
+      <div class="flex items-center gap-3">
+        <button onclick="openModal('Быстрая консультация по вечернему визиту')" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 text-xs font-semibold transition-all">
+          <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i>
+          <span>Записаться</span>
+        </button>
+        <a href="tel:+79242326997" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-extrabold text-xs sm:text-sm transition-all shadow-md shadow-violet-600/30 active:scale-95 whitespace-nowrap shrink-0">
+          <i data-lucide="phone-call" class="w-4 h-4 text-white"></i>
+          <span class="hidden md:inline whitespace-nowrap shrink-0">+7 (924) 232-69-97</span>
+          <span class="md:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 lg:pt-12 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Левая колонка: УТП студии «AutoDetailing» -->
+        <div class="lg:col-span-6 space-y-6">
+
+          <!-- Бейджи доверия и режима работы -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs sm:text-sm font-medium">
+              <span class="flex items-center text-violet-400 font-bold">
+                <i data-lucide="moon" class="w-4 h-4 mr-1"></i>
+                Вечерний график 16:00&ndash;00:00
+              </span>
+              <span class="text-zinc-600">&bull;</span>
+              <span class="text-zinc-300">Сызрань</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-violet-400"></i>
+              <span>Центр города (ул. Ленина)</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-400"></i>
+              <span>Щепетильный подход</span>
+            </div>
+          </div>
+
+          <!-- Главный заголовок -->
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Щепетильный детейлинг и вечерняя мойка <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-300 to-indigo-400">в центре Сызрани</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base text-zinc-400 leading-relaxed max-w-xl">
+            Идеальный уход за автомобилем на ул. Ленина, 30. Работаем с 16:00 до 00:00 &mdash; сдайте авто после работы и заберите в состоянии нового, без дневной спешки и очередей.
+          </p>
+
+          <!-- Быстрые факты -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Диэлектрик для ДВС</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="brush" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Промывка швов кистями</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Приём до полуночи</span>
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-violet-600/25 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-white"></i>
+              <span>Рассчитать стоимость</span>
+            </button>
+            <button onclick="openModal('Бронирование бокса на вечер (ул. Ленина, 30)')" class="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i>
+              <span>Забронировать бокс</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Правая колонка: Интерактивный калькулятор комплекса «AutoDetailing» -->
+        <div id="calculator-section" class="lg:col-span-6">
+          <div class="p-6 sm:p-7 rounded-2xl glass-card border border-zinc-800 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-violet-400 font-bold">AutoDetailing • Калькулятор услуг</div>
+                <h3 class="text-lg font-bold text-white">Расчет стоимости ухода и мойки</h3>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                <i data-lucide="sliders" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Выбор класса авто -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                1. Выберите категорию автомобиля:
+              </label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-violet-500/15 border-violet-500 text-violet-300">
+                  <i data-lucide="car" class="w-4 h-4"></i>
+                  <span>Седан / Хэтчбек</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="car-front" class="w-4 h-4"></i>
+                  <span>Кроссовер</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="truck" class="w-4 h-4"></i>
+                  <span>Внедорожник / Премиум</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                2. Выберите необходимые услуги:
+              </label>
+              <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+
+                <!-- Услуга 1: Бережная 2-х и 3-х фазная мойка кузова -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-wash" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Бережная 2-х и 3-х фазная мойка кузова</div>
+                      <div class="text-[10px] text-zinc-400">Ручная фаза пористыми губками, промывка шильдиков кистями, турбосушка</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-wash" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">800&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 2: Деликатная мойка подкапотного пространства диэлектриком -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-engine" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Деликатная мойка двигателя диэлектриком</div>
+                      <div class="text-[10px] text-zinc-400">Безопасный диэлектрический состав, очистка кистями и консервация проводки</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-engine" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">1&nbsp;600&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 3: Глубокая очистка дисков и консервация резины -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-wheels" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Глубокая очистка дисков и консервация резины</div>
+                      <div class="text-[10px] text-zinc-400">Удаление металлической тормозной пыли, очистка полок и шелковистый мат шин</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-wheels" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">1&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 4: Комплексная детейлинг-химчистка салона -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-dryclean" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Комплексная детейлинг-химчистка салона</div>
+                      <div class="text-[10px] text-zinc-400">Экстракторная чистка сидений, ковролина, деликатный уход за кожей и сушка</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-dryclean" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">4&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 5: Мягкая восстановительная полировка кузова -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-polish" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Мягкая восстановительная полировка кузова</div>
+                      <div class="text-[10px] text-zinc-400">Устранение паутинки, возвращение глубокого сочного глянца без съема лака</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-polish" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">6&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 6: Гидрофобное покрытие кузова и стекол «Антидождь» -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-coating" onchange="calculateTotal()" class="w-4 h-4 rounded text-violet-600 focus:ring-violet-500 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-violet-600">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Гидрофобное покрытие кузова и «Антидождь»</div>
+                      <div class="text-[10px] text-zinc-400">Мощный сброс капель воды, защита от грязи и реагентов на скорости от 60 км/ч</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-coating" class="text-xs font-mono font-bold text-violet-400 whitespace-nowrap shrink-0">1&nbsp;800&nbsp;₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Итоговая смета и кнопки калькулятора -->
+            <div class="pt-3 border-t border-zinc-800">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-zinc-400 block font-semibold">Ориентировочная сумма:</span>
+                  <span class="text-[11px] text-zinc-500">Прайс студии «AutoDetailing» (ул. Ленина, 30)</span>
+                </div>
+                <div class="text-right whitespace-nowrap shrink-0">
+                  <span id="calc-grand-total" class="text-3xl font-extrabold font-mono text-violet-400 whitespace-nowrap shrink-0">800&nbsp;₽</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a href="tel:+79242326997" class="py-3 px-3 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-violet-500 text-zinc-200 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2 shadow-sm whitespace-nowrap shrink-0">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-violet-400"></i>
+                  <span>Позвонить</span>
+                </a>
+                <button onclick="openModalWithCalculatedData()" class="py-3 px-3 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-violet-600/25 active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-white"></i>
+                  <span>Забронировать бокс</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-y border-zinc-800 bg-[#0d0d14]/80 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-2">Стандарты студии «AutoDetailing»</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Почему выбирают наш вечерний сервис</h2>
+          </div>
+          <p class="text-sm text-zinc-400 mt-2 md:mt-0">Сызрань &bull; ул. Ленина, 30 &bull; Вечерний график 16:00&ndash;00:00</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Преимущество 1: Удобный вечерний график -->
+          <div class="p-6 rounded-2xl bg-[#13121d] border border-violet-500/30 flex flex-col justify-between group shadow-lg shadow-violet-600/5 hover:border-violet-500 transition-all">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-violet-950/50 border border-violet-500/40 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="moon" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Работаем до полуночи</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Специальный вечерний график с 16:00 до 00:00. Вам не нужно отпрашиваться с работы или стоять в пробках &mdash; сдайте авто вечером и заберите обновлённым.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-violet-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> Без очередей и дневной суеты
+            </div>
+          </div>
+
+          <!-- Преимущество 2: Щепетильность к деталям -->
+          <div class="p-6 rounded-2xl bg-[#13121d] border border-zinc-800 hover:border-violet-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="brush" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Щепетильность к мелочам</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Тщательная проработка каждого элемента: решётки радиатора, дверные проёмы, шильдики и стыки кузова вычищаются деликатными кистями из кабаньей щетины.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Внимание к каждому стыку
+            </div>
+          </div>
+
+          <!-- Преимущество 3: Безопасная мойка двигателя -->
+          <div class="p-6 rounded-2xl bg-[#13121d] border border-zinc-800 hover:border-violet-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Диэлектрик для ДВС</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Мойка подкапотного пространства специализированными диэлектрическими гелями исключает замыкание датчиков, проводки и блока управления. Консервация матовым лаком.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Безопасность проводки
+            </div>
+          </div>
+
+          <!-- Преимущество 4: Локация в самом центре города -->
+          <div class="p-6 rounded-2xl bg-[#13121d] border border-zinc-800 hover:border-violet-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 mb-4 group-hover:scale-105 transition-transform">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Центр Сызрани</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Студия расположена на ул. Ленина, 30. Удобная транспортная развязка, асфальтированный заезд и охраняемая прилегающая территория в самом сердце города.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-violet-400"></i> Удобный вечерний заезд
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Социальное доказательство: реальный отзыв с Яндекс Карт -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 max-w-4xl mx-auto">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-1">Репутация студии детейлинга</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Отзывы клиентов на Яндекс Картах</h2>
+        </div>
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 self-start sm:self-auto">
+          <div class="flex text-violet-400">
+            <i data-lucide="star" class="w-4 h-4 fill-violet-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-violet-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-violet-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-violet-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-violet-400"></i>
+          </div>
+          <span class="text-sm font-bold text-white">5.0</span>
+          <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">Яндекс Карты &bull; Сызрань</span>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+
+        <!-- Единственная аутентичная карточка отзыва: Серафим Л. -->
+        <div class="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-[#151323] via-[#12111d] to-[#0e0d17] border border-violet-500/35 relative overflow-hidden shadow-2xl shadow-violet-950/20">
+          <div class="absolute -right-16 -top-16 w-56 h-56 bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+              <div class="flex items-center gap-1.5 text-violet-400">
+                <i data-lucide="star" class="w-5 h-5 fill-violet-400"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-violet-400"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-violet-400"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-violet-400"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-violet-400"></i>
+                <span class="ml-2 text-sm font-mono font-bold text-white">5.0</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono text-violet-300 bg-violet-500/15 px-3 py-1 rounded-full border border-violet-500/30">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-violet-400"></i>
+                Проверенный отзыв на Яндекс Картах
+              </span>
+            </div>
+
+            <!-- Текст отзыва -->
+            <blockquote class="text-base sm:text-xl text-zinc-100 font-medium leading-relaxed italic mb-8">
+              «Очень щепетильный подход. Очень качественная мойка. Максимально доволен результатом!»
+            </blockquote>
+
+            <!-- Автор -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-800/80">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-violet-500/20 border border-violet-500/40 flex items-center justify-center text-violet-300 font-bold font-mono text-sm">
+                  СЛ
+                </div>
+                <div>
+                  <span class="font-bold text-white text-sm block">Серафим Л.</span>
+                  <span class="text-xs text-zinc-400">Знаток города 4 уровня</span>
+                </div>
+              </div>
+
+              <div class="text-xs font-mono text-zinc-400 flex items-center gap-1.5">
+                <i data-lucide="check-check" class="w-4 h-4 text-violet-400"></i>
+                <span>Опубликовано на Яндекс Картах</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Компактная плашка открытости и доверия -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950/70 border border-zinc-800/90 flex flex-col md:flex-row md:items-center justify-between gap-5">
+          <div class="flex items-start sm:items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-xl">
+              Мы делаем ставку на честный персональный сервис, а не на поток. Оцените работу студии и поделитесь своим мнением на Яндекс Картах.
+            </p>
+          </div>
+
+          <a href="https://yandex.ru/maps/?text=AutoDetailing+Сызрань+Ленина+30" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-zinc-700 hover:border-violet-500 text-xs font-semibold flex items-center justify-center gap-2 transition-all shrink-0 active:scale-95">
+            <span>Открыть профиль на Яндекс Картах</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5 text-violet-400"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="border-t border-zinc-800 bg-[#08080d] py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Карточка контактов -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-[#12111c] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-2">Локация и контакты студии</div>
+            <h2 class="text-2xl font-extrabold text-white mb-6">«AutoDetailing» Сызрань</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Точный адрес</span>
+                  <span class="text-base text-zinc-100 font-medium">Самарская область, г. Сызрань, ул. Ленина, 30</span>
+                  <span class="text-xs text-zinc-500 block mt-0.5">Центральный район, комфортный прямой подъезд</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">График работы</span>
+                  <span class="text-base text-violet-300 font-medium flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
+                    Ежедневно с 16:00 до 00:00
+                  </span>
+                  <span class="text-xs text-zinc-400 block mt-0.5">Вечерний приём авто без очередей по записи</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-violet-400 shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Прямой телефон студии</span>
+                  <a href="tel:+79242326997" class="text-lg text-violet-400 font-mono font-bold hover:underline block whitespace-nowrap shrink-0">
+                    +7 (924) 232-69-97
+                  </a>
+                  <span class="text-xs text-zinc-500">Мастер детейлинг-бокса</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Кнопки звонка и записи -->
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <span class="text-xs text-zinc-400 uppercase font-mono block mb-3">Записаться на удобное время:</span>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="tel:+79242326997" class="py-2.5 px-4 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-extrabold flex items-center justify-center gap-2 text-xs transition-all shadow-md shadow-violet-600/25 active:scale-95 whitespace-nowrap shrink-0">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-white"></i>
+                  <span>Позвонить</span>
+                </a>
+                <button onclick="openModal('Вечерний визит в AutoDetailing на Ленина, 30')" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-violet-500/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i>
+                  <span>Записаться</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Навигация и схема заезда для водителя -->
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#12111c] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-violet-400 font-mono font-bold mb-2">Навигатор водителя</div>
+            <h3 class="text-2xl font-extrabold text-white mb-6">Как проехать в «AutoDetailing»</h3>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-violet-400 w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0">1</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Движение по улице Ленина</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Ориентируйтесь на номер здания 30 в центральной части Сызрани. Удобный асфальтированный заезд с ярким вечерним уличным освещением.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-violet-400 w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0">2</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Приём автомобиля мастером</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Мастер лично встречает вас, проводит осмотр лакокрасочного покрытия и моторного отсека, фиксирует задачи и точную стоимость сметы.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-violet-400 w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0">3</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Готовое чистое авто в тот же вечер</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Вы забираете автомобиль с чистым сухим салоном, сияющим кузовом и безопасным подкапотным пространством до полуночи.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Копирование адреса -->
+            <div class="mt-8 pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-zinc-400">
+                Адрес: <span class="text-zinc-200">г. Сызрань, ул. Ленина, 30</span>
+              </div>
+              <button onclick="copyAddress('Самарская область, Сызрань, улица Ленина, 30')" class="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Скопировать адрес для навигатора</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-zinc-800 bg-[#06060a] text-zinc-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-violet-500/20 border border-violet-500/40 flex items-center justify-center text-violet-400 shrink-0">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-200 uppercase tracking-wider font-mono">AUTODETAILING &bull; Syzran</span>
+          <p class="text-[11px] text-zinc-500">Щепетильный детейлинг, вечерняя мойка, уход за ДВС &bull; Сызрань, Ленина, 30</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-zinc-500 space-y-1">
+        <div>Информация носит ознакомительный характер и не является публичной офертой.</div>
+        <div>&copy; 2026 Студия детейлинга «AutoDetailing». Щепетильная чистота и бережный уход.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#0a0a0f]/95 backdrop-blur-md border-t border-zinc-800 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79242326997" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 text-white font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-violet-600/30 active:scale-95 whitespace-nowrap shrink-0">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Позвонить</span>
+    </a>
+    <button onclick="openModal('Быстрая запись с мобильного')" class="flex-1 py-3 px-3 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-violet-500 text-violet-300 font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
+      <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i>
+      <span>Записаться</span>
+    </button>
+  </aside>
+
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-[#141320] border border-zinc-800 p-6 sm:p-7 shadow-2xl">
+
+      <!-- Кнопка закрытия -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-violet-400 font-mono font-bold">AutoDetailing • Сызрань, Ленина 30</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Запись на вечерний детейлинг</h3>
+        <p class="text-xs text-zinc-400 mt-1">Оставьте заявку &mdash; мастер свяжется для подтверждения удобного вечернего времени (16:00&ndash;00:00)</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Серафим" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-violet-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (924) 232-69-97" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-violet-500 focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Марка авто и выбранные услуги</label>
+          <input type="text" id="modal-notes" placeholder="Например: Audi A4, Мойка двигателя и 3-х фазная мойка" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-violet-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-violet-600/25 active:scale-95">
+            Подтвердить запись
+          </button>
+        </div>
+
+        <p class="text-[10px] text-zinc-500 text-center">Приём авто в боксе с 16:00 до полуночи</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 border border-violet-500/40 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-violet-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
+        <div id="toast-desc" class="text-xs text-zinc-400">Мастер свяжется с вами для согласования времени.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Базовые тарифы для седана/хэтчбека студии «AutoDetailing»
+    const basePrices = {
+      'wash': 800,
+      'engine': 1600,
+      'wheels': 1000,
+      'dryclean': 4000,
+      'polish': 6500,
+      'coating': 1800
+    };
+
+    // Коэффициенты по классам авто
+    const categoryMultipliers = {
+      sedan: 1.0,
+      crossover: 1.25,
+      suv: 1.45
+    };
+
+    const categoryNames = {
+      sedan: 'Седан / Хэтчбек',
+      crossover: 'Кроссовер',
+      suv: 'Внедорожник / Премиум'
+    };
+
+    let currentCategory = 'sedan';
+
+    function selectCarCategory(category) {
+      currentCategory = category;
+
+      document.querySelectorAll('.car-type-btn').forEach(btn => {
+        btn.classList.remove('bg-violet-500/15', 'border-violet-500', 'text-violet-300');
+        btn.classList.add('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const activeBtn = document.getElementById('car-btn-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+        activeBtn.classList.add('bg-violet-500/15', 'border-violet-500', 'text-violet-300');
+      }
+
+      updateIndividualPriceLabels();
+      calculateTotal();
+    }
+
+    function updateIndividualPriceLabels() {
+      const mult = categoryMultipliers[currentCategory];
+      for (const [key, basePrice] of Object.entries(basePrices)) {
+        const label = document.getElementById(`price-label-${key}`);
+        if (label) {
+          const calculated = Math.round(basePrice * mult);
+          label.innerHTML = `${calculated.toLocaleString('ru-RU')}&nbsp;₽`;
+        }
+      }
+    }
+
+    function calculateTotal() {
+      const mult = categoryMultipliers[currentCategory];
+      let total = 0;
+
+      if (document.getElementById('srv-wash')?.checked) total += basePrices['wash'] * mult;
+      if (document.getElementById('srv-engine')?.checked) total += basePrices['engine'] * mult;
+      if (document.getElementById('srv-wheels')?.checked) total += basePrices['wheels'] * mult;
+      if (document.getElementById('srv-dryclean')?.checked) total += basePrices['dryclean'] * mult;
+      if (document.getElementById('srv-polish')?.checked) total += basePrices['polish'] * mult;
+      if (document.getElementById('srv-coating')?.checked) total += basePrices['coating'] * mult;
+
+      const roundedTotal = Math.round(total);
+      const totalEl = document.getElementById('calc-grand-total');
+      if (totalEl) {
+        totalEl.innerHTML = `${roundedTotal.toLocaleString('ru-RU')}&nbsp;₽`;
+      }
+
+      return roundedTotal;
+    }
+
+    function getSelectedServicesList() {
+      const list = [];
+      if (document.getElementById('srv-wash')?.checked) list.push('2-х и 3-х фазная мойка кузова');
+      if (document.getElementById('srv-engine')?.checked) list.push('Мойка двигателя диэлектриком');
+      if (document.getElementById('srv-wheels')?.checked) list.push('Очистка дисков и шин');
+      if (document.getElementById('srv-dryclean')?.checked) list.push('Детейлинг-химчистка салона');
+      if (document.getElementById('srv-polish')?.checked) list.push('Восстановительная полировка');
+      if (document.getElementById('srv-coating')?.checked) list.push('Гидрофоб и Антидождь');
+      return list;
+    }
+
+    function openModalWithCalculatedData() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const summary = `${car}: ${services.join(', ')} (~${total.toLocaleString('ru-RU')} ₽)`;
+      openModal(summary);
+    }
+
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Запись в бокс AutoDetailing (Ленина, 30)';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка принята!', 'Мастер свяжется с вами для согласования вечернего времени.');
+    }
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('translate-y-4'), 10);
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 4000);
+      }
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Ориентир скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

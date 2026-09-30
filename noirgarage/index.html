@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR GARAGE • Приватный премиум-детейлинг в Сызрани (Варламово) | ул. Зелёная, 16</title>
+  <meta name="description" content="Один мастер. Одна машина. Без спешки. Только идеал. Студия приватного детейлинга Сергея в Сызрани (пос. Варламово, ул. Зелёная, 16). Комплекс «Как новая машина», керамика, полировка и защита плёнкой. Телефон: +7 (927) 028-98-98.">
+
+  <!-- Google Fonts: Inter Display & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            noir: {
+              950: '#050507',
+              900: '#08080a',
+              850: '#0d0e12',
+              800: '#111216',
+              750: '#17181f',
+              700: '#22242c',
+              600: '#2e303b',
+              400: '#717586',
+              200: '#c3c7d6',
+              100: '#e2e8f0',
+              50: '#f8fafc',
+            },
+            platinum: {
+              400: '#cbd5e1',
+              300: '#e2e8f0',
+              200: '#f1f5f9',
+              100: '#ffffff'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Тончайшая архитектурная сетка премиального бокса */
+    .bg-noir-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+    /* Сдержанное холодное серебристо-платиновое свечение */
+    .radial-noir-glow {
+      background: radial-gradient(circle at 50% -12%, rgba(226, 232, 240, 0.09) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 75%);
+    }
+    /* Матовая стеклянная поверхность карточек */
+    .noir-glass {
+      background: linear-gradient(180deg, rgba(17, 18, 22, 0.88) 0%, rgba(11, 12, 15, 0.96) 100%);
+    }
+    /* Гладкий скроллбар */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08080a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #22242c;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #474c5d;
+    }
+  </style>
+</head>
+<body class="bg-[#08080a] text-noir-100 font-sans antialiased selection:bg-white selection:text-black min-h-screen relative pb-20 md:pb-0">
+
+  <!-- Декоративные фоновые подложки -->
+  <div class="fixed inset-0 bg-noir-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[680px] radial-noir-glow pointer-events-none z-0"></div>
+
+  <!-- Фиксированная шапка -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#08080a]/90 border-b border-noir-700/80 transition-all pt-5 pb-3 sm:py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] sm:h-20 flex items-center justify-between relative z-10">
+
+      <!-- Логотип NOIR GARAGE -->
+      <a href="#" class="flex items-center gap-3.5 group py-1">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-950 flex items-center justify-center text-white font-black shadow-lg shadow-black/50 group-hover:border-zinc-500 transition-all border border-zinc-700/60 shrink-0">
+          <i data-lucide="shield-check" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8] text-noir-100"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2 leading-tight mb-1">
+            <span class="text-sm sm:text-base md:text-lg font-black tracking-[0.22em] uppercase font-serif text-white">
+              NOIR<span class="text-noir-400 font-sans ml-1">GARAGE</span>
+            </span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-noir-200 border border-white/15 font-mono font-medium tracking-widest uppercase">SYZRAN</span>
+          </div>
+          <span class="text-[10px] tracking-wider uppercase text-noir-400 font-medium line-clamp-1 sm:line-clamp-none">Приватная студия детейлинга • пос. Варламово</span>
+        </div>
+      </a>
+
+      <!-- Бейдж закрытого формата и мастера -->
+      <div class="hidden lg:flex items-center gap-5 text-xs text-noir-300">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-noir-800/90 border border-noir-700">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span class="font-medium text-noir-200">Приём по записи: Пн&ndash;Вс 09:00 &ndash; 18:00</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-noir-400">
+          <i data-lucide="user" class="w-3.5 h-3.5 text-platinum-300"></i>
+          <span>Мастер Сергей</span>
+        </div>
+      </div>
+
+      <!-- Кнопки связи в шапке -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="https://t.me/+79270289898" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-noir-800 hover:bg-noir-750 text-noir-200 hover:text-white border border-noir-700 text-xs font-semibold transition-all">
+          <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+          <span>Запись в Telegram</span>
+        </a>
+        <a href="tel:+79270289898" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-100 hover:bg-white text-noir-950 font-extrabold text-xs sm:text-sm transition-all shadow-md shadow-white/5 active:scale-95 whitespace-nowrap shrink-0">
+          <i data-lucide="phone" class="w-4 h-4 text-noir-950"></i>
+          <span class="hidden md:inline whitespace-nowrap shrink-0">+7 (927) 028-98-98</span>
+          <span class="md:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 lg:pt-14 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Левая колонка: Манифест и позиционирование студии -->
+        <div class="lg:col-span-6 space-y-6">
+
+          <!-- Бейджи закрытого формата -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 text-noir-200 text-xs sm:text-sm font-medium">
+              <span class="flex items-center text-white font-semibold">
+                <i data-lucide="lock" class="w-3.5 h-3.5 mr-1.5 text-platinum-400"></i>
+                Закрытый формат
+              </span>
+              <span class="text-noir-600">&bull;</span>
+              <span class="text-noir-300">Индивидуальный бокс</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-noir-800 border border-noir-700 text-noir-300 text-xs font-medium">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-platinum-400"></i>
+              <span>Варламово • ул. Зелёная, 16</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-noir-800 border border-noir-700 text-noir-300 text-xs font-medium">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <span>4.3 на Яндекс Картах</span>
+            </div>
+          </div>
+
+          <!-- Главный журнальный заголовок -->
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.14]">
+            Один мастер. Одна машина. <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-noir-200 to-zinc-400">Без спешки. Только идеал.</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base text-noir-400 leading-relaxed max-w-xl">
+            Персональный детейлинг премиального уровня в Сызрани. Авторский комплекс «Как новая машина», защита керамикой и полиуретановой бронепленкой, локальная реставрация кожи.
+          </p>
+
+          <!-- Быстрые тезисы формата -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-noir-800/60 border border-noir-700 text-xs font-medium text-noir-200 flex items-center gap-2.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-platinum-400 shrink-0"></i>
+              <span>Только один авто в работе</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-noir-800/60 border border-noir-700 text-xs font-medium text-noir-200 flex items-center gap-2.5">
+              <i data-lucide="eye" class="w-4 h-4 text-platinum-400 shrink-0"></i>
+              <span>Инспекционный свет</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-noir-800/60 border border-noir-700 text-xs font-medium text-noir-200 flex items-center gap-2.5">
+              <i data-lucide="camera" class="w-4 h-4 text-platinum-400 shrink-0"></i>
+              <span>Подробный фотоотчет</span>
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-white hover:bg-noir-100 text-noir-950 font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-white/5 active:scale-95 flex items-center gap-2">
+              <i data-lucide="sliders" class="w-4 h-4 text-noir-950"></i>
+              <span>Собрать комплекс</span>
+            </button>
+            <a href="https://t.me/+79270289898" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-noir-800 hover:bg-noir-750 text-noir-200 border border-noir-700 font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+              <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+              <span>Написать в Telegram</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Правая колонка: Интерактивный калькулятор NOIR GARAGE -->
+        <div id="calculator-section" class="lg:col-span-6">
+          <div class="p-6 sm:p-7 rounded-2xl noir-glass border border-noir-700 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-noir-700 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-noir-400 font-semibold">NOIR GARAGE • Индивидуальный расчет</div>
+                <h3 class="text-lg font-bold text-white">Выбор комплексов и услуг</h3>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-noir-800 border border-noir-700 flex items-center justify-center text-platinum-300 shrink-0">
+                <i data-lucide="calculator" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Выбор класса авто -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-noir-400 font-semibold mb-2.5">
+                1. Выберите категорию автомобиля:
+              </label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-white/10 border-white text-white">
+                  <i data-lucide="car" class="w-4 h-4"></i>
+                  <span>Купе / Седан</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-noir-900 border-noir-700 text-noir-400 hover:border-noir-600">
+                  <i data-lucide="car-front" class="w-4 h-4"></i>
+                  <span>Кроссовер</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-noir-900 border-noir-700 text-noir-400 hover:border-noir-600">
+                  <i data-lucide="truck" class="w-4 h-4"></i>
+                  <span>Премиум SUV</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Шаг 2: Выбор услуг из официального прайса -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-noir-400 font-semibold mb-2.5">
+                2. Выберите необходимые пакеты:
+              </label>
+              <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+
+                <!-- Услуга 1: Комплекс «Как новая машина» -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-noir-900/80 border border-noir-700 hover:border-noir-600 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-newcar" onchange="calculateTotal()" class="w-4 h-4 rounded text-zinc-900 focus:ring-white border-noir-600 bg-noir-800 accent-white">
+                    <div>
+                      <div class="text-xs font-semibold text-white flex items-center gap-1.5">
+                        <span>Комплекс «Как новая машина»</span>
+                        <span class="text-[9px] px-1 rounded bg-white/10 text-white font-mono uppercase">Хит</span>
+                      </div>
+                      <div class="text-[10px] text-noir-400">Химчистка, полировка, восстановление кожи, керамика</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-newcar" class="text-xs font-mono font-bold text-white whitespace-nowrap shrink-0">28&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 2: Защита нового авто -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-noir-900/80 border border-noir-700 hover:border-noir-600 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-protect" onchange="calculateTotal()" class="w-4 h-4 rounded text-zinc-900 focus:ring-white border-noir-600 bg-noir-800 accent-white">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Защита нового авто</div>
+                      <div class="text-[10px] text-noir-400">Первичная полировка, керамика/пленка зон риска, гидрофоб</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-protect" class="text-xs font-mono font-bold text-white whitespace-nowrap shrink-0">22&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 3: Полировка кузова «Зеркало» -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-noir-900/80 border border-noir-700 hover:border-noir-600 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-mirror" onchange="calculateTotal()" class="w-4 h-4 rounded text-zinc-900 focus:ring-white border-noir-600 bg-noir-800 accent-white">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Полировка кузова «Зеркало»</div>
+                      <div class="text-[10px] text-noir-400">Трёхэтапная полировка, устранение голограмм + фары в подарок</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-mirror" class="text-xs font-mono font-bold text-white whitespace-nowrap shrink-0">18&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 4: Премиум-химчистка салона -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-noir-900/80 border border-noir-700 hover:border-noir-600 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-dryclean" onchange="calculateTotal()" class="w-4 h-4 rounded text-zinc-900 focus:ring-white border-noir-600 bg-noir-800 accent-white">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Премиум-химчистка салона</div>
+                      <div class="text-[10px] text-noir-400">Глубокая экстракция, озонирование и кондиционер кожи</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-dryclean" class="text-xs font-mono font-bold text-white whitespace-nowrap shrink-0">12&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 5: Экспресс-подготовка к событию -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-noir-900/80 border border-noir-700 hover:border-noir-600 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-express" onchange="calculateTotal()" class="w-4 h-4 rounded text-zinc-900 focus:ring-white border-noir-600 bg-noir-800 accent-white">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Экспресс-подготовка к событию</div>
+                      <div class="text-[10px] text-noir-400">Срочный глянец кузова и экспресс-уборка перед встречей</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-express" class="text-xs font-mono font-bold text-white whitespace-nowrap shrink-0">8&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Услуга 6: Локальное восстановление кожи -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-noir-900/80 border border-noir-700 hover:border-noir-600 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-leather" onchange="calculateTotal()" class="w-4 h-4 rounded text-zinc-900 focus:ring-white border-noir-600 bg-noir-800 accent-white">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Локальное восстановление кожи</div>
+                      <div class="text-[10px] text-noir-400">Устранение задиров, покраска и точный подбор фактуры (1 элемент)</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-leather" class="text-xs font-mono font-bold text-white whitespace-nowrap shrink-0">5&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Итоговая смета и кнопки калькулятора -->
+            <div class="pt-3 border-t border-noir-700">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-noir-400 block font-semibold">Ориентировочная сумма:</span>
+                  <span class="text-[11px] text-noir-400">Прайс студии «NOIR GARAGE»</span>
+                </div>
+                <div class="text-right whitespace-nowrap shrink-0">
+                  <span id="calc-grand-total" class="text-3xl font-extrabold font-mono text-white whitespace-nowrap shrink-0">28&nbsp;000&nbsp;₽</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a href="https://t.me/+79270289898" target="_blank" rel="noopener noreferrer" class="py-3 px-3 rounded-xl bg-noir-800 border border-noir-600 hover:border-noir-400 text-noir-200 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2 shadow-sm whitespace-nowrap shrink-0">
+                  <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+                  <span>В Telegram</span>
+                </a>
+                <button onclick="openModalWithCalculatedData()" class="py-3 px-3 rounded-xl bg-white hover:bg-noir-100 text-noir-950 font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-white/10 active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="calendar" class="w-4 h-4 text-noir-950"></i>
+                  <span>Зарезервировать бокс</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Принципы приватной студии (3 тезиса) -->
+    <section class="border-y border-noir-700 bg-noir-850/90 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-noir-400 font-mono font-bold mb-2">Философия сервиса</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Стандарты закрытой студии NOIR GARAGE</h2>
+          </div>
+          <p class="text-sm text-noir-400 mt-2 md:mt-0">Сызрань &bull; пос. Варламово &bull; Только один автомобиль в работе</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Принцип 1 -->
+          <div class="p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-noir-900 border border-noir-700 flex items-center justify-center text-white mb-5 group-hover:scale-105 transition-transform">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2.5">Никакого потока</h3>
+              <p class="text-xs text-noir-400 leading-relaxed">
+                В работе единовременно находится исключительно один автомобиль. Мастер Сергей лично погружается в каждый элемент ЛКП, кожи и оптики без спешки и посторонних сотрудников.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-noir-700/80 text-[11px] font-mono text-noir-300 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> 100% времени мастера — вашему авто
+            </div>
+          </div>
+
+          <!-- Принцип 2 -->
+          <div class="p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-noir-900 border border-noir-700 flex items-center justify-center text-white mb-5 group-hover:scale-105 transition-transform">
+                <i data-lucide="box" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2.5">Индивидуальный бокс</h3>
+              <p class="text-xs text-noir-400 leading-relaxed">
+                Закрытое обеспыленное пространство с постоянным микроклиматом и многозонным инспекционным светом Scangrip, позволяющим увидеть и убрать малейшие микродефекты лака.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-noir-700/80 text-[11px] font-mono text-noir-300 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> Контроль при инспекционном свете
+            </div>
+          </div>
+
+          <!-- Принцип 3 -->
+          <div class="p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-noir-900 border border-noir-700 flex items-center justify-center text-white mb-5 group-hover:scale-105 transition-transform">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2.5">Гарантия результата</h3>
+              <p class="text-xs text-noir-400 leading-relaxed">
+                Применение сертифицированных керамических составов, полиуретановой брони и профессиональной химии для кожи. Каждый этап сопровождается макро-фотоотчетом «до/после».
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-noir-700/80 text-[11px] font-mono text-noir-300 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> Детальный фотоотчет владельцу
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Сетка ключевых комплексов (Прайс-лист) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-noir-400 font-mono font-bold mb-1">Прозрачный прайс-лист</div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Ключевые комплексы студии</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-noir-400 mt-2 md:mt-0">Точная фиксация объёма работ до передачи ключей</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Комплекс 1: Хит продаж -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-noir-800 via-noir-850 to-noir-900 border border-white/20 flex flex-col justify-between group shadow-xl relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-white text-noir-950 flex items-center justify-center font-bold">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-white/10 text-white border border-white/20 font-bold">Хит продаж</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Комплекс «Как новая машина»</h3>
+            <p class="text-xs text-noir-400 leading-relaxed mb-4">
+              Полная глубокая химчистка салона, деликатное восстановление фактуры кожи, многоэтапная восстановительная полировка кузова, нанесение керамического защитного состава и фотоотчет «до/после».
+            </p>
+          </div>
+          <div class="pt-4 border-t border-noir-700 flex items-center justify-between">
+            <span class="text-xs text-noir-400 font-mono">Срок: ~2-3 дня</span>
+            <span class="text-lg font-mono font-extrabold text-white whitespace-nowrap shrink-0">28&nbsp;000&nbsp;₽</span>
+          </div>
+        </div>
+
+        <!-- Комплекс 2: Защита нового авто -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Защита нового авто</h3>
+            <p class="text-xs text-noir-400 leading-relaxed mb-4">
+              Первичная мягкая полировка для удаления салонного налета, покрытие кузова керамикой либо полиуретановой бронепленкой зон риска, гидрофоб на стекла и консервация элементов интерьера.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-noir-700 flex items-center justify-between">
+            <span class="text-xs text-noir-400 font-mono">Срок: ~1-2 дня</span>
+            <span class="text-lg font-mono font-extrabold text-white whitespace-nowrap shrink-0">22&nbsp;000&nbsp;₽</span>
+          </div>
+        </div>
+
+        <!-- Комплекс 3: Полировка «Зеркало» -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="sun" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Полировка кузова «Зеркало»</h3>
+            <p class="text-xs text-noir-400 leading-relaxed mb-4">
+              Трёхэтапная восстановительная полировка с устранением микроцарапин, помутнений и голограмм. Полировка оптики (фар) и очистка стекол &mdash; входят в стоимость в подарок.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-noir-700 flex items-center justify-between">
+            <span class="text-xs text-noir-400 font-mono">Срок: ~1.5 дня</span>
+            <span class="text-lg font-mono font-extrabold text-white whitespace-nowrap shrink-0">18&nbsp;000&nbsp;₽</span>
+          </div>
+        </div>
+
+        <!-- Комплекс 4: Премиум-химчистка -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="wind" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Премиум-химчистка салона</h3>
+            <p class="text-xs text-noir-400 leading-relaxed mb-4">
+              Глубокая экстракторная очистка ковролина и сидений, удаление въевшихся посторонних запахов, озонирование системы вентиляции и нанесение защитного кондиционера на кожу и пластик.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-noir-700 flex items-center justify-between">
+            <span class="text-xs text-noir-400 font-mono">Срок: ~1 день</span>
+            <span class="text-lg font-mono font-extrabold text-white whitespace-nowrap shrink-0">12&nbsp;000&nbsp;₽</span>
+          </div>
+        </div>
+
+        <!-- Комплекс 5: Экспресс-подготовка к событию -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="clock" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Экспресс-подготовка к событию</h3>
+            <p class="text-xs text-noir-400 leading-relaxed mb-4">
+              Быстрая химчистка видимых зон интерьера и локальная финишная полировка кузова для срочной подготовки автомобиля к важной сделке, свадебному кортежу или торжественному мероприятию.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-noir-700 flex items-center justify-between">
+            <span class="text-xs text-noir-400 font-mono">Срок: ~4-6 часов</span>
+            <span class="text-lg font-mono font-extrabold text-white whitespace-nowrap shrink-0">8&nbsp;000&nbsp;₽</span>
+          </div>
+        </div>
+
+        <!-- Комплекс 6: Локальное восстановление кожи -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Локальное восстановление кожи</h3>
+            <p class="text-xs text-noir-400 leading-relaxed mb-4">
+              Точечное устранение потертостей, задиров, порезов и глубоких трещин на руле, валиках боковой поддержки кресел и подлокотниках. Точный колористический подбор оттенка и фактуры.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-noir-700 flex items-center justify-between">
+            <span class="text-xs text-noir-400 font-mono">Срок: ~1 день</span>
+            <span class="text-lg font-mono font-extrabold text-white whitespace-nowrap shrink-0">от 5&nbsp;000&nbsp;₽</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Социальное доказательство: реальные отзывы с Яндекс Карт -->
+    <section class="border-t border-noir-700 bg-noir-850/80 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-noir-400 font-mono font-bold mb-1">Репутация студии</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Реальные отзывы гостей на Яндекс Картах</h2>
+          </div>
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-noir-800 border border-noir-700 self-start sm:self-auto">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <span class="text-sm font-bold text-white">4.3</span>
+            <span class="text-xs text-noir-400 border-l border-noir-700 pl-3">Яндекс Карты &bull; Сызрань</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Отзыв 1: Илья Леонов -->
+          <div class="p-7 sm:p-8 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="flex text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-noir-400">29 августа 2024</span>
+              </div>
+              <blockquote class="text-sm sm:text-base text-noir-100 font-normal leading-relaxed italic mb-6">
+                «Делал полировку, плюс затягивал пленкой и покрыл керамикой, результат просто супер, Сергей настоящий профессионал и ответственно относится к своему делу, все объяснил, все рассказал что да как, цены ниже на порядок чем в тюнинг салонах, а качество работы намного выше!!!»
+              </blockquote>
+            </div>
+            <div class="pt-4 border-t border-noir-700/80 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-white/10 text-white font-bold font-mono text-xs flex items-center justify-center">
+                  ИЛ
+                </div>
+                <div>
+                  <span class="font-bold text-white text-xs block">Илья Леонов</span>
+                  <span class="text-[10px] text-noir-400">Знаток города 2 уровня</span>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-noir-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-emerald-400"></i> Проверен
+              </span>
+            </div>
+          </div>
+
+          <!-- Отзыв 2: Dmitriy P. -->
+          <div class="p-7 sm:p-8 rounded-2xl bg-noir-800 border border-noir-700 hover:border-zinc-500 transition-all flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="flex text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-noir-400">26 июня 2025</span>
+              </div>
+              <blockquote class="text-sm sm:text-base text-noir-100 font-normal leading-relaxed italic mb-6">
+                «Делали полировку фар и покрыли броне-пленкой. Результатом очень доволен! Работа была выполнена меньше чем за пол дня. Рекомендую. Планирую в будущем еще раз посетить данный Detail»
+              </blockquote>
+            </div>
+            <div class="pt-4 border-t border-noir-700/80 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-white/10 text-white font-bold font-mono text-xs flex items-center justify-center">
+                  DP
+                </div>
+                <div>
+                  <span class="font-bold text-white text-xs block">Dmitriy P.</span>
+                  <span class="text-[10px] text-noir-400">Знаток города 3 уровня</span>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-noir-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-emerald-400"></i> Проверен
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Контакты и локация студии (пос. Варламово) -->
+    <section class="border-t border-noir-700 bg-noir-900 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Карточка контактов -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-noir-800 border border-noir-700">
+            <div class="text-xs uppercase tracking-widest text-noir-400 font-mono font-bold mb-2">Локация и связь</div>
+            <h2 class="text-2xl font-extrabold text-white mb-6">«NOIR GARAGE» Сызрань</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-noir-400 block font-semibold uppercase">Точный адрес</span>
+                  <span class="text-base text-noir-100 font-medium">Самарская область, пос. Варламово, ул. Зелёная, 16</span>
+                  <span class="text-xs text-noir-400 block mt-0.5">Приватная территория, закрытый въезд</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-noir-400 block font-semibold uppercase">График приёма</span>
+                  <span class="text-base text-white font-medium flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Пн&ndash;Вс: 09:00 &ndash; 18:00
+                  </span>
+                  <span class="text-xs text-noir-400 block mt-0.5">Строго по предварительной договорённости</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-noir-900 border border-noir-700 flex items-center justify-center text-platinum-300 shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-noir-400 block font-semibold uppercase">Прямой телефон мастера</span>
+                  <a href="tel:+79270289898" class="text-lg text-white font-mono font-bold hover:underline block whitespace-nowrap shrink-0">
+                    +7 (927) 028-98-98
+                  </a>
+                  <span class="text-xs text-noir-400">Мастер Сергей</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Кнопки звонка и Telegram -->
+            <div class="mt-8 pt-6 border-t border-noir-700">
+              <span class="text-xs text-noir-400 uppercase font-mono block mb-3">Забронировать визит:</span>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="tel:+79270289898" class="py-2.5 px-4 rounded-xl bg-white hover:bg-noir-100 text-noir-950 font-extrabold flex items-center justify-center gap-2 text-xs transition-all shadow-md shadow-white/5 active:scale-95 whitespace-nowrap shrink-0">
+                  <i data-lucide="phone" class="w-4 h-4 text-noir-950"></i>
+                  <span>Позвонить</span>
+                </a>
+                <a href="https://t.me/+79270289898" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-noir-900 border border-noir-700 hover:border-zinc-500 text-noir-200 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+                  <span>В Telegram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Схема проезда и навигатор водителя -->
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-noir-800 border border-noir-700">
+            <div class="text-xs uppercase tracking-widest text-noir-400 font-mono font-bold mb-2">Навигатор водителя</div>
+            <h3 class="text-2xl font-extrabold text-white mb-6">Как проехать в «NOIR GARAGE»</h3>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-white w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">1</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Заезд в посёлок Варламово</h4>
+                  <p class="text-xs sm:text-sm text-noir-400 mt-1">Сызрань, въезд в Варламово со стороны города. Удобная асфальтированная подъездная дорога до улицы Зелёная.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-white w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">2</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Дом 16 &mdash; приватная территория</h4>
+                  <p class="text-xs sm:text-sm text-noir-400 mt-1">Ориентируйтесь на номер здания 16. Сергей лично встречает вас, осматривает ЛКП и интерьер при специализированном свете.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-white w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">3</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Передача автомобиля в безупречном состоянии</h4>
+                  <p class="text-xs sm:text-sm text-noir-400 mt-1">Вы забираете сияющий автомобиль с сухим чистым салоном и защитным слоем в согласованное время с фотоотчетом.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Копирование адреса -->
+            <div class="mt-8 pt-6 border-t border-noir-700 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-noir-400">
+                Адрес: <span class="text-noir-100">пос. Варламово, ул. Зелёная, 16</span>
+              </div>
+              <button onclick="copyAddress('Самарская область, посёлок Варламово, Зелёная улица, 16')" class="px-4 py-2 rounded-lg bg-noir-900 hover:bg-noir-750 text-noir-300 hover:text-white border border-noir-700 text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Скопировать адрес для навигатора</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="border-t border-noir-700 bg-noir-950 text-noir-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white shrink-0">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-white uppercase tracking-widest font-serif">NOIR GARAGE &bull; Варламово</span>
+          <p class="text-[11px] text-noir-400">Приватный детейлинг, керамика, полировка и защита плёнкой &bull; ул. Зелёная, 16</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-noir-400 space-y-1">
+        <div>Информация носит ознакомительный характер и не является публичной офертой.</div>
+        <div>&copy; 2026 Студия приватного детейлинга «NOIR GARAGE». Только идеал.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Мобильная фиксированная нижняя панель (sticky bottom bar) -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-noir-900/95 backdrop-blur-md border-t border-noir-700 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79270289898" class="flex-1 py-3 px-3 rounded-xl bg-white text-noir-950 font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-white/5 active:scale-95 whitespace-nowrap shrink-0">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span>Позвонить</span>
+    </a>
+    <a href="https://t.me/+79270289898" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-3 rounded-xl bg-noir-800 border border-noir-700 hover:border-zinc-500 text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
+      <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+      <span>Telegram</span>
+    </a>
+  </aside>
+
+  <!-- Модальное окно резервирования бокса -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-noir-800 border border-noir-700 p-6 sm:p-7 shadow-2xl">
+
+      <!-- Кнопка закрытия -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-noir-400 hover:text-white p-2 rounded-lg hover:bg-noir-700 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-noir-400 font-mono font-bold">NOIR GARAGE • Приватный бокс</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Резервирование даты визита</h3>
+        <p class="text-xs text-noir-400 mt-1">Оставьте заявку &mdash; мастер Сергей свяжется с вами для согласования удобного дня.</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-noir-300 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Илья" class="w-full px-3.5 py-2.5 rounded-lg bg-noir-900 border border-noir-700 focus:border-white focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-noir-300 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (927) 028-98-98" class="w-full px-3.5 py-2.5 rounded-lg bg-noir-900 border border-noir-700 focus:border-white focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-noir-300 mb-1">Марка авто и выбранный комплекс</label>
+          <input type="text" id="modal-notes" placeholder="Например: BMW 5, Комплекс «Как новая машина»" class="w-full px-3.5 py-2.5 rounded-lg bg-noir-900 border border-noir-700 focus:border-white focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-white hover:bg-noir-100 text-noir-950 font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-white/10 active:scale-95">
+            Подтвердить бронирование
+          </button>
+        </div>
+
+        <p class="text-[10px] text-noir-400 text-center">Один мастер. Одна машина. Без спешки.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Всплывающее уведомление (Toast) -->
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-noir-800 border border-white/20 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-white/10 text-white flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
+        <div id="toast-desc" class="text-xs text-noir-400">Мастер Сергей свяжется с вами в ближайшее время.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Базовые тарифы для купе/седана студии «NOIR GARAGE»
+    const basePrices = {
+      'newcar': 28000,
+      'protect': 22000,
+      'mirror': 18000,
+      'dryclean': 12000,
+      'express': 8000,
+      'leather': 5000
+    };
+
+    // Коэффициенты по классам авто
+    const categoryMultipliers = {
+      sedan: 1.0,
+      crossover: 1.15,
+      suv: 1.3
+    };
+
+    const categoryNames = {
+      sedan: 'Купе / Седан',
+      crossover: 'Кроссовер',
+      suv: 'Премиум SUV'
+    };
+
+    let currentCategory = 'sedan';
+
+    function selectCarCategory(category) {
+      currentCategory = category;
+
+      document.querySelectorAll('.car-type-btn').forEach(btn => {
+        btn.classList.remove('bg-white/10', 'border-white', 'text-white');
+        btn.classList.add('bg-noir-900', 'border-noir-700', 'text-noir-400');
+      });
+
+      const activeBtn = document.getElementById('car-btn-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-noir-900', 'border-noir-700', 'text-noir-400');
+        activeBtn.classList.add('bg-white/10', 'border-white', 'text-white');
+      }
+
+      updateIndividualPriceLabels();
+      calculateTotal();
+    }
+
+    function updateIndividualPriceLabels() {
+      const mult = categoryMultipliers[currentCategory];
+      for (const [key, basePrice] of Object.entries(basePrices)) {
+        const label = document.getElementById(`price-label-${key}`);
+        if (label) {
+          const calculated = Math.round(basePrice * mult);
+          const prefix = key === 'leather' ? 'от ' : '';
+          label.innerHTML = `${prefix}${calculated.toLocaleString('ru-RU')}&nbsp;₽`;
+        }
+      }
+    }
+
+    function calculateTotal() {
+      const mult = categoryMultipliers[currentCategory];
+      let total = 0;
+
+      if (document.getElementById('srv-newcar')?.checked) total += basePrices['newcar'] * mult;
+      if (document.getElementById('srv-protect')?.checked) total += basePrices['protect'] * mult;
+      if (document.getElementById('srv-mirror')?.checked) total += basePrices['mirror'] * mult;
+      if (document.getElementById('srv-dryclean')?.checked) total += basePrices['dryclean'] * mult;
+      if (document.getElementById('srv-express')?.checked) total += basePrices['express'] * mult;
+      if (document.getElementById('srv-leather')?.checked) total += basePrices['leather'] * mult;
+
+      const roundedTotal = Math.round(total);
+      const totalEl = document.getElementById('calc-grand-total');
+      if (totalEl) {
+        totalEl.innerHTML = `${roundedTotal.toLocaleString('ru-RU')}&nbsp;₽`;
+      }
+
+      return roundedTotal;
+    }
+
+    function getSelectedServicesList() {
+      const list = [];
+      if (document.getElementById('srv-newcar')?.checked) list.push('Комплекс «Как новая машина»');
+      if (document.getElementById('srv-protect')?.checked) list.push('Защита нового авто');
+      if (document.getElementById('srv-mirror')?.checked) list.push('Полировка «Зеркало»');
+      if (document.getElementById('srv-dryclean')?.checked) list.push('Премиум-химчистка');
+      if (document.getElementById('srv-express')?.checked) list.push('Экспресс-подготовка');
+      if (document.getElementById('srv-leather')?.checked) list.push('Восстановление кожи');
+      return list;
+    }
+
+    function openModalWithCalculatedData() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const summary = `${car}: ${services.length ? services.join(', ') : 'Индивидуальный комплекс'} (~${total.toLocaleString('ru-RU')} ₽)`;
+      openModal(summary);
+    }
+
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Резервирование бокса NOIR GARAGE';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка принята!', 'Мастер Сергей свяжется с вами для согласования даты.');
+    }
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('translate-y-4'), 10);
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 4000);
+      }
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Ориентир скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

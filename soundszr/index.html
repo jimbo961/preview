@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOUND SZR • Студия автозвука и шумоизоляции в Сызрани | BASS DAY</title>
+  <meta name="description" content="Профессиональный автозвук, качественная шумо- и виброизоляция, расчет и изготовление коробов, настройка DSP процессоров и замер SPL в Сызрани. просп. Гагарина, 48. Телефон: +7 (937) 236-68-38.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            neon: {
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+            },
+            bass: {
+              400: '#a3e635',
+              500: '#84cc16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Карбоново-технологическая сетка студии автозвука */
+    .bg-audio-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+    }
+    /* Неоновое свечение басовой волны */
+    .radial-bass-glow {
+      background: radial-gradient(circle at 50% -8%, rgba(34, 197, 94, 0.18) 0%, rgba(16, 185, 129, 0.06) 45%, transparent 75%);
+    }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(19, 24, 34, 0.88) 0%, rgba(13, 16, 23, 0.96) 100%);
+    }
+    /* Кастомный гладкий скроллбар */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090b0e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #22c55e;
+    }
+    /* Анимация звукового эквалайзера */
+    @keyframes eqWave {
+      0%, 100% { height: 25%; }
+      50% { height: 100%; }
+    }
+    .eq-bar-1 { animation: eqWave 1.1s ease-in-out infinite; }
+    .eq-bar-2 { animation: eqWave 0.8s ease-in-out infinite 0.2s; }
+    .eq-bar-3 { animation: eqWave 1.3s ease-in-out infinite 0.4s; }
+    .eq-bar-4 { animation: eqWave 0.9s ease-in-out infinite 0.1s; }
+  </style>
+</head>
+<body class="bg-[#090b0e] text-zinc-100 font-sans antialiased selection:bg-neon-500 selection:text-black min-h-screen relative pb-20 md:pb-0">
+
+  <!-- Декоративные фоновые подложки -->
+  <div class="fixed inset-0 bg-audio-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[620px] radial-bass-glow pointer-events-none z-0"></div>
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#090b0e]/90 border-b border-zinc-800/80 transition-all pt-5 pb-3 sm:py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] sm:h-20 flex items-center justify-between relative z-10">
+
+      <!-- Логотип «SOUND SZR» -->
+      <a href="#" class="flex items-center gap-3 group py-1">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-neon-500 via-emerald-600 to-green-700 flex items-center justify-center text-black font-black shadow-lg shadow-neon-500/25 group-hover:scale-105 transition-transform border border-neon-400/40 shrink-0">
+          <i data-lucide="volume-2" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.4]"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5 sm:gap-2 leading-tight mb-1">
+            <span class="text-sm sm:text-base md:text-lg font-black tracking-wider uppercase font-mono text-white">
+              SOUND <span class="text-neon-400">SZR</span>
+            </span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-neon-500/15 text-neon-300 border border-neon-500/30 font-sans font-bold tracking-widest uppercase">BASS DAY</span>
+          </div>
+          <span class="text-[10px] tracking-wider uppercase text-zinc-400 font-medium line-clamp-1 sm:line-clamp-none">Студия автозвука и шумоизоляции • просп. Гагарина, 48</span>
+        </div>
+      </a>
+
+      <!-- Бейдж рабочего графика и VK-аудитории на десктопе -->
+      <div class="hidden lg:flex items-center gap-5 text-xs text-zinc-300">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-neon-500"></span>
+          </span>
+          <span class="font-medium">Открыто: 10:00 &ndash; 19:00 ежедневно</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <i data-lucide="users" class="w-3.5 h-3.5 text-neon-400"></i>
+          <span>2 800+ в VK сообществе</span>
+        </div>
+      </div>
+
+      <!-- Кнопка ВКонтакте и прямой звонок в шапке -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 text-xs font-semibold transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4 text-neon-400"></i>
+          <span>ВКонтакте</span>
+        </a>
+        <a href="tel:+79372366838" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-neon-500 via-emerald-500 to-green-600 hover:from-neon-400 hover:to-emerald-500 text-black font-extrabold text-xs sm:text-sm transition-all shadow-md shadow-neon-500/25 active:scale-95 whitespace-nowrap shrink-0">
+          <i data-lucide="phone-call" class="w-4 h-4 text-black"></i>
+          <span class="hidden md:inline whitespace-nowrap shrink-0">+7 (937) 236-68-38</span>
+          <span class="md:hidden">Позвонить</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 lg:pt-12 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Левая колонка: УТП студии «SOUND SZR» -->
+        <div class="lg:col-span-6 space-y-6">
+
+          <!-- Бейджи доверия и локации -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neon-500/10 border border-neon-500/30 text-neon-300 text-xs sm:text-sm font-medium">
+              <span class="flex items-center text-neon-400 font-bold">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i>
+                просп. Гагарина, 48
+              </span>
+              <span class="text-zinc-600">&bull;</span>
+              <span class="text-zinc-300">Сызрань</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">
+              <i data-lucide="gauge" class="w-3.5 h-3.5 text-neon-400"></i>
+              <span>Замер SPL (Bass Meter)</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">
+              <i data-lucide="battery-charging" class="w-3.5 h-3.5 text-neon-400"></i>
+              <span>Титанат &bull; Питание</span>
+            </div>
+          </div>
+
+          <!-- Главный заголовок -->
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Профессиональный автозвук и правильная шумоизоляция <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-400 via-emerald-300 to-green-400">в Сызрани</span>
+          </h1>
+
+          <!-- Подзаголовок -->
+          <p class="text-base text-zinc-400 leading-relaxed max-w-xl">
+            От детальной настройки процессорных SQ систем до сокрушительного баса и SPL соревнований. Качественная виброизоляция без лишнего веса, расчет коробов и грамотное питание.
+          </p>
+
+          <!-- Быстрые фичи студии -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="sliders" class="w-4 h-4 text-neon-400 shrink-0"></i>
+              <span>Настройка DSP процессоров</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="box" class="w-4 h-4 text-neon-400 shrink-0"></i>
+              <span>Расчет и сборка коробов</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs font-medium text-zinc-300 flex items-center gap-2.5">
+              <i data-lucide="layers" class="w-4 h-4 text-neon-400 shrink-0"></i>
+              <span>Шумка по технологиям</span>
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="scrollToCalc()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-neon-500 via-emerald-500 to-green-600 hover:from-neon-400 hover:to-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-neon-500/25 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-black"></i>
+              <span>Рассчитать проект</span>
+            </button>
+            <a href="tel:+79372366838" class="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2 whitespace-nowrap shrink-0">
+              <i data-lucide="phone-call" class="w-4 h-4 text-neon-400"></i>
+              <span>Позвонить мастеру</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Правая колонка: Интерактивный калькулятор проекта «SOUND SZR» -->
+        <div id="calculator-section" class="lg:col-span-6">
+          <div class="p-6 sm:p-7 rounded-2xl glass-card border border-zinc-800 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-neon-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-5">
+              <div>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-neon-400 font-bold">SOUND SZR • Конфигуратор системы</div>
+                <h3 class="text-lg font-bold text-white">Расчет автозвука и виброизоляции</h3>
+              </div>
+              <div class="flex items-end gap-1 h-6 px-2 py-1 rounded bg-zinc-900 border border-zinc-800">
+                <div class="w-1 bg-neon-400 rounded-full eq-bar-1 h-3"></div>
+                <div class="w-1 bg-neon-400 rounded-full eq-bar-2 h-5"></div>
+                <div class="w-1 bg-neon-400 rounded-full eq-bar-3 h-2"></div>
+                <div class="w-1 bg-neon-400 rounded-full eq-bar-4 h-4"></div>
+              </div>
+            </div>
+
+            <!-- Шаг 1: Выбор кузова авто -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                1. Выберите категорию автомобиля:
+              </label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-neon-500/15 border-neon-500 text-neon-300">
+                  <i data-lucide="car" class="w-4 h-4"></i>
+                  <span>Седан / Хэтчбек</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="car-front" class="w-4 h-4"></i>
+                  <span>Кроссовер</span>
+                </button>
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-zinc-950 border-zinc-800 text-zinc-400 hover:border-zinc-700">
+                  <i data-lucide="truck" class="w-4 h-4"></i>
+                  <span>Внедорожник</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Шаг 2: Выбор необходимых задач -->
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
+                2. Выберите необходимые задачи:
+              </label>
+              <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+
+                <!-- Опция 1: Шумо- и виброизоляция дверей (базовый акустический пакет) -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-shum-doors" onchange="calculateTotal()" class="w-4 h-4 rounded text-neon-500 focus:ring-neon-400 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-neon-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Шумо- и виброизоляция дверей (4 двери)</div>
+                      <div class="text-[10px] text-zinc-400">Премиальные мастичные листы, жесткий щит для сочного мидбаса</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-shum-doors" class="text-xs font-mono font-bold text-neon-400 whitespace-nowrap shrink-0">3&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 2: Установка фронтальной акустики и усилителя -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" checked id="srv-install-front" onchange="calculateTotal()" class="w-4 h-4 rounded text-neon-500 focus:ring-neon-400 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-neon-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Установка фронтальной акустики + усилителя</div>
+                      <div class="text-[10px] text-zinc-400">Протяжка силовой и акустической проводки, крепление через проставки</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-install-front" class="text-xs font-mono font-bold text-neon-400 whitespace-nowrap shrink-0">3&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 3: Изготовление индивидуального короба под сабвуфер -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-box" onchange="calculateTotal()" class="w-4 h-4 rounded text-neon-500 focus:ring-neon-400 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-neon-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Расчет и сборка короба под сабвуфер</div>
+                      <div class="text-[10px] text-zinc-400">ФИ на щели или трубе, ЗЯ, раскрывы, расчет нужного литража и настройки</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-box" class="text-xs font-mono font-bold text-neon-400 whitespace-nowrap shrink-0">3&nbsp;500&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 4: Настройка аудиосистемы / DSP процессора -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-dsp" onchange="calculateTotal()" class="w-4 h-4 rounded text-neon-500 focus:ring-neon-400 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-neon-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Профессиональная настройка системы и DSP</div>
+                      <div class="text-[10px] text-zinc-400">Срезы частот, фазировка, поканальные задержки и согласование гейнов</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-dsp" class="text-xs font-mono font-bold text-neon-400 whitespace-nowrap shrink-0">1&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 5: Диагностика питания / титаната / балансиры -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-power" onchange="calculateTotal()" class="w-4 h-4 rounded text-neon-500 focus:ring-neon-400 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-neon-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Диагностика питания: титанат LTO, замер банок</div>
+                      <div class="text-[10px] text-zinc-400">Проверка сопротивления банок, подключение активного балансира</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-power" class="text-xs font-mono font-bold text-neon-400 whitespace-nowrap shrink-0">1&nbsp;000&nbsp;₽</span>
+                  </div>
+                </label>
+
+                <!-- Опция 6: Точный замер звукового давления (LCD Bass Meter) -->
+                <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950/70 border border-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="srv-spl" onchange="calculateTotal()" class="w-4 h-4 rounded text-neon-500 focus:ring-neon-400 focus:ring-offset-zinc-900 border-zinc-700 bg-zinc-900 accent-neon-500">
+                    <div>
+                      <div class="text-xs font-semibold text-white">Замер звукового давления SPL (LCD Bass Meter)</div>
+                      <div class="text-[10px] text-zinc-400">Точный замер пикового давления dB на лобовом стекле</div>
+                    </div>
+                  </div>
+                  <div class="text-right whitespace-nowrap shrink-0 ml-2">
+                    <span id="price-label-spl" class="text-xs font-mono font-bold text-neon-400 whitespace-nowrap shrink-0">200&nbsp;₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Итоговая смета и кнопки калькулятора -->
+            <div class="pt-3 border-t border-zinc-800">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-zinc-400 block font-semibold">Ориентировочная сумма:</span>
+                  <span class="text-[11px] text-zinc-500">Прайс студии «SOUND SZR» (просп. Гагарина, 48)</span>
+                </div>
+                <div class="text-right whitespace-nowrap shrink-0">
+                  <span id="calc-grand-total" class="text-3xl font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">6&nbsp;500&nbsp;₽</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a href="tel:+79372366838" class="py-3 px-3 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-neon-500 text-zinc-200 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2 shadow-sm whitespace-nowrap shrink-0">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-neon-400"></i>
+                  <span>Позвонить</span>
+                </a>
+                <button onclick="openModalWithCalculatedData()" class="py-3 px-3 rounded-xl bg-gradient-to-r from-neon-500 via-emerald-500 to-green-600 hover:from-neon-400 hover:to-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-neon-500/25 active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-black"></i>
+                  <span>Записаться на замер</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Секция полного прайса ключевых услуг студии -->
+    <section class="border-y border-zinc-800 bg-[#0d1017]/80 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-neon-400 font-mono font-bold mb-2">Услуги и направления SOUND SZR</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Что мы делаем профессионально</h2>
+          </div>
+          <p class="text-sm text-zinc-400 mt-2 md:mt-0">Сызрань &bull; просп. Гагарина, 48 &bull; Гарантия на инсталляцию</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Карточка 1: Комплексная шумо- и виброизоляция -->
+          <div class="p-6 rounded-2xl bg-[#131722] border border-zinc-800 hover:border-neon-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-neon-950/40 border border-neon-500/30 flex items-center justify-center text-neon-400 group-hover:scale-105 transition-transform">
+                  <i data-lucide="layers" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">от 1 дня</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Шумо- и виброизоляция</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Двери, пол, багажник, крыша, моторный щит и арки. Прокатка валиками без воздушных карманов, устранение сверчков и подготовка объема под бас.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-500">Стоимость:</span>
+              <div class="text-right whitespace-nowrap shrink-0">
+                <span class="text-sm text-zinc-400 font-medium">от </span>
+                <span class="text-lg font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">3&nbsp;500&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 2: Настройка аудиосистем и процессоров -->
+          <div class="p-6 rounded-2xl bg-[#131722] border border-zinc-800 hover:border-neon-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-neon-950/40 border border-neon-500/30 flex items-center justify-center text-neon-400 group-hover:scale-105 transition-transform">
+                  <i data-lucide="sliders" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">~1–2 часа</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Настройка систем и DSP</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Сведение сцены, расчет задержек по рулетке/микрофону, точные срезы фильтров HPF/LPF, настройка эквалайзера и согласование чувствительности усилителей.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-500">Стоимость:</span>
+              <div class="text-right whitespace-nowrap shrink-0">
+                <span class="text-sm text-zinc-400 font-medium">от </span>
+                <span class="text-lg font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">1&nbsp;000&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 3: Расчет и изготовление коробов под сабвуферы -->
+          <div class="p-6 rounded-2xl bg-[#131722] border border-neon-500/40 shadow-lg shadow-neon-500/5 hover:border-neon-400 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-neon-950/40 border border-neon-500/40 flex items-center justify-center text-neon-400 group-hover:scale-105 transition-transform">
+                  <i data-lucide="box" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono text-neon-400 bg-neon-500/10 px-2.5 py-1 rounded border border-neon-500/20">Хит заказов</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Изготовление коробов и подиумов</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Фазоинверторы на щели или трубе с раскрывами, закрытые ящики, стелс-короба в крыло. Точный расчет частоты настройки под ваши любимые треки.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-500">Стоимость:</span>
+              <div class="text-right whitespace-nowrap shrink-0">
+                <span class="text-sm text-zinc-400 font-medium">от </span>
+                <span class="text-lg font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">3&nbsp;500&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 4: Установка автозвука и доп. оборудования -->
+          <div class="p-6 rounded-2xl bg-[#131722] border border-zinc-800 hover:border-neon-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-neon-950/40 border border-neon-500/30 flex items-center justify-center text-neon-400 group-hover:scale-105 transition-transform">
+                  <i data-lucide="speaker" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">По регламенту</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Установка компонентов и камер</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Монтаж головных устройств (Android/2DIN), эстрадных динамиков, твитеров, усилителей, дубляжей генератора и камер заднего вида (камеры от 2 000 ₽).
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-500">Стоимость:</span>
+              <div class="text-right whitespace-nowrap shrink-0">
+                <span class="text-sm text-zinc-400 font-medium">от </span>
+                <span class="text-lg font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">2&nbsp;000&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 5: Замер звукового давления SPL (LCD Bass Meter) -->
+          <div class="p-6 rounded-2xl bg-[#131722] border border-zinc-800 hover:border-neon-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-neon-950/40 border border-neon-500/30 flex items-center justify-center text-neon-400 group-hover:scale-105 transition-transform">
+                  <i data-lucide="gauge" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">10 минут</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Замер звукового давления SPL</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Официальный измерительный прибор LCD Bass Meter. Узнайте реальный пик вашей системы в децибелах (dB), пиковую частоту и полку воспроизведения.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-500">Фиксировано:</span>
+              <div class="text-right whitespace-nowrap shrink-0">
+                <span class="text-lg font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">200&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 6: Питание автозвука и титанат LTO -->
+          <div class="p-6 rounded-2xl bg-[#131722] border border-zinc-800 hover:border-neon-500/60 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-neon-950/40 border border-neon-500/30 flex items-center justify-center text-neon-400 group-hover:scale-105 transition-transform">
+                  <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">Диагностика</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Питание: Титанат LTO и балансиры</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                Сборка и проверка секций литий-титаната (LTO), замер внутреннего сопротивления каждой банки, установка шин, балансиров и защитных реле.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-500">Стоимость:</span>
+              <div class="text-right whitespace-nowrap shrink-0">
+                <span class="text-sm text-zinc-400 font-medium">от </span>
+                <span class="text-lg font-extrabold font-mono text-neon-400 whitespace-nowrap shrink-0">1&nbsp;000&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок инженерных стандартов SOUND SZR -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-neon-400 font-mono font-bold mb-2">Инженерный подход BASS DAY</div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Почему у нас не горит и играет чисто</h2>
+        </div>
+        <p class="text-sm text-zinc-400 mt-2 md:mt-0">Безопасная силовая проводка и акустический расчет</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="p-6 rounded-2xl bg-[#11141c] border border-zinc-800 hover:border-neon-500/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">ГОСТ сечение кабелей</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Чистая бескислородная медь (OFC), защита проводки змеиной кожей и обязательные предохранители ANL возле АКБ.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#11141c] border border-zinc-800 hover:border-neon-500/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 mb-4">
+            <i data-lucide="disc" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Акустический объем</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Мидбасы не играют «в никуда»: формируем жесткий закрытый объем дверей с антискрипом обшивок и плотными кольцами.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#11141c] border border-zinc-800 hover:border-neon-500/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 mb-4">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Настройка без клиппинга</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Контролируем форму сигнала осциллографом. Никакого клипа и перегрева катушек — динамики и сабы живут годами.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#11141c] border border-zinc-800 hover:border-neon-500/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 mb-4">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Опыт соревнований SPL</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Регулярные участники и призеры форматов автозвука. Знаем, как выжать максимум dB без вреда автомобилю.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Социальное доказательство: реальные отзывы из Яндекс Карт -->
+    <section class="border-t border-zinc-800 bg-[#0b0e14] py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-neon-400 font-mono font-bold mb-1">Репутация студии автозвука</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Отзывы клиентов на Яндекс Картах</h2>
+          </div>
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800">
+            <div class="flex text-neon-400">
+              <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+              <i data-lucide="star-half" class="w-4 h-4 fill-neon-400"></i>
+            </div>
+            <span class="text-sm font-bold text-white">4.3</span>
+            <span class="text-xs text-zinc-400 border-l border-zinc-700 pl-3">Яндекс Карты &bull; 14 оценок</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Отзыв 1: Алексей Саркиев -->
+          <div class="p-7 rounded-2xl bg-[#121620] border border-neon-500/30 flex flex-col justify-between hover:border-neon-400 transition-colors shadow-lg shadow-neon-500/5">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-neon-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-0.5 rounded border border-zinc-800">23 февраля 2024</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+                «Шикарнейше, машина нексия, решил все вопросы, проконсультировал, все рассказал подробно, что лучше, что не надо, что не стоит. Результатом доволен, звук что надо, хотя и не ожидал даже. И по стоимости, дешевле чем в других именитых аудиостудиях. Спасибо»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+              <div>
+                <span class="font-bold text-white block">Алексей Саркиев</span>
+                <span class="text-[11px] text-zinc-500">Автомобиль: Daewoo Nexia</span>
+              </div>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-neon-400"></i> Яндекс Карты
+              </span>
+            </div>
+          </div>
+
+          <!-- Отзыв 2: Эдуард Сапаров -->
+          <div class="p-7 rounded-2xl bg-[#121620] border border-zinc-800 flex flex-col justify-between hover:border-neon-400/50 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-1 text-neon-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-neon-400"></i>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-400 bg-zinc-900 px-2.5 py-0.5 rounded border border-zinc-800">8 сентября 2025</span>
+              </div>
+              <p class="text-sm text-zinc-300 leading-relaxed mb-6 italic">
+                «Студия топ !»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs">
+              <div>
+                <span class="font-bold text-white block">Эдуард Сапаров</span>
+                <span class="text-[11px] text-zinc-500">Клиент студии</span>
+              </div>
+              <span class="text-zinc-400 flex items-center gap-1">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-neon-400"></i> Яндекс Карты
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Плашка сообщества ВКонтакте -->
+        <div class="mt-8 p-6 rounded-2xl bg-[#141824] border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-xl bg-neon-500/15 border border-neon-500/30 flex items-center justify-center text-neon-400 shrink-0">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-white">Крупнейшее сообщество автозвука в Сызрани</h4>
+              <p class="text-xs text-zinc-400">Более 2 800 участников: фотоотчеты инсталляций, замеры dB и клубные сходки BASS DAY.</p>
+            </div>
+          </div>
+          <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-neon-500 text-white font-semibold text-xs flex items-center gap-2 transition-all shrink-0 active:scale-95">
+            <i data-lucide="external-link" class="w-4 h-4 text-neon-400"></i>
+            <span>Вступить в группу VK</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Контакты и локация студии -->
+    <section class="border-t border-zinc-800 bg-[#090b0e] py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Карточка контактов -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-[#11141d] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-neon-400 font-mono font-bold mb-2">Локация и контакты студии</div>
+            <h2 class="text-2xl font-extrabold text-white mb-6">«SOUND SZR» Сызрань</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Точный адрес</span>
+                  <span class="text-base text-zinc-100 font-medium">Самарская область, г. Сызрань, просп. Гагарина, 48</span>
+                  <span class="text-xs text-zinc-500 block mt-0.5">Удобный широкий подъезд, парковка для замеров</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 shrink-0">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">График работы</span>
+                  <span class="text-base text-zinc-100 font-medium">Ежедневно: 10:00 &ndash; 19:00</span>
+                  <span class="text-xs text-neon-400 block mt-0.5">Прием на замер SPL и расчет проекта</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-neon-400 shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-zinc-400 block font-semibold uppercase">Прямой телефон студии</span>
+                  <a href="tel:+79372366838" class="text-lg text-neon-400 font-mono font-bold hover:underline block whitespace-nowrap shrink-0">
+                    +7 (937) 236-68-38
+                  </a>
+                  <span class="text-xs text-zinc-500">Мастер инсталляционного бокса</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Кнопки звонка и записи -->
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <span class="text-xs text-zinc-400 uppercase font-mono block mb-3">Связаться с мастером:</span>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="tel:+79372366838" class="py-2.5 px-4 rounded-xl bg-gradient-to-r from-neon-500 via-emerald-500 to-green-600 hover:from-neon-400 hover:to-emerald-500 text-black font-extrabold flex items-center justify-center gap-2 text-xs transition-all shadow-md shadow-neon-500/20 active:scale-95 whitespace-nowrap shrink-0">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-black"></i>
+                  <span>Позвонить</span>
+                </a>
+                <button onclick="openModal('Консультация по автозвуку (Гагарина, 48)')" class="py-2.5 px-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-neon-500/50 text-zinc-300 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="message-square" class="w-4 h-4 text-neon-400"></i>
+                  <span>Записаться</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Навигация и схема заезда -->
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#11141d] border border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-neon-400 font-mono font-bold mb-2">Навигатор водителя</div>
+            <h3 class="text-2xl font-extrabold text-white mb-6">Как добраться в «SOUND SZR»</h3>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-neon-400 w-8 h-8 rounded-lg bg-neon-500/10 flex items-center justify-center shrink-0">1</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Движение по проспекту Гагарина</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Ориентируйтесь на здание номер 48. Прямой заезд с широкой дороги, просторная площадка перед боксом.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-neon-400 w-8 h-8 rounded-lg bg-neon-500/10 flex items-center justify-center shrink-0">2</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Осмотр и замер существующей системы</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Подключаем LCD Bass Meter, слушаем тональный баланс, проверяем просадки вольтметром и составляем план доработок.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="font-mono text-lg font-bold text-neon-400 w-8 h-8 rounded-lg bg-neon-500/10 flex items-center justify-center shrink-0">3</div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Чистый плотный бас и детальный звук</h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1">Забираете автомобиль без посторонних шумов в салоне, с настроенной поканалкой и безупречным звуком.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Копирование адреса -->
+            <div class="mt-8 pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-zinc-400">
+                Адрес: <span class="text-zinc-200">г. Сызрань, просп. Гагарина, 48</span>
+              </div>
+              <button onclick="copyAddress('Самарская область, Сызрань, проспект Гагарина, 48')" class="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Скопировать адрес для навигатора</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="border-t border-zinc-800 bg-[#07090c] text-zinc-400 text-xs py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-neon-500/20 border border-neon-500/40 flex items-center justify-center text-neon-400 shrink-0">
+          <i data-lucide="volume-2" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-200 uppercase tracking-wider font-mono">SOUND SZR &bull; BASS DAY</span>
+          <p class="text-[11px] text-zinc-500">Автозвук, шумоизоляция, короба, настройка DSP &bull; Сызрань, просп. Гагарина, 48</p>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right text-[11px] text-zinc-500 space-y-1">
+        <div>Информация носит ознакомительный характер и не является публичной офертой.</div>
+        <div>&copy; 2026 Студия автозвука и шумоизоляции «SOUND SZR». Мощный и качественный звук.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Мобильная фиксированная нижняя панель (sticky bottom bar) -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#090b0e]/95 backdrop-blur-md border-t border-zinc-800 flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79372366838" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-neon-500 via-emerald-500 to-green-600 text-black font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-neon-500/25 active:scale-95 whitespace-nowrap shrink-0">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Позвонить</span>
+    </a>
+    <button onclick="openModal('Быстрая запись на замер с мобильного')" class="flex-1 py-3 px-3 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-neon-500 text-neon-300 font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
+      <i data-lucide="gauge" class="w-4 h-4 text-neon-400"></i>
+      <span>Записаться</span>
+    </button>
+  </aside>
+
+  <!-- Модальное окно быстрой записи -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/85 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl bg-[#121622] border border-zinc-800 p-6 sm:p-7 shadow-2xl">
+
+      <!-- Кнопка закрытия -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5">
+        <div class="text-[11px] uppercase tracking-wider text-neon-400 font-mono font-bold">SOUND SZR • Сызрань, Гагарина 48</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Запись на расчет / замер SPL</h3>
+        <p class="text-xs text-zinc-400 mt-1">Оставьте заявку &mdash; мастер перезвонит для согласования удобного времени в боксе</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Ваше имя</label>
+          <input type="text" required placeholder="Алексей" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-neon-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Номер телефона</label>
+          <input type="tel" required placeholder="+7 (937) 236-68-38" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-neon-500 focus:outline-none text-white text-sm font-mono">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase font-semibold text-zinc-400 mb-1">Марка авто и задачи по звуку</label>
+          <input type="text" id="modal-notes" placeholder="Например: Daewoo Nexia, Шумка 4 дверей и настройка усилителя" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-neon-500 focus:outline-none text-white text-sm">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-neon-500 via-emerald-500 to-green-600 hover:from-neon-400 hover:to-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-neon-500/25 active:scale-95">
+            Подтвердить запись
+          </button>
+        </div>
+
+        <p class="text-[10px] text-zinc-500 text-center">Работаем ежедневно с 10:00 до 19:00</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Всплывающее уведомление (Toast) -->
+  <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 border border-neon-500/40 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-neon-500/20 text-neon-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
+        <div id="toast-desc" class="text-xs text-zinc-400">Мастер студии свяжется с вами в течение 10 минут.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Базовые тарифы студии «SOUND SZR»
+    const basePrices = {
+      'shum-doors': 3500,
+      'install-front': 3000,
+      'box': 3500,
+      'dsp': 1000,
+      'power': 1000,
+      'spl': 200
+    };
+
+    // Коэффициенты по классам авто (шумка и протяжка на кроссовер/джип требуют больше материала и длины)
+    const categoryMultipliers = {
+      sedan: 1.0,
+      crossover: 1.2,
+      suv: 1.35
+    };
+
+    const categoryNames = {
+      sedan: 'Седан / Хэтчбек',
+      crossover: 'Кроссовер',
+      suv: 'Внедорожник'
+    };
+
+    let currentCategory = 'sedan';
+
+    function selectCarCategory(category) {
+      currentCategory = category;
+
+      document.querySelectorAll('.car-type-btn').forEach(btn => {
+        btn.classList.remove('bg-neon-500/15', 'border-neon-500', 'text-neon-300');
+        btn.classList.add('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+      });
+
+      const activeBtn = document.getElementById('car-btn-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-zinc-950', 'border-zinc-800', 'text-zinc-400');
+        activeBtn.classList.add('bg-neon-500/15', 'border-neon-500', 'text-neon-300');
+      }
+
+      updateIndividualPriceLabels();
+      calculateTotal();
+    }
+
+    function updateIndividualPriceLabels() {
+      const mult = categoryMultipliers[currentCategory];
+      for (const [key, basePrice] of Object.entries(basePrices)) {
+        const label = document.getElementById(`price-label-${key}`);
+        if (label) {
+          // Для замера SPL и настройки цена фиксированная, для инсталляций масштабируется
+          const itemMult = (key === 'spl' || key === 'dsp' || key === 'power') ? 1.0 : mult;
+          const calculated = Math.round(basePrice * itemMult);
+          label.innerHTML = `${calculated.toLocaleString('ru-RU')}&nbsp;₽`;
+        }
+      }
+    }
+
+    function calculateTotal() {
+      const mult = categoryMultipliers[currentCategory];
+      let total = 0;
+
+      if (document.getElementById('srv-shum-doors')?.checked) total += basePrices['shum-doors'] * mult;
+      if (document.getElementById('srv-install-front')?.checked) total += basePrices['install-front'] * mult;
+      if (document.getElementById('srv-box')?.checked) total += basePrices['box'] * mult;
+      if (document.getElementById('srv-dsp')?.checked) total += basePrices['dsp'];
+      if (document.getElementById('srv-power')?.checked) total += basePrices['power'];
+      if (document.getElementById('srv-spl')?.checked) total += basePrices['spl'];
+
+      const roundedTotal = Math.round(total);
+      const totalEl = document.getElementById('calc-grand-total');
+      if (totalEl) {
+        totalEl.innerHTML = `${roundedTotal.toLocaleString('ru-RU')}&nbsp;₽`;
+      }
+
+      return roundedTotal;
+    }
+
+    function getSelectedServicesList() {
+      const list = [];
+      if (document.getElementById('srv-shum-doors')?.checked) list.push('Шумоизоляция 4 дверей');
+      if (document.getElementById('srv-install-front')?.checked) list.push('Установка фронта и усилителя');
+      if (document.getElementById('srv-box')?.checked) list.push('Изготовление короба');
+      if (document.getElementById('srv-dsp')?.checked) list.push('Настройка DSP');
+      if (document.getElementById('srv-power')?.checked) list.push('Питание и титанат');
+      if (document.getElementById('srv-spl')?.checked) list.push('Замер SPL (Bass Meter)');
+      return list;
+    }
+
+    function openModalWithCalculatedData() {
+      const total = calculateTotal();
+      const services = getSelectedServicesList();
+      const car = categoryNames[currentCategory];
+      const summary = `${car}: ${services.join(', ')} (~${total.toLocaleString('ru-RU')} ₽)`;
+      openModal(summary);
+    }
+
+    function openModal(serviceTitle) {
+      const modal = document.getElementById('booking-modal');
+      const titleEl = document.getElementById('modal-service-title');
+      const notesEl = document.getElementById('modal-notes');
+
+      if (titleEl && serviceTitle) {
+        titleEl.textContent = 'Запись в бокс SOUND SZR (Гагарина, 48)';
+      }
+      if (notesEl && serviceTitle) {
+        notesEl.value = serviceTitle;
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Заявка принята!', 'Мастер SOUND SZR свяжется с вами в течение 10 минут.');
+    }
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-msg');
+      const titleEl = document.getElementById('toast-title');
+      const descEl = document.getElementById('toast-desc');
+
+      if (titleEl && title) titleEl.textContent = title;
+      if (descEl && desc) descEl.textContent = desc;
+
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('translate-y-4'), 10);
+        setTimeout(() => {
+          toast.classList.add('translate-y-4');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 4000);
+      }
+    }
+
+    function scrollToCalc() {
+      const target = document.getElementById('calculator-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function copyAddress(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = "Адрес скопирован!";
+          setTimeout(() => {
+            btnText.textContent = original;
+          }, 2500);
+        }
+        showToast('Ориентир скопирован', text);
+      } catch (err) {
+        console.error('Ошибка копирования адреса', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>

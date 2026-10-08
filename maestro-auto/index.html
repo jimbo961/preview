@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro Auto | Детейлинг и продажа авто под ключ в Жигулёвске</title>
+    <meta name="description" content="Уход за авто, полировка, химчистка и продажа автомобиля под ключ в Жигулёвске.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E53E3E',
+                            accent: '#F56565',
+                            dark: '#0B0F17',
+                            card: '#161F30',
+                            border: '#24324D'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(229, 62, 62, 0.35);
+        }
+        /* Надежное управление модальным окном без конфликтов с Tailwind CDN */
+        #leadModalOverlay {
+            display: none;
+        }
+        #leadModalOverlay.is-open {
+            display: flex !important;
+        }
+    </style>
+</head>
+<body class="bg-[#0B0F17] text-slate-100 font-sans antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- 1. ШАПКА -->
+    <header class="sticky top-0 z-40 bg-[#0B0F17]/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-red to-brand-accent flex items-center justify-center font-black text-white text-lg tracking-wider shadow-lg shadow-brand-red/20">
+                    M
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight block text-white">Maestro <span class="text-brand-accent">Auto</span></span>
+                    <span class="text-xs text-slate-400 flex items-center">
+                        <i data-lucide="map-pin" class="w-3 h-3 mr-1 text-brand-accent"></i> Жигулёвск, ГСК 1
+                    </span>
+                </div>
+            </div>
+
+            <!-- Десктопные контакты -->
+            <div class="hidden md:flex items-center space-x-6 text-sm">
+                <div class="text-right">
+                    <div class="text-xs text-slate-400">Пн-Вс: 09:00 - 19:00</div>
+                    <a href="tel:+79033331270" class="font-semibold text-white hover:text-brand-accent transition">+7 (903) 333-12-70</a>
+                </div>
+                <!-- Кнопка 1: Записаться в шапке -->
+                <button type="button" onclick="openModal('Общая запись')" class="px-5 py-2.5 rounded-xl bg-brand-red hover:bg-red-600 font-medium text-white shadow-md shadow-brand-red/20 transition cursor-pointer">
+                    Записаться
+                </button>
+            </div>
+
+            <!-- Мобильная кнопка вызова и записи -->
+            <div class="flex items-center space-x-2 md:hidden">
+                <a href="tel:+79033331270" class="p-2.5 rounded-xl bg-slate-800 text-white flex items-center justify-center border border-brand-border">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                </a>
+                <button type="button" onclick="openModal('Быстрая запись')" class="px-3.5 py-2 rounded-xl bg-brand-red text-white text-xs font-semibold cursor-pointer">
+                    Запись
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO-ЭКРАН -->
+        <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 px-4 overflow-hidden border-b border-brand-border/40">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-brand-red/15 via-transparent to-transparent pointer-events-none"></div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-brand-border text-xs text-brand-accent font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+                    Профессиональный автосервис & детейлинг в Жигулёвске
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-none text-white mb-6">
+                    Продажа авто под ключ <br class="hidden sm:inline" />
+                    и <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-brand-accent to-red-400">комплексный уход</span> за кузовом
+                </h1>
+                
+                <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Возьмем на себя предпродажную подготовку, поиск покупателя и сопровождение сделки по максимальной цене. А также вернем вашему авто блеск и свежесть салона.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                    <!-- Кнопка 2: Продать авто под ключ в Hero -->
+                    <button type="button" onclick="openModal('Продажа авто под ключ')" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-red hover:bg-red-600 font-semibold text-white transition flex items-center justify-center gap-2 glow-effect cursor-pointer">
+                        <i data-lucide="key" class="w-4 h-4"></i>
+                        Продать авто под ключ
+                    </button>
+                    <a href="#services" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-card hover:bg-slate-800 border border-brand-border font-medium text-slate-200 transition flex items-center justify-center">
+                        Каталог услуг
+                    </a>
+                </div>
+
+                <!-- Быстрые плашки УТП -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-12 text-left">
+                    <div class="p-3.5 rounded-xl bg-brand-card/60 border border-brand-border">
+                        <div class="text-brand-accent font-bold text-lg mb-0.5">от 2 000 ₽</div>
+                        <div class="text-xs text-slate-400">Продажа авто под ключ</div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-card/60 border border-brand-border">
+                        <div class="text-brand-accent font-bold text-lg mb-0.5">от 500 ₽</div>
+                        <div class="text-xs text-slate-400">Доступный детейлинг</div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-card/60 border border-brand-border">
+                        <div class="text-brand-accent font-bold text-lg mb-0.5">09:00 - 19:00</div>
+                        <div class="text-xs text-slate-400">Без выходных</div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-card/60 border border-brand-border">
+                        <div class="text-brand-accent font-bold text-lg mb-0.5">100%</div>
+                        <div class="text-xs text-slate-400">Безопасность сделки</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. БЛОК УСЛУГ И ЦЕН -->
+        <section id="services" class="py-16 px-4 max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Услуги и прайс-лист</h2>
+                    <p class="text-sm text-slate-400">Честные фиксированные цены без скрытых условий</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-xs text-slate-400">
+                    * Итоговая стоимость зависит от класса авто и объёма работ
+                </div>
+            </div>
+
+            <!-- Главный флагман -->
+            <div class="mb-8 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-brand-card to-slate-900 border-2 border-brand-red/50 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+                    <div class="max-w-2xl">
+                        <span class="inline-block px-3 py-1 bg-brand-red text-white text-xs font-bold uppercase rounded-md tracking-wider mb-3">Главная услуга</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Продажа автомобиля под ключ</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Хотите продать автомобиль быстро, безопасно и по максимальной рыночной цене? Мы берём весь процесс на себя: профессиональная фотосессия, размещение на ключевых площадках, общение с покупателями, показы и юридическое сопровождение.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                            <span class="px-2.5 py-1 bg-slate-800 rounded-md border border-slate-700">✓ Экономия времени</span>
+                            <span class="px-2.5 py-1 bg-slate-800 rounded-md border border-slate-700">✓ Защита от перекупов</span>
+                            <span class="px-2.5 py-1 bg-slate-800 rounded-md border border-slate-700">✓ Прозрачный расчет</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-between gap-4 shrink-0">
+                        <div class="text-left lg:text-right">
+                            <span class="text-xs text-slate-400 block">Стоимость:</span>
+                            <span class="text-3xl font-extrabold text-white">от 2 000 ₽</span>
+                        </div>
+                        <button type="button" onclick="openModal('Продажа автомобиля под ключ')" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-red hover:bg-red-600 text-white font-medium transition flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Заказать продажу</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сетка услуг -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <div class="p-5 rounded-xl bg-brand-card border border-brand-border hover:border-slate-600 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent mb-3">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base mb-1">Полировка кузова</h4>
+                        <p class="text-xs text-slate-400 mb-4">Устранение паутинки, голограмм и мелких царапин. Возвращение глубокого глянца.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <span class="font-bold text-brand-accent">от 500 ₽</span>
+                        <button type="button" onclick="openModal('Полировка кузова')" class="text-xs font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition cursor-pointer">Выбрать</button>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-brand-card border border-brand-border hover:border-slate-600 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent mb-3">
+                            <i data-lucide="sun" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base mb-1">Полировка фар</h4>
+                        <p class="text-xs text-slate-400 mb-4">Восстановление прозрачности оптики и яркости светового потока на дороге.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <span class="font-bold text-brand-accent">от 500 ₽</span>
+                        <button type="button" onclick="openModal('Полировка фар')" class="text-xs font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition cursor-pointer">Выбрать</button>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-brand-card border border-brand-border hover:border-slate-600 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent mb-3">
+                            <i data-lucide="spray-can" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base mb-1">Химчистка салона</h4>
+                        <p class="text-xs text-slate-400 mb-4">Глубокая очистка сидений, ковролина и пластика от въевшейся грязи и запахов.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <span class="font-bold text-brand-accent">от 500 ₽</span>
+                        <button type="button" onclick="openModal('Химчистка салона')" class="text-xs font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition cursor-pointer">Выбрать</button>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-brand-card border border-brand-border hover:border-slate-600 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent mb-3">
+                            <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base mb-1">Ремонт сколов и царапин</h4>
+                        <p class="text-xs text-slate-400 mb-4">Локальная маскировка повреждений ЛКП с защитой металла от коррозии.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <span class="font-bold text-brand-accent">от 500 ₽</span>
+                        <button type="button" onclick="openModal('Ремонт сколов и царапин')" class="text-xs font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition cursor-pointer">Выбрать</button>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-brand-card border border-brand-border hover:border-slate-600 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent mb-3">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base mb-1">Предпродажная подготовка</h4>
+                        <p class="text-xs text-slate-400 mb-4">Комплекс мер для максимального повышения товарного вида перед продажей.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <span class="font-bold text-brand-accent">от 500 ₽</span>
+                        <button type="button" onclick="openModal('Предпродажная подготовка')" class="text-xs font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition cursor-pointer">Выбрать</button>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-brand-card border border-brand-border hover:border-slate-600 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent mb-3">
+                            <i data-lucide="search" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base mb-1">Автоподбор</h4>
+                        <p class="text-xs text-slate-400 mb-4">Проверка кузова толщиномером, диагностика узлов и юридическая проверка.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                        <span class="font-bold text-brand-accent">от 500 ₽</span>
+                        <button type="button" onclick="openModal('Автоподбор')" class="text-xs font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition cursor-pointer">Выбрать</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. ПРЕИМУЩЕСТВА -->
+        <section class="py-16 px-4 bg-slate-900/60 border-y border-brand-border">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Почему выбирают Maestro Auto</h2>
+                    <p class="text-sm text-slate-400">Работаем на результат и репутацию каждого выполненного заказа</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-accent mb-4">
+                            <i data-lucide="badge-dollar-sign" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Выгодная продажа</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Окупаем затраты на услугу продажи за счет правильного товарного вида и профессионального торга без потери в цене.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-accent mb-4">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Экономия вашего времени</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Никаких звонков от перекупов и бесконечных показов в выходные дни — берем всю рутину на себя.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-accent mb-4">
+                            <i data-lucide="check-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Бережный детейлинг</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Используем только качественные составы и деликатные технологии очистки, сохраняя заводские покрытия.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. КОНТАКТЫ И ФОРМА -->
+        <section class="py-16 px-4 bg-slate-900/40">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Контакты сервиса</h2>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accent shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400">Адрес:</div>
+                                    <div class="font-medium text-white">г. Жигулёвск, Молодёжный просп., 2 (ГСК 1)</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accent shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400">Телефон:</div>
+                                    <a href="tel:+79033331270" class="font-semibold text-white hover:text-brand-accent transition text-lg">+7 (903) 333-12-70</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accent shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400">График работы:</div>
+                                    <div class="font-medium text-white">Ежедневно с 09:00 до 19:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://yandex.ru/maps/?text=Жигулёвск+Молодёжный+просп+2+ГСК+1" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm transition inline-flex items-center gap-2">
+                                <i data-lucide="navigation" class="w-4 h-4 text-brand-accent"></i>
+                                Маршрут в Яндекс.Картах
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Форма на странице -->
+                    <div class="p-6 md:p-8 rounded-2xl bg-brand-card border border-brand-border">
+                        <h3 class="text-lg font-bold text-white mb-1">Получить расчет стоимости</h3>
+                        <p class="text-xs text-slate-400 mb-6">Оставьте контакты — мастер свяжется с вами и сориентирует по цене.</p>
+                        
+                        <form onsubmit="handleFormSubmission(event, this)" class="space-y-4">
+                            <input type="hidden" name="service" value="Заявка со страницы контактов">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Ваше имя *</label>
+                                <input type="text" name="name" required placeholder="Константин" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-brand-border text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Номер телефона *</label>
+                                <input type="tel" name="phone" required placeholder="+7 (900) 000-00-00" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-brand-border text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Услуга</label>
+                                <select name="service_choice" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-brand-border text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                                    <option value="Продажа авто под ключ">Продажа авто под ключ</option>
+                                    <option value="Полировка кузова / фар">Полировка кузова / фар</option>
+                                    <option value="Химчистка салона">Химчистка салона</option>
+                                    <option value="Предпродажная подготовка">Предпродажная подготовка</option>
+                                    <option value="Автоподбор">Автоподбор</option>
+                                    <option value="Другая услуга">Другая услуга</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-red hover:bg-red-600 font-semibold text-white transition text-sm flex items-center justify-center gap-2 cursor-pointer">
+                                <span>Отправить заявку</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. ПОДВАЛ -->
+    <footer class="py-8 px-4 border-t border-brand-border/60 bg-[#0B0F17] text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 Maestro Auto. Жигулёвск, Молодёжный просп., 2 (ГСК 1)
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+79033331270" class="hover:text-slate-300 transition">+7 (903) 333-12-70</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ВСИТРОЕННОЕ МОДАЛЬНОЕ ОКНО ЗАЯВКИ (ТОЧНО ПО СКРИНШОТУ) -->
+    <div id="leadModalOverlay" onclick="handleOverlayClick(event)" class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="bg-[#161F30] border border-[#24324D] w-full max-w-md p-6 sm:p-7 rounded-2xl relative shadow-2xl">
+            <!-- Крестик закрытия -->
+            <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition cursor-pointer p-1">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <h3 class="text-xl font-bold text-white mb-1">Запись на услугу</h3>
+            <p id="modalServiceLabel" class="text-xs text-brand-red mb-5 font-medium">Общая запись</p>
+
+            <form onsubmit="handleFormSubmission(event, this)" class="space-y-4">
+                <input type="hidden" id="modalServiceInput" name="service" value="Общая запись">
+                
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1.5">Ваше имя *</label>
+                    <input type="text" name="name" required placeholder="Константин" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-[#24324D] text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1.5">Телефон *</label>
+                    <input type="tel" name="phone" required placeholder="+7 (900) 000-00-00" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-[#24324D] text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1.5">Марка авто (необязательно)</label>
+                    <input type="text" name="car" placeholder="Lada Vesta / Camry" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-[#24324D] text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-brand-red hover:bg-red-600 font-semibold text-white transition text-sm flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-brand-red/25 mt-2">
+                    <span>Подтвердить запись</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS СКРИПТ (ПРОСТОЙ, ГАРАНТИРОВАННО РАБОЧИЙ) -->
+    <script>
+        // Инициализация Lucide иконок
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+
+        const modalOverlay = document.getElementById('leadModalOverlay');
+        const modalLabel = document.getElementById('modalServiceLabel');
+        const modalInput = document.getElementById('modalServiceInput');
+
+        // Открытие всплывающего окна
+        function openModal(serviceTitle) {
+            if (modalLabel) modalLabel.textContent = serviceTitle || 'Общая запись';
+            if (modalInput) modalInput.value = serviceTitle || 'Общая запись';
+            if (modalOverlay) {
+                modalOverlay.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Закрытие всплывающего окна
+        function closeModal() {
+            if (modalOverlay) {
+                modalOverlay.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Закрытие при клике мимо карточки
+        function handleOverlayClick(event) {
+            if (event.target === modalOverlay) {
+                closeModal();
+            }
+        }
+
+        // Закрытие по клавише Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Отправка формы
+        function handleFormSubmission(event, form) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const name = formData.get('name') || 'Клиент';
+            const service = formData.get('service') || formData.get('service_choice') || 'Услуга';
+            
+            alert(`Спасибо, ${name}! Заявка на «${service}» принята. Мы свяжемся с вами в ближайшее время.`);
+            form.reset();
+            closeModal();
+        }
+    </script>
+</body>
+</html>

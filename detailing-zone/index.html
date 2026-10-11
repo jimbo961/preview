@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detailing Zone — Удаление вмятин PDR, покраска и полировка в Отрадном</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nx: {
+              bg: '#090C15',
+              panel: '#101524',
+              card: '#161E33',
+              border: '#1F2B48',
+              lavender: '#C4B5FD',
+              accent: '#8B5CF6',
+              accentHover: '#7C3AED',
+              subtext: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .nextsense-bg {
+      background-color: #090C15;
+      background-image: 
+        radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 15% 85%, rgba(196, 181, 253, 0.08) 0%, transparent 50%);
+    }
+
+    .glass-card {
+      background: rgba(16, 21, 36, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+  </style>
+</head>
+<body class="nextsense-bg text-slate-100 font-sans antialiased selection:bg-nx-accent selection:text-white min-h-screen overflow-x-hidden">
+
+  <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
+  <div class="bg-black/75 text-[10px] sm:text-[11px] font-mono tracking-wider sm:tracking-widest text-nx-subtext text-center py-2 px-3 border-b border-nx-border/60 uppercase">
+    ОТРАДНЫЙ • КУЗОВНОЙ ДЕТЕЙЛИНГ «DETAILING ZONE» • РАБОТАЕМ С 10:00 ДО 20:00
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sticky top-0 z-50 bg-nx-bg/90 backdrop-blur-md border-b border-nx-border/80 w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+      
+      <!-- Логотип -->
+      <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2 group shrink-0">
+        <div class="w-7 h-7 sm:w-8 h-8 rounded-full bg-gradient-to-tr from-nx-accent to-nx-lavender flex items-center justify-center text-black font-serif text-sm italic shadow-md shadow-nx-accent/30 shrink-0">
+          DZ
+        </div>
+        <span class="text-base sm:text-xl font-serif tracking-wide text-white group-hover:text-nx-lavender transition">
+          Detailing <span class="text-nx-lavender italic">Zone</span>
+        </span>
+      </a>
+
+      <!-- Меню -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-medium text-nx-subtext uppercase tracking-widest font-mono">
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+        <a href="#about" class="hover:text-white transition">Преимущества</a>
+        <a href="#contacts" class="hover:text-white transition">Контакты</a>
+      </nav>
+
+      <!-- Контакты и кнопка -->
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <a href="https://vk.com" target="_blank" class="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-nx-panel border border-nx-border text-slate-300 hover:text-nx-lavender flex items-center justify-center transition shrink-0" title="ВКонтакте">
+          <span class="font-bold text-[10px] sm:text-xs">VK</span>
+        </a>
+        <a href="tel:+79276088562" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-nx-panel border border-nx-border text-xs font-mono font-bold text-white hover:border-nx-accent transition shrink-0">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-nx-lavender"></i>
+          +7 (927) 608-85-62
+        </a>
+        <button onclick="openModal('Быстрая запись')" class="px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-nx-accent hover:bg-nx-accentHover text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition shadow-md shadow-nx-accent/25 active:scale-95 shrink-0 whitespace-nowrap">
+          Записаться
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO СЕКЦИЯ -->
+  <section class="py-12 sm:py-20 border-b border-nx-border/80 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Офферная часть -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-nx-panel/80 border border-nx-border text-[11px] sm:text-xs font-mono text-nx-lavender">
+            <span class="w-2 h-2 rounded-full bg-nx-accent animate-pulse"></span>
+            Самарская обл. • г. Отрадный • с 10:00 до 20:00
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif text-white tracking-tight leading-[1.1]">
+            Идеальная геометрия кузова <br>
+            <span class="italic text-nx-lavender font-light">и безупречный глянец.</span>
+          </h1>
+
+          <p class="text-nx-subtext text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+            Ювелирное удаление вмятин без покраски по немецкой технологии PDR с сохранением заводского ЛКП. Локальная и полная покраска, восстановительная полировка и сварочные работы любой сложности.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-3.5 max-w-sm pt-2">
+            <button onclick="openModal('Главный экран')" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-nx-accent hover:bg-nx-accentHover text-white font-medium text-xs uppercase tracking-wider transition shadow-lg shadow-nx-accent/30 active:scale-95 flex items-center justify-center gap-2">
+              <span>Оценить ремонт по фото</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="#services" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-nx-panel hover:bg-nx-card border border-nx-border text-slate-200 font-medium text-xs uppercase tracking-wider transition text-center">
+              Виды услуг
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-nx-border/70 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-nx-subtext font-mono">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-nx-lavender"></i>
+              <span class="text-white">Сохранение заводского лака</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-nx-lavender"></i>
+              <span class="text-white">10:00 – 20:00 ежедневно</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Витрина-плашка -->
+        <div class="lg:col-span-5">
+          <div class="glass-card p-6 sm:p-7 rounded-3xl space-y-4 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center pb-3 border-b border-nx-border/80">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-nx-lavender">ПРОФЕССИОНАЛЬНЫЙ БОКС</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-nx-accent/20 border border-nx-accent/40 text-nx-lavender text-[10px] font-mono">PDR СТУДИЯ</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-serif text-white mb-1">Восстановление кузова без шпаклевки</h3>
+              <p class="text-xs text-nx-subtext leading-relaxed">
+                Выпрямляем вмятины от града, парковочных ударов и повреждений ребер жесткости специальным PDR-инструментом.
+              </p>
+            </div>
+
+            <div class="space-y-2 text-xs font-mono">
+              <div class="p-3 rounded-2xl bg-black/40 border border-nx-border flex items-center justify-between">
+                <span class="text-slate-300">Удаление вмятин PDR</span>
+                <span class="text-nx-lavender font-bold">Без покраски</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-black/40 border border-nx-border flex items-center justify-between">
+                <span class="text-slate-300">Покраска деталей авто</span>
+                <span class="text-nx-lavender font-bold">В цвет кузова</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-black/40 border border-nx-border flex items-center justify-between">
+                <span class="text-slate-300">Восстановительная полировка</span>
+                <span class="text-nx-lavender font-bold">Зеркальный блеск</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-black/40 border border-nx-border flex items-center justify-between">
+                <span class="text-slate-300">Сварочные работы</span>
+                <span class="text-nx-lavender font-bold">Любая сложность</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('Консультация с главного экрана')" class="w-full py-3 rounded-2xl bg-white hover:bg-slate-200 text-black text-xs font-bold uppercase tracking-wider transition">
+              Получить расчет стоимости
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК УСЛУГ -->
+  <section id="services" class="py-12 sm:py-16 border-b border-nx-border/80 bg-nx-panel/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-8">
+        <span class="text-xs font-mono uppercase tracking-widest text-nx-lavender block mb-1">НАПРАВЛЕНИЯ РАБОТЫ</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-white">Услуги кузовного детейлинга</h2>
+        <p class="text-xs sm:text-sm text-nx-subtext mt-2 max-w-xl">
+          Специализируемся на сложном восстановлении внешнего вида деталей автомобиля. Точная стоимость рассчитывается после осмотра или предварительно по фото повреждения.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- 1. PDR вмятины -->
+        <div class="p-6 rounded-2xl bg-nx-panel border-2 border-nx-accent relative flex flex-col justify-between shadow-xl">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-nx-accent text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full shadow">
+            Флагман
+          </div>
+
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-nx-accent/20 border border-nx-accent/40 text-nx-lavender flex items-center justify-center mb-4 mt-1">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-serif text-white mb-2">Удаление вмятин PDR</h3>
+            <p class="text-xs text-nx-subtext mb-4 leading-relaxed">
+              Беспокрасочное выпрямление вмятин после града, мелких ДТП и неосторожной парковки с сохранением заводского ЛКП и толщины лака.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-lavender"></i> Без шпаклевки и перекраса</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-lavender"></i> Сохранение заводской гарантии</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-lavender"></i> Ремонт за несколько часов</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Удаление вмятин PDR')" class="w-full py-2.5 rounded-xl bg-nx-accent hover:bg-nx-accentHover text-white text-xs font-semibold uppercase transition">
+            Рассчитать ремонт
+          </button>
+        </div>
+
+        <!-- 2. Покраска -->
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border flex flex-col justify-between hover:border-nx-accent/60 transition">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center mb-4">
+              <i data-lucide="paint-bucket" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-serif text-white mb-2">Покраска деталей</h3>
+            <p class="text-xs text-nx-subtext mb-4 leading-relaxed">
+              Локальная и полная покраска элементов кузова: бамперы, крылья, капоты, двери и пороги с точным компьютерным подбором оттенка.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> 100% попадание в родной цвет</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Качественные грунты и лаки</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Сушка в камере без соринок</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Покраска деталей')" class="w-full py-2.5 rounded-xl bg-nx-card hover:bg-nx-cardHover border border-nx-border text-white text-xs font-semibold uppercase transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+        <!-- 3. Полировка -->
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border flex flex-col justify-between hover:border-nx-accent/60 transition">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center mb-4">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-serif text-white mb-2">Полировка кузова</h3>
+            <p class="text-xs text-nx-subtext mb-4 leading-relaxed">
+              Восстановление глубокого глянца, удаление паутинки, мелких царапин от веток и следов моек. Защитная консервация блеска.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Мягкая и абразивная полировка</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Полировка фар под прозрачность</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Удаление следов реагентов</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Полировка кузова')" class="w-full py-2.5 rounded-xl bg-nx-card hover:bg-nx-cardHover border border-nx-border text-white text-xs font-semibold uppercase transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+        <!-- 4. Сварочные работы -->
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border flex flex-col justify-between hover:border-nx-accent/60 transition">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center mb-4">
+              <i data-lucide="flame" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-serif text-white mb-2">Сварочные работы</h3>
+            <p class="text-xs text-nx-subtext mb-4 leading-relaxed">
+              Профессиональный кузовной ремонт: переварка порогов, арок, глушителей и устранение коррозионных сквозных повреждений металла.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Замена и усиление порогов</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Сварка трещин и крепежей</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-nx-accent"></i> Антикоррозийная защита швов</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Сварочные работы')" class="w-full py-2.5 rounded-xl bg-nx-card hover:bg-nx-cardHover border border-nx-border text-white text-xs font-semibold uppercase transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section id="about" class="py-12 sm:py-16 border-b border-nx-border/80 bg-nx-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-8 max-w-lg">
+        <span class="text-xs font-mono uppercase tracking-widest text-nx-lavender block mb-1">ПОЧЕМУ ДОВЕРЯЮТ НАМ</span>
+        <h2 class="text-2xl sm:text-3xl font-serif text-white">Принципы работы «Detailing Zone»</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-serif text-white">Сохранение стоимости авто</h3>
+          <p class="text-xs text-nx-subtext leading-relaxed">
+            При продаже автомобиль с устраненными по PDR вмятинами проверяется толщиномером как заводской, без признаков ДТП и следов шпаклевки.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-serif text-white">Быстрая оценка по фотографии</h3>
+          <p class="text-xs text-nx-subtext leading-relaxed">
+            Пришлите фото вмятины или повреждения в сообщения — мастер заранее сориентирует по возможности ремонта, срокам и ориентировочной цене.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-serif text-white">Удобный график без задержек</h3>
+          <p class="text-xs text-nx-subtext leading-relaxed">
+            Работаем с 10:00 до 20:00, принимаем автомобили строго по предварительной записи, чтобы уделить ремонту максимум внимания.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section id="contacts" class="py-12 sm:py-16 border-b border-nx-border/80 bg-nx-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        
+        <div class="space-y-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-nx-lavender block">ЛОКАЦИЯ И СВЯЗЬ</span>
+          <h2 class="text-2xl sm:text-3xl font-serif text-white">Ждем вас в «Detailing Zone»</h2>
+
+          <div class="space-y-3 text-xs sm:text-sm text-slate-200">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-nx-lavender shrink-0 mt-0.5"></i>
+              <span>Самарская область, городской округ Отрадный</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="w-4 h-4 text-nx-lavender shrink-0"></i>
+              <span>Ежедневно с 10:00 до 20:00</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-nx-lavender shrink-0"></i>
+              <a href="tel:+79276088562" class="text-white hover:text-nx-lavender font-mono font-bold transition">+7 (927) 608-85-62</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="share-2" class="w-4 h-4 text-nx-lavender shrink-0"></i>
+              <a href="https://vk.com" target="_blank" class="text-slate-300 hover:text-white transition">Страница ВКонтакте</a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://yandex.ru/maps/?text=Отрадный+Detailing+zone" target="_blank" class="px-5 py-2.5 rounded-xl bg-nx-accent hover:bg-nx-accentHover text-white font-medium text-xs uppercase tracking-wider transition flex items-center gap-2 shadow-md shadow-nx-accent/20">
+              <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Маршрут в Яндекс.Картах
+            </a>
+            <button onclick="openModal('Запись на осмотр')" class="px-5 py-2.5 rounded-xl bg-nx-panel hover:bg-nx-card border border-nx-border text-slate-200 font-medium text-xs uppercase tracking-wider transition">
+              Записаться на осмотр
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-nx-panel border border-nx-border text-center">
+          <div class="w-12 h-12 mx-auto rounded-full bg-nx-card border border-nx-border text-nx-lavender flex items-center justify-center mb-3">
+            <i data-lucide="phone-call" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif text-white mb-1">Предварительная запись</h3>
+          <p class="text-xs text-nx-subtext mb-4 max-w-xs mx-auto">
+            Позвоните перед визитом или отправьте фото повреждения для оперативной консультации мастера.
+          </p>
+          <a href="tel:+79276088562" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-nx-accent hover:bg-nx-accentHover text-white text-xs font-semibold uppercase transition shadow">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i> Позвонить мастеру
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="py-6 bg-black text-nx-subtext text-xs font-mono border-t border-nx-border/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <p>© 2026 Кузовной детейлинг «Detailing Zone». г. Отрадный.</p>
+      <div class="flex items-center gap-4">
+        <a href="tel:+79276088562" class="hover:text-nx-lavender transition">Телефон</a>
+        <a href="https://vk.com" target="_blank" class="hover:text-nx-lavender transition">ВКонтакте</a>
+        <a href="#services" class="hover:text-nx-lavender transition">Услуги</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-nx-panel rounded-2xl max-w-sm w-full p-6 relative border-2 border-nx-accent shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-nx-subtext hover:text-white transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <span class="text-[10px] font-mono uppercase tracking-widest text-nx-lavender block mb-1">ОНЛАЙН-ОЦЕНКА</span>
+      <h3 class="text-lg font-serif text-white mb-4">Запись на оценку и ремонт</h3>
+
+      <form onsubmit="handleModalSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-nx-subtext mb-1 font-mono text-[10px]">Услуга</label>
+          <input type="text" id="modalServiceInput" readonly class="w-full bg-nx-bg border border-nx-border rounded-xl px-3 py-2 text-nx-lavender font-bold focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-nx-subtext mb-1 font-mono text-[10px]">Ваше имя</label>
+          <input type="text" required placeholder="Как вас зовут?" class="w-full bg-nx-bg border border-nx-border rounded-xl px-3 py-2 text-white placeholder-slate-600 focus:outline-none focus:border-nx-accent">
+        </div>
+        <div>
+          <label class="block text-nx-subtext mb-1 font-mono text-[10px]">Телефон для связи</label>
+          <input type="tel" required placeholder="+7 (___) ___-__-__" class="w-full bg-nx-bg border border-nx-border rounded-xl px-3 py-2 text-white placeholder-slate-600 focus:outline-none focus:border-nx-accent">
+        </div>
+        
+        <button type="submit" class="w-full py-3 rounded-xl bg-nx-accent hover:bg-nx-accentHover text-white font-semibold uppercase tracking-wider transition shadow-lg shadow-nx-accent/30 mt-2">
+          Подтвердить запись
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function openModal(serviceName) {
+      document.getElementById('modalServiceInput').value = serviceName;
+      document.getElementById('bookingModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      alert('Заявка принята! Мастер свяжется с вами в течение 5 минут для консультации.');
+      closeModal();
+    }
+  </script>
+</body>
+</html>

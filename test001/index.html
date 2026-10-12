@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МАРАФЕТ — Студия глубокой химчистки автомобилей в Отрадном</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Newsreader + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            griffin: {
+              bg: '#0B0D11',
+              panel: '#151922',
+              card: '#1C222E',
+              border: '#333D50',
+              borderHover: '#4A5770',
+              textMain: '#F8FAFC',
+              textBody: '#CBD5E1',
+              textMuted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .griffin-pattern {
+      background-color: #0B0D11;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+      background-size: 28px 28px;
+    }
+  </style>
+</head>
+<body class="griffin-pattern text-griffin-textMain font-sans antialiased selection:bg-white selection:text-black min-h-screen overflow-x-hidden">
+
+  <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
+  <div class="bg-black/95 text-xs sm:text-sm font-mono tracking-wider text-slate-200 text-center py-2.5 px-4 border-b border-griffin-border font-medium">
+    ОТРАДНЫЙ • СТУДИЯ ХИМЧИСТКИ «МАРАФЕТ» • ЕЖЕДНЕВНО С 08:00 ДО 22:00
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sticky top-0 z-50 bg-[#0B0D11]/95 backdrop-blur-md border-b border-griffin-border w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between gap-3">
+      
+      <!-- Логотип -->
+      <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-9 h-9 rounded-full border-2 border-white bg-white/10 flex items-center justify-center text-white font-serif text-base font-bold shadow-md shrink-0">
+          М
+        </div>
+        <span class="text-lg sm:text-2xl font-serif font-bold tracking-wider text-white uppercase">
+          МАРАФЕТ<span class="text-xs sm:text-sm font-mono lowercase text-slate-300 ml-1.5 font-normal tracking-normal">.авто</span>
+        </span>
+      </a>
+
+      <!-- Меню -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-mono uppercase tracking-wider text-slate-200 font-semibold">
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+        <a href="#standards" class="hover:text-white transition">Стандарты</a>
+        <a href="#review" class="hover:text-white transition">Отзыв гостя</a>
+        <a href="#contacts" class="hover:text-white transition">Контакты</a>
+      </nav>
+
+      <!-- Контакты и кнопка -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="https://vk.com" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-griffin-panel border-2 border-griffin-border text-white hover:border-white flex items-center justify-center transition shrink-0" title="ВКонтакте">
+          <span class="font-mono text-xs sm:text-sm font-bold">VK</span>
+        </a>
+        <a href="tel:+79376597699" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-griffin-panel border-2 border-griffin-border text-sm font-mono text-white font-bold hover:border-white transition shrink-0">
+          <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+          +7 (937) 659-76-99
+        </a>
+        <button onclick="openModal('Быстрая запись')" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-white text-black hover:bg-slate-200 text-xs sm:text-sm font-mono uppercase tracking-wider font-bold transition active:scale-95 shrink-0 shadow-lg">
+          Записаться
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO СЕКЦИЯ -->
+  <section class="py-14 sm:py-24 border-b border-griffin-border relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Офферная часть -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-griffin-panel border border-griffin-border text-xs sm:text-sm font-mono text-emerald-300 font-medium">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Отрадный • Лесная ул., 8А • 08:00–22:00
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight leading-[1.08]">
+            Возвращаем салону <br>
+            <span class="italic font-normal text-slate-100">заводскую свежесть</span> <br>
+            и абсолютную чистоту.
+          </h1>
+
+          <p class="text-griffin-textBody text-base sm:text-xl leading-relaxed max-w-xl font-normal">
+            Профессиональная глубокая химчистка интерьеров. Полная нейтрализация въевшихся запахов, табака и застарелых пятен. Бережная забота о велюре, алькантаре, коже и пластиковых деталях.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center gap-3.5 max-w-md pt-2">
+            <button onclick="openModal('Главный экран')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black hover:bg-slate-200 font-mono text-sm uppercase tracking-wider font-bold transition active:scale-95 flex items-center justify-center gap-2 shadow-xl">
+              <span>Забронировать дату</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="#services" class="w-full sm:w-auto px-7 py-4 rounded-full bg-griffin-panel hover:bg-griffin-card border border-griffin-border text-white font-mono text-sm uppercase tracking-wider font-semibold transition text-center">
+              Виды химчистки
+            </a>
+          </div>
+
+          <div class="pt-8 border-t border-griffin-border flex flex-wrap items-center gap-6 sm:gap-8 text-sm sm:text-base text-slate-200 font-mono">
+            <div class="flex items-center gap-2.5 font-medium">
+              <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+              <span>Безопасная эко-химия</span>
+            </div>
+            <div class="flex items-center gap-2.5 font-medium">
+              <i data-lucide="clock" class="w-5 h-5 text-emerald-400"></i>
+              <span>Работаем без опозданий</span>
+            </div>
+            <div class="flex items-center gap-2.5 font-medium">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+              <span>Полная сохранность вещей</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Витрина спецификации -->
+        <div class="lg:col-span-5">
+          <div class="p-7 sm:p-8 rounded-3xl bg-griffin-panel border-2 border-griffin-border space-y-5 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center pb-3 border-b border-griffin-border font-mono text-xs sm:text-sm text-slate-300 font-semibold">
+              <span class="uppercase tracking-wider">СТУДИЯ «МАРАФЕТ»</span>
+              <span class="text-emerald-400">EST. ОТРАДНЫЙ</span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-2">Комплексное преображение</h3>
+              <p class="text-sm sm:text-base text-griffin-textBody leading-relaxed">
+                Вычищаем каждый шов и труднодоступные полости. Все забытые в салоне вещи аккуратно упаковываются в отдельный пакет.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 text-sm font-mono">
+              <div class="p-3.5 rounded-2xl bg-griffin-card border border-griffin-border flex items-center justify-between">
+                <span class="text-slate-200 font-medium">Текстиль, ковролин и потолок</span>
+                <span class="text-white font-bold">Экстрактор</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-griffin-card border border-griffin-border flex items-center justify-between">
+                <span class="text-slate-200 font-medium">Кожаные сиденья</span>
+                <span class="text-white font-bold">Кондиционер</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-griffin-card border border-griffin-border flex items-center justify-between">
+                <span class="text-slate-200 font-medium">Сушка салона</span>
+                <span class="text-emerald-400 font-bold">Без сырости</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-griffin-card border border-griffin-border flex items-center justify-between">
+                <span class="text-slate-200 font-medium">Удаление табачного налета</span>
+                <span class="text-white font-bold">Озонация</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('Быстрая консультация')" class="w-full py-3.5 rounded-full bg-white/15 hover:bg-white/25 border-2 border-white/30 text-white font-mono text-xs sm:text-sm uppercase tracking-wider font-bold transition">
+              Уточнить детали по авто
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК УСЛУГ -->
+  <section id="services" class="py-14 sm:py-20 border-b border-griffin-border bg-[#0E1117]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold block mb-2">РЕГЛАМЕНТ РАБОТ</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Программы химчистки интерьера</h2>
+        <p class="text-base sm:text-lg text-griffin-textBody mt-3 leading-relaxed">
+          Подбираем технологию и составы индивидуально под материал обивки. Стоимость рассчитывается в зависимости от класса машины и степени загрязнения.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- 1. Комплексная химчистка -->
+        <div class="p-7 sm:p-8 rounded-3xl bg-griffin-panel border-2 border-white relative flex flex-col justify-between shadow-2xl">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-black font-mono text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+            Полный цикл
+          </div>
+
+          <div>
+            <div class="w-12 h-12 rounded-full bg-white/15 border border-white/30 text-white flex items-center justify-center mb-5 mt-1">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-white mb-3">Глубокая химчистка «Все включено»</h3>
+            <p class="text-sm sm:text-base text-griffin-textBody mb-5 leading-relaxed">
+              Полная очистка внутреннего пространства автомобиля от потолка до ковролина багажника с бережной принудительной сушкой.
+            </p>
+            <ul class="text-sm sm:text-base text-slate-100 space-y-2.5 mb-8 font-mono">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Химчистка сидений и подголовников</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Мойка ковролина и ворсовых ковров</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Очистка потолка без провисания</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Дверные карты, торпедо и консоль</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Мойка багажного отсека</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Комплексная химчистка')" class="w-full py-3.5 rounded-full bg-white text-black hover:bg-slate-200 font-mono text-xs sm:text-sm uppercase tracking-wider font-bold transition shadow-lg">
+            Записаться на комплекс
+          </button>
+        </div>
+
+        <!-- 2. Локальная химчистка -->
+        <div class="p-7 sm:p-8 rounded-3xl bg-griffin-panel border-2 border-griffin-border flex flex-col justify-between hover:border-slate-400 transition shadow-xl">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-griffin-card border border-griffin-border text-white flex items-center justify-center mb-5">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-white mb-3">Локальное удаление пятен</h3>
+            <p class="text-sm sm:text-base text-griffin-textBody mb-5 leading-relaxed">
+              Точечное выведение сложных загрязнений: пролитые напитки, следы детского питания, кофе, масла и перевозки животных.
+            </p>
+            <ul class="text-sm sm:text-base text-slate-100 space-y-2.5 mb-8 font-mono">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Чистка отдельных кресел или дивана</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Профессиональные пятновыводители</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Сохранение цвета и структуры ткани</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Экспресс-сушка обработанной зоны</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Локальная химчистка')" class="w-full py-3.5 rounded-full bg-griffin-card hover:bg-griffin-border border border-griffin-border text-white font-mono text-xs sm:text-sm uppercase tracking-wider font-bold transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+        <!-- 3. Уход за кожей и пластиком -->
+        <div class="p-7 sm:p-8 rounded-3xl bg-griffin-panel border-2 border-griffin-border flex flex-col justify-between hover:border-slate-400 transition shadow-xl">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-griffin-card border border-griffin-border text-white flex items-center justify-center mb-5">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-white mb-3">Деликатный уход за кожей</h3>
+            <p class="text-sm sm:text-base text-griffin-textBody mb-5 leading-relaxed">
+              Мягкое очищение кожаных сидений от въевшейся грязи и синевы от джинсов с нанесением увлажняющего крема.
+            </p>
+            <ul class="text-sm sm:text-base text-slate-100 space-y-2.5 mb-8 font-mono">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Пенообразователи нейтрального pH</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Глубокое питание и мягкость кожи</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Заводской матовый финиш (без блеска)</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Антистатическая защита пластика</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Уход за кожей')" class="w-full py-3.5 rounded-full bg-griffin-card hover:bg-griffin-border border border-griffin-border text-white font-mono text-xs sm:text-sm uppercase tracking-wider font-bold transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- СТАНДАРТЫ СЕРВИСА -->
+  <section id="standards" class="py-14 sm:py-20 border-b border-griffin-border bg-griffin-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold block mb-2">ПРИНЦИПЫ СЕРВИСА</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Почему выбирают студию «МАРАФЕТ»</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-7 rounded-3xl bg-griffin-panel border-2 border-griffin-border space-y-3 shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-griffin-card border border-griffin-border text-white flex items-center justify-center mb-3">
+            <i data-lucide="clock" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white">Сдача автомобиля строго в срок</h3>
+          <p class="text-sm sm:text-base text-griffin-textBody leading-relaxed">
+            Ценим время клиентов. Фиксируем дедлайн при приеме машины и отдаем сухой, чистый автомобиль точно в назначенный час.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-griffin-panel border-2 border-griffin-border space-y-3 shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-griffin-card border border-griffin-border text-white flex items-center justify-center mb-3">
+            <i data-lucide="package-check" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white">Бережная упаковка личных вещей</h3>
+          <p class="text-sm sm:text-base text-griffin-textBody leading-relaxed">
+            Все оставленные мелочи, документы и забытые деньги аккуратно собираются в отдельный пакет и возвращаются владельцу.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-griffin-panel border-2 border-griffin-border space-y-3 shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-griffin-card border border-griffin-border text-white flex items-center justify-center mb-3">
+            <i data-lucide="badge-percent" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white">Честная и прозрачная цена</h3>
+          <p class="text-sm sm:text-base text-griffin-textBody leading-relaxed">
+            Стоимость услуг остается понятной и честной, радуя идеальным балансом профессионального результата и доступности.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ОТЗЫВ КЛИЕНТА -->
+  <section id="review" class="py-14 sm:py-20 border-b border-griffin-border bg-[#0E1117]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-8">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold block mb-2">РЕАЛЬНЫЙ ОПЫТ</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Отзыв нашего клиента</h2>
+      </div>
+
+      <div class="p-8 sm:p-10 rounded-3xl bg-griffin-panel border-2 border-white/60 relative shadow-2xl">
+        <div class="flex items-center justify-between pb-5 border-b border-griffin-border mb-6">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-serif text-lg font-bold">
+              В
+            </div>
+            <div>
+              <span class="text-base sm:text-lg font-bold text-white block">Владимир</span>
+              <span class="text-xs sm:text-sm font-mono text-slate-300">Знаток города 10 уровня • Яндекс.Карты</span>
+            </div>
+          </div>
+          <div class="text-amber-400 text-base sm:text-lg font-mono">★★★★★</div>
+        </div>
+
+        <blockquote class="text-base sm:text-xl text-slate-100 font-serif italic leading-relaxed mb-6">
+          «Отдал 2 машины, всё было сделано в срок и даже быстрее! Цены радуют не только глаз и карман, не последний раз приеду сюда. Всё что было в машине, сложили в пакет и положили в багажник. Нашли 100 руб., о которых я и не знал, и так же положили в пакет и сообщили об этом. Честный, качественный сервис!»
+        </blockquote>
+
+        <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-slate-300 pt-3 border-t border-griffin-border">
+          <span>г. Отрадный</span>
+          <span class="text-emerald-400 font-semibold">Проверенный визит</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section id="contacts" class="py-14 sm:py-20 border-b border-griffin-border bg-griffin-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center font-mono">
+        
+        <div class="space-y-5">
+          <span class="text-xs sm:text-sm uppercase tracking-widest text-emerald-400 font-semibold block">МЕСТОПОЛОЖЕНИЕ</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Ждем вас в студии «МАРАФЕТ»</h2>
+
+          <div class="space-y-4 text-sm sm:text-base text-slate-200 font-sans">
+            <div class="flex items-start gap-3.5">
+              <i data-lucide="map-pin" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>г. Отрадный, ул. Лесная, д. 8А</span>
+            </div>
+            <div class="flex items-center gap-3.5">
+              <i data-lucide="clock" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <span>Ежедневно с 08:00 до 22:00 (без выходных)</span>
+            </div>
+            <div class="flex items-center gap-3.5">
+              <i data-lucide="phone" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <a href="tel:+79376597699" class="text-white hover:underline font-mono font-bold text-lg transition">+7 (937) 659-76-99</a>
+            </div>
+            <div class="flex items-center gap-3.5">
+              <i data-lucide="share-2" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <a href="https://vk.com" target="_blank" class="text-slate-200 hover:text-white underline transition">Группа ВКонтакте</a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5 pt-3">
+            <a href="https://yandex.ru/maps/?text=Отрадный+Лесная+8А+Химчистка" target="_blank" class="px-6 py-3.5 rounded-full bg-white text-black hover:bg-slate-200 text-xs sm:text-sm uppercase tracking-wider font-bold transition flex items-center gap-2 shadow-lg">
+              <i data-lucide="navigation" class="w-4 h-4"></i> Яндекс.Карты
+            </a>
+            <button onclick="openModal('Запись по локации')" class="px-6 py-3.5 rounded-full bg-griffin-panel hover:bg-griffin-card border-2 border-griffin-border text-white text-xs sm:text-sm uppercase tracking-wider font-semibold transition">
+              Забронировать время
+            </button>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-griffin-panel border-2 border-griffin-border text-center shadow-2xl">
+          <div class="w-14 h-14 mx-auto rounded-full bg-griffin-card border border-griffin-border text-white flex items-center justify-center mb-4">
+            <i data-lucide="calendar" class="w-7 h-7 text-emerald-400"></i>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-white mb-2">Предварительная бронь</h3>
+          <p class="text-sm sm:text-base text-griffin-textBody mb-6 max-w-sm mx-auto font-sans leading-relaxed">
+            Чтобы исключить ожидание, рекомендуем предварительно согласовать время приезда по телефону.
+          </p>
+          <a href="tel:+79376597699" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black hover:bg-slate-200 text-xs sm:text-sm uppercase tracking-wider font-bold transition shadow-lg">
+            <i data-lucide="phone" class="w-4 h-4"></i> Позвонить в студию
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="py-8 bg-black text-slate-300 text-xs sm:text-sm font-mono border-t border-griffin-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <p>© 2026 Студия химчистки автомобилей «МАРАФЕТ». г. Отрадный.</p>
+      <div class="flex items-center gap-6">
+        <a href="tel:+79376597699" class="hover:text-white transition">Телефон</a>
+        <a href="https://vk.com" target="_blank" class="hover:text-white transition">ВКонтакте</a>
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ С ПОДДЕРЖКОЙ ВЕБХУКА N8N -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-griffin-panel rounded-3xl max-w-sm w-full p-7 relative border-2 border-white shadow-2xl font-mono">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-300 hover:text-white transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-1">БРОНИРОВАНИЕ</span>
+      <h3 class="text-2xl font-serif font-bold text-white mb-5">Запись на химчистку</h3>
+
+      <form class="space-y-4 text-sm">
+        <!-- Скрытые поля для интеграции с n8n -->
+        <input type="hidden" name="source" value="Марафет Отрадный">
+        <input type="hidden" name="form_type" value="booking">
+
+        <div>
+          <label class="block text-slate-300 mb-1.5 text-xs font-semibold">Выбранная услуга</label>
+          <input type="text" id="modalServiceInput" name="service" readonly class="w-full bg-griffin-card border-2 border-griffin-border rounded-xl px-3.5 py-2.5 text-white font-bold focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-slate-300 mb-1.5 text-xs font-semibold">Ваше имя</label>
+          <input type="text" name="client_name" required placeholder="Как вас зовут?" class="w-full bg-griffin-card border-2 border-griffin-border rounded-xl px-3.5 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:border-white">
+        </div>
+        <div>
+          <label class="block text-slate-300 mb-1.5 text-xs font-semibold">Телефон для связи</label>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-griffin-card border-2 border-griffin-border rounded-xl px-3.5 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:border-white">
+        </div>
+        
+        <button type="submit" class="w-full py-3.5 rounded-full bg-white text-black hover:bg-slate-200 font-bold uppercase tracking-wider transition mt-3 shadow-lg">
+          Подтвердить запись
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function openModal(serviceName) {
+      document.getElementById('modalServiceInput').value = serviceName;
+      document.getElementById('bookingModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Скрипт отправки заявок на вебхук n8n -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // ВШИТ ВАШ РЕАЛЬНЫЙ ТЕСТОВЫЙ URL ИЗ N8N:
+    const N8N_WEBHOOK_URL = 'https://n8n.novabase24.ru/webhook-test/lead-entry';
+
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Отправить';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <span style="display:inline-flex;align-items:center;gap:8px;">
+              <svg class="animate-spin" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="4" stroke="currentColor" stroke-dasharray="32" stroke-linecap="round"></circle>
+              </svg>
+              Отправка...
+            </span>
+          `;
+        }
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        payload.timestamp = new Date().toISOString();
+        payload.page_url = window.location.href;
+
+        try {
+          const response = await fetch(N8N_WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (submitBtn) {
+            submitBtn.innerHTML = '✓ Заявка отправлена!';
+            submitBtn.style.backgroundColor = '#10B981';
+            submitBtn.style.color = '#FFFFFF';
+          }
+          form.reset();
+        } catch (error) {
+          console.error('Ошибка отправки на вебхук:', error);
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Ошибка отправки';
+            submitBtn.style.backgroundColor = '#EF4444';
+          }
+        } finally {
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.innerHTML = originalBtnText;
+              submitBtn.disabled = false;
+              submitBtn.style.backgroundColor = '';
+              submitBtn.style.color = '';
+            }
+          }, 4000);
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

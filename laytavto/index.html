@@ -6,10 +6,15 @@
   <title>Лайт авто • Студия детейлинга и автохимчистки в Чапаевске | ул. Красноармейская, 25</title>
   <meta name="description" content="Профессиональный детейлинг, глубокая 4-этапная химчистка салона, восстановительная полировка и нанесение жидкого стекла/керамики в г. Чапаевск. Красноармейская ул., 25. Телефон: +7 (937) 062-55-14.">
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Open Graph для карточки превью в Telegram -->
+  <meta property="og:title" content="Лайт авто — Студия детейлинга и химчистки в Чапаевске">
+  <meta property="og:description" content="Глубокая 4-этапная химчистка, полировка кузова, жидкое стекло и керамика на ул. Красноармейская, 25. Рейтинг 4.8 на Яндекс Картах.">
+  <meta property="og:type" content="website">
+
+  <!-- Шрифты: Inter для читаемости + Newsreader для заголовков + JetBrains Mono для цен -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,120 +22,71 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Tailwind CSS Configuration -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            graphite: {
-              950: '#060910',
-              900: '#0B0F19',
-              850: '#0E1422',
-              800: '#141C2E',
-              750: '#1B243B',
-              700: '#23304E',
-              600: '#33446C',
-            },
-            cyanic: {
-              300: '#67E8F9',
-              400: '#22D3EE',
-              500: '#06B6D4',
-              600: '#0891B2',
-            },
-            electric: {
-              400: '#60A5FA',
-              500: '#3B82F6',
-              600: '#2563EB',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
   <style>
-    .bg-tech-grid {
-      background-size: 38px 38px;
-      background-image: 
-        linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
-    }
-    .radial-cyan-glow {
-      background: radial-gradient(circle at 50% -10%, rgba(6, 182, 212, 0.22) 0%, rgba(59, 130, 246, 0.07) 45%, transparent 75%);
-    }
-    .glass-card {
-      background: linear-gradient(180deg, rgba(20, 28, 46, 0.94) 0%, rgba(14, 20, 34, 0.98) 100%);
+    .font-serif-editorial {
+      font-family: 'Newsreader', Georgia, serif;
     }
     ::-webkit-scrollbar {
       width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0B0F19;
+      background: #FAF8F5;
     }
     ::-webkit-scrollbar-thumb {
-      background: #23304E;
+      background: #D5CEBF;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #06B6D4;
+      background: #E05A38;
     }
   </style>
 </head>
-<body class="bg-[#0B0F19] text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen relative pb-28 md:pb-12">
-
-  <!-- Фоновые подложки -->
-  <div class="fixed inset-0 bg-tech-grid pointer-events-none z-0"></div>
-  <div class="fixed top-0 left-0 right-0 h-[660px] radial-cyan-glow pointer-events-none z-0"></div>
+<body class="bg-[#FAF8F5] text-zinc-900 font-sans antialiased selection:bg-[#E05A38] selection:text-white min-h-screen relative pb-28 md:pb-12">
 
   <!-- Шапка -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0B0F19]/90 border-b border-graphite-700/80 transition-all pt-5 pb-3 sm:py-4">
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#FAF8F5]/90 border-b border-[#EAE6DF] transition-all pt-5 pb-3 sm:py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] sm:h-20 flex items-center justify-between relative z-10">
 
       <!-- Логотип «ЛАЙТ АВТО» -->
       <a href="#" class="flex items-center gap-3.5 group py-1">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-cyan-400 via-cyan-600 to-blue-700 flex items-center justify-center text-graphite-950 font-black shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform border border-cyan-300/40 shrink-0">
-          <i data-lucide="sparkles" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.3] text-graphite-950"></i>
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-zinc-950 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform shrink-0">
+          <i data-lucide="sparkles" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2] text-[#E05A38]"></i>
         </div>
         <div class="flex flex-col">
           <div class="flex items-center gap-1.5 sm:gap-2 leading-tight mb-1">
-            <span class="text-sm sm:text-base md:text-lg font-black tracking-wider uppercase font-mono text-white">
-              ЛАЙТ <span class="text-cyanic-400">АВТО</span>
+            <span class="text-sm sm:text-base md:text-lg font-black tracking-wider uppercase font-mono text-zinc-950">
+              ЛАЙТ <span class="text-[#E05A38]">АВТО</span>
             </span>
-            <span class="text-[9px] px-1.5 py-0.5 rounded bg-cyanic-500/20 text-cyanic-300 border border-cyanic-500/40 font-mono font-bold tracking-widest uppercase">CHAPAYEVSK</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded-full bg-zinc-100 text-zinc-800 border border-zinc-200 font-mono font-bold tracking-widest uppercase">CHAPAYEVSK</span>
           </div>
-          <span class="text-[10px] tracking-wider uppercase text-slate-300 font-medium line-clamp-1 sm:line-clamp-none">Детейлинг & Химчистка • ул. Красноармейская, 25</span>
+          <span class="text-[10px] tracking-wider uppercase text-zinc-600 font-medium line-clamp-1 sm:line-clamp-none">Детейлинг & Химчистка • ул. Красноармейская, 25</span>
         </div>
       </a>
 
       <!-- Бейдж доверия -->
-      <div class="hidden lg:flex items-center gap-5 text-xs text-slate-300">
-        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-graphite-850/90 border border-graphite-700">
+      <div class="hidden lg:flex items-center gap-5 text-xs text-zinc-600">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EAE6DF] shadow-xs">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span class="font-medium text-slate-200">Приём по записи: ежедневно 09:00 &ndash; 20:00</span>
+          <span class="font-medium text-zinc-800">Приём по записи: ежедневно 09:00 &ndash; 20:00</span>
         </div>
-        <div class="flex items-center gap-1.5 text-slate-300">
+        <div class="flex items-center gap-1.5 text-zinc-700">
           <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
-          <span class="font-bold text-white">4.8</span>
-          <span class="text-slate-300">на Яндекс Картах</span>
+          <span class="font-bold text-zinc-950">4.8</span>
+          <span class="text-zinc-500">на Яндекс Картах</span>
         </div>
       </div>
 
       <!-- Кнопки связи -->
       <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-graphite-850 hover:bg-graphite-800 text-slate-200 hover:text-white border border-graphite-700 text-xs font-semibold transition-all">
-          <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+        <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white hover:bg-zinc-50 text-zinc-700 hover:text-zinc-950 border border-[#EAE6DF] text-xs font-semibold transition-all shadow-xs">
+          <i data-lucide="send" class="w-4 h-4 text-[#E05A38]"></i>
           <span>Telegram</span>
         </a>
-        <a href="tel:+79370625514" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-graphite-950 font-extrabold text-xs sm:text-sm transition-all shadow-md shadow-cyan-500/25 active:scale-95 whitespace-nowrap shrink-0">
-          <i data-lucide="phone-call" class="w-4 h-4 text-graphite-950"></i>
+        <a href="tel:+79370625514" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#E05A38] hover:bg-[#C94A2A] text-white font-extrabold text-xs sm:text-sm transition-all shadow-sm active:scale-95 whitespace-nowrap shrink-0">
+          <i data-lucide="phone-call" class="w-4 h-4 text-white"></i>
           <span class="hidden md:inline whitespace-nowrap shrink-0">+7 (937) 062-55-14</span>
           <span class="md:hidden">Позвонить</span>
         </a>
@@ -149,59 +105,59 @@
 
           <!-- Бейджи доверия -->
           <div class="flex flex-wrap items-center gap-2">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/40 text-cyanic-200 text-xs sm:text-sm font-medium">
-              <span class="flex items-center text-cyanic-400 font-bold">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1 text-cyan-400"></i>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EAE6DF] text-zinc-700 text-xs sm:text-sm font-medium shadow-xs">
+              <span class="flex items-center text-[#E05A38] font-bold">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1 text-[#E05A38]"></i>
                 Чапаевск
               </span>
-              <span class="text-graphite-600">&bull;</span>
-              <span class="text-slate-200">ул. Красноармейская, 25</span>
+              <span class="text-zinc-300">&bull;</span>
+              <span class="text-zinc-700">ул. Красноармейская, 25</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-graphite-850 border border-graphite-700 text-slate-200 text-xs font-medium">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#EAE6DF] text-zinc-700 text-xs font-medium shadow-xs">
               <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
-              <span class="font-bold text-white">4.8</span>
+              <span class="font-bold text-zinc-950">4.8</span>
               <span>на Яндекс Картах</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-graphite-850 border border-graphite-700 text-slate-200 text-xs font-medium">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#EAE6DF] text-zinc-700 text-xs font-medium shadow-xs">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#E05A38]"></i>
               <span>Европейские составы</span>
             </div>
           </div>
 
           <!-- Заголовок -->
-          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.14]">
-            Профессиональный детейлинг, глубокая химчистка <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400">и защита авто в Чапаевске</span>
+          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-serif-editorial text-zinc-950 leading-[1.14] tracking-tight">
+            Профессиональный детейлинг, глубокая химчистка <span class="italic text-[#E05A38]">и защита авто в Чапаевске</span>
           </h1>
 
           <!-- Подзаголовок -->
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl font-normal">
+          <p class="text-sm sm:text-base text-zinc-600 leading-relaxed max-w-xl font-normal">
             Вернем автомобилю салонный лоск: бережная 4-этапная химчистка интерьера, многоэтапная полировка кузова, нанесение жидкого стекла, керамики и защита моторного отсека диэлектриком.
           </p>
 
           <!-- Быстрые тезисы -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            <div class="p-3.5 rounded-xl bg-graphite-850/80 border border-graphite-700 text-xs font-semibold text-slate-200 flex items-center gap-2.5 shadow-sm">
-              <i data-lucide="layers" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <div class="p-3.5 rounded-xl bg-white border border-[#EAE6DF] text-xs font-semibold text-zinc-800 flex items-center gap-2.5 shadow-xs">
+              <i data-lucide="layers" class="w-4 h-4 text-[#E05A38] shrink-0"></i>
               <span>4 этапа очистки</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-graphite-850/80 border border-graphite-700 text-xs font-semibold text-slate-200 flex items-center gap-2.5 shadow-sm">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <div class="p-3.5 rounded-xl bg-white border border-[#EAE6DF] text-xs font-semibold text-zinc-800 flex items-center gap-2.5 shadow-xs">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#E05A38] shrink-0"></i>
               <span>Без скрытых доплат</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-graphite-850/80 border border-graphite-700 text-xs font-semibold text-slate-200 flex items-center gap-2.5 shadow-sm">
-              <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <div class="p-3.5 rounded-xl bg-white border border-[#EAE6DF] text-xs font-semibold text-zinc-800 flex items-center gap-2.5 shadow-xs">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#E05A38] shrink-0"></i>
               <span>Сохранение лака</span>
             </div>
           </div>
 
           <!-- Кнопки действий -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <button onclick="scrollToCalc()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-graphite-950 font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/25 active:scale-95 flex items-center justify-center gap-2">
-              <i data-lucide="calculator" class="w-4 h-4 text-graphite-950"></i>
+            <button onclick="scrollToCalc()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#E05A38] hover:bg-[#C94A2A] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md active:scale-95 flex items-center justify-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-white"></i>
               <span>Рассчитать стоимость</span>
             </button>
-            <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-graphite-850 hover:bg-graphite-800 text-slate-200 border border-graphite-700 font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-              <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+            <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-800 border border-[#EAE6DF] font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xs">
+              <i data-lucide="send" class="w-4 h-4 text-[#E05A38]"></i>
               <span>Консультация в Telegram</span>
             </a>
           </div>
@@ -210,34 +166,33 @@
 
         <!-- Правая колонка: Калькулятор -->
         <div id="calculator-section" class="lg:col-span-6">
-          <div class="p-5 sm:p-7 rounded-2xl glass-card border border-graphite-700 shadow-2xl relative overflow-hidden">
-            <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="p-5 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] shadow-xl relative">
 
-            <div class="flex items-center justify-between pb-4 border-b border-graphite-700 mb-5">
+            <div class="flex items-center justify-between pb-4 border-b border-[#EAE6DF] mb-5">
               <div>
-                <div class="text-[11px] uppercase tracking-wider font-mono text-cyanic-400 font-bold">Лайт авто • Калькулятор услуг</div>
-                <h3 class="text-lg font-bold text-white">Расчет стоимости ухода за автомобилем</h3>
+                <div class="text-[11px] uppercase tracking-wider font-mono text-[#E05A38] font-bold">Лайт авто • Калькулятор услуг</div>
+                <h3 class="text-lg font-bold text-zinc-900">Расчет стоимости ухода за автомобилем</h3>
               </div>
-              <div class="w-10 h-10 rounded-lg bg-graphite-850 border border-graphite-700 flex items-center justify-center text-cyan-400 shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 shrink-0">
                 <i data-lucide="sliders" class="w-5 h-5"></i>
               </div>
             </div>
 
             <!-- Шаг 1: Класс авто -->
             <div class="mb-5">
-              <label class="block text-xs uppercase tracking-wider text-slate-300 font-semibold mb-2.5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-700 font-bold mb-2.5">
                 1. Выберите категорию автомобиля:
               </label>
               <div class="grid grid-cols-3 gap-2">
-                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-cyan-500/20 border-cyan-400 text-cyanic-200 shadow-sm">
-                  <i data-lucide="car" class="w-4 h-4"></i>
+                <button type="button" onclick="selectCarCategory('sedan')" id="car-btn-sedan" class="car-type-btn active p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-[#FAF8F5] border-zinc-950 text-zinc-950 shadow-xs">
+                  <i data-lucide="car" class="w-4 h-4 text-[#E05A38]"></i>
                   <span>Хэтчбек / Седан</span>
                 </button>
-                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-graphite-900 border-graphite-700 text-slate-300 hover:border-graphite-600">
+                <button type="button" onclick="selectCarCategory('crossover')" id="car-btn-crossover" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-white border-[#EAE6DF] text-zinc-600 hover:border-zinc-400">
                   <i data-lucide="car-front" class="w-4 h-4"></i>
                   <span>Кроссовер</span>
                 </button>
-                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-graphite-900 border-graphite-700 text-slate-300 hover:border-graphite-600">
+                <button type="button" onclick="selectCarCategory('suv')" id="car-btn-suv" class="car-type-btn p-3 rounded-xl border text-xs font-semibold transition-all text-center flex flex-col items-center justify-center gap-1 bg-white border-[#EAE6DF] text-zinc-600 hover:border-zinc-400">
                   <i data-lucide="truck" class="w-4 h-4"></i>
                   <span>Внедорожник</span>
                 </button>
@@ -246,92 +201,92 @@
 
             <!-- Шаг 2: Услуги калькулятора -->
             <div class="mb-5">
-              <label class="block text-xs uppercase tracking-wider text-slate-300 font-semibold mb-2.5">
+              <label class="block text-xs uppercase tracking-wider text-zinc-700 font-bold mb-2.5">
                 2. Выберите необходимые услуги:
               </label>
               <div class="space-y-2.5">
 
                 <!-- Услуга 1: Жидкое стекло и керамика -->
-                <label class="flex items-center justify-between p-3.5 rounded-xl bg-graphite-900/80 border border-graphite-700 hover:border-cyan-500/40 cursor-pointer transition-all">
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 cursor-pointer transition-all">
                   <div class="flex items-center gap-3">
-                    <input type="checkbox" id="srv-ceramic" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500 border-graphite-600 bg-graphite-850 accent-cyan-500 shrink-0">
+                    <input type="checkbox" id="srv-ceramic" onchange="calculateTotal()" class="w-4 h-4 rounded text-[#E05A38] focus:ring-[#E05A38] border-zinc-300 accent-[#E05A38] shrink-0">
                     <div>
-                      <div class="text-xs sm:text-sm font-semibold text-white">Жидкое стекло и керамика</div>
-                      <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">Стойкий гидрофобный слой, глубина цвета и защита от реагентов</div>
+                      <div class="text-xs sm:text-sm font-bold text-zinc-900">Жидкое стекло и керамика</div>
+                      <div class="text-[11px] text-zinc-600 mt-0.5 leading-snug">Стойкий гидрофобный слой, глубина цвета и защита от реагентов</div>
                     </div>
                   </div>
                   <div class="text-right whitespace-nowrap shrink-0 ml-3">
-                    <span id="price-label-ceramic" class="text-xs sm:text-sm font-mono font-bold text-cyanic-300 whitespace-nowrap">26&nbsp;400&nbsp;₽</span>
+                    <span id="price-label-ceramic" class="text-xs sm:text-sm font-mono font-bold text-zinc-950 whitespace-nowrap">26&nbsp;400&nbsp;₽</span>
                   </div>
                 </label>
 
                 <!-- Услуга 2: Восстановительная полировка кузова -->
-                <label class="flex items-center justify-between p-3.5 rounded-xl bg-graphite-900/80 border border-graphite-700 hover:border-cyan-500/40 cursor-pointer transition-all">
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 cursor-pointer transition-all">
                   <div class="flex items-center gap-3">
-                    <input type="checkbox" checked id="srv-polish" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500 border-graphite-600 bg-graphite-850 accent-cyan-500 shrink-0">
+                    <input type="checkbox" checked id="srv-polish" onchange="calculateTotal()" class="w-4 h-4 rounded text-[#E05A38] focus:ring-[#E05A38] border-zinc-300 accent-[#E05A38] shrink-0">
                     <div>
-                      <div class="text-xs sm:text-sm font-semibold text-white">Полировка кузова</div>
-                      <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">Устранение паутинки, микроцарапин и возврат зеркального блеска</div>
+                      <div class="text-xs sm:text-sm font-bold text-zinc-900">Полировка кузова</div>
+                      <div class="text-[11px] text-zinc-600 mt-0.5 leading-snug">Устранение паутинки, микроцарапин и возврат зеркального блеска</div>
                     </div>
                   </div>
                   <div class="text-right whitespace-nowrap shrink-0 ml-3">
-                    <span id="price-label-polish" class="text-xs sm:text-sm font-mono font-bold text-cyanic-300 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
+                    <span id="price-label-polish" class="text-xs sm:text-sm font-mono font-bold text-zinc-950 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
                   </div>
                 </label>
 
                 <!-- Услуга 3: Химчистка салона (ткань) -->
-                <label class="flex items-center justify-between p-3.5 rounded-xl bg-graphite-900/80 border border-graphite-700 hover:border-cyan-500/40 cursor-pointer transition-all">
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 cursor-pointer transition-all">
                   <div class="flex items-center gap-3">
-                    <input type="checkbox" checked id="srv-dryclean" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500 border-graphite-600 bg-graphite-850 accent-cyan-500 shrink-0">
+                    <input type="checkbox" checked id="srv-dryclean" onchange="calculateTotal()" class="w-4 h-4 rounded text-[#E05A38] focus:ring-[#E05A38] border-zinc-300 accent-[#E05A38] shrink-0">
                     <div>
-                      <div class="text-xs sm:text-sm font-semibold text-white">Химчистка салона (ткань)</div>
-                      <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">Глубокая 4-этапная экстракция, антибактериальная обработка и сушка</div>
+                      <div class="text-xs sm:text-sm font-bold text-zinc-900">Химчистка салона (ткань)</div>
+                      <div class="text-[11px] text-zinc-600 mt-0.5 leading-snug">Глубокая 4-этапная экстракция, антибактериальная обработка и сушка</div>
                     </div>
                   </div>
                   <div class="text-right whitespace-nowrap shrink-0 ml-3">
-                    <span id="price-label-dryclean" class="text-xs sm:text-sm font-mono font-bold text-cyanic-300 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
+                    <span id="price-label-dryclean" class="text-xs sm:text-sm font-mono font-bold text-zinc-950 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
                   </div>
                 </label>
 
                 <!-- Услуга 4: Химчистка моторного отсека -->
-                <label class="flex items-center justify-between p-3.5 rounded-xl bg-graphite-900/80 border border-graphite-700 hover:border-cyan-500/40 cursor-pointer transition-all">
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 cursor-pointer transition-all">
                   <div class="flex items-center gap-3">
-                    <input type="checkbox" id="srv-engine" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500 border-graphite-600 bg-graphite-850 accent-cyan-500 shrink-0">
+                    <input type="checkbox" id="srv-engine" onchange="calculateTotal()" class="w-4 h-4 rounded text-[#E05A38] focus:ring-[#E05A38] border-zinc-300 accent-[#E05A38] shrink-0">
                     <div>
-                      <div class="text-xs sm:text-sm font-semibold text-white">Химчистка моторного отсека</div>
-                      <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">Диэлектрический состав, мойка паром/кистями и консервация проводки</div>
+                      <div class="text-xs sm:text-sm font-bold text-zinc-900">Химчистка моторного отсека</div>
+                      <div class="text-[11px] text-zinc-600 mt-0.5 leading-snug">Диэлектрический состав, мойка паром/кистями и консервация проводки</div>
                     </div>
                   </div>
                   <div class="text-right whitespace-nowrap shrink-0 ml-3">
-                    <span id="price-label-engine" class="text-xs sm:text-sm font-mono font-bold text-cyanic-300 whitespace-nowrap">3&nbsp;500&nbsp;₽</span>
+                    <span id="price-label-engine" class="text-xs sm:text-sm font-mono font-bold text-zinc-950 whitespace-nowrap">3&nbsp;500&nbsp;₽</span>
                   </div>
                 </label>
 
                 <!-- Услуга 5: Нанесение «Антидождь» -->
-                <label class="flex items-center justify-between p-3.5 rounded-xl bg-graphite-900/80 border border-graphite-700 hover:border-cyan-500/40 cursor-pointer transition-all">
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 cursor-pointer transition-all">
                   <div class="flex items-center gap-3">
-                    <input type="checkbox" id="srv-antirain" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500 border-graphite-600 bg-graphite-850 accent-cyan-500 shrink-0">
+                    <input type="checkbox" id="srv-antirain" onchange="calculateTotal()" class="w-4 h-4 rounded text-[#E05A38] focus:ring-[#E05A38] border-zinc-300 accent-[#E05A38] shrink-0">
                     <div>
-                      <div class="text-xs sm:text-sm font-semibold text-white">Нанесение «Антидождь»</div>
-                      <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">Стойкий водоотталкивающий барьер для стекол длительного действия</div>
+                      <div class="text-xs sm:text-sm font-bold text-zinc-900">Нанесение «Антидождь»</div>
+                      <div class="text-[11px] text-zinc-600 mt-0.5 leading-snug">Стойкий водоотталкивающий барьер для стекол длительного действия</div>
                     </div>
                   </div>
                   <div class="text-right whitespace-nowrap shrink-0 ml-3">
-                    <span id="price-label-antirain" class="text-xs sm:text-sm font-mono font-bold text-cyanic-300 whitespace-nowrap">4&nbsp;000&nbsp;₽</span>
+                    <span id="price-label-antirain" class="text-xs sm:text-sm font-mono font-bold text-zinc-950 whitespace-nowrap">4&nbsp;000&nbsp;₽</span>
                   </div>
                 </label>
 
                 <!-- Услуга 6: Полировка фар -->
-                <label class="flex items-center justify-between p-3.5 rounded-xl bg-graphite-900/80 border border-graphite-700 hover:border-cyan-500/40 cursor-pointer transition-all">
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 cursor-pointer transition-all">
                   <div class="flex items-center gap-3">
-                    <input type="checkbox" id="srv-headlights" onchange="calculateTotal()" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500 border-graphite-600 bg-graphite-850 accent-cyan-500 shrink-0">
+                    <input type="checkbox" id="srv-headlights" onchange="calculateTotal()" class="w-4 h-4 rounded text-[#E05A38] focus:ring-[#E05A38] border-zinc-300 accent-[#E05A38] shrink-0">
                     <div>
-                      <div class="text-xs sm:text-sm font-semibold text-white">Полировка оптики (фар)</div>
-                      <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">Снятие желтизны и матовости, восстановление прозрачности света</div>
+                      <div class="text-xs sm:text-sm font-bold text-zinc-900">Полировка оптики (фар)</div>
+                      <div class="text-[11px] text-zinc-600 mt-0.5 leading-snug">Снятие желтизны и матовости, восстановление прозрачности света</div>
                     </div>
                   </div>
                   <div class="text-right whitespace-nowrap shrink-0 ml-3">
-                    <span id="price-label-headlights" class="text-xs sm:text-sm font-mono font-bold text-cyanic-300 whitespace-nowrap">1&nbsp;000&nbsp;₽</span>
+                    <span id="price-label-headlights" class="text-xs sm:text-sm font-mono font-bold text-zinc-950 whitespace-nowrap">1&nbsp;000&nbsp;₽</span>
                   </div>
                 </label>
 
@@ -339,24 +294,24 @@
             </div>
 
             <!-- Итог и действия -->
-            <div class="pt-4 border-t border-graphite-700">
+            <div class="pt-4 border-t border-[#EAE6DF]">
               <div class="flex items-baseline justify-between mb-4">
                 <div>
-                  <span class="text-xs uppercase tracking-wider text-slate-300 block font-semibold">Ориентировочная сумма:</span>
-                  <span class="text-xs text-slate-400">Прайс студии «Лайт авто» (Чапаевск)</span>
+                  <span class="text-xs uppercase tracking-wider text-zinc-700 block font-semibold">Ориентировочная сумма:</span>
+                  <span class="text-xs text-zinc-500">Прайс студии «Лайт авто» (Чапаевск)</span>
                 </div>
                 <div class="text-right whitespace-nowrap shrink-0">
-                  <span id="calc-grand-total" class="text-3xl font-black font-mono text-white tracking-tight drop-shadow-[0_0_15px_rgba(6,182,212,0.35)] whitespace-nowrap">20&nbsp;000&nbsp;₽</span>
+                  <span id="calc-grand-total" class="text-3xl font-black font-mono text-zinc-950 tracking-tight whitespace-nowrap">20&nbsp;000&nbsp;₽</span>
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="py-3.5 px-3 rounded-xl bg-graphite-850 border border-graphite-700 hover:border-cyan-400 text-slate-200 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2 shadow-sm whitespace-nowrap">
-                  <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+                <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="py-3.5 px-3 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 text-zinc-800 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 flex items-center justify-center gap-2 shadow-xs whitespace-nowrap">
+                  <i data-lucide="send" class="w-4 h-4 text-[#E05A38]"></i>
                   <span>В Telegram</span>
                 </a>
-                <button onclick="openModalWithCalculatedData()" class="py-3.5 px-3 rounded-xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-graphite-950 font-black text-xs uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 active:scale-95 flex items-center justify-center gap-2">
-                  <i data-lucide="calendar" class="w-4 h-4 text-graphite-950"></i>
+                <button onclick="openModalWithCalculatedData()" class="py-3.5 px-3 rounded-xl bg-[#E05A38] hover:bg-[#C94A2A] text-white font-black text-xs uppercase tracking-wider transition-all shadow-sm active:scale-95 flex items-center justify-center gap-2">
+                  <i data-lucide="calendar" class="w-4 h-4 text-white"></i>
                   <span>Зафиксировать цену</span>
                 </button>
               </div>
@@ -369,67 +324,67 @@
     </section>
 
     <!-- Преимущества в цифрах -->
-    <section class="border-y border-graphite-700 bg-graphite-850/80 py-16 lg:py-20">
+    <section class="border-y border-[#EAE6DF] bg-white py-16 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <div class="text-xs uppercase tracking-widest text-cyanic-400 font-mono font-bold mb-2">Стандарты студии</div>
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Почему выбирают детейлинг «Лайт авто»</h2>
+            <div class="text-xs uppercase tracking-widest text-[#E05A38] font-mono font-bold mb-2">Стандарты студии</div>
+            <h2 class="text-2xl sm:text-4xl font-serif-editorial text-zinc-950">Почему выбирают детейлинг «Лайт авто»</h2>
           </div>
-          <p class="text-sm text-slate-300 mt-2 md:mt-0 font-medium">Чапаевск &bull; ул. Красноармейская, 25 &bull; Рейтинг 4.8 ★</p>
+          <p class="text-sm text-zinc-600 mt-2 md:mt-0 font-medium">Чапаевск &bull; ул. Красноармейская, 25 &bull; Рейтинг 4.8 ★</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           <!-- Преимущество 1 -->
-          <div class="p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+          <div class="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-105 transition-transform">
+              <div class="w-12 h-12 rounded-xl bg-white border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] mb-5 group-hover:scale-105 transition-transform shadow-xs">
                 <i data-lucide="layers" class="w-6 h-6"></i>
               </div>
-              <div class="text-2xl font-black font-mono text-cyan-400 mb-1">4 ЭТАПА</div>
-              <h3 class="text-lg font-bold text-white mb-2.5 leading-tight">Глубокая очистка салона</h3>
-              <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">
+              <div class="text-2xl font-black font-mono text-[#E05A38] mb-1">4 ЭТАПА</div>
+              <h3 class="text-lg font-bold text-zinc-950 mb-2.5 leading-tight">Глубокая очистка салона</h3>
+              <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed">
                 Сухое обеспыливание, обработка пневмопистолетом Tornador, экстракторное вымывание загрязнений из волокон и финишная антибактериальная сушка до сухого состояния.
               </p>
             </div>
-            <div class="pt-5 mt-5 border-t border-graphite-700/80 text-[11px] font-mono text-cyan-300 flex items-center gap-1.5 font-semibold">
-              <i data-lucide="check" class="w-3.5 h-3.5"></i> Удаление до 99% въевшихся пятен
+            <div class="pt-5 mt-5 border-t border-[#EAE6DF] text-[11px] font-mono text-zinc-700 flex items-center gap-1.5 font-semibold">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-[#E05A38]"></i> Удаление до 99% въевшихся пятен
             </div>
           </div>
 
           <!-- Преимущество 2 -->
-          <div class="p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+          <div class="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-105 transition-transform">
+              <div class="w-12 h-12 rounded-xl bg-white border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] mb-5 group-hover:scale-105 transition-transform shadow-xs">
                 <i data-lucide="shield-check" class="w-6 h-6"></i>
               </div>
-              <div class="text-2xl font-black font-mono text-cyan-400 mb-1">100% ЭКО</div>
-              <h3 class="text-lg font-bold text-white mb-2.5 leading-tight">Безопасные составы</h3>
-              <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">
+              <div class="text-2xl font-black font-mono text-[#E05A38] mb-1">100% ЭКО</div>
+              <h3 class="text-lg font-bold text-zinc-950 mb-2.5 leading-tight">Безопасные составы</h3>
+              <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed">
                 Используем профессиональную немецкую и итальянскую химию с нейтральным уровнем pH. Составы безопасны для аллергиков, детей, деликатной кожи и алькантары.
               </p>
             </div>
-            <div class="pt-5 mt-5 border-t border-graphite-700/80 text-[11px] font-mono text-cyan-300 flex items-center gap-1.5 font-semibold">
-              <i data-lucide="check" class="w-3.5 h-3.5"></i> Без едких запахов и липкости
+            <div class="pt-5 mt-5 border-t border-[#EAE6DF] text-[11px] font-mono text-zinc-700 flex items-center gap-1.5 font-semibold">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-[#E05A38]"></i> Без едких запахов и липкости
             </div>
           </div>
 
           <!-- Преимущество 3 -->
-          <div class="p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+          <div class="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-105 transition-transform">
+              <div class="w-12 h-12 rounded-xl bg-white border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] mb-5 group-hover:scale-105 transition-transform shadow-xs">
                 <i data-lucide="badge-percent" class="w-6 h-6"></i>
               </div>
-              <div class="text-2xl font-black font-mono text-cyan-400 mb-1">0 ₽</div>
-              <h3 class="text-lg font-bold text-white mb-2.5 leading-tight">Без скрытых доплат</h3>
-              <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">
+              <div class="text-2xl font-black font-mono text-[#E05A38] mb-1">0 ₽</div>
+              <h3 class="text-lg font-bold text-zinc-950 mb-2.5 leading-tight">Без скрытых доплат</h3>
+              <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed">
                 Смета фиксируется мастером до передачи ключей. Мы не навязываем ненужные процедуры и четко оговариваем сроки выполнения каждого комплекса.
               </p>
             </div>
-            <div class="pt-5 mt-5 border-t border-graphite-700/80 text-[11px] font-mono text-cyan-300 flex items-center gap-1.5 font-semibold">
-              <i data-lucide="check" class="w-3.5 h-3.5"></i> Точная фиксация стоимости
+            <div class="pt-5 mt-5 border-t border-[#EAE6DF] text-[11px] font-mono text-zinc-700 flex items-center gap-1.5 font-semibold">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-[#E05A38]"></i> Точная фиксация стоимости
             </div>
           </div>
 
@@ -441,186 +396,185 @@
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
-          <div class="text-xs uppercase tracking-widest text-cyanic-400 font-mono font-bold mb-1">Официальный прайс-лист</div>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Каталог услуг «Лайт авто»</h2>
+          <div class="text-xs uppercase tracking-widest text-[#E05A38] font-mono font-bold mb-1">Официальный прайс-лист</div>
+          <h2 class="text-2xl sm:text-4xl font-serif-editorial text-zinc-950">Каталог услуг «Лайт авто»</h2>
         </div>
-        <p class="text-xs sm:text-sm text-slate-300 mt-2 md:mt-0 font-medium">Цены зафиксированы для легковых автомобилей</p>
+        <p class="text-xs sm:text-sm text-zinc-600 mt-2 md:mt-0 font-medium">Цены зафиксированы для легковых автомобилей</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Услуга 1 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-graphite-800 via-graphite-850 to-graphite-900 border border-cyan-500/30 flex flex-col justify-between group shadow-xl relative overflow-hidden">
-          <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border-2 border-[#E05A38]/30 flex flex-col justify-between group shadow-sm relative overflow-hidden">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <div class="w-10 h-10 rounded-lg bg-cyan-500/20 text-cyan-300 flex items-center justify-center font-bold">
+              <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] text-[#E05A38] flex items-center justify-center font-bold">
                 <i data-lucide="shield" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-200 border border-cyan-500/40 font-bold">Флагман защиты</span>
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-[#FAF8F5] text-[#E05A38] border border-[#E05A38]/30 font-bold">Флагман защиты</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Жидкое стекло и керамика</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Жидкое стекло и керамика</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Нанесение многослойного защитного покрытия. Мощный гидрофобный эффект, зеркальный блеск и защита заводского лака от выгорания, мелких царапин и зимних реагентов.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~1-2 дня</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">26&nbsp;400&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~1-2 дня</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">26&nbsp;400&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 2 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="sparkles" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Полировка кузова</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Полировка кузова</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Многоэтапная полировка кузова с удалением паутинки от моек, потертостей и голограмм. Профилактика очагов микрокоррозии и глубокое насыщение цвета.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~1 день</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~1 день</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 3 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="wind" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="wind" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Химчистка салона (ткань)</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Химчистка салона (ткань)</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Глубокая экстракторная 4-этапная очистка сидений, ковролина, дверных карт и потолка. Уничтожение въевшихся запахов, бактерий и финишная сушка.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~1 день</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~1 день</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">10&nbsp;000&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 4 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="sun" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="sun" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Полировка стёкол</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Полировка стёкол</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Деликатная полировка оксидом церия для устранения кольцевых затертостей от дворников, белесого налета и микросколов без эффекта линзы.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~3-4 часа</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">4&nbsp;500&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~3-4 часа</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">4&nbsp;500&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 5 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="cloud-rain" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="cloud-rain" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Нанесение «Антидождь»</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Нанесение «Антидождь»</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Создание ультрастойкого водоотталкивающего барьера на стеклах. Капли воды и грязи сдуваются потоком воздуха уже на скорости от 50 км/ч.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~2 часа</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">4&nbsp;000&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~2 часа</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">4&nbsp;000&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 6 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="armchair" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="armchair" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Химчистка кожи</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Химчистка кожи</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Бережное глубокое раскрытие и очищение пор натуральной и экокожи щетками из конского волоса, удаление лоснящегося жира и пропитка питательным кремом.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~4-6 часов</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">4&nbsp;000&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~4-6 часов</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">4&nbsp;000&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 7 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="cpu" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="cpu" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Химчистка моторного отсека</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Химчистка моторного отсека</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Деликатная очистка двигателя диэлектрическим гелем, кистями и паром. Снижение риска воспламенения масляных отложений и консервация проводки.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~3 часа</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">3&nbsp;500&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~3 часа</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">3&nbsp;500&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 8 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="disc" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="disc" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Химчистка дисков и арок</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Химчистка дисков и арок</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Растворение въевшейся металлической тормозной пыли составами Iron Remover, удаление смолы и битума с полок дисков и консервация шин.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~2 часа</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">3&nbsp;000&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~2 часа</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">3&nbsp;000&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 9 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group shadow-xs">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
-              <i data-lucide="droplet" class="w-5 h-5"></i>
+            <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-zinc-700 mb-4 group-hover:scale-105 transition-transform">
+              <i data-lucide="droplet" class="w-5 h-5 text-[#E05A38]"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 leading-tight">Воск карнауба / силант</h3>
-            <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed mb-4">
+            <h3 class="text-lg font-bold text-zinc-950 mb-2 leading-tight">Воск карнауба / силант</h3>
+            <p class="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-4">
               Нанесение твердого премиального воска для создания глубокого мокрого глянца, маскировки мельчайших рисок и отличного гидрофоба.
             </p>
           </div>
-          <div class="pt-4 border-t border-graphite-700 flex items-center justify-between font-medium">
-            <span class="text-xs text-slate-300 font-mono">Срок: ~2-3 часа</span>
-            <span class="text-lg font-mono font-extrabold text-cyan-300 whitespace-nowrap">2&nbsp;000&nbsp;₽</span>
+          <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between font-medium">
+            <span class="text-xs text-zinc-500 font-mono">Срок: ~2-3 часа</span>
+            <span class="text-lg font-mono font-extrabold text-zinc-950 whitespace-nowrap">2&nbsp;000&nbsp;₽</span>
           </div>
         </div>
 
         <!-- Услуга 10 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between group md:col-span-2 lg:col-span-3 shadow-sm">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between group md:col-span-2 lg:col-span-3 shadow-xs">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] shrink-0">
                 <i data-lucide="flashlight" class="w-5 h-5"></i>
               </div>
               <div>
-                <h3 class="text-lg font-bold text-white leading-tight">Полировка фар и фонарей</h3>
-                <p class="text-xs sm:text-[13px] text-slate-300 mt-0.5">Абразивное восстановление оптической прозрачности поликарбоната фар с маскировкой периметра кузова.</p>
+                <h3 class="text-lg font-bold text-zinc-950 leading-tight">Полировка фар и фонарей</h3>
+                <p class="text-xs sm:text-[13px] text-zinc-600 mt-0.5">Абразивное восстановление оптической прозрачности поликарбоната фар с маскировкой периметра кузова.</p>
               </div>
             </div>
-            <div class="flex items-center justify-between sm:justify-end gap-6 pt-3 sm:pt-0 border-t sm:border-t-0 border-graphite-700 font-medium">
-              <span class="text-xs text-slate-300 font-mono">Срок: ~1 час</span>
-              <span class="text-xl font-mono font-extrabold text-cyan-300 whitespace-nowrap">1&nbsp;000&nbsp;₽</span>
+            <div class="flex items-center justify-between sm:justify-end gap-6 pt-3 sm:pt-0 border-t sm:border-t-0 border-[#EAE6DF] font-medium">
+              <span class="text-xs text-zinc-500 font-mono">Срок: ~1 час</span>
+              <span class="text-xl font-mono font-extrabold text-zinc-950 whitespace-nowrap">1&nbsp;000&nbsp;₽</span>
             </div>
           </div>
         </div>
@@ -629,15 +583,15 @@
     </section>
 
     <!-- Отзывы -->
-    <section class="border-t border-graphite-700 bg-graphite-850/80 py-20">
+    <section class="border-t border-[#EAE6DF] bg-white py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
           <div>
-            <div class="text-xs uppercase tracking-widest text-cyanic-400 font-mono font-bold mb-1">Репутация студии</div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Реальные отзывы гостей на Яндекс Картах</h2>
+            <div class="text-xs uppercase tracking-widest text-[#E05A38] font-mono font-bold mb-1">Репутация студии</div>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial text-zinc-950">Реальные отзывы гостей на Яндекс Картах</h2>
           </div>
-          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-graphite-800 border border-graphite-700 self-start sm:self-auto">
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] self-start sm:self-auto shadow-xs">
             <div class="flex text-amber-400">
               <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
               <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
@@ -645,15 +599,15 @@
               <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
               <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
             </div>
-            <span class="text-sm font-bold text-white">4.8</span>
-            <span class="text-xs text-slate-300 border-l border-graphite-700 pl-3">Яндекс Карты &bull; Чапаевск</span>
+            <span class="text-sm font-bold text-zinc-950">4.8</span>
+            <span class="text-xs text-zinc-500 border-l border-zinc-200 pl-3">Яндекс Карты &bull; Чапаевск</span>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           <!-- Отзыв 1: Елена -->
-          <div class="p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-xl">
+          <div class="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="flex text-amber-400">
@@ -663,28 +617,28 @@
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                 </div>
-                <span class="text-[11px] font-mono text-cyanic-300 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/30 font-semibold">Проверен</span>
+                <span class="text-[11px] font-mono text-[#E05A38] bg-white px-2.5 py-1 rounded-full border border-[#EAE6DF] font-semibold">Проверен</span>
               </div>
-              <blockquote class="text-xs sm:text-sm text-slate-200 leading-relaxed italic mb-6">
+              <blockquote class="text-xs sm:text-sm text-zinc-700 leading-relaxed italic mb-6">
                 «Выражаю огромную благодарность мастеру за превосходную работу! Качество, аккуратность и скорость выполнения на высоте, а цена приятно удивила. Работать с таким профессионалом — одно удовольствие. Настоятельно рекомендую!»
               </blockquote>
             </div>
-            <div class="pt-4 border-t border-graphite-700 flex items-center justify-between">
+            <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 font-bold font-mono text-xs flex items-center justify-center">
+                <div class="w-9 h-9 rounded-full bg-white border border-[#EAE6DF] text-zinc-950 font-bold font-mono text-xs flex items-center justify-center shadow-xs">
                   ЕЛ
                 </div>
                 <div>
-                  <span class="font-bold text-white text-xs block">Елена</span>
-                  <span class="text-[11px] text-slate-300">Знаток города 3 уровня</span>
+                  <span class="font-bold text-zinc-950 text-xs block">Елена</span>
+                  <span class="text-[11px] text-zinc-500">Знаток города 3 уровня</span>
                 </div>
               </div>
-              <span class="text-[11px] font-mono text-slate-300 font-medium">Яндекс Карты</span>
+              <span class="text-[11px] font-mono text-zinc-400 font-medium">Яндекс Карты</span>
             </div>
           </div>
 
           <!-- Отзыв 2: Александр Б. -->
-          <div class="p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-xl">
+          <div class="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="flex text-amber-400">
@@ -694,28 +648,28 @@
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                 </div>
-                <span class="text-[11px] font-mono text-cyanic-300 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/30 font-semibold">Проверен</span>
+                <span class="text-[11px] font-mono text-[#E05A38] bg-white px-2.5 py-1 rounded-full border border-[#EAE6DF] font-semibold">Проверен</span>
               </div>
-              <blockquote class="text-xs sm:text-sm text-slate-200 leading-relaxed italic mb-6">
+              <blockquote class="text-xs sm:text-sm text-zinc-700 leading-relaxed italic mb-6">
                 «Отличный детейлинг! Сделали суперкомплексную мойку, полировку и химчистку. Качество на высшем уровне, мастеру отдельный респект»
               </blockquote>
             </div>
-            <div class="pt-4 border-t border-graphite-700 flex items-center justify-between">
+            <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 font-bold font-mono text-xs flex items-center justify-center">
+                <div class="w-9 h-9 rounded-full bg-white border border-[#EAE6DF] text-zinc-950 font-bold font-mono text-xs flex items-center justify-center shadow-xs">
                   АБ
                 </div>
                 <div>
-                  <span class="font-bold text-white text-xs block">Александр Б.</span>
-                  <span class="text-[11px] text-slate-300">Знаток города 5 уровня</span>
+                  <span class="font-bold text-zinc-950 text-xs block">Александр Б.</span>
+                  <span class="text-[11px] text-zinc-500">Знаток города 5 уровня</span>
                 </div>
               </div>
-              <span class="text-[11px] font-mono text-slate-300 font-medium">Яндекс Карты</span>
+              <span class="text-[11px] font-mono text-zinc-400 font-medium">Яндекс Карты</span>
             </div>
           </div>
 
           <!-- Отзыв 3: Кирилл К. -->
-          <div class="p-7 rounded-2xl bg-graphite-800 border border-graphite-700 hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-xl">
+          <div class="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 transition-all flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="flex text-amber-400">
@@ -725,23 +679,23 @@
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                 </div>
-                <span class="text-[11px] font-mono text-cyanic-300 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/30 font-semibold">Проверен</span>
+                <span class="text-[11px] font-mono text-[#E05A38] bg-white px-2.5 py-1 rounded-full border border-[#EAE6DF] font-semibold">Проверен</span>
               </div>
-              <blockquote class="text-xs sm:text-sm text-slate-200 leading-relaxed italic mb-6">
+              <blockquote class="text-xs sm:text-sm text-zinc-700 leading-relaxed italic mb-6">
                 «Все супер, работу выполнили быстро и качественно, приятны в общении, клиентоориентированы.»
               </blockquote>
             </div>
-            <div class="pt-4 border-t border-graphite-700 flex items-center justify-between">
+            <div class="pt-4 border-t border-[#EAE6DF] flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 font-bold font-mono text-xs flex items-center justify-center">
+                <div class="w-9 h-9 rounded-full bg-white border border-[#EAE6DF] text-zinc-950 font-bold font-mono text-xs flex items-center justify-center shadow-xs">
                   КК
                 </div>
                 <div>
-                  <span class="font-bold text-white text-xs block">Кирилл К.</span>
-                  <span class="text-[11px] text-slate-300">Знаток города 4 уровня</span>
+                  <span class="font-bold text-zinc-950 text-xs block">Кирилл К.</span>
+                  <span class="text-[11px] text-zinc-500">Знаток города 4 уровня</span>
                 </div>
               </div>
-              <span class="text-[11px] font-mono text-slate-300 font-medium">Яндекс Карты</span>
+              <span class="text-[11px] font-mono text-zinc-400 font-medium">Яндекс Карты</span>
             </div>
           </div>
 
@@ -751,65 +705,65 @@
     </section>
 
     <!-- Контакты -->
-    <section class="border-t border-graphite-700 bg-graphite-900 py-20">
+    <section class="border-t border-[#EAE6DF] bg-[#FAF8F5] py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
           <!-- Карточка контактов -->
-          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-graphite-800 border border-graphite-700 shadow-sm">
-            <div class="text-xs uppercase tracking-widest text-cyanic-400 font-mono font-bold mb-2">Локация и связь</div>
-            <h2 class="text-2xl font-extrabold text-white mb-6">«Лайт авто» Чапаевск</h2>
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-white border border-[#EAE6DF] shadow-sm">
+            <div class="text-xs uppercase tracking-widest text-[#E05A38] font-mono font-bold mb-2">Локация и связь</div>
+            <h2 class="text-2xl font-serif-editorial text-zinc-950 mb-6">«Лайт авто» Чапаевск</h2>
 
             <div class="space-y-6">
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 shrink-0">
+                <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] shrink-0">
                   <i data-lucide="map-pin" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <span class="text-xs text-slate-300 block font-semibold uppercase">Точный адрес студии</span>
-                  <span class="text-base text-slate-100 font-medium">Самарская область, г. Чапаевск, ул. Красноармейская, 25</span>
-                  <span class="text-xs text-slate-400 block mt-0.5">Удобный асфальтированный подъезд</span>
+                  <span class="text-xs text-zinc-500 block font-semibold uppercase">Точный адрес студии</span>
+                  <span class="text-base text-zinc-900 font-medium">Самарская область, г. Чапаевск, ул. Красноармейская, 25</span>
+                  <span class="text-xs text-zinc-400 block mt-0.5">Удобный асфальтированный подъезд</span>
                 </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 shrink-0">
+                <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] shrink-0">
                   <i data-lucide="clock" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <span class="text-xs text-slate-300 block font-semibold uppercase">График приёма</span>
-                  <span class="text-base text-white font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                  <span class="text-xs text-zinc-500 block font-semibold uppercase">График приёма</span>
+                  <span class="text-base text-zinc-900 font-medium flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                     Ежедневно: 09:00 &ndash; 20:00
                   </span>
-                  <span class="text-xs text-cyan-300 block mt-0.5 font-medium">По предварительной записи без очередей</span>
+                  <span class="text-xs text-[#E05A38] block mt-0.5 font-medium">По предварительной записи без очередей</span>
                 </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-graphite-900 border border-graphite-700 flex items-center justify-center text-cyan-400 shrink-0">
+                <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center text-[#E05A38] shrink-0">
                   <i data-lucide="phone" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <span class="text-xs text-slate-300 block font-semibold uppercase">Телефон студии</span>
-                  <a href="tel:+79370625514" class="text-lg text-cyanic-300 font-mono font-bold hover:underline block whitespace-nowrap">
+                  <span class="text-xs text-zinc-500 block font-semibold uppercase">Телефон студии</span>
+                  <a href="tel:+79370625514" class="text-lg text-zinc-950 font-mono font-bold hover:underline block whitespace-nowrap">
                     +7 (937) 062-55-14
                   </a>
-                  <span class="text-xs text-slate-400">Мастер детейлинга</span>
+                  <span class="text-xs text-zinc-400">Мастер детейлинга</span>
                 </div>
               </div>
             </div>
 
             <!-- Кнопки звонка и Telegram -->
-            <div class="mt-8 pt-6 border-t border-graphite-700">
-              <span class="text-xs text-slate-300 uppercase font-mono block mb-3 font-semibold">Забронировать время:</span>
+            <div class="mt-8 pt-6 border-t border-[#EAE6DF]">
+              <span class="text-xs text-zinc-500 uppercase font-mono block mb-3 font-semibold">Забронировать время:</span>
               <div class="grid grid-cols-2 gap-3">
-                <a href="tel:+79370625514" class="py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-graphite-950 font-black flex items-center justify-center gap-2 text-xs transition-all shadow-md shadow-cyan-500/20 active:scale-95 whitespace-nowrap">
-                  <i data-lucide="phone" class="w-4 h-4 text-graphite-950"></i>
+                <a href="tel:+79370625514" class="py-3 px-4 rounded-xl bg-[#E05A38] hover:bg-[#C94A2A] text-white font-black flex items-center justify-center gap-2 text-xs transition-all shadow-sm active:scale-95 whitespace-nowrap">
+                  <i data-lucide="phone" class="w-4 h-4 text-white"></i>
                   <span>Позвонить</span>
                 </a>
-                <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-graphite-900 border border-graphite-700 hover:border-cyan-400 text-slate-200 hover:text-white flex items-center justify-center gap-2 text-xs font-semibold transition-all">
-                  <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+                <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] hover:border-zinc-400 text-zinc-800 flex items-center justify-center gap-2 text-xs font-semibold transition-all">
+                  <i data-lucide="send" class="w-4 h-4 text-[#E05A38]"></i>
                   <span>В Telegram</span>
                 </a>
               </div>
@@ -817,43 +771,43 @@
           </div>
 
           <!-- Навигатор водителя -->
-          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-graphite-800 border border-graphite-700 shadow-sm">
-            <div class="text-xs uppercase tracking-widest text-cyanic-400 font-mono font-bold mb-2">Навигатор водителя</div>
-            <h3 class="text-2xl font-extrabold text-white mb-6">Как проехать в «Лайт авто»</h3>
+          <div class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-white border border-[#EAE6DF] shadow-sm">
+            <div class="text-xs uppercase tracking-widest text-[#E05A38] font-mono font-bold mb-2">Навигатор водителя</div>
+            <h3 class="text-2xl font-serif-editorial text-zinc-950 mb-6">Как проехать в «Лайт авто»</h3>
 
             <div class="space-y-6">
               <div class="flex gap-4">
-                <div class="font-mono text-lg font-bold text-cyan-300 w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center shrink-0">1</div>
+                <div class="font-mono text-base font-bold text-zinc-900 w-8 h-8 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center shrink-0">1</div>
                 <div>
-                  <h4 class="text-base font-bold text-white">Движение по улице Красноармейская</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">Ориентируйтесь на номер здания 25 в Чапаевске. Прямой комфортный заезд с главной дороги без ям и препятствий.</p>
+                  <h4 class="text-base font-bold text-zinc-950">Движение по улице Красноармейская</h4>
+                  <p class="text-xs sm:text-sm text-zinc-600 mt-1 leading-relaxed">Ориентируйтесь на номер здания 25 в Чапаевске. Прямой комфортный заезд с главной дороги без ям и препятствий.</p>
                 </div>
               </div>
 
               <div class="flex gap-4">
-                <div class="font-mono text-lg font-bold text-cyan-300 w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center shrink-0">2</div>
+                <div class="font-mono text-base font-bold text-zinc-900 w-8 h-8 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center shrink-0">2</div>
                 <div>
-                  <h4 class="text-base font-bold text-white">Приём автомобиля мастером</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">Мастер проводит осмотр салона и кузова, выполняет замер толщины ЛКП, согласует этапы работ и фиксирует стоимость сметы.</p>
+                  <h4 class="text-base font-bold text-zinc-950">Приём автомобиля мастером</h4>
+                  <p class="text-xs sm:text-sm text-zinc-600 mt-1 leading-relaxed">Мастер проводит осмотр салона и кузова, выполняет замер толщины ЛКП, согласует этапы работ и фиксирует стоимость сметы.</p>
                 </div>
               </div>
 
               <div class="flex gap-4">
-                <div class="font-mono text-lg font-bold text-cyan-300 w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center shrink-0">3</div>
+                <div class="font-mono text-base font-bold text-zinc-900 w-8 h-8 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-center justify-center shrink-0">3</div>
                 <div>
-                  <h4 class="text-base font-bold text-white">Выдача сияющего автомобиля</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">Вы забираете автомобиль с чистым сухим салоном, глубоким зеркальным блеском кузова и защитным гидрофобным слоем.</p>
+                  <h4 class="text-base font-bold text-zinc-950">Выдача сияющего автомобиля</h4>
+                  <p class="text-xs sm:text-sm text-zinc-600 mt-1 leading-relaxed">Вы забираете автомобиль с чистым сухим салоном, глубоким зеркальным блеском кузова и защитным гидрофобным слоем.</p>
                 </div>
               </div>
             </div>
 
             <!-- Копирование адреса -->
-            <div class="mt-8 pt-6 border-t border-graphite-700 flex flex-wrap items-center justify-between gap-4">
-              <div class="text-xs font-mono text-slate-300">
-                Адрес: <span class="text-white font-semibold">г. Чапаевск, ул. Красноармейская, 25</span>
+            <div class="mt-8 pt-6 border-t border-[#EAE6DF] flex flex-wrap items-center justify-between gap-4">
+              <div class="text-xs font-mono text-zinc-600">
+                Адрес: <span class="text-zinc-950 font-semibold">г. Чапаевск, ул. Красноармейская, 25</span>
               </div>
-              <button onclick="copyAddress('Самарская область, Чапаевск, Красноармейская улица, 25')" class="px-4 py-2.5 rounded-lg bg-graphite-900 hover:bg-graphite-750 text-slate-200 hover:text-white border border-graphite-700 text-xs font-medium flex items-center gap-2 transition-all">
-                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <button onclick="copyAddress('Самарская область, Чапаевск, Красноармейская улица, 25')" class="px-4 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-zinc-100 text-zinc-800 border border-[#EAE6DF] text-xs font-medium flex items-center gap-2 transition-all">
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-[#E05A38]"></i>
                 <span id="copy-btn-text">Скопировать адрес для навигатора</span>
               </button>
             </div>
@@ -865,20 +819,20 @@
   </main>
 
   <!-- Подвал сайта -->
-  <footer class="border-t border-graphite-700 bg-graphite-950 text-slate-300 text-xs py-10 relative z-10">
+  <footer class="border-t border-[#EAE6DF] bg-white text-zinc-500 text-xs py-10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
 
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center text-cyan-300 shrink-0">
-          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <div class="w-8 h-8 rounded-xl bg-zinc-950 flex items-center justify-center text-white shrink-0">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#E05A38]"></i>
         </div>
         <div>
-          <span class="font-bold text-white uppercase tracking-wider font-mono">ЛАЙТ АВТО &bull; Чапаевск</span>
-          <p class="text-[11px] text-slate-400">Детейлинг, полировка кузова, 4-этапная химчистка, жидкое стекло &bull; ул. Красноармейская, 25</p>
+          <span class="font-bold text-zinc-950 uppercase tracking-wider font-mono">ЛАЙТ АВТО &bull; Чапаевск</span>
+          <p class="text-[11px] text-zinc-500">Детейлинг, полировка кузова, 4-этапная химчистка, жидкое стекло &bull; ул. Красноармейская, 25</p>
         </div>
       </div>
 
-      <div class="text-center md:text-right text-[11px] text-slate-400 space-y-1">
+      <div class="text-center md:text-right text-[11px] text-zinc-400 space-y-1">
         <div>Информация носит ознакомительный характер и не является публичной офертой.</div>
         <div>&copy; 2026 Студия детейлинга «Лайт авто». Кристальная чистота и салонный лоск.</div>
       </div>
@@ -887,67 +841,67 @@
   </footer>
 
   <!-- Мобильная фиксированная нижняя панель -->
-  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-graphite-900/95 backdrop-blur-md border-t border-graphite-700 flex items-center gap-2" aria-label="Быстрые действия">
-    <a href="tel:+79370625514" class="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-graphite-950 font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-lg shadow-cyan-500/25 active:scale-95 whitespace-nowrap shrink-0">
-      <i data-lucide="phone" class="w-4 h-4 text-graphite-950"></i>
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-white/95 backdrop-blur-md border-t border-[#EAE6DF] flex items-center gap-2" aria-label="Быстрые действия">
+    <a href="tel:+79370625514" class="flex-1 py-3 px-3 rounded-xl bg-[#E05A38] text-white font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm active:scale-95 whitespace-nowrap shrink-0">
+      <i data-lucide="phone" class="w-4 h-4 text-white"></i>
       <span>Позвонить</span>
     </a>
-    <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-3 rounded-xl bg-graphite-850 border border-graphite-700 hover:border-cyan-400 text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
-      <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+    <a href="https://t.me/+79370625514" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-3 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] text-zinc-800 font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5 active:scale-95">
+      <i data-lucide="send" class="w-4 h-4 text-[#E05A38]"></i>
       <span>Telegram</span>
     </a>
   </aside>
 
   <!-- Модальное окно онлайн-записи -->
-  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-sm">
-    <div class="relative w-full max-w-md rounded-2xl bg-graphite-800 border border-graphite-700 p-6 sm:p-7 shadow-2xl">
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-zinc-950/60 backdrop-blur-xs">
+    <div class="relative w-full max-w-md rounded-2xl bg-white border border-[#EAE6DF] p-6 sm:p-7 shadow-2xl">
 
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg hover:bg-graphite-700 transition-colors">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-700 p-2 rounded-lg hover:bg-zinc-100 transition-colors">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="mb-5">
-        <div class="text-[11px] uppercase tracking-wider text-cyanic-400 font-mono font-bold">Лайт авто • Онлайн-запись</div>
-        <h3 id="modal-service-title" class="text-xl font-bold text-white mt-1">Фиксация цены и бронь даты</h3>
-        <p class="text-xs text-slate-300 mt-1">Оставьте заявку &mdash; мастер свяжется с вами для согласования удобного времени.</p>
+        <div class="text-[11px] uppercase tracking-wider text-[#E05A38] font-mono font-bold">Лайт авто • Онлайн-запись</div>
+        <h3 id="modal-service-title" class="text-xl font-bold text-zinc-950 mt-1">Фиксация цены и бронь даты</h3>
+        <p class="text-xs text-zinc-600 mt-1">Оставьте заявку &mdash; мастер свяжется с вами для согласования удобного времени.</p>
       </div>
 
       <form onsubmit="handleFormSubmit(event)" class="space-y-4">
         <div>
-          <label class="block text-xs uppercase font-semibold text-slate-300 mb-1">Ваше имя</label>
-          <input type="text" id="client_name" required placeholder="Елена" class="w-full px-3.5 py-2.5 rounded-lg bg-graphite-900 border border-graphite-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
+          <label class="block text-xs uppercase font-semibold text-zinc-700 mb-1">Ваше имя</label>
+          <input type="text" id="client_name" required placeholder="Елена" class="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] focus:border-[#E05A38] focus:outline-none text-zinc-900 text-sm">
         </div>
 
         <div>
-          <label class="block text-xs uppercase font-semibold text-slate-300 mb-1">Номер телефона</label>
-          <input type="tel" id="client_phone" required placeholder="+7 (937) 062-55-14" class="w-full px-3.5 py-2.5 rounded-lg bg-graphite-900 border border-graphite-700 focus:border-cyan-400 focus:outline-none text-white text-sm font-mono">
+          <label class="block text-xs uppercase font-semibold text-zinc-700 mb-1">Номер телефона</label>
+          <input type="tel" id="client_phone" required placeholder="+7 (937) 062-55-14" class="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] focus:border-[#E05A38] focus:outline-none text-zinc-900 text-sm font-mono">
         </div>
 
         <div>
-          <label class="block text-xs uppercase font-semibold text-slate-300 mb-1">Марка авто и выбранные услуги</label>
-          <input type="text" id="modal-notes" placeholder="Например: Kia Ceed, Полировка + Химчистка" class="w-full px-3.5 py-2.5 rounded-lg bg-graphite-900 border border-graphite-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
+          <label class="block text-xs uppercase font-semibold text-zinc-700 mb-1">Марка авто и выбранные услуги</label>
+          <input type="text" id="modal-notes" placeholder="Например: Kia Ceed, Полировка + Химчистка" class="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] focus:border-[#E05A38] focus:outline-none text-zinc-900 text-sm">
         </div>
 
         <div class="pt-2">
-          <button id="modal-submit-btn" type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-graphite-950 font-black text-xs uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 active:scale-95">
+          <button id="modal-submit-btn" type="submit" class="w-full py-3.5 px-4 rounded-xl bg-[#E05A38] hover:bg-[#C94A2A] text-white font-black text-xs uppercase tracking-wider transition-all shadow-sm active:scale-95">
             Подтвердить запись
           </button>
         </div>
 
-        <p class="text-[11px] text-slate-400 text-center">Фиксированная смета без навязанных услуг</p>
+        <p class="text-[11px] text-zinc-400 text-center">Фиксированная смета без навязанных услуг</p>
       </form>
     </div>
   </div>
 
   <!-- Toast -->
   <div id="toast-msg" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-4">
-    <div class="px-5 py-3.5 rounded-xl bg-graphite-800 border border-cyan-400/40 text-white shadow-2xl flex items-center gap-3">
-      <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 flex items-center justify-center shrink-0">
+    <div class="px-5 py-3.5 rounded-xl bg-zinc-900 text-white shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
         <i data-lucide="check" class="w-4 h-4"></i>
       </div>
       <div>
         <div id="toast-title" class="text-sm font-bold text-white">Заявка принята!</div>
-        <div id="toast-desc" class="text-xs text-slate-300">Мастер студии «Лайт авто» свяжется с вами для согласования даты.</div>
+        <div id="toast-desc" class="text-xs text-zinc-300">Мастер студии «Лайт авто» свяжется с вами для согласования даты.</div>
       </div>
     </div>
   </div>
@@ -985,14 +939,18 @@
       currentCategory = category;
 
       document.querySelectorAll('.car-type-btn').forEach(btn => {
-        btn.classList.remove('bg-cyan-500/20', 'border-cyan-400', 'text-cyanic-200', 'shadow-sm');
-        btn.classList.add('bg-graphite-900', 'border-graphite-700', 'text-slate-300');
+        btn.classList.remove('bg-[#FAF8F5]', 'border-zinc-950', 'text-zinc-950', 'shadow-xs');
+        btn.classList.add('bg-white', 'border-[#EAE6DF]', 'text-zinc-600');
+        const icon = btn.querySelector('svg');
+        if (icon) icon.classList.remove('text-[#E05A38]');
       });
 
       const activeBtn = document.getElementById('car-btn-' + category);
       if (activeBtn) {
-        activeBtn.classList.remove('bg-graphite-900', 'border-graphite-700', 'text-slate-300');
-        activeBtn.classList.add('bg-cyan-500/20', 'border-cyan-400', 'text-cyanic-200', 'shadow-sm');
+        activeBtn.classList.remove('bg-white', 'border-[#EAE6DF]', 'text-zinc-600');
+        activeBtn.classList.add('bg-[#FAF8F5]', 'border-zinc-950', 'text-zinc-950', 'shadow-xs');
+        const icon = activeBtn.querySelector('svg');
+        if (icon) icon.classList.add('text-[#E05A38]');
       }
 
       updateIndividualPriceLabels();

@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Заголовок и базовое описание страницы -->
   <title>El Kamo — Автокомплекс в Самаре | Мойка, антикор, шиномонтаж</title>
   <meta name="description" content="Автокомплекс El Kamo на Киевской 12А: деликатная мойка кузова, антикоррозийная защита, шиномонтаж и детейлинг. Оставьте ключи — сделаем всё аккуратно и в срок.">
 
-  <!-- Open Graph метатеги для красивого превью в Telegram / WhatsApp / VK -->
+  <!-- Open Graph для Telegram / WhatsApp / VK -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jimbo961.github.io/preview/el-kamo/">
+  <meta property="og:site_name" content="El Kamo Самара">
   <meta property="og:title" content="El Kamo — Автокомплекс в Самаре | Мойка, антикор, шиномонтаж">
   <meta property="og:description" content="Автокомплекс El Kamo на Киевской 12А: деликатная мойка кузова, антикоррозийная защита, шиномонтаж и детейлинг. Оставьте ключи — сделаем всё аккуратно и в срок.">
-  <meta property="og:site_name" content="El Kamo Автокомплекс">
   <meta property="og:locale" content="ru_RU">
 
-  <!-- Twitter Card метатеги -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="El Kamo — Автокомплекс в Самаре | Мойка, антикор, шиномонтаж">
   <meta name="twitter:description" content="Автокомплекс El Kamo на Киевской 12А: деликатная мойка кузова, антикоррозийная защита, шиномонтаж и детейлинг.">
@@ -37,15 +36,16 @@
       theme: {
         extend: {
           colors: {
-            p2: {
-              cream: '#FFF3C8',
-              gold: '#E5CB90',
-              teal: '#0D8275',
-              tealHover: '#096359',
-              petrol: '#1E5361',
-              petrolDark: '#122E36',
-              surface: '#FFFFFF',
-              muted: '#2E4C54'
+            pinkish: {
+              bg: '#FAF9FB',          /* Чистый белоснежно-молочный фон */
+              surface: '#FFFFFF',     /* Белые карточки с мягкой тенью */
+              rose: '#E11D48',        /* Насыщенный малиново-розовый акцент (кнопки, плашки) */
+              roseHover: '#BE123C',
+              roseSoft: '#FFE4E6',    /* Нежно-розовая подложка бейджей */
+              roseBorder: '#FECDD3',
+              ink: '#0F172A',         /* Глубокий контрастный чернильный текст */
+              body: '#334155',        /* Четкий, не выцветающий основной текст */
+              muted: '#64748B'        /* Вспомогательный текст */
             }
           },
           fontFamily: {
@@ -59,69 +59,73 @@
   </script>
 
   <style>
-    .bg-palette-two {
-      background-color: #FFF3C8;
+    /* Мягкое радиальное розовое свечение как на референсе Simple AI Chatbot */
+    .bg-rose-radial {
+      background-color: #FAF9FB;
       background-image: 
-        radial-gradient(#DEC282 0.85px, transparent 0.85px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent 450px);
-      background-size: 24px 24px, 100% 100%;
+        radial-gradient(circle at 92% 18%, rgba(225, 29, 72, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 10% 80%, rgba(244, 63, 94, 0.05) 0%, transparent 50%),
+        linear-gradient(to bottom, #FFFFFF 0%, #FAF9FB 500px);
     }
-    .btn-solid-glow {
-      box-shadow: 0 10px 24px -4px rgba(13, 130, 117, 0.45);
+    .soft-card-shadow {
+      box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.08), 0 0 1px 1px rgba(226, 232, 240, 0.8);
+    }
+    .rose-btn-glow {
+      box-shadow: 0 10px 25px -4px rgba(225, 29, 72, 0.35);
     }
   </style>
 </head>
-<body class="bg-palette-two text-p2-petrolDark font-sans antialiased selection:bg-p2-teal selection:text-white min-h-screen overflow-x-hidden">
+<body class="bg-rose-radial text-pinkish-ink font-sans antialiased selection:bg-pinkish-rose selection:text-white min-h-screen overflow-x-hidden">
 
   <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
-  <div class="bg-p2-petrolDark text-[#FFF3C8] text-xs sm:text-sm font-mono tracking-wider py-2 px-4 border-b border-p2-petrol">
+  <div class="bg-pinkish-ink text-white text-xs sm:text-sm font-mono tracking-wider py-2 px-3 sm:px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <span class="font-semibold flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="font-semibold text-white flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm">
+        <span class="w-2 h-2 rounded-full bg-pinkish-rose animate-pulse shrink-0"></span>
         САМАРА • КИЕВСКАЯ 12А
       </span>
-      <span class="hidden sm:inline text-p2-gold">МОЙКА • АНТИКОРРОЗИЙНАЯ ОБРАБОТКА • ШИНОМОНТАЖ</span>
-      <span class="font-bold text-p2-gold">ОТКРЫТО ДО 21:00</span>
+      <span class="hidden md:inline text-slate-300">МОЙКА • АНТИКОРРОЗИЙНАЯ ЗАЩИТА • ШИНОМОНТАЖ</span>
+      <span class="font-bold text-pinkish-rose text-[11px] sm:text-sm">РАБОТАЕМ ДО 21:00</span>
     </div>
   </div>
 
   <!-- ШАПКА -->
-  <header class="sticky top-0 z-50 bg-[#FFF3C8]/95 backdrop-blur-md border-b border-p2-gold w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-3">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
       
       <!-- Логотип -->
       <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2.5 group shrink-0">
-        <div class="w-9 h-9 rounded-xl bg-p2-petrol text-[#FFF3C8] flex items-center justify-center font-display font-black text-lg shadow-sm transition-transform group-hover:scale-105">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-pinkish-rose text-white flex items-center justify-center font-display font-black text-base sm:text-lg shadow-sm transition-transform group-hover:scale-105 shrink-0">
           K
         </div>
-        <div>
-          <span class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-p2-petrolDark">
-            El Kamo<span class="text-p2-teal font-mono text-sm ml-1 font-bold">.auto</span>
+        <div class="leading-none">
+          <span class="text-lg sm:text-2xl font-display font-extrabold tracking-tight text-pinkish-ink">
+            El Kamo<span class="text-pinkish-rose font-mono text-xs sm:text-sm lowercase ml-0.5 font-bold">.auto</span>
           </span>
         </div>
       </a>
 
-      <!-- Меню -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-p2-muted font-bold">
-        <a href="#services" class="hover:text-p2-teal transition">Услуги</a>
-        <a href="#advantages" class="hover:text-p2-teal transition">Преимущества</a>
-        <a href="#reviews" class="hover:text-p2-teal transition">Отзывы (94)</a>
-        <a href="#contacts" class="hover:text-p2-teal transition">Контакты</a>
+      <!-- Меню (десктоп) -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-pinkish-body font-bold">
+        <a href="#services" class="hover:text-pinkish-rose transition">Услуги</a>
+        <a href="#advantages" class="hover:text-pinkish-rose transition">Преимущества</a>
+        <a href="#reviews" class="hover:text-pinkish-rose transition">Отзывы (94)</a>
+        <a href="#contacts" class="hover:text-pinkish-rose transition">Контакты</a>
       </nav>
 
-      <!-- Контакты и кнопка -->
-      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <a href="https://wa.me/79967235388" target="_blank" class="w-9 h-9 rounded-xl bg-white border border-p2-gold text-emerald-700 hover:border-p2-teal flex items-center justify-center transition shadow-sm hover:-translate-y-0.5" title="WhatsApp">
+      <!-- Контакты и кнопки -->
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <a href="https://wa.me/79967235388" target="_blank" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-50 border border-slate-200 text-emerald-700 hover:border-pinkish-rose flex items-center justify-center transition shadow-sm hover:-translate-y-0.5 shrink-0" title="WhatsApp">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
         </a>
-        <a href="https://t.me/+79967235388" target="_blank" class="w-9 h-9 rounded-xl bg-white border border-p2-gold text-sky-600 hover:border-p2-teal flex items-center justify-center transition shadow-sm hover:-translate-y-0.5" title="Telegram">
+        <a href="https://t.me/+79967235388" target="_blank" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-50 border border-slate-200 text-sky-600 hover:border-pinkish-rose flex items-center justify-center transition shadow-sm hover:-translate-y-0.5 shrink-0" title="Telegram">
           <i data-lucide="send" class="w-4 h-4"></i>
         </a>
-        <a href="tel:+79967235388" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-p2-gold text-xs sm:text-sm font-mono font-bold text-p2-petrolDark hover:border-p2-teal transition shadow-sm">
-          <i data-lucide="phone" class="w-4 h-4 text-p2-teal"></i>
+        <a href="tel:+79967235388" class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-mono font-bold text-pinkish-ink hover:border-pinkish-rose transition shadow-sm shrink-0">
+          <i data-lucide="phone" class="w-4 h-4 text-pinkish-rose"></i>
           +7 (996) 723-53-88
         </a>
-        <button onclick="openModal('Быстрая запись')" class="px-5 py-2.5 rounded-xl bg-p2-teal hover:bg-p2-tealHover text-white text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition active:scale-95 shadow-md btn-solid-glow hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+        <button onclick="openModal('Быстрая запись')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-pinkish-rose hover:bg-pinkish-roseHover text-white text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition active:scale-95 shadow-md rose-btn-glow hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
           Записаться
         </button>
       </div>
@@ -130,92 +134,99 @@
   </header>
 
   <!-- HERO СЕКЦИЯ -->
-  <section class="py-12 sm:py-20 border-b border-p2-gold relative">
+  <section class="py-12 sm:py-20 border-b border-slate-200/80 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Офферная часть -->
-        <div class="lg:col-span-7 space-y-6">
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-p2-gold text-xs font-mono text-p2-petrol font-bold shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-p2-teal animate-pulse"></span>
-            Самара • Киевская ул., 12А • Автокомплекс полного цикла
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pinkish-roseSoft border border-pinkish-roseBorder text-[11px] sm:text-xs font-mono text-pinkish-rose font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-pinkish-rose animate-pulse shrink-0"></span>
+            САМАРА • КИЕВСКАЯ 12А • АВТОКОМПЛЕКС ПОЛНОГО ЦИКЛА
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-p2-petrolDark tracking-tight leading-[1.12]">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-pinkish-ink tracking-tight leading-[1.05]">
             Качественная мойка, <br>
-            <span class="text-p2-teal">надежный антикор</span> <br>
+            <span class="text-pinkish-rose">надежный антикор</span> <br>
             и быстрый шиномонтаж.
           </h1>
 
-          <p class="text-p2-muted text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-            Бережный профессиональный уход на Киевской. Моем аккуратно и на совесть, смываем следы наклеек со штрафстоянок без царапин, меняем шины по честным ценам и защищаем днище от реагентов.
+          <p class="text-pinkish-body text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            Бережный профессиональный уход за автомобилем на Киевской. Моем аккуратно и на совесть, смываем следы наклеек со штрафстоянок без царапин, меняем шины по честным ценам и защищаем днище от реагентов.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1 max-w-md">
-            <button onclick="openModal('Главный экран')" class="px-7 py-3.5 rounded-xl bg-p2-teal hover:bg-p2-tealHover text-white font-display font-bold text-xs sm:text-sm uppercase tracking-wider transition active:scale-95 shadow-md btn-solid-glow hover:-translate-y-0.5 flex items-center justify-center gap-2">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 max-w-md">
+            <button onclick="openModal('Главный экран')" class="px-7 py-3.5 rounded-full bg-pinkish-rose hover:bg-pinkish-roseHover text-white font-display font-bold text-xs sm:text-sm uppercase tracking-wider transition active:scale-95 shadow-lg rose-btn-glow hover:-translate-y-0.5 flex items-center justify-center gap-2">
               <span>Забронировать бокс</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
-            <a href="#services" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-p2-gold text-p2-petrolDark font-mono text-xs uppercase tracking-wider font-bold transition text-center shadow-sm hover:border-p2-teal">
+            <a href="#services" class="px-6 py-3.5 rounded-full bg-white hover:bg-slate-50 border-2 border-slate-200 text-pinkish-ink font-mono text-xs uppercase tracking-wider font-bold transition text-center hover:border-pinkish-rose">
               Перечень услуг
             </a>
           </div>
 
-          <div class="pt-6 border-t border-p2-gold flex flex-wrap items-center gap-6 text-xs sm:text-sm text-p2-muted font-mono font-semibold">
+          <div class="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-5 sm:gap-7 text-xs sm:text-sm text-pinkish-muted font-mono font-semibold">
             <div class="flex items-center gap-2">
-              <i data-lucide="key" class="w-4 h-4 text-p2-teal"></i>
-              <span>Можно оставить ключи</span>
+              <i data-lucide="key" class="w-4 h-4 text-pinkish-rose"></i>
+              <span class="text-pinkish-body">Можно оставить ключи</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="clock" class="w-4 h-4 text-p2-teal"></i>
-              <span>09:00 – 21:00 ежедневно</span>
+              <i data-lucide="clock" class="w-4 h-4 text-pinkish-rose"></i>
+              <span class="text-pinkish-body">09:00 – 21:00 ежедневно</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-p2-teal"></i>
-              <span>94 отзыва на Яндекс.Картах</span>
+              <i data-lucide="shield-check" class="w-4 h-4 text-pinkish-rose"></i>
+              <span class="text-pinkish-body">94 отзыва на Яндекс.Картах</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Визитная карточка -->
+        <!-- Визитная карточка / Интерактивный диалог (по структуре референса) -->
         <div class="lg:col-span-5 w-full">
-          <div class="p-6 sm:p-7 rounded-2xl bg-white border border-p2-gold space-y-5 shadow-lg relative">
+          <div class="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 space-y-5 soft-card-shadow relative">
             
-            <div class="flex justify-between items-center pb-3 border-b border-p2-gold font-mono text-xs">
-              <span class="text-p2-petrol font-bold uppercase tracking-wider">АВТОКОМПЛЕКС «EL KAMO»</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">ОТКРЫТО</span>
+            <div class="flex justify-between items-center pb-3 border-b border-slate-100 font-mono text-xs">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-pinkish-roseSoft text-pinkish-rose flex items-center justify-center font-bold">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </div>
+                <span class="text-pinkish-ink font-bold uppercase tracking-wider">АВТОКОМПЛЕКС «EL KAMO»</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-200 text-[11px]">ОТКРЫТО</span>
             </div>
 
             <div>
-              <h3 class="text-xl font-display font-bold text-p2-petrolDark mb-1">Оставьте ключи — мы сделаем всё сами</h3>
-              <p class="text-xs sm:text-sm text-p2-muted leading-relaxed">
-                Вам не обязательно ждать в очереди: помоем, сами выгоним автомобиль на парковку, закроем и дождемся вашего возвращения.
+              <h3 class="text-xl sm:text-2xl font-display font-bold text-pinkish-ink mb-1.5">
+                Оставьте ключи — мы сделаем всё сами
+              </h3>
+              <p class="text-xs sm:text-sm text-pinkish-muted leading-relaxed">
+                Вам не нужно ждать в боксе: помоем кузов, аккуратно выгоним машину на стоянку, закроем и дождемся вашего возвращения.
               </p>
             </div>
 
             <div class="space-y-2.5 text-xs sm:text-sm font-mono">
-              <div class="p-3 rounded-xl bg-[#FFF3C8]/70 border border-p2-gold flex items-center justify-between">
-                <span class="text-p2-petrolDark font-medium">Бесконтактная и ручная мойка</span>
-                <span class="text-p2-teal font-bold">Без очередей</span>
+              <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-between gap-2">
+                <span class="text-pinkish-body font-medium truncate">Бесконтактная и ручная мойка</span>
+                <span class="text-pinkish-rose font-bold shrink-0">Без очередей</span>
               </div>
-              <div class="p-3 rounded-xl bg-[#FFF3C8]/70 border border-p2-gold flex items-center justify-between">
-                <span class="text-p2-petrolDark font-medium">Шиномонтаж и балансировка</span>
-                <span class="text-p2-petrol font-bold">Выгодная цена</span>
+              <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-between gap-2">
+                <span class="text-pinkish-body font-medium truncate">Шиномонтаж и балансировка</span>
+                <span class="text-pinkish-ink font-bold shrink-0">Выгодная цена</span>
               </div>
-              <div class="p-3 rounded-xl bg-[#FFF3C8]/70 border border-p2-gold flex items-center justify-between">
-                <span class="text-p2-petrolDark font-medium">Антикоррозийная обработка</span>
-                <span class="text-p2-teal font-bold">Спецсоставы</span>
+              <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-between gap-2">
+                <span class="text-pinkish-body font-medium truncate">Антикоррозийная защита</span>
+                <span class="text-pinkish-rose font-bold shrink-0">Спецсоставы</span>
               </div>
-              <div class="p-3 rounded-xl bg-[#FFF3C8]/70 border border-p2-gold flex items-center justify-between">
-                <span class="text-p2-petrolDark font-medium">Снятие наклеек и следов клея</span>
-                <span class="text-p2-petrol font-bold">Без следа</span>
+              <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-between gap-2">
+                <span class="text-pinkish-body font-medium truncate">Снятие наклеек и следов клея</span>
+                <span class="text-pinkish-ink font-bold shrink-0">Без следа</span>
               </div>
             </div>
 
-            <button onclick="openModal('Уточнить стоимость')" class="w-full py-3 rounded-xl bg-[#FFF3C8] hover:bg-p2-gold/60 border border-p2-gold text-p2-petrolDark font-mono text-xs uppercase tracking-wider font-bold transition">
+            <button onclick="openModal('Уточнить стоимость')" class="w-full py-3 rounded-2xl bg-pinkish-roseSoft hover:bg-rose-200/80 border border-pinkish-roseBorder text-pinkish-rose font-mono text-xs uppercase tracking-wider font-bold transition">
               Уточнить свободное время на сегодня
             </button>
 
@@ -228,103 +239,103 @@
   </section>
 
   <!-- БЛОК УСЛУГ -->
-  <section id="services" class="py-14 sm:py-20 border-b border-p2-gold bg-white/75">
+  <section id="services" class="py-14 sm:py-20 border-b border-slate-200/80 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="mb-10 max-w-2xl">
-        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-p2-teal font-bold block mb-1.5">НАШИ УСЛУГИ</span>
-        <h2 class="text-2xl sm:text-4xl font-display font-extrabold text-p2-petrolDark">Полный комплекс сервиса для авто</h2>
-        <p class="text-sm sm:text-base text-p2-muted mt-2 leading-relaxed">
-          Все необходимые работы в одной удобной локации Самары. Цены рассчитываются честно в зависимости от класса кузова.
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-pinkish-rose font-bold block mb-1.5">НАШИ УСЛУГИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-pinkish-ink">Полный спектр услуг автокомплекса</h2>
+        <p class="text-sm sm:text-base text-pinkish-body mt-2 leading-relaxed font-normal">
+          Все основные работы в одной локации Самары. Цены рассчитываются честно в зависимости от класса кузова.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- 1. Мойка кузова и салона -->
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold hover:border-p2-teal transition duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 hover:border-pinkish-rose transition duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-petrol flex items-center justify-center mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-pinkish-rose flex items-center justify-center mb-4 shadow-sm">
               <i data-lucide="droplets" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-display font-bold text-p2-petrolDark mb-2">Комплексная мойка</h3>
-            <p class="text-xs sm:text-sm text-p2-muted mb-4 leading-relaxed">
+            <h3 class="text-lg font-display font-bold text-pinkish-ink mb-2">Комплексная мойка</h3>
+            <p class="text-xs sm:text-sm text-pinkish-body mb-4 leading-relaxed font-normal">
               Деликатная бесконтактная и ручная мойка, чистка ковров, тщательная протирка порогов и сушка стекол без разводов.
             </p>
-            <ul class="text-xs text-p2-petrolDark space-y-2 mb-6 font-mono">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Бесконтактная пена и ручной шампунь</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Пылесос салона и влажная уборка</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Чернение резины и продувка замков</li>
+            <ul class="text-xs text-pinkish-body space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Бесконтактная пена и шампунь</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Пылесос салона и влажная уборка</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Чернение резины и сушка замков</li>
             </ul>
           </div>
-          <button onclick="openModal('Комплексная автомойка')" class="w-full py-2.5 rounded-xl bg-[#FFF3C8] hover:bg-p2-teal hover:text-white border border-p2-gold text-p2-petrolDark font-mono text-xs uppercase font-bold transition">
+          <button onclick="openModal('Комплексная автомойка')" class="w-full py-2.5 rounded-full bg-white hover:bg-pinkish-rose hover:text-white border border-slate-300 text-pinkish-ink font-mono text-xs uppercase font-bold transition shadow-sm">
             Выбрать
           </button>
         </div>
 
         <!-- 2. Антикоррозийная обработка (ХИТ) -->
-        <div class="p-6 rounded-2xl bg-white border-2 border-p2-teal relative flex flex-col justify-between shadow-md">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-p2-teal text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full shadow">
+        <div class="p-6 rounded-3xl bg-white border-2 border-pinkish-rose relative flex flex-col justify-between soft-card-shadow">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-pinkish-rose text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3.5 py-0.5 rounded-full shadow">
             Защита от реагентов
           </div>
 
           <div>
-            <div class="w-10 h-10 rounded-xl bg-teal-50 text-p2-teal flex items-center justify-center mb-4 mt-1 border border-teal-200">
+            <div class="w-10 h-10 rounded-xl bg-pinkish-roseSoft text-pinkish-rose flex items-center justify-center mb-4 mt-1 border border-pinkish-roseBorder">
               <i data-lucide="shield" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-display font-bold text-p2-petrolDark mb-2">Антикоррозийная обработка</h3>
-            <p class="text-xs sm:text-sm text-p2-muted mb-4 leading-relaxed">
-              Качественная консервация скрытых полостей, колесных арок и днища специальными составами для защиты от соли и ржавчины.
+            <h3 class="text-lg font-display font-bold text-pinkish-ink mb-2">Антикоррозийная обработка</h3>
+            <p class="text-xs sm:text-sm text-pinkish-body mb-4 leading-relaxed font-normal">
+              Качественная консервация скрытых полостей, колесных арок и днища специальными составами для защиты от соли и коррозии.
             </p>
-            <ul class="text-xs text-p2-petrolDark space-y-2 mb-6 font-mono">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Мойка днища на подъемнике</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Обработка арок и скрытых полостей</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Долговечный антикоррозийный слой</li>
+            <ul class="text-xs text-pinkish-body space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Мойка днища на подъемнике</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Обработка арок и скрытых полостей</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Долговечный защитный слой</li>
             </ul>
           </div>
-          <button onclick="openModal('Антикоррозийная обработка')" class="w-full py-2.5 rounded-xl bg-p2-teal hover:bg-p2-tealHover text-white font-mono text-xs uppercase tracking-wider font-bold transition shadow btn-solid-glow">
+          <button onclick="openModal('Антикоррозийная обработка')" class="w-full py-2.5 rounded-full bg-pinkish-rose hover:bg-pinkish-roseHover text-white font-mono text-xs uppercase tracking-wider font-bold transition shadow rose-btn-glow">
             Записаться
           </button>
         </div>
 
         <!-- 3. Шиномонтаж -->
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold hover:border-p2-teal transition duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 hover:border-pinkish-rose transition duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-petrol flex items-center justify-center mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-pinkish-ink flex items-center justify-center mb-4 shadow-sm">
               <i data-lucide="disc" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-display font-bold text-p2-petrolDark mb-2">Шиномонтаж и балансировка</h3>
-            <p class="text-xs sm:text-sm text-p2-muted mb-4 leading-relaxed">
-              Быстрая сезонная переобувка, точная балансировка колес и ремонт проколов. Цены ниже, чем в среднем по городу.
+            <h3 class="text-lg font-display font-bold text-pinkish-ink mb-2">Шиномонтаж и балансировка</h3>
+            <p class="text-xs sm:text-sm text-pinkish-body mb-4 leading-relaxed font-normal">
+              Быстрая сезонная смена колес, точная балансировка и ремонт проколов. Цены ниже, чем в среднем по городу.
             </p>
-            <ul class="text-xs text-p2-petrolDark space-y-2 mb-6 font-mono">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Смена резины R13–R22</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Высокоточная балансировка</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Проверка давления и подкачка</li>
+            <ul class="text-xs text-pinkish-body space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Смена резины R13–R22</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Высокоточная балансировка</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Проверка давления и подкачка</li>
             </ul>
           </div>
-          <button onclick="openModal('Шиномонтаж')" class="w-full py-2.5 rounded-xl bg-[#FFF3C8] hover:bg-p2-teal hover:text-white border border-p2-gold text-p2-petrolDark font-mono text-xs uppercase font-bold transition">
+          <button onclick="openModal('Шиномонтаж')" class="w-full py-2.5 rounded-full bg-white hover:bg-pinkish-rose hover:text-white border border-slate-300 text-pinkish-ink font-mono text-xs uppercase font-bold transition shadow-sm">
             Выбрать
           </button>
         </div>
 
         <!-- 4. Детейлинг и спецработы -->
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold hover:border-p2-teal transition duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 hover:border-pinkish-rose transition duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-petrol flex items-center justify-center mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-pinkish-rose flex items-center justify-center mb-4 shadow-sm">
               <i data-lucide="sparkles" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-display font-bold text-p2-petrolDark mb-2">Детейлинг & Удаление следов</h3>
-            <p class="text-xs sm:text-sm text-p2-muted mb-4 leading-relaxed">
-              Химчистка салона, полировка фар и кузова, а также деликатное удаление следов наклеек и скотча со штрафстоянок.
+            <h3 class="text-lg font-display font-bold text-pinkish-ink mb-2">Детейлинг & Удаление следов</h3>
+            <p class="text-xs sm:text-sm text-pinkish-body mb-4 leading-relaxed font-normal">
+              Химчистка салона, полировка фар и кузова, а также бережное удаление следов наклеек и скотча со штрафстоянок.
             </p>
-            <ul class="text-xs text-p2-petrolDark space-y-2 mb-6 font-mono">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Безопасное снятие следов наклеек</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Глубокая химчистка сидений и пола</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-p2-teal"></i> Нанесение защитных полимеров</li>
+            <ul class="text-xs text-pinkish-body space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Безопасное снятие наклеек</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Глубокая химчистка салона</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pinkish-rose shrink-0"></i> Защитные полимерные воски</li>
             </ul>
           </div>
-          <button onclick="openModal('Детейлинг и удаление наклеек')" class="w-full py-2.5 rounded-xl bg-[#FFF3C8] hover:bg-p2-teal hover:text-white border border-p2-gold text-p2-petrolDark font-mono text-xs uppercase font-bold transition">
+          <button onclick="openModal('Детейлинг и удаление наклеек')" class="w-full py-2.5 rounded-full bg-white hover:bg-pinkish-rose hover:text-white border border-slate-300 text-pinkish-ink font-mono text-xs uppercase font-bold transition shadow-sm">
             Выбрать
           </button>
         </div>
@@ -335,42 +346,42 @@
   </section>
 
   <!-- ПРЕИМУЩЕСТВА -->
-  <section id="advantages" class="py-14 sm:py-20 border-b border-p2-gold bg-[#FFF3C8]/40">
+  <section id="advantages" class="py-14 sm:py-20 border-b border-slate-200/80 bg-[#FAF9FB]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="mb-10 max-w-xl">
-        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-p2-teal font-bold block mb-1">ПОЧЕМУ МЫ</span>
-        <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-p2-petrolDark">Комфортный автосервис в Самаре</h2>
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-pinkish-rose font-bold block mb-1">ПОЧЕМУ МЫ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-pinkish-ink">Стандарты автосервиса El Kamo</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold space-y-3 shadow-sm hover:border-p2-teal transition">
-          <div class="w-10 h-10 rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-petrol flex items-center justify-center">
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 space-y-3 soft-card-shadow hover:border-pinkish-rose transition">
+          <div class="w-10 h-10 rounded-xl bg-pinkish-roseSoft text-pinkish-rose flex items-center justify-center">
             <i data-lucide="key-round" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-display font-bold text-p2-petrolDark">Оставьте ключ и занимайтесь делами</h3>
-          <p class="text-xs sm:text-sm text-p2-muted leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-pinkish-ink">Оставьте ключ и занимайтесь делами</h3>
+          <p class="text-xs sm:text-sm text-pinkish-body leading-relaxed font-normal">
             Не нужно сидеть в ожидании. Оставляйте ключи нашему мастеру: мы помоем автомобиль, аккуратно выгоним на стоянку и закроем до вашего прихода.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold space-y-3 shadow-sm hover:border-p2-teal transition">
-          <div class="w-10 h-10 rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-petrol flex items-center justify-center">
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 space-y-3 soft-card-shadow hover:border-pinkish-rose transition">
+          <div class="w-10 h-10 rounded-xl bg-pinkish-roseSoft text-pinkish-rose flex items-center justify-center">
             <i data-lucide="badge-percent" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-display font-bold text-p2-petrolDark">Честные городские цены</h3>
-          <p class="text-xs sm:text-sm text-p2-muted leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-pinkish-ink">Честные городские цены</h3>
+          <p class="text-xs sm:text-sm text-pinkish-body leading-relaxed font-normal">
             Стоимость шиномонтажа и моечных комплексов стабильно выгоднее большинства сервисов в районе. Никаких накруток при приеме авто.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold space-y-3 shadow-sm hover:border-p2-teal transition">
-          <div class="w-10 h-10 rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-petrol flex items-center justify-center">
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 space-y-3 soft-card-shadow hover:border-pinkish-rose transition">
+          <div class="w-10 h-10 rounded-xl bg-pinkish-roseSoft text-pinkish-rose flex items-center justify-center">
             <i data-lucide="map-pin" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-display font-bold text-p2-petrolDark">Удобная городская локация</h3>
-          <p class="text-xs sm:text-sm text-p2-muted leading-relaxed">
+          <h3 class="text-lg font-display font-bold text-pinkish-ink">Удобная городская локация</h3>
+          <p class="text-xs sm:text-sm text-pinkish-body leading-relaxed font-normal">
             Находимся на ул. Киевская, 12А. Быстрый и удобный подъезд с основных магистралей города, минимальное время ожидания в очереди.
           </p>
         </div>
@@ -381,65 +392,65 @@
   </section>
 
   <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНЫЕ С ЯНДЕКС.КАРТ) -->
-  <section id="reviews" class="py-14 sm:py-20 border-b border-p2-gold bg-white/60">
+  <section id="reviews" class="py-14 sm:py-20 border-b border-slate-200/80 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="mb-10 max-w-xl">
-        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-p2-teal font-bold block mb-1">РЕАЛЬНЫЕ ОЦЕНКИ</span>
-        <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-p2-petrolDark">Отзывы с Яндекс.Карт</h2>
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-pinkish-rose font-bold block mb-1">РЕАЛЬНЫЕ ОЦЕНКИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-pinkish-ink">Отзывы наших клиентов</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Отзыв 1: Илья Гудь -->
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold flex flex-col justify-between shadow-sm hover:border-p2-teal transition">
+        <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 flex flex-col justify-between shadow-sm hover:border-pinkish-rose transition">
           <div>
-            <div class="flex items-center justify-between pb-3 border-b border-p2-gold/60 mb-3">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-3">
               <div>
-                <span class="text-sm font-bold text-p2-petrolDark block">Илья Гудь</span>
-                <span class="text-[11px] font-mono text-p2-muted">Знаток города 14 уровня</span>
+                <span class="text-sm font-bold text-pinkish-ink block">Илья Гудь</span>
+                <span class="text-[11px] font-mono text-pinkish-muted">Знаток города 14 уровня</span>
               </div>
               <span class="text-amber-500 text-xs font-mono font-bold">★★★★★</span>
             </div>
-            <p class="text-xs sm:text-sm text-p2-petrolDark italic leading-relaxed">
+            <p class="text-xs sm:text-sm text-pinkish-body italic leading-relaxed font-normal">
               «Отличная автомойка! Машину моют аккуратно и на совесть. Можно оставить ключи и подойти позже, машину сами выгонят и закроют, чтобы дождаться тебя. Рекомендую.»
             </p>
           </div>
-          <span class="text-[11px] font-mono text-p2-muted mt-4 block pt-2 border-t border-p2-gold/40">19 сентября 2025 • Яндекс.Карты</span>
+          <span class="text-[11px] font-mono text-pinkish-muted mt-4 block pt-2 border-t border-slate-200">19 сентября 2025 • Яндекс.Карты</span>
         </div>
 
         <!-- Отзыв 2: Николай Николай -->
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold flex flex-col justify-between shadow-sm hover:border-p2-teal transition">
+        <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 flex flex-col justify-between shadow-sm hover:border-pinkish-rose transition">
           <div>
-            <div class="flex items-center justify-between pb-3 border-b border-p2-gold/60 mb-3">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-3">
               <div>
-                <span class="text-sm font-bold text-p2-petrolDark block">Николай Николай</span>
-                <span class="text-[11px] font-mono text-p2-muted">Знаток города 8 уровня</span>
+                <span class="text-sm font-bold text-pinkish-ink block">Николай Николай</span>
+                <span class="text-[11px] font-mono text-pinkish-muted">Знаток города 8 уровня</span>
               </div>
               <span class="text-amber-500 text-xs font-mono font-bold">★★★★★</span>
             </div>
-            <p class="text-xs sm:text-sm text-p2-petrolDark italic leading-relaxed">
+            <p class="text-xs sm:text-sm text-pinkish-body italic leading-relaxed font-normal">
               «На шиномонтаже поменяли быстро и качественно старые шины на новые дешевле, чем в других местах. Очень рекомендую!»
             </p>
           </div>
-          <span class="text-[11px] font-mono text-p2-muted mt-4 block pt-2 border-t border-p2-gold/40">5 июня • Яндекс.Карты</span>
+          <span class="text-[11px] font-mono text-pinkish-muted mt-4 block pt-2 border-t border-slate-200">5 июня • Яндекс.Карты</span>
         </div>
 
         <!-- Отзыв 3: Андрей Т. -->
-        <div class="p-6 rounded-2xl bg-white border border-p2-gold flex flex-col justify-between shadow-sm hover:border-p2-teal transition">
+        <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 flex flex-col justify-between shadow-sm hover:border-pinkish-rose transition">
           <div>
-            <div class="flex items-center justify-between pb-3 border-b border-p2-gold/60 mb-3">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-3">
               <div>
-                <span class="text-sm font-bold text-p2-petrolDark block">Андрей Т.</span>
-                <span class="text-[11px] font-mono text-p2-muted">Знаток города 6 уровня</span>
+                <span class="text-sm font-bold text-pinkish-ink block">Андрей Т.</span>
+                <span class="text-[11px] font-mono text-pinkish-muted">Знаток города 6 уровня</span>
               </div>
               <span class="text-amber-500 text-xs font-mono font-bold">★★★★☆</span>
             </div>
-            <p class="text-xs sm:text-sm text-p2-petrolDark italic leading-relaxed">
+            <p class="text-xs sm:text-sm text-pinkish-body italic leading-relaxed font-normal">
               «Хорошее расположение. Нормально смыли следы от наклеек со штрафплощадки, очередь небольшая.»
             </p>
           </div>
-          <span class="text-[11px] font-mono text-p2-muted mt-4 block pt-2 border-t border-p2-gold/40">7 сентября • Яндекс.Карты</span>
+          <span class="text-[11px] font-mono text-pinkish-muted mt-4 block pt-2 border-t border-slate-200">7 сентября • Яндекс.Карты</span>
         </div>
 
       </div>
@@ -448,48 +459,48 @@
   </section>
 
   <!-- КОНТАКТЫ И ЛОКАЦИЯ -->
-  <section id="contacts" class="py-14 sm:py-20 border-b border-p2-gold bg-[#FFF3C8]/50">
+  <section id="contacts" class="py-14 sm:py-20 border-b border-slate-200/80 bg-[#FAF9FB]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
         
         <div class="space-y-5">
-          <span class="text-xs sm:text-sm uppercase tracking-widest text-p2-teal font-mono font-bold block">ЛОКАЦИЯ И СВЯЗЬ</span>
-          <h2 class="text-2xl sm:text-4xl font-display font-extrabold text-p2-petrolDark">Ждем вас в «El Kamo»</h2>
+          <span class="text-xs sm:text-sm uppercase tracking-widest text-pinkish-rose font-mono font-bold block">ЛОКАЦИЯ И СВЯЗЬ</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-pinkish-ink">Ждем вас в «El Kamo»</h2>
 
-          <div class="space-y-3.5 text-sm sm:text-base text-p2-petrolDark font-sans">
+          <div class="space-y-3.5 text-sm sm:text-base text-pinkish-body font-sans">
             <div class="flex items-start gap-3">
-              <i data-lucide="map-pin" class="w-5 h-5 text-p2-teal shrink-0 mt-0.5"></i>
+              <i data-lucide="map-pin" class="w-5 h-5 text-pinkish-rose shrink-0 mt-0.5"></i>
               <span>г. Самара, Киевская ул., д. 12А</span>
             </div>
             <div class="flex items-center gap-3">
-              <i data-lucide="clock" class="w-5 h-5 text-p2-teal shrink-0"></i>
+              <i data-lucide="clock" class="w-5 h-5 text-pinkish-rose shrink-0"></i>
               <span>Ежедневно с 09:00 до 21:00 (без выходных)</span>
             </div>
             <div class="flex items-center gap-3">
-              <i data-lucide="phone" class="w-5 h-5 text-p2-teal shrink-0"></i>
-              <a href="tel:+79967235388" class="text-p2-petrolDark hover:text-p2-teal font-mono font-bold text-lg transition">+7 (996) 723-53-88</a>
+              <i data-lucide="phone" class="w-5 h-5 text-pinkish-rose shrink-0"></i>
+              <a href="tel:+79967235388" class="text-pinkish-ink hover:text-pinkish-rose font-mono font-bold text-lg transition">+7 (996) 723-53-88</a>
             </div>
           </div>
 
           <div class="flex flex-wrap gap-3 pt-2">
-            <a href="https://yandex.ru/maps/?text=Самара+Киевская+12А+El+Kamo" target="_blank" class="px-5 py-3 rounded-xl bg-p2-teal hover:bg-p2-tealHover text-white text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition flex items-center gap-2 shadow btn-solid-glow hover:-translate-y-0.5">
+            <a href="https://yandex.ru/maps/?text=Самара+Киевская+12А+El+Kamo" target="_blank" class="px-6 py-3.5 rounded-full bg-pinkish-rose hover:bg-pinkish-roseHover text-white text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition flex items-center gap-2 shadow rose-btn-glow hover:-translate-y-0.5">
               <i data-lucide="navigation" class="w-4 h-4"></i> Маршрут в Яндекс.Картах
             </a>
-            <button onclick="openModal('Запись по локации')" class="px-5 py-3 rounded-xl bg-white hover:bg-slate-50 border border-p2-gold text-p2-petrolDark text-xs sm:text-sm uppercase tracking-wider font-mono font-bold transition shadow-sm hover:border-p2-teal">
+            <button onclick="openModal('Запись по локации')" class="px-6 py-3.5 rounded-full bg-white hover:bg-slate-50 border border-slate-300 text-pinkish-ink text-xs sm:text-sm uppercase tracking-wider font-mono font-bold transition shadow-sm hover:border-pinkish-rose">
               Забронировать пост
             </button>
           </div>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-white border border-p2-gold text-center shadow-md">
-          <div class="w-12 h-12 mx-auto rounded-xl bg-[#FFF3C8] border border-p2-gold text-p2-teal flex items-center justify-center mb-3.5">
+        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 text-center soft-card-shadow">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-pinkish-roseSoft text-pinkish-rose flex items-center justify-center mb-3.5">
             <i data-lucide="phone-call" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-lg sm:text-xl font-display font-bold text-p2-petrolDark mb-1.5">Прямая связь с администратором</h3>
-          <p class="text-xs sm:text-sm text-p2-muted mb-5 max-w-sm mx-auto leading-relaxed">
+          <h3 class="text-xl font-display font-bold text-pinkish-ink mb-1.5">Прямая связь с администратором</h3>
+          <p class="text-xs sm:text-sm text-pinkish-muted mb-5 max-w-sm mx-auto leading-relaxed">
             Позвоните перед выездом, чтобы уточнить загруженность постов и забронировать удобное время.
           </p>
-          <a href="tel:+79967235388" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-p2-teal hover:bg-p2-tealHover text-white text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition shadow btn-solid-glow hover:-translate-y-0.5">
+          <a href="tel:+79967235388" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-pinkish-rose hover:bg-pinkish-roseHover text-white text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition shadow-lg rose-btn-glow hover:-translate-y-0.5">
             <i data-lucide="phone" class="w-4 h-4"></i> Позвонить в El Kamo
           </a>
         </div>
@@ -499,45 +510,45 @@
   </section>
 
   <!-- ФУТЕР -->
-  <footer class="py-6 bg-p2-petrolDark text-[#FFF3C8] text-xs font-mono border-t border-p2-petrol">
+  <footer class="py-6 bg-pinkish-ink text-slate-400 text-xs font-mono border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
       <p>© 2026 Автокомплекс «El Kamo». г. Самара, Киевская ул., 12А.</p>
       <div class="flex items-center gap-5">
-        <a href="tel:+79967235388" class="hover:text-p2-teal transition">Телефон</a>
-        <a href="#services" class="hover:text-p2-teal transition">Услуги</a>
-        <a href="#reviews" class="hover:text-p2-teal transition">Отзывы</a>
+        <a href="tel:+79967235388" class="hover:text-white transition">Телефон</a>
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+        <a href="#reviews" class="hover:text-white transition">Отзывы</a>
       </div>
     </div>
   </footer>
 
   <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ (С ВЕБХУКОМ N8N) -->
   <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-sm w-full p-6 sm:p-7 relative border border-p2-gold shadow-2xl">
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-p2-muted hover:text-black transition">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 sm:p-7 relative border border-slate-200 shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-black transition">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <span class="text-[10px] font-mono uppercase tracking-widest text-p2-teal font-bold block mb-1">ОНЛАЙН-ЗАПИСЬ</span>
-      <h3 class="text-xl font-display font-bold text-p2-petrolDark mb-4">Бронирование времени</h3>
+      <span class="text-[10px] font-mono uppercase tracking-widest text-pinkish-rose font-bold block mb-1">ОНЛАЙН-ЗАПИСЬ</span>
+      <h3 class="text-xl font-display font-bold text-pinkish-ink mb-4">Бронирование времени</h3>
 
       <form class="space-y-3.5 text-xs sm:text-sm">
         <input type="hidden" name="source" value="El Kamo Самара">
         <input type="hidden" name="form_type" value="booking">
 
         <div>
-          <label class="block text-p2-muted mb-1 text-xs font-mono">Выбранная услуга</label>
-          <input type="text" id="modalServiceInput" name="service" readonly class="w-full bg-[#FFF3C8] border border-p2-gold rounded-xl px-3.5 py-2.5 text-p2-petrolDark font-bold focus:outline-none">
+          <label class="block text-pinkish-muted mb-1 text-xs font-mono">Выбранная услуга</label>
+          <input type="text" id="modalServiceInput" name="service" readonly class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-pinkish-ink font-bold focus:outline-none">
         </div>
         <div>
-          <label class="block text-p2-muted mb-1 text-xs font-mono">Ваше имя</label>
-          <input type="text" name="client_name" required placeholder="Как вас зовут?" class="w-full bg-white border border-p2-gold rounded-xl px-3.5 py-2.5 text-p2-petrolDark placeholder-slate-400 focus:outline-none focus:border-p2-teal">
+          <label class="block text-pinkish-muted mb-1 text-xs font-mono">Ваше имя</label>
+          <input type="text" name="client_name" required placeholder="Как вас зовут?" class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-pinkish-ink placeholder-slate-400 focus:outline-none focus:border-pinkish-rose">
         </div>
         <div>
-          <label class="block text-p2-muted mb-1 text-xs font-mono">Телефон для связи</label>
-          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-white border border-p2-gold rounded-xl px-3.5 py-2.5 text-p2-petrolDark placeholder-slate-400 focus:outline-none focus:border-p2-teal">
+          <label class="block text-pinkish-muted mb-1 text-xs font-mono">Телефон для связи</label>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-pinkish-ink placeholder-slate-400 focus:outline-none focus:border-pinkish-rose">
         </div>
         
-        <button type="submit" class="w-full py-3 rounded-xl bg-p2-teal hover:bg-p2-tealHover text-white font-display font-bold uppercase tracking-wider transition shadow mt-2 btn-solid-glow hover:-translate-y-0.5">
+        <button type="submit" class="w-full py-3.5 rounded-full bg-pinkish-rose hover:bg-pinkish-roseHover text-white font-display font-bold uppercase tracking-wider transition shadow-lg rose-btn-glow mt-2 hover:-translate-y-0.5">
           Подтвердить запись
         </button>
       </form>
@@ -600,7 +611,7 @@
 
           if (submitBtn) {
             submitBtn.innerHTML = '✓ Заявка отправлена!';
-            submitBtn.style.backgroundColor = '#0D8275';
+            submitBtn.style.backgroundColor = '#10B981';
             submitBtn.style.color = '#FFFFFF';
           }
           form.reset();

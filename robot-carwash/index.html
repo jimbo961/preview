@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Роботизированная автомойка в Самаре — Чистый кузов от 6 минут | Круглосуточно</title>
+  <meta name="description" content="Бесконтактная роботизированная автомойка 24/7 в Самаре на ул. Ташкентская, 161. Мойка днища, двойной шампунь, активная пена, осмос и сушка без выхода из автомобиля.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jimbo961.github.io/preview/robot-carwash-tashkentskaya/">
+  <meta property="og:site_name" content="Робот-Автомойка Самара">
+  <meta property="og:title" content="Роботизированная автомойка 24/7 | Самара, Ташкентская 161">
+  <meta property="og:description" content="Экспресс-мойка от 6 минут без очередей. Оплата у ворот через терминал, мойка днища и сушка. Круглосуточно.">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Роботизированная автомойка 24/7 в Самаре">
+  <meta name="twitter:description" content="Быстрая мойка роботом за 6–10 минут на ул. Ташкентская, 161.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter + Oswald + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Palette: Gadoury Clinical Navy -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gcn: {
+              bg: '#0B1320',          // Глубокий строгий темно-синий
+              surface: '#111D30',     // Поверхность карточек
+              card: '#182942',        // Внутренний контейнер
+              border: '#1E3554',      // Технологичная граница
+              borderHover: '#00D1FF', // Яркий неоновый циан
+              accent: '#00D1FF',      // Основной акцентный циан (клиническая чистота)
+              accentHover: '#00B4DB', // Ховер циана
+              accentBlue: '#2563EB',  // Вспомогательный синий
+              textMain: '#FFFFFF',
+              textBody: '#E2E8F0',
+              textMuted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Oswald', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-gcn-grid {
+      background-color: #0B1320;
+      background-image: 
+        radial-gradient(circle at 80% 10%, rgba(0, 209, 255, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 20% 90%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+        linear-gradient(to bottom, #0B1320 0%, #070B14 100%);
+    }
+    .cyan-glow {
+      box-shadow: 0 10px 25px -4px rgba(0, 209, 255, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-gcn-grid text-gcn-textMain font-sans antialiased selection:bg-gcn-accent selection:text-black min-h-screen overflow-x-hidden">
+
+  <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
+  <div class="bg-black/90 text-gcn-textMuted text-[11px] sm:text-xs font-mono tracking-wider py-2 px-3 sm:px-4 border-b border-gcn-border/60">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-hidden">
+      <div class="flex items-center gap-1.5 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+        <span class="font-bold text-white whitespace-nowrap">САМАРА • УЛ. ТАШКЕНТСКАЯ, 161</span>
+      </div>
+      <div class="hidden lg:block text-gcn-textMuted truncate font-medium">
+        БЕСКОНТАКТНАЯ РОБОТ-МОЙКА • МОЙКА ДНИЩА • ОСМОС • СУШКА
+      </div>
+      <div class="text-right shrink-0 font-bold text-gcn-accent whitespace-nowrap">
+        24/7 КРУГЛОСУТОЧНО
+      </div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sticky top-0 z-50 bg-[#0B1320]/95 backdrop-blur-md border-b border-gcn-border w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+      
+      <!-- Логотип -->
+      <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2 group shrink-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gcn-accent text-slate-950 flex items-center justify-center font-display font-bold text-base sm:text-lg shadow-sm shrink-0">
+          <i data-lucide="bot" class="w-5 h-5 text-slate-950"></i>
+        </div>
+        <div class="leading-none">
+          <span class="text-lg sm:text-2xl font-display font-bold tracking-wider uppercase text-white">
+            РОБОТ<span class="text-gcn-accent font-mono text-xs sm:text-sm lowercase ml-0.5 font-bold">.мойка</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Меню -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-gcn-textMuted font-bold">
+        <a href="#tariffs" class="hover:text-white transition">Тарифы & Опции</a>
+        <a href="#how-it-works" class="hover:text-white transition">Как это работает</a>
+        <a href="#advantages" class="hover:text-white transition">Преимущества</a>
+        <a href="#reviews" class="hover:text-white transition">Отзывы (171)</a>
+        <a href="#contacts" class="hover:text-white transition">Локация</a>
+      </nav>
+
+      <!-- Контакты и кнопка -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+79270063764" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gcn-surface border border-gcn-border text-xs sm:text-sm font-mono font-bold text-white hover:border-gcn-accent transition shadow-sm">
+          <i data-lucide="phone" class="w-4 h-4 text-gcn-accent"></i>
+          +7 (927) 006-37-64
+        </a>
+        <a href="#tariffs" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-gcn-accent hover:bg-gcn-accentHover text-slate-950 text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition active:scale-95 shadow-md cyan-glow hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+          Выбрать режим
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO СЕКЦИЯ -->
+  <section class="py-12 sm:py-20 border-b border-gcn-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Офферная часть -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-gcn-surface border border-gcn-border text-[11px] sm:text-xs font-mono text-gcn-accent font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            АВТОМАТИЧЕСКАЯ БЕСКОНТАКТНАЯ МОЙКА В САМАРЕ
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-bold uppercase text-white tracking-tight leading-[1.12] sm:leading-[1.05]">
+            ЧИСТЫЙ КУЗОВ <br>
+            <span class="text-gcn-accent">ОТ 6 ДО 12 МИНУТ.</span> <br>
+            НЕ ВЫХОДЯ ИЗ АВТОМОБИЛЯ.
+          </h1>
+
+          <p class="text-gcn-textBody text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            Технологичная роботизированная мойка на Ташкентской, 161. Высокое давление, мойка днища, двойной шампунь, бережная пена, ополаскивание осмосом без разводов и мощный турбообдув 24/7.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 max-w-md">
+            <a href="https://yandex.ru/maps/?text=Самара+Ташкентская+161+Роботизированная+автомойка" target="_blank" class="px-7 py-4 rounded-lg bg-gcn-accent hover:bg-gcn-accentHover text-slate-950 font-display font-bold text-sm uppercase tracking-wider transition active:scale-95 shadow-lg cyan-glow hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i data-lucide="navigation" class="w-4 h-4 text-slate-950"></i>
+              <span>Построить маршрут</span>
+            </a>
+            <a href="#tariffs" class="px-6 py-4 rounded-lg bg-gcn-surface hover:bg-gcn-card border border-gcn-border text-white font-mono text-xs uppercase tracking-wider font-bold transition text-center hover:border-gcn-accent">
+              Программы от 500 ₽
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-gcn-border/80 flex flex-wrap items-center gap-5 sm:gap-7 text-xs sm:text-sm text-gcn-textMuted font-mono font-semibold">
+            <div class="flex items-center gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-gcn-accent"></i>
+              <span class="text-white">Сеанс от 6 минут</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="credit-card" class="w-4 h-4 text-gcn-accent"></i>
+              <span class="text-white">Оплата терминалом у ворот</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-gcn-accent"></i>
+              <span class="text-white">100% бесконтактно</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Визитная карточка / Live-панель -->
+        <div class="lg:col-span-5 w-full">
+          <div class="p-6 sm:p-7 rounded-2xl bg-gcn-surface border-2 border-gcn-border space-y-5 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center pb-3 border-b border-gcn-border font-mono text-xs">
+              <span class="text-white font-bold uppercase tracking-wider">БОКС ТАШКЕНТСКАЯ 161</span>
+              <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/40 text-[11px]">РАБОТАЕТ 24/7</span>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white">
+                  Тариф «Ежедневная»
+                </h3>
+                <span class="text-2xl font-display font-bold text-gcn-accent">600 ₽</span>
+              </div>
+              <p class="text-xs sm:text-sm text-gcn-textMuted leading-relaxed">
+                Сбалансированный комплекс: мойка днища под давлением, нанесение двух фаз шампуня, активная пена, осмос и сушка воздухом.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 text-xs sm:text-sm font-mono">
+              <div class="p-3 rounded-lg bg-gcn-card border border-gcn-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">1. Экспресс (кузов + 2х шампунь)</span>
+                <span class="text-gcn-accent font-bold shrink-0">500 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-gcn-card border border-gcn-accent/60 flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">2. Ежедневная (+ днище, пена, осмос)</span>
+                <span class="text-gcn-accent font-bold shrink-0">600 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-gcn-card border border-gcn-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">3. Премиум (+ турбообдув x3)</span>
+                <span class="text-gcn-accent font-bold shrink-0">700 ₽</span>
+              </div>
+            </div>
+
+            <a href="https://yandex.ru/maps/?text=Самара+Ташкентская+161+Роботизированная+автомойка" target="_blank" class="w-full py-3.5 rounded-lg bg-gcn-accent hover:bg-gcn-accentHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg cyan-glow text-center block">
+              Ехать на мойку сейчас
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК ПРОГРАММ И ЦЕН -->
+  <section id="tariffs" class="py-14 sm:py-20 border-b border-gcn-border bg-[#09101B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-gcn-accent font-bold block mb-1.5">ПРОГРАММЫ МОЙКИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Выбирайте режим под задачу</h2>
+        <p class="text-sm sm:text-base text-gcn-textBody mt-2 leading-relaxed font-medium">
+          Оплата происходит прямо у въезда в бокс через терминал: банковской картой или смартфоном. Сидите в салоне и отдыхайте.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- 1. Экспресс -->
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border hover:border-gcn-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-10 h-10 rounded-lg bg-gcn-card border border-gcn-border text-gcn-accent flex items-center justify-center">
+                <i data-lucide="gauge" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-display font-bold text-white">500 ₽</span>
+            </div>
+            <h3 class="text-2xl font-display font-bold uppercase text-white mb-2">Экспресс</h3>
+            <p class="text-sm text-gcn-textBody mb-4 leading-relaxed font-normal">
+              Быстро сбить городскую пыль и дорожный налет за 6 минут. Идеальный выбор для регулярного поддержания чистоты кузова.
+            </p>
+            <ul class="text-xs text-white space-y-2.5 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 1. Первичная мойка кузова</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 2. Нанесение шампуня 2 раза</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 3. Финишный смыв кузова водой</li>
+              <li class="flex items-center gap-2 text-gcn-textMuted"><i data-lucide="clock" class="w-3.5 h-3.5 shrink-0"></i> Длительность: ~6 минут</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Экспресс 500 ₽')" class="w-full py-3 rounded-lg bg-gcn-card hover:bg-gcn-accent hover:text-slate-950 border border-gcn-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать экспресс
+          </button>
+        </div>
+
+        <!-- 2. Ежедневная (ХИТ) -->
+        <div class="p-7 rounded-xl bg-gcn-surface border-2 border-gcn-accent relative flex flex-col justify-between shadow-xl cyan-glow">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gcn-accent text-slate-950 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded shadow">
+            Оптимальный баланс
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-10 h-10 rounded-lg bg-gcn-accent/20 text-gcn-accent flex items-center justify-center border border-gcn-accent">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-display font-bold text-gcn-accent">600 ₽</span>
+            </div>
+            <h3 class="text-2xl font-display font-bold uppercase text-white mb-2">Ежедневная</h3>
+            <p class="text-sm text-gcn-textBody mb-4 leading-relaxed font-normal">
+              Полноценная программа с мойкой днища, густой активной пеной и финишным ополаскиванием деминерализованной водой (осмос).
+            </p>
+            <ul class="text-xs text-white space-y-2.5 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 1. Мойка днища под высоким давлением</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 2. Мойка кузова + Шампунь 2 раза</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 3. Густая активная пена</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 4. Мойка кузова + Осмос (без разводов)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 5. Сушка обдувом</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Ежедневная 600 ₽')" class="w-full py-3 rounded-lg bg-gcn-accent hover:bg-gcn-accentHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow">
+            Выбрать ежедневную
+          </button>
+        </div>
+
+        <!-- 3. Премиум -->
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border hover:border-gcn-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-10 h-10 rounded-lg bg-gcn-card border border-gcn-border text-gcn-accent flex items-center justify-center">
+                <i data-lucide="crown" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-display font-bold text-white">700 ₽</span>
+            </div>
+            <h3 class="text-2xl font-display font-bold uppercase text-white mb-2">Премиум</h3>
+            <p class="text-sm text-gcn-textBody mb-4 leading-relaxed font-normal">
+              Максимальный комплекс чистоты. Включает усиленную мойку днища, активную химию, осмос и тройной цикл обдува кузова мощными соплами.
+            </p>
+            <ul class="text-xs text-white space-y-2.5 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 1. Мойка днища форсунками снизу</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 2. Мойка кузова + Двойной шампунь</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 3. Плотная активная пена</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 4. Ополаскивание чистым осмосом</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gcn-accent shrink-0"></i> 5. Усиленный тройной обдув (х3)</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Премиум 700 ₽')" class="w-full py-3 rounded-lg bg-gcn-card hover:bg-gcn-accent hover:text-slate-950 border border-gcn-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать премиум
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КАК ЭТО РАБОТАЕТ -->
+  <section id="how-it-works" class="py-14 sm:py-20 border-b border-gcn-border bg-[#0B1320]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-gcn-accent font-bold block mb-1">ПРОСТОЙ АЛГОРИТМ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Всего 3 шага к чистому авто</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-xl bg-gcn-surface border border-gcn-border space-y-3">
+          <div class="text-3xl font-display font-bold text-gcn-accent font-mono">01</div>
+          <h4 class="text-xl font-display font-bold uppercase text-white">Подъезжайте к терминалу</h4>
+          <p class="text-sm text-gcn-textBody leading-relaxed">
+            Подъезжайте к въездным воротам на Ташкентской, 161. Выберите тариф на сенсорном экране и оплатите картой или через QR-код.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-gcn-surface border border-gcn-border space-y-3">
+          <div class="text-3xl font-display font-bold text-gcn-accent font-mono">02</div>
+          <h4 class="text-xl font-display font-bold uppercase text-white">Заезжайте по светофору</h4>
+          <p class="text-sm text-gcn-textBody leading-relaxed">
+            По зеленому сигналу заезжайте в бокс. Робот автоматически промоет днище на въезде. Остановитесь по световому табло и заглушите мотор.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-gcn-surface border border-gcn-border space-y-3">
+          <div class="text-3xl font-display font-bold text-gcn-accent font-mono">03</div>
+          <h4 class="text-xl font-display font-bold uppercase text-white">Наблюдайте за процессом</h4>
+          <p class="text-sm text-gcn-textBody leading-relaxed">
+            Сидя в комфортном салоне авто, наблюдайте за работой автоматического контура высокого давления. 8–10 минут — и машина чистая и сухая.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section id="advantages" class="py-14 sm:py-20 border-b border-gcn-border bg-[#09101B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-gcn-accent font-bold block mb-1">ТЕХНОЛОГИИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Почему выбирают робот-мойку</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border space-y-3 shadow-md hover:border-gcn-accent transition">
+          <div class="w-10 h-10 rounded-lg bg-gcn-card border border-gcn-border text-gcn-accent flex items-center justify-center">
+            <i data-lucide="timer" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Быстрая очередь и мойка за 6–10 минут</h3>
+          <p class="text-sm text-gcn-textBody leading-relaxed font-normal">
+            Автоматика работает строго по таймингу. Даже в часы пик машины проходят непрерывным потоком без долгих человеческих пауз.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border space-y-3 shadow-md hover:border-gcn-accent transition">
+          <div class="w-10 h-10 rounded-lg bg-gcn-card border border-gcn-border text-gcn-accent flex items-center justify-center">
+            <i data-lucide="sparkle" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Безопасность для лакокрасочного покрытия</h3>
+          <p class="text-sm text-gcn-textBody leading-relaxed font-normal">
+            Никаких затертых тряпок и грязных щеток. Только гидродинамический напор воды, качественные составы и деминерализованный осмос.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border space-y-3 shadow-md hover:border-gcn-accent transition">
+          <div class="w-10 h-10 rounded-lg bg-gcn-card border border-gcn-border text-gcn-accent flex items-center justify-center">
+            <i data-lucide="moon" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Круглосуточный доступ 24/7</h3>
+          <p class="text-sm text-gcn-textBody leading-relaxed font-normal">
+            Мойка полностью автоматизирована и готова к приему в любое время суток: ранним утром перед работой или ночью без очередей.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНЫЕ С ЯНДЕКС КАРТ) -->
+  <section id="reviews" class="py-14 sm:py-20 border-b border-gcn-border bg-[#0B1320]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-gcn-accent font-bold block mb-1">РЕАЛЬНЫЕ ОЦЕНКИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Отзывы клиентов на Яндекс Картах</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Отзыв 1: Елена Кудинова -->
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border flex flex-col justify-between shadow-md hover:border-gcn-accent transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-gcn-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Елена Кудинова</span>
+                <span class="text-[11px] font-mono text-gcn-textMuted">Знаток города 9 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-gcn-textBody italic leading-relaxed font-medium">
+              «Мы уже не первый раз моемся на этой автомойке. Выбираем быструю мойку. Для лета пыль смыть самое то. Всё отлично. Быстро. За 300 руб масса удовольствия.»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gcn-textMuted mt-4 block pt-2 border-t border-gcn-border/40">18 сентября 2024 • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 2: Alex Икс -->
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border flex flex-col justify-between shadow-md hover:border-gcn-accent transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-gcn-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Alex Икс</span>
+                <span class="text-[11px] font-mono text-gcn-textMuted">Знаток города 11 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-gcn-textBody italic leading-relaxed font-medium">
+              «Довольно часто пользуюсь. Главное преимущество - очень быстрая очередь, самый долгий сеанс - 10 минут. На выбор можно выбрать один из 3-х вариантов наружней мойки, оплатить через терминал, у ворот, и, сидя в автомобиле, наблюдать весь процесс мойки...»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gcn-textMuted mt-4 block pt-2 border-t border-gcn-border/40">7 апреля 2024 • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 3: Олег Б. -->
+        <div class="p-7 rounded-xl bg-gcn-surface border border-gcn-border flex flex-col justify-between shadow-md hover:border-gcn-accent transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-gcn-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Олег Б.</span>
+                <span class="text-[11px] font-mono text-gcn-textMuted">Знаток города 16 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-gcn-textBody italic leading-relaxed font-medium">
+              «Если нужно быстро помыться, то здесь это можно. На одну машину требуется от 6 до 12 минут. Время зависит от выбранных опций мойки. Качество мойки хорошее. Рекомендую.»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gcn-textMuted mt-4 block pt-2 border-t border-gcn-border/40">27 мая • Яндекс Карты</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ И НАВИГАЦИЯ -->
+  <section id="contacts" class="py-14 sm:py-20 border-b border-gcn-border bg-[#09101B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+        
+        <div class="space-y-5">
+          <span class="text-xs sm:text-sm uppercase tracking-widest text-gcn-accent font-mono font-bold block">ЛОКАЦИЯ И РЕЖИМ</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold uppercase text-white">Приезжайте в любое время</h2>
+
+          <div class="space-y-3.5 text-sm sm:text-base text-gcn-textBody font-sans">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-gcn-accent shrink-0 mt-0.5"></i>
+              <span>г. Самара, Ташкентская ул., д. 161</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-gcn-accent shrink-0"></i>
+              <span>Круглосуточно, 24/7 (без перерывов и выходных)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-gcn-accent shrink-0"></i>
+              <a href="tel:+79270063764" class="text-white hover:text-gcn-accent font-mono font-bold text-lg transition">+7 (927) 006-37-64</a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://yandex.ru/maps/?text=Самара+Ташкентская+161+Роботизированная+автомойка" target="_blank" class="px-6 py-3.5 rounded-lg bg-gcn-accent hover:bg-gcn-accentHover text-slate-950 text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition flex items-center gap-2 shadow-lg cyan-glow hover:-translate-y-0.5">
+              <i data-lucide="navigation" class="w-4 h-4"></i> Маршрут в Яндекс Картах
+            </a>
+            <button onclick="openModal('Быстрый вопрос / Поддержка')" class="px-6 py-3.5 rounded-lg bg-gcn-surface hover:bg-gcn-card border border-gcn-border text-white text-xs sm:text-sm uppercase tracking-wider font-mono font-bold transition hover:border-gcn-accent">
+              Связаться с оператором
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-xl bg-gcn-surface border border-gcn-border text-center shadow-xl">
+          <div class="w-12 h-12 mx-auto rounded-lg bg-gcn-card border border-gcn-border text-gcn-accent flex items-center justify-center mb-3.5">
+            <i data-lucide="credit-card" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white mb-1.5">Терминал у ворот</h3>
+          <p class="text-xs sm:text-sm text-gcn-textMuted mb-5 max-w-sm mx-auto leading-relaxed font-normal">
+            Принимаются все виды банковских карт, оплата по QR-коду и СБП. Предварительная запись не требуется — живая очередь движется за считанные минуты.
+          </p>
+          <a href="tel:+79270063764" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-gcn-card hover:bg-gcn-accent hover:text-slate-950 border border-gcn-border text-white text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition">
+            <i data-lucide="phone" class="w-4 h-4"></i> Горячая линия поддержки
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="py-6 bg-black text-gcn-textMuted text-xs font-mono border-t border-gcn-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <p>© 2026 Роботизированная автомойка. г. Самара, Ташкентская ул., 161.</p>
+      <div class="flex items-center gap-5">
+        <a href="tel:+79270063764" class="hover:text-white transition">Телефон</a>
+        <a href="#tariffs" class="hover:text-white transition">Тарифы</a>
+        <a href="#reviews" class="hover:text-white transition">Отзывы</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-gcn-surface rounded-2xl max-w-sm w-full p-6 sm:p-7 relative border border-gcn-border shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gcn-textMuted hover:text-white transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <span class="text-[10px] font-mono uppercase tracking-widest text-gcn-accent font-bold block mb-1">СВЯЗЬ С ОПЕРАТОРОМ</span>
+      <h3 class="text-2xl font-display font-bold uppercase text-white mb-4">Вопрос или бронь</h3>
+
+      <form class="space-y-3.5 text-xs sm:text-sm">
+        <input type="hidden" name="source" value="Робот-Автомойка Ташкентская Самара">
+        <input type="hidden" name="form_type" value="callback">
+
+        <div>
+          <label class="block text-gcn-textMuted mb-1 text-xs font-mono">Выбранный тариф / Тема</label>
+          <input type="text" id="modalServiceInput" name="service" readonly class="w-full bg-gcn-card border border-gcn-border rounded-lg px-3.5 py-2.5 text-gcn-accent font-bold focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-gcn-textMuted mb-1 text-xs font-mono">Ваше имя</label>
+          <input type="text" name="client_name" required placeholder="Как вас зовут?" class="w-full bg-gcn-card border border-gcn-border rounded-lg px-3.5 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:border-gcn-accent">
+        </div>
+        <div>
+          <label class="block text-gcn-textMuted mb-1 text-xs font-mono">Телефон для связи</label>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-gcn-card border border-gcn-border rounded-xl px-3.5 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:border-gcn-accent">
+        </div>
+        
+        <button type="submit" class="w-full py-3.5 rounded-lg bg-gcn-accent hover:bg-gcn-accentHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg cyan-glow mt-2 hover:-translate-y-0.5">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function openModal(serviceName) {
+      document.getElementById('modalServiceInput').value = serviceName;
+      document.getElementById('bookingModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Скрипт отправки заявок на вебхук n8n -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const N8N_WEBHOOK_URL = 'https://ваш-n8n-сервер.com/webhook-test/lead-entry';
+
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Отправить';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <span style="display:inline-flex;align-items:center;gap:8px;">
+              <svg class="animate-spin" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="4" stroke="currentColor" stroke-dasharray="32" stroke-linecap="round"></circle>
+              </svg>
+              Отправка...
+            </span>
+          `;
+        }
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        payload.timestamp = new Date().toISOString();
+        payload.page_url = window.location.href;
+
+        try {
+          const response = await fetch(N8N_WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (submitBtn) {
+            submitBtn.innerHTML = '✓ Отправлено!';
+            submitBtn.style.backgroundColor = '#10B981';
+            submitBtn.style.color = '#FFFFFF';
+          }
+          form.reset();
+        } catch (error) {
+          console.error('Ошибка отправки на вебхук:', error);
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Ошибка отправки';
+            submitBtn.style.backgroundColor = '#EF4444';
+            submitBtn.style.color = '#FFFFFF';
+          }
+        } finally {
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.innerHTML = originalBtnText;
+              submitBtn.disabled = false;
+              submitBtn.style.backgroundColor = '';
+              submitBtn.style.color = '';
+            }
+          }, 4000);
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

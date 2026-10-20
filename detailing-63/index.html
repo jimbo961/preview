@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Detailing 63 — Детейлинг студия и автомойка в Самаре | ул. Энтузиастов, 11</title>
+  <meta name="description" content="Студия Detailing 63 в Самаре на ул. Энтузиастов, 11. Детейлинг-мойка от 2100 ₽, абразивная полировка кузова, полировка стекол, химчистка салона, антигравийная бронепленка и керамика. Запись онлайн.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jimbo961.github.io/preview/detailing-63/">
+  <meta property="og:site_name" content="Detailing 63 Самара">
+  <meta property="og:title" content="Detailing 63 — Детейлинг студия в Самаре | ул. Энтузиастов, 11">
+  <meta property="og:description" content="Бережный уход за ЛКП, полировка кузова и стекол, химчистка, бронирование авто. Запись по телефону и онлайн.">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Oswald + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Palette: High-End Obsidian & Electric Cyan -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dt: {
+              bg: '#0C1017',
+              surface: '#141B24',
+              card: '#1C2633',
+              border: '#273547',
+              borderHover: '#00E5FF',
+              accent: '#00E5FF',
+              accentHover: '#00B8CC',
+              textMain: '#FFFFFF',
+              textBody: '#E2E8F0',
+              textMuted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Oswald', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-dt-pattern {
+      background-color: #0C1017;
+      background-image: 
+        radial-gradient(circle at 85% 15%, rgba(0, 229, 255, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 15% 85%, rgba(39, 53, 71, 0.35) 0%, transparent 50%),
+        linear-gradient(to bottom, #0C1017 0%, #080B10 100%);
+    }
+    .cyan-glow {
+      box-shadow: 0 10px 25px -4px rgba(0, 229, 255, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-dt-pattern text-dt-textMain font-sans antialiased selection:bg-dt-accent selection:text-black min-h-screen overflow-x-hidden">
+
+  <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
+  <div class="bg-black/90 text-dt-textMuted text-[11px] sm:text-xs font-mono tracking-wider py-2 px-3 sm:px-4 border-b border-dt-border/60">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-hidden">
+      <div class="flex items-center gap-1.5 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+        <span class="font-bold text-white whitespace-nowrap">САМАРА • УЛ. ЭНТУЗИАСТОВ, 11</span>
+      </div>
+      <div class="hidden lg:block text-dt-textMuted truncate font-medium">
+        ДЕТЕЙЛИНГ МОЙКА • ПОЛИРОВКА КУЗОВА И СТЕКОЛ • ХИМЧИСТКА • БРОНЕПЛЕНКА
+      </div>
+      <div class="text-right shrink-0 font-bold text-dt-accent whitespace-nowrap">
+        09:00 – 20:00 ЕЖЕДНЕВНО
+      </div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sticky top-0 z-50 bg-[#0C1017]/95 backdrop-blur-md border-b border-dt-border w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+      
+      <!-- Логотип -->
+      <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2 group shrink-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded bg-dt-accent text-slate-950 flex items-center justify-center font-display font-bold text-base sm:text-lg shadow-sm shrink-0">
+          63
+        </div>
+        <div class="leading-none">
+          <span class="text-lg sm:text-2xl font-display font-bold tracking-wider uppercase text-white">
+            DETAILING<span class="text-dt-accent font-mono text-xs sm:text-sm lowercase ml-0.5 font-bold">.63</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Меню -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-dt-textMuted font-bold">
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+        <a href="#comfort" class="hover:text-white transition">Комфорт</a>
+        <a href="#advantages" class="hover:text-white transition">Преимущества</a>
+        <a href="#reviews" class="hover:text-white transition">Отзывы (56)</a>
+        <a href="#contacts" class="hover:text-white transition">Контакты</a>
+      </nav>
+
+      <!-- Контакты и кнопка -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+79649774273" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-dt-surface border border-dt-border text-xs sm:text-sm font-mono font-bold text-white hover:border-dt-accent transition shadow-sm">
+          <i data-lucide="phone" class="w-4 h-4 text-dt-accent"></i>
+          +7 (964) 977-42-73
+        </a>
+        <button onclick="openModal('Быстрая запись')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition active:scale-95 shadow-md cyan-glow hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+          Записаться
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO СЕКЦИЯ -->
+  <section class="py-12 sm:py-20 border-b border-dt-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Офферная часть -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-dt-surface border border-dt-border text-[11px] sm:text-xs font-mono text-dt-accent font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-dt-accent animate-pulse shrink-0"></span>
+            ПРОФЕССИОНАЛЬНЫЙ ДЕТЕЙЛИНГ В САМАРЕ
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-bold uppercase text-white tracking-tight leading-[1.12] sm:leading-[1.05]">
+            ИДЕАЛЬНЫЙ БЛЕСК. <br>
+            <span class="text-dt-accent">БЕЗОПАСНОСТЬ ЛКП.</span> <br>
+            ВНИМАНИЕ К КАЖДОЙ ДЕТАЛИ.
+          </h1>
+
+          <p class="text-dt-textBody text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            Студия Detailing 63 на ул. Энтузиастов, 11: правильная детейлинг-мойка, глубокая восстановительная полировка с удалением до 90% дефектов, полировка стекол, химчистка салона и оклейка антигравийной бронепленкой.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 max-w-md">
+            <button onclick="openModal('Главный экран')" class="px-7 py-4 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 font-display font-bold text-sm uppercase tracking-wider transition active:scale-95 shadow-lg cyan-glow hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <span>Забронировать визит</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+            </button>
+            <a href="#services" class="px-6 py-4 rounded-lg bg-dt-surface hover:bg-dt-card border border-dt-border text-white font-mono text-xs uppercase tracking-wider font-bold transition text-center hover:border-dt-accent">
+              Услуги и цены
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-dt-border/80 flex flex-wrap items-center gap-5 sm:gap-7 text-xs sm:text-sm text-dt-textMuted font-mono font-semibold">
+            <div class="flex items-center gap-2">
+              <i data-lucide="coffee" class="w-4 h-4 text-dt-accent"></i>
+              <span class="text-white">Кафе & Wi-Fi</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-dt-accent"></i>
+              <span class="text-white">Бережем толщину лака</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="dog" class="w-4 h-4 text-dt-accent"></i>
+              <span class="text-white">Dog-friendly (можно с собакой)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Визитная карточка / Live-статус -->
+        <div class="lg:col-span-5 w-full">
+          <div class="p-6 sm:p-7 rounded-2xl bg-dt-surface border-2 border-dt-border space-y-5 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center pb-3 border-b border-dt-border font-mono text-xs">
+              <span class="text-white font-bold uppercase tracking-wider">СТУДИЯ «DETAILING 63»</span>
+              <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/40 text-[11px]">09:00 – 20:00</span>
+            </div>
+
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white leading-tight">
+                  Детейлинг мойка
+                </h3>
+                <span class="text-xl sm:text-2xl font-display font-bold text-dt-accent whitespace-nowrap shrink-0">2 100 ₽</span>
+              </div>
+              <p class="text-xs sm:text-sm text-dt-textMuted leading-relaxed">
+                Комплексная проработка всех мелочей: кисточки для шильдиков и решеток, деликатная ручная фаза и идеальная чистота кузова.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 text-xs sm:text-sm font-mono">
+              <div class="p-3 rounded-lg bg-dt-card border border-dt-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Абразивная полировка кузова</span>
+                <span class="text-dt-accent font-bold shrink-0 whitespace-nowrap">10 000 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-dt-card border border-dt-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Химчистка салона авто</span>
+                <span class="text-white font-bold shrink-0 whitespace-nowrap">10 000 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-dt-card border border-dt-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Полировка стекол авто</span>
+                <span class="text-dt-accent font-bold shrink-0 whitespace-nowrap">Под свет</span>
+              </div>
+              <div class="p-3 rounded-lg bg-dt-card border border-dt-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Антигравийная бронепленка</span>
+                <span class="text-white font-bold shrink-0 whitespace-nowrap">Защита</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('Детейлинг мойка за 2 100 ₽')" class="w-full py-3.5 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg cyan-glow">
+              Записаться на мойку за 2 100 ₽
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК УСЛУГ И ЦЕН -->
+  <section id="services" class="py-14 sm:py-20 border-b border-dt-border bg-[#090D13]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-dt-accent font-bold block mb-1.5">ПРАЙС-ЛИСТ</span>
+        <h2 class="text-2xl sm:text-4xl font-display font-bold uppercase text-white leading-tight">
+          Услуги студии <span class="whitespace-nowrap">Detailing 63</span>
+        </h2>
+        <p class="text-sm sm:text-base text-dt-textBody mt-2 leading-relaxed font-medium">
+          Прозрачные регламенты работ, сертифицированная химия и профессиональный свет для контроля качества на каждом миллиметре.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Детейлинг мойка (ХИТ) -->
+        <div class="p-5 sm:p-7 rounded-xl bg-dt-surface border-2 border-dt-accent relative flex flex-col justify-between shadow-xl cyan-glow">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-dt-accent text-slate-950 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded shadow">
+            Популярная услуга
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-3 sm:mb-4">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-dt-accent/20 text-dt-accent flex items-center justify-center border border-dt-accent shrink-0">
+                <i data-lucide="droplets" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl sm:text-2xl font-display font-bold text-dt-accent whitespace-nowrap">2 100 ₽</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white mb-2 leading-tight">Детейлинг мойка</h3>
+            <p class="text-xs sm:text-sm text-dt-textBody mb-4 leading-relaxed font-normal">
+              Детейлинг-мойка вашего авто с детальной проработкой всех мелочей: диски, арки, шильдики кисточками. Доводим чистоту кузова до идеала.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Бережный бесконтакт + ручной шампунь</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Очистка стыков, эмблем и решеток кистью</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Деликатная сушка микрофибрами и турбосушкой</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Чернение резины качественным составом</span></li>
+            </ul>
+          </div>
+          <button onclick="openModal('Детейлинг мойка 2100 ₽')" class="w-full py-3 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow text-xs sm:text-sm">
+            Выбрать за 2 100 ₽
+          </button>
+        </div>
+
+        <!-- 2. Абразивная полировка кузова -->
+        <div class="p-5 sm:p-7 rounded-xl bg-dt-surface border border-dt-border hover:border-dt-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3 sm:mb-4">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center shrink-0">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl sm:text-2xl font-display font-bold text-white whitespace-nowrap">10 000 ₽</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white mb-2 leading-tight">Абразивная полировка</h3>
+            <p class="text-xs sm:text-sm text-dt-textBody mb-4 leading-relaxed font-normal">
+              Большой комплекс восстановительных работ по кузову легкового автомобиля. Убирается от 85% до 90% царапин, паутинки и потертостей.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Устранение 85–90% дефектов ЛКП</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Работа под специализированными инспекционными лампами</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Возвращение зеркального блеска и насыщенного цвета</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Деликатный съем лака с сохранением слоя</span></li>
+            </ul>
+          </div>
+          <button onclick="openModal('Абразивная полировка 10000 ₽')" class="w-full py-3 rounded-lg bg-dt-card hover:bg-dt-accent hover:text-slate-950 border border-dt-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать за 10 000 ₽
+          </button>
+        </div>
+
+        <!-- 3. Химчистка салона -->
+        <div class="p-5 sm:p-7 rounded-xl bg-dt-surface border border-dt-border hover:border-dt-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3 sm:mb-4">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center shrink-0">
+                <i data-lucide="brush" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl sm:text-2xl font-display font-bold text-white whitespace-nowrap">10 000 ₽</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white mb-2 leading-tight">Химчистка салона</h3>
+            <p class="text-xs sm:text-sm text-dt-textBody mb-4 leading-relaxed font-normal">
+              Полная комплексная химчистка всего интерьера легкового авто. Очистка потолка, стоек, сидений, ковролина, пластика и багажника.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Полная химчистка всех поверхностей салона</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Безопасная биоразлагаемая химия без едкого запаха</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Чистка труднодоступных ниш и воздуховодов</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Сухой автомобиль без влаги и запаха сырости</span></li>
+            </ul>
+          </div>
+          <button onclick="openModal('Химчистка салона 10000 ₽')" class="w-full py-3 rounded-lg bg-dt-card hover:bg-dt-accent hover:text-slate-950 border border-dt-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать за 10 000 ₽
+          </button>
+        </div>
+
+        <!-- 4. Полировка стекол -->
+        <div class="p-5 sm:p-7 rounded-xl bg-dt-surface border border-dt-border hover:border-dt-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center mb-3 sm:mb-4 shrink-0">
+              <i data-lucide="sun" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white mb-2 leading-tight">Полировка стекол</h3>
+            <p class="text-xs sm:text-sm text-dt-textBody mb-4 leading-relaxed font-normal">
+              Удаление затертостей от дворников, водного камня и микроцарапин с лобового и боковых стекол. Восстановление прозрачности для безопасной езды ночью.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Устранение ореолов и бликов в темное время</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Удаление следов от щеток стеклоочистителей</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Идеальная кристальная прозрачность стекол</span></li>
+            </ul>
+          </div>
+          <button onclick="openModal('Полировка стекол')" class="w-full py-3 rounded-lg bg-dt-card hover:bg-dt-accent hover:text-slate-950 border border-dt-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+        <!-- 5. Антигравийная бронепленка (ИСПРАВЛЕН ЗАГОЛОВОК И СПИСОК) -->
+        <div class="p-5 sm:p-7 rounded-xl bg-dt-surface border border-dt-border hover:border-dt-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center mb-3 sm:mb-4 shrink-0">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white mb-2 leading-tight">
+              Бронепленка кузова <span class="text-dt-accent font-mono text-sm sm:text-base whitespace-nowrap">(PPF)</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-dt-textBody mb-4 leading-relaxed font-normal">
+              Оклейка кузова полиуретановой бронепленкой. Надежная защита зон риска от дорожного гравия, сколов, пескоструя и мелких притертостей.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Бронирование фар, капота, бампера и зеркал</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Защита зон под ручками и порогов</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Пленка с эффектом самозатягивания царапин</span></li>
+            </ul>
+          </div>
+          <button onclick="openModal('Антигравийная пленка')" class="w-full py-3 rounded-lg bg-dt-card hover:bg-dt-accent hover:text-slate-950 border border-dt-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+        <!-- 6. Защитный воск & Предпродажная подготовка (ИСПРАВЛЕН ЗАГОЛОВОК И СПИСОК) -->
+        <div class="p-5 sm:p-7 rounded-xl bg-dt-surface border border-dt-border hover:border-dt-accent transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center mb-3 sm:mb-4 shrink-0">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white mb-2 leading-tight">
+              Защитный воск & Подготовка
+            </h3>
+            <p class="text-xs sm:text-sm text-dt-textBody mb-4 leading-relaxed font-normal">
+              Нанесение твердого воска для консервации ЛКП и мощного гидрофоба. Комплексная предпродажная подготовка авто для максимальной цены сделки.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Нанесение твердого премиум-воска</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Сильный гидрофобный эффект — вода слетает каплями</span></li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-3.5 h-3.5 text-dt-accent shrink-0 mt-0.5"></i> <span>Предпродажная подготовка салона и кузова</span></li>
+            </ul>
+          </div>
+          <button onclick="openModal('Защитный воск / Предпродажа')" class="w-full py-3 rounded-lg bg-dt-card hover:bg-dt-accent hover:text-slate-950 border border-dt-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать услугу
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК КОМФОРТА И ОСОБЕННОСТЕЙ -->
+  <section id="comfort" class="py-14 sm:py-20 border-b border-dt-border bg-[#0C1017]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-dt-accent font-bold block mb-1">ДЛЯ КЛИЕНТОВ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Удобство и сервис</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        
+        <div class="p-5 rounded-xl bg-dt-surface border border-dt-border text-center space-y-2 hover:border-dt-accent transition">
+          <i data-lucide="coffee" class="w-7 h-7 text-dt-accent mx-auto"></i>
+          <h4 class="font-display font-bold uppercase text-sm text-white">Кафе</h4>
+          <p class="text-xs text-dt-textMuted font-mono">Чай и кофе для гостей</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-dt-surface border border-dt-border text-center space-y-2 hover:border-dt-accent transition">
+          <i data-lucide="wifi" class="w-7 h-7 text-dt-accent mx-auto"></i>
+          <h4 class="font-display font-bold uppercase text-sm text-white">Wi-Fi</h4>
+          <p class="text-xs text-dt-textMuted font-mono">Быстрый интернет</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-dt-surface border border-dt-border text-center space-y-2 hover:border-dt-accent transition">
+          <i data-lucide="credit-card" class="w-7 h-7 text-dt-accent mx-auto"></i>
+          <h4 class="font-display font-bold uppercase text-sm text-white">Оплата картой</h4>
+          <p class="text-xs text-dt-textMuted font-mono">Безналичный расчет</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-dt-surface border border-dt-border text-center space-y-2 hover:border-dt-accent transition">
+          <i data-lucide="dog" class="w-7 h-7 text-dt-accent mx-auto"></i>
+          <h4 class="font-display font-bold uppercase text-sm text-white">Dog Friendly</h4>
+          <p class="text-xs text-dt-textMuted font-mono">Можно с собакой</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-dt-surface border border-dt-border text-center space-y-2 hover:border-dt-accent transition">
+          <i data-lucide="gift" class="w-7 h-7 text-dt-accent mx-auto"></i>
+          <h4 class="font-display font-bold uppercase text-sm text-white">Сертификаты</h4>
+          <p class="text-xs text-dt-textMuted font-mono">Подарочные карты</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-dt-surface border border-dt-border text-center space-y-2 hover:border-dt-accent transition">
+          <i data-lucide="parking-circle" class="w-7 h-7 text-dt-accent mx-auto"></i>
+          <h4 class="font-display font-bold uppercase text-sm text-white">Парковка</h4>
+          <p class="text-xs text-dt-textMuted font-mono">Своя парковка и пандус</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section id="advantages" class="py-14 sm:py-20 border-b border-dt-border bg-[#090D13]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-dt-accent font-bold block mb-1">ПОЧЕМУ МЫ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Стандарты Detailing 63</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-7 rounded-xl bg-dt-surface border border-dt-border space-y-3 shadow-md hover:border-dt-accent transition">
+          <div class="w-10 h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Знают работу и не испортят ЛКП</h3>
+          <p class="text-sm text-dt-textBody leading-relaxed font-normal">
+            Используем мягкие насадки, проверенные пасты и деликатные методики. Сохраняем заводской лак и гарантируем идеальную гладкость кузова.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-dt-surface border border-dt-border space-y-3 shadow-md hover:border-dt-accent transition">
+          <div class="w-10 h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Четкая запись и выдача точно в срок</h3>
+          <p class="text-sm text-dt-textBody leading-relaxed font-normal">
+            Оставляете автомобиль в назначенное время и забираете по звонку мастера без пустых ожиданий и очередей.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-dt-surface border border-dt-border space-y-3 shadow-md hover:border-dt-accent transition">
+          <div class="w-10 h-10 rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Машина словно только из автосалона</h3>
+          <p class="text-sm text-dt-textBody leading-relaxed font-normal">
+            Комплексный подход: кузов обретает глубокий сочный цвет, а салон возвращается к первозданной чистоте и свежести.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНЫЕ С ЯНДЕКС КАРТ) -->
+  <section id="reviews" class="py-14 sm:py-20 border-b border-dt-border bg-[#0C1017]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-dt-accent font-bold block mb-1">РЕАЛЬНЫЕ ОЦЕНКИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Отзывы клиентов на Яндекс Картах</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Отзыв 1: Диана -->
+        <div class="p-7 rounded-xl bg-dt-surface border border-dt-border flex flex-col justify-between shadow-md hover:border-dt-accent transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-dt-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Диана</span>
+                <span class="text-[11px] font-mono text-dt-textMuted">Знаток города 3 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-dt-textBody italic leading-relaxed font-medium">
+              «Делал полировку кузова с керамическим покрытием. Результат превзошел ожидания. Машина выглядит как новая, цвет стал намного глубже, а кузов получил отличный блеск. Все сделали аккуратно и в срок. Видно, что работают на качество. Однозначно рекомендую!»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-dt-textMuted mt-4 block pt-2 border-t border-dt-border/40">11 июля • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 2: s.drzhn -->
+        <div class="p-7 rounded-xl bg-dt-surface border border-dt-border flex flex-col justify-between shadow-md hover:border-dt-accent transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-dt-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">s.drzhn</span>
+                <span class="text-[11px] font-mono text-dt-textMuted">Знаток города 7 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-dt-textBody italic leading-relaxed font-medium">
+              «Шикарная мойка, договорился по записи в назначенное время, оставил авто, приехал забирать по звонку. состояние было как с салона. Очень понравился подход к работе, всё качественно и чётко. Буду обращаться ещё)»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-dt-textMuted mt-4 block pt-2 border-t border-dt-border/40">23 апреля 2025 • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 3: Елена А -->
+        <div class="p-7 rounded-xl bg-dt-surface border border-dt-border flex flex-col justify-between shadow-md hover:border-dt-accent transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-dt-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Елена А</span>
+                <span class="text-[11px] font-mono text-dt-textMuted">Знаток города 5 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-dt-textBody italic leading-relaxed font-medium">
+              «Заезжала на полировку. Николай профи своего дела! Все рассказал, показал. Очень довольна результатом. Обязательно буду ездить к ребятам на мойку тк они знают свою работу и не испортят лкп автомобиля. Если вы думаете куда отдать свой автомобиль что бы вам все заделали все качественно, то только в one deteiIing!!!»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-dt-textMuted mt-4 block pt-2 border-t border-dt-border/40">28 декабря 2024 • Яндекс Карты</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ И ЛОКАЦИЯ -->
+  <section id="contacts" class="py-14 sm:py-20 border-b border-dt-border bg-[#090D13]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+        
+        <div class="space-y-5">
+          <span class="text-xs sm:text-sm uppercase tracking-widest text-dt-accent font-mono font-bold block">ЛОКАЦИЯ И СВЯЗЬ</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold uppercase text-white">Ждем вас в Detailing 63</h2>
+
+          <div class="space-y-3.5 text-sm sm:text-base text-dt-textBody font-sans">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-dt-accent shrink-0 mt-0.5"></i>
+              <span>г. Самара, ул. Энтузиастов, д. 11</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-dt-accent shrink-0"></i>
+              <span>Ежедневно с 09:00 до 20:00 (по записи)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-dt-accent shrink-0"></i>
+              <a href="tel:+79649774273" class="text-white hover:text-dt-accent font-mono font-bold text-lg transition">+7 (964) 977-42-73</a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://yandex.ru/maps/?text=Самара+Энтузиастов+11+Detailing+63" target="_blank" class="px-6 py-3.5 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition flex items-center gap-2 shadow-lg cyan-glow hover:-translate-y-0.5">
+              <i data-lucide="navigation" class="w-4 h-4 text-slate-950"></i> Маршрут в Яндекс Картах
+            </a>
+            <button onclick="openModal('Запись по локации')" class="px-6 py-3.5 rounded-lg bg-dt-surface hover:bg-dt-card border border-dt-border text-white text-xs sm:text-sm uppercase tracking-wider font-mono font-bold transition hover:border-dt-accent">
+              Забронировать бокс
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-xl bg-dt-surface border border-dt-border text-center shadow-xl">
+          <div class="w-12 h-12 mx-auto rounded-lg bg-dt-card border border-dt-border text-dt-accent flex items-center justify-center mb-3.5">
+            <i data-lucide="phone-call" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white mb-1.5">Предварительная запись</h3>
+          <p class="text-xs sm:text-sm text-dt-textMuted mb-5 max-w-sm mx-auto leading-relaxed font-normal">
+            Позвоните перед выездом, чтобы Николай и мастера подготовили свободный бокс под ваш автомобиль.
+          </p>
+          <a href="tel:+79649774273" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition shadow-lg cyan-glow hover:-translate-y-0.5">
+            <i data-lucide="phone" class="w-4 h-4 text-slate-950"></i> Позвонить в Detailing 63
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="py-6 bg-black text-dt-textMuted text-xs font-mono border-t border-dt-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <p>© 2026 Детейлинг студия «Detailing 63». г. Самара, ул. Энтузиастов, 11.</p>
+      <div class="flex items-center gap-5">
+        <a href="tel:+79649774273" class="hover:text-white transition">Телефон</a>
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+        <a href="#reviews" class="hover:text-white transition">Отзывы</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ (С ВЕБХУКОМ N8N) -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-dt-surface rounded-2xl max-w-sm w-full p-6 sm:p-7 relative border border-dt-border shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-dt-textMuted hover:text-white transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <span class="text-[10px] font-mono uppercase tracking-widest text-dt-accent font-bold block mb-1">ОНЛАЙН-ЗАПИСЬ</span>
+      <h3 class="text-2xl font-display font-bold uppercase text-white mb-4">Бронирование бокса</h3>
+
+      <form class="space-y-3.5 text-xs sm:text-sm">
+        <input type="hidden" name="source" value="Detailing 63 Самара">
+        <input type="hidden" name="form_type" value="booking">
+
+        <div>
+          <label class="block text-dt-textMuted mb-1 text-xs font-mono">Выбранная услуга</label>
+          <input type="text" id="modalServiceInput" name="service" readonly class="w-full bg-dt-card border border-dt-border rounded-lg px-3.5 py-2.5 text-dt-accent font-bold focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-dt-textMuted mb-1 text-xs font-mono">Ваше имя</label>
+          <input type="text" name="client_name" required placeholder="Как вас зовут?" class="w-full bg-dt-card border border-dt-border rounded-lg px-3.5 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:border-dt-accent">
+        </div>
+        <div>
+          <label class="block text-dt-textMuted mb-1 text-xs font-mono">Телефон для связи</label>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-dt-card border border-dt-border rounded-xl px-3.5 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:border-dt-accent font-mono">
+        </div>
+        
+        <button type="submit" class="w-full py-3.5 rounded-lg bg-dt-accent hover:bg-dt-accentHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg cyan-glow mt-2 hover:-translate-y-0.5">
+          Подтвердить запись
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function openModal(serviceName) {
+      document.getElementById('modalServiceInput').value = serviceName;
+      document.getElementById('bookingModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Скрипт отправки заявок на вебхук n8n -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const N8N_WEBHOOK_URL = 'https://ваш-n8n-сервер.com/webhook-test/lead-entry';
+
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Отправить';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <span style="display:inline-flex;align-items:center;gap:8px;">
+              <svg class="animate-spin" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="4" stroke="currentColor" stroke-dasharray="32" stroke-linecap="round"></circle>
+              </svg>
+              Отправка...
+            </span>
+          `;
+        }
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        payload.timestamp = new Date().toISOString();
+        payload.page_url = window.location.href;
+
+        try {
+          const response = await fetch(N8N_WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (submitBtn) {
+            submitBtn.innerHTML = '✓ Заявка отправлена!';
+            submitBtn.style.backgroundColor = '#10B981';
+            submitBtn.style.color = '#FFFFFF';
+          }
+          form.reset();
+        } catch (error) {
+          console.error('Ошибка отправки на вебхук:', error);
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Ошибка отправки';
+            submitBtn.style.backgroundColor = '#EF4444';
+            submitBtn.style.color = '#FFFFFF';
+          }
+        } finally {
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.innerHTML = originalBtnText;
+              submitBtn.disabled = false;
+              submitBtn.style.backgroundColor = '';
+              submitBtn.style.color = '';
+            }
+          }, 4000);
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

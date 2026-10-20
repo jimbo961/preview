@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Syndicate — Премиальный детейлинг и автокомплекс в Самаре | ул. Льва Толстого, 97А</title>
+  <meta name="description" content="Детейлинг студия Syndicate в Самаре. Трехфазная мойка, полировка кузова, оклейка матовой бронепленкой, керамика Krytex Mega8, химчистка салона и карбоновый стайлинг. Онлайн-калькулятор расчета стоимости.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jimbo961.github.io/preview/syndicate-detailing/">
+  <meta property="og:site_name" content="Syndicate Detailing Samara">
+  <meta property="og:title" content="Syndicate — Премиальный детейлинг центр в Самаре">
+  <meta property="og:description" content="Бронирование кузова пленкой, керамика, глубокая полировка и трехфазная мойка в центре города. Рассчитайте стоимость онлайн.">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Syncopate + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Syncopate:wght@700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Luxury Obsidian & Liquid Gold Palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            syn: {
+              bg: '#0A0C10',
+              surface: '#11141C',
+              card: '#161B26',
+              border: '#232A3B',
+              borderHover: '#D4AF37',
+              gold: '#D4AF37',
+              goldHover: '#BF9B30',
+              goldMuted: 'rgba(212, 175, 55, 0.15)',
+              textMain: '#FFFFFF',
+              textBody: '#E1E7F0',
+              textMuted: '#8F9CAE'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            brand: ['Syncopate', 'sans-serif'],
+            display: ['Oswald', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-syn-radial {
+      background-color: #0A0C10;
+      background-image: 
+        radial-gradient(circle at 75% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 20% 85%, rgba(35, 42, 59, 0.35) 0%, transparent 50%),
+        linear-gradient(to bottom, #0A0C10 0%, #060709 100%);
+    }
+    .gold-glow {
+      box-shadow: 0 10px 25px -4px rgba(212, 175, 55, 0.35);
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-syn-radial text-syn-textMain font-sans antialiased selection:bg-syn-gold selection:text-black min-h-screen overflow-x-hidden">
+
+  <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
+  <div class="bg-black/90 text-syn-textMuted text-[11px] sm:text-xs font-mono tracking-wider py-2 px-3 sm:px-4 border-b border-syn-border/60">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-hidden">
+      <div class="flex items-center gap-1.5 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-syn-gold animate-pulse shrink-0"></span>
+        <span class="font-bold text-white whitespace-nowrap">САМАРА • УЛ. ЛЬВА ТОЛСТОГО, 97А, КОРП. 1</span>
+      </div>
+      <div class="hidden lg:block text-syn-textMuted truncate font-medium">
+        ПРЕМИУМ ДЕТЕЙЛИНГ • БРОНЕПЛЕНКИ • КЕРАМИКА KRYTEX • КАРБОН
+      </div>
+      <div class="text-right shrink-0 font-bold text-syn-gold whitespace-nowrap">
+        ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ
+      </div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sticky top-0 z-50 bg-[#0A0C10]/95 backdrop-blur-md border-b border-syn-border w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+      
+      <!-- Логотип -->
+      <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded bg-syn-gold text-slate-950 flex items-center justify-center font-brand font-bold text-base sm:text-lg shadow-sm shrink-0">
+          S
+        </div>
+        <div class="leading-none">
+          <span class="text-base sm:text-xl font-brand font-bold tracking-widest uppercase text-white">
+            SYNDICATE<span class="text-syn-gold font-mono text-xs sm:text-sm lowercase ml-1 font-bold">.detailing</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Меню -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-wider text-syn-textMuted font-bold">
+        <a href="#flagship" class="hover:text-syn-gold transition">Флагманы</a>
+        <a href="#calculator" class="hover:text-syn-gold transition text-syn-gold">Калькулятор услуг</a>
+        <a href="#standards" class="hover:text-syn-gold transition">Стандарты</a>
+        <a href="#reviews" class="hover:text-syn-gold transition">Отзывы (91)</a>
+        <a href="#contacts" class="hover:text-syn-gold transition">Локация</a>
+      </nav>
+
+      <!-- Контакты и кнопка -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+78462053177" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-syn-surface border border-syn-border text-xs sm:text-sm font-mono font-bold text-white hover:border-syn-gold transition shadow-sm">
+          <i data-lucide="phone" class="w-4 h-4 text-syn-gold"></i>
+          +7 (846) 205-31-77
+        </a>
+        <button onclick="openModal('Быстрая консультация')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition active:scale-95 shadow-md gold-glow hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+          Записаться
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO СЕКЦИЯ -->
+  <section class="py-12 sm:py-20 border-b border-syn-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Офферная часть -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-syn-surface border border-syn-border text-[11px] sm:text-xs font-mono text-syn-gold font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-syn-gold animate-pulse shrink-0"></span>
+            ПРЕМИУМ ДЕТЕЙЛИНГ В ЦЕНТРЕ САМАРЫ
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-bold uppercase text-white tracking-tight leading-[1.12] sm:leading-[1.05]">
+            БЕЗУПРЕЧНЫЙ ВИД. <br>
+            <span class="text-syn-gold">БРОНЯ И БЛЕСК КУЗОВА.</span> <br>
+            МАШИНА СЛОВНО ИЗ САЛОНА.
+          </h1>
+
+          <p class="text-syn-textBody text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            Студия детейлинга Syndicate на ул. Льва Толстого, 97А: профессиональная трехфазная мойка, восстановительная полировка, оклейка полиуретаном, керамика KRYTEX MEGA8 и индивидуальный салонный стайлинг.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 max-w-md">
+            <a href="#calculator" class="px-7 py-4 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 font-display font-bold text-sm uppercase tracking-wider transition active:scale-95 shadow-lg gold-glow hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-slate-950"></i>
+              <span>Рассчитать стоимость</span>
+            </a>
+            <a href="#flagship" class="px-6 py-4 rounded-lg bg-syn-surface hover:bg-syn-card border border-syn-border text-white font-mono text-xs uppercase tracking-wider font-bold transition text-center hover:border-syn-gold">
+              Основные комплексы
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-syn-border/80 flex flex-wrap items-center gap-5 sm:gap-7 text-xs sm:text-sm text-syn-textMuted font-mono font-semibold">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-syn-gold"></i>
+              <span class="text-white">Оригинальные составы Krytex</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="award" class="w-4 h-4 text-syn-gold"></i>
+              <span class="text-white">Оценка 10 из 10 по отзывам</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-syn-gold"></i>
+              <span class="text-white">Точная запись без задержек</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Визитная карточка / Live-статус студии (ИСПРАВЛЕН ПЕРЕНОС ЦЕНЫ) -->
+        <div class="lg:col-span-5 w-full">
+          <div class="p-6 sm:p-7 rounded-2xl bg-syn-surface border-2 border-syn-border space-y-5 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center pb-3 border-b border-syn-border font-mono text-xs">
+              <span class="text-white font-bold uppercase tracking-wider">SYNDICATE DETAILING</span>
+              <span class="px-2.5 py-0.5 rounded bg-amber-500/20 text-syn-gold font-bold border border-amber-500/40 text-[11px]">ЦЕНТР САМАРЫ</span>
+            </div>
+
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white leading-tight">
+                  Трехфазная мойка комплекс
+                </h3>
+                <span class="text-xl sm:text-2xl font-display font-bold text-syn-gold whitespace-nowrap shrink-0">от 2 750 ₽</span>
+              </div>
+              <p class="text-xs sm:text-sm text-syn-textMuted leading-relaxed">
+                Комплексная мойка с бережной химией, деликатной ручной фазой, очисткой колесных дисков, консервацией и сушкой кузова турбосушкой.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 text-xs sm:text-sm font-mono">
+              <div class="p-3 rounded-lg bg-syn-card border border-syn-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Детейлинг-полировка ЛКП</span>
+                <span class="text-syn-gold font-bold shrink-0 whitespace-nowrap">25 000 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-syn-card border border-syn-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Комплексная химчистка салона</span>
+                <span class="text-white font-bold shrink-0 whitespace-nowrap">18 000 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-syn-card border border-syn-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Керамика KRYTEX MEGA8</span>
+                <span class="text-syn-gold font-bold shrink-0 whitespace-nowrap">15 000 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-syn-card border border-syn-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Полная оклейка в матовую пленку</span>
+                <span class="text-white font-bold shrink-0 whitespace-nowrap">250 000 ₽</span>
+              </div>
+            </div>
+
+            <a href="#calculator" class="w-full py-3.5 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg gold-glow text-center block">
+              Собрать индивидуальный пакет
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК 1: ОСНОВНЫЕ ФЛАГМАНСКИЕ УСЛУГИ -->
+  <section id="flagship" class="py-14 sm:py-20 border-b border-syn-border bg-[#0C0F15]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-syn-gold font-bold block mb-1.5">ФЛАГМАНСКИЕ НАПРАВЛЕНИЯ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Ключевые комплексы Syndicate</h2>
+        <p class="text-sm sm:text-base text-syn-textBody mt-2 leading-relaxed font-medium">
+          Базовые услуги студии для поддержания первозданного блеска кузова и абсолютной чистоты интерьера вашего автомобиля.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Карточка 1: Детейлинг полировка -->
+        <div class="p-7 rounded-xl bg-syn-surface border-2 border-syn-gold relative flex flex-col justify-between shadow-xl gold-border-glow">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-syn-gold text-slate-950 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded shadow">
+            Флагман реставрации
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-10 h-10 rounded-lg bg-syn-goldMuted text-syn-gold flex items-center justify-center border border-syn-gold">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-display font-bold text-syn-gold whitespace-nowrap">25 000 ₽</span>
+            </div>
+            <h3 class="text-2xl font-display font-bold uppercase text-white mb-2">Детейлинг полировка ЛКП</h3>
+            <p class="text-sm text-syn-textBody mb-4 leading-relaxed font-normal">
+              Глубокая восстановительная полировка лакокрасочного покрытия. В зависимости от состояния ЛКП применяются пасты различной градации и наждачная микробумага под инспекционным светом.
+            </p>
+            <ul class="text-xs text-white space-y-2.5 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Устранение до 95% царапин и паутинки</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Возвращение кристальной глубины цвета</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Локальная коррекция глубоких дефектов</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Детейлинг полировка ЛКП')" class="w-full py-3 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow">
+            Записаться на полировку
+          </button>
+        </div>
+
+        <!-- Карточка 2: Мягкая полировка -->
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border hover:border-syn-gold transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-10 h-10 rounded-lg bg-syn-card border border-syn-border text-syn-gold flex items-center justify-center">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-display font-bold text-white whitespace-nowrap">18 000 ₽</span>
+            </div>
+            <h3 class="text-2xl font-display font-bold uppercase text-white mb-2">Мягкая полировка ЛКП</h3>
+            <p class="text-sm text-syn-textBody mb-4 leading-relaxed font-normal">
+              Полировка кузова в два этапа среднеабразивной и антиголограммной финишной пастами. Идеально подходит для свежих автомобилей и сезонного обновления глянца.
+            </p>
+            <ul class="text-xs text-white space-y-2.5 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> 2 этапа полировки (миди + финиш)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Удаление мелкой сетки и матовости</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Сохранение заводской толщины лака</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Мягкая полировка ЛКП')" class="w-full py-3 rounded-lg bg-syn-card hover:bg-syn-gold hover:text-slate-950 border border-syn-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать комплекс
+          </button>
+        </div>
+
+        <!-- Карточка 3: Комплексная химчистка -->
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border hover:border-syn-gold transition duration-300 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-10 h-10 rounded-lg bg-syn-card border border-syn-border text-syn-gold flex items-center justify-center">
+                <i data-lucide="droplet" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-display font-bold text-white whitespace-nowrap">18 000 ₽</span>
+            </div>
+            <h3 class="text-2xl font-display font-bold uppercase text-white mb-2">Химчистка салона</h3>
+            <p class="text-sm text-syn-textBody mb-4 leading-relaxed font-normal">
+              Многоэтапная процедура глубокой очистки, консервации и восстановления всех элементов интерьера: кожа, алькантара, ковролин, пластик и багажное отделение.
+            </p>
+            <ul class="text-xs text-white space-y-2.5 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Полный разбор труднодоступных зон</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Премиальная гипоаллергенная химия</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-syn-gold shrink-0"></i> Деликатная консервация и сушка</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Комплексная химчистка салона')" class="w-full py-3 rounded-lg bg-syn-card hover:bg-syn-gold hover:text-slate-950 border border-syn-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать комплекс
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК 2: ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР ДЕТЕЙЛИНГ-УСЛУГ (ВСЕ 10 УСЛУГ ИЗ ПРАЙСА) -->
+  <section id="calculator" class="py-14 sm:py-20 border-b border-syn-border bg-[#0A0C10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-syn-gold font-bold block mb-1.5">ОНЛАЙН-РАСЧЕТ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Интерактивный калькулятор услуг</h2>
+        <p class="text-sm sm:text-base text-syn-textBody mt-2 leading-relaxed font-medium">
+          Отметьте необходимые позиции из официального прайса Syndicate для моментального расчета предварительной сметы и быстрой брони даты.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Список опций с чекбоксами (10 услуг по категориям) -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <!-- Категория: Мойка и уход -->
+          <div class="p-5 sm:p-6 rounded-xl bg-syn-surface border border-syn-border space-y-3">
+            <h4 class="text-xs font-mono font-bold uppercase text-syn-gold tracking-wider flex items-center gap-2">
+              <i data-lucide="waves" class="w-4 h-4"></i> Мойка кузова
+            </h4>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Трехфазная мойка комплекс" data-price="3300" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Трехфазная мойка комплекс</span>
+                    <span class="text-xs text-syn-textMuted font-mono">От 2 750 до 5 000 ₽ в зависимости от класса авто</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">3 300 ₽</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Категория: Защитные покрытия и керамика -->
+          <div class="p-5 sm:p-6 rounded-xl bg-syn-surface border border-syn-border space-y-3">
+            <h4 class="text-xs font-mono font-bold uppercase text-syn-gold tracking-wider flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4"></i> Керамика & Защитные составы
+            </h4>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Керамическое покрытие KRYTEX MEGA8" data-price="15000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Керамическое покрытие KRYTEX MEGA8</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Стойкая защита от химии, выгорания и УФ-лучей</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-syn-gold shrink-0 whitespace-nowrap">15 000 ₽</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Жидкое стекло 7H" data-price="12000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Жидкое стекло 7H</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Глубокий зеркальный блеск и гидрофобный слой</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">12 000 ₽</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Гидрофобное покрытие (передняя полусфера)" data-price="4000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Антидождь (передняя полусфера)</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Сокращает расход омывателя в 5 раз, легкая очистка</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">4 000 ₽</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Категория: Полировка кузова -->
+          <div class="p-5 sm:p-6 rounded-xl bg-syn-surface border border-syn-border space-y-3">
+            <h4 class="text-xs font-mono font-bold uppercase text-syn-gold tracking-wider flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Полировка кузова
+            </h4>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Детейлинг полировка ЛКП" data-price="25000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Детейлинг полировка лакокрасочного покрытия</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Устранение глубоких царапин, пасты + наждачная микрокоррекция</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-syn-gold shrink-0 whitespace-nowrap">25 000 ₽</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Мягкая полировка ЛКП" data-price="18000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Мягкая полировка ЛКП</span>
+                    <span class="text-xs text-syn-textMuted font-mono">2 этапа: среднеабразивная и финишная паста</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">18 000 ₽</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Категория: Пленки, Салон и Тюнинг -->
+          <div class="p-5 sm:p-6 rounded-xl bg-syn-surface border border-syn-border space-y-3">
+            <h4 class="text-xs font-mono font-bold uppercase text-syn-gold tracking-wider flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4"></i> Бронирование, Салон & Тюнинг
+            </h4>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Полная оклейка в матовую пленку" data-price="250000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Полная оклейка авто в матовую пленку</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Топовый полиуретан: надежная броня от гравия и сколов</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-syn-gold shrink-0 whitespace-nowrap">250 000 ₽</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Комплексная химчистка салона" data-price="18000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Комплексная химчистка салона</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Глубокая многоэтапная очистка и восстановление интерьера</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">18 000 ₽</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Изменение анатомии руля" data-price="50000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Изменение анатомии руля</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Формирование индивидуального спортивного хвата</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">50 000 ₽</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-lg bg-syn-card border border-syn-border hover:border-syn-gold/50 cursor-pointer transition select-none group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="service-checkbox w-4 h-4 accent-amber-400 rounded" data-name="Изготовление карбоновых элементов" data-price="15000" onchange="calculateTotal()">
+                  <div>
+                    <span class="text-sm font-semibold text-white group-hover:text-syn-gold transition block">Изготовление карбоновых элементов</span>
+                    <span class="text-xs text-syn-textMuted font-mono">Ламинация натуральным углетканью или изготовление с нуля</span>
+                  </div>
+                </div>
+                <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">15 000 ₽</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Боковая плашка калькулятора (Липкий итог) -->
+        <div class="lg:col-span-4 sticky top-24">
+          <div class="p-6 rounded-2xl bg-syn-surface border-2 border-syn-gold space-y-5 shadow-2xl gold-border-glow">
+            
+            <div class="pb-3 border-b border-syn-border flex items-center justify-between">
+              <span class="font-mono text-xs uppercase font-bold text-white">ВАША СМЕТА</span>
+              <span id="selectedCount" class="px-2 py-0.5 rounded bg-syn-goldMuted text-syn-gold font-mono text-xs font-bold">0 услуг</span>
+            </div>
+
+            <div id="selectedServicesList" class="text-xs font-mono text-syn-textMuted space-y-1.5 max-h-48 overflow-y-auto pr-1">
+              <p class="italic text-syn-textMuted/60">Отметьте необходимые позиции в списке слева для формирования пакета...</p>
+            </div>
+
+            <div class="pt-3 border-t border-syn-border">
+              <span class="text-xs font-mono text-syn-textMuted block">Предварительный итог:</span>
+              <div class="text-3xl font-display font-bold text-syn-gold" id="totalPriceDisplay">
+                0 ₽
+              </div>
+            </div>
+
+            <button onclick="bookCalculatedPackage()" class="w-full py-4 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg gold-glow hover:-translate-y-0.5 active:scale-95">
+              Забронировать комплекс
+            </button>
+
+            <p class="text-[11px] font-mono text-syn-textMuted text-center leading-normal">
+              * Точная стоимость подтверждается мастером после очного осмотра ЛКП на ул. Льва Толстого, 97А
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК СТАНДАРТОВ СТУДИИ -->
+  <section id="standards" class="py-14 sm:py-20 border-b border-syn-border bg-[#0C0F15]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-syn-gold font-bold block mb-1">СТАНДАРТЫ КАЧЕСТВА</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Почему выбирают Syndicate</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border space-y-3 shadow-md hover:border-syn-gold transition">
+          <div class="w-10 h-10 rounded-lg bg-syn-card border border-syn-border text-syn-gold flex items-center justify-center">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Локация в центре города</h3>
+          <p class="text-sm text-syn-textBody leading-relaxed font-normal">
+            Удобный заезд в историческом центре Самары на ул. Льва Толстого, 97А с закрытой охраняемой зоной и чистыми боксами.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border space-y-3 shadow-md hover:border-syn-gold transition">
+          <div class="w-10 h-10 rounded-lg bg-syn-card border border-syn-border text-syn-gold flex items-center justify-center">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Грамотная и ответственная команда</h3>
+          <p class="text-sm text-syn-textBody leading-relaxed font-normal">
+            Опытные мастера детейлинга со стажем от 5 лет. Строгое соблюдение технологий нанесения составов и деликатная разборка деталей.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border space-y-3 shadow-md hover:border-syn-gold transition">
+          <div class="w-10 h-10 rounded-lg bg-syn-card border border-syn-border text-syn-gold flex items-center justify-center">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Оригинальные составы и пленки</h3>
+          <p class="text-sm text-syn-textBody leading-relaxed font-normal">
+            Работаем только сертифицированной автохимией Krytex и проверенными полиуретановыми пленками с гарантией на выполненные работы.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНЫЕ С ЯНДЕКС КАРТ) -->
+  <section id="reviews" class="py-14 sm:py-20 border-b border-syn-border bg-[#0A0C10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-syn-gold font-bold block mb-1">РЕАЛЬНЫЕ ОЦЕНКИ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Отзывы клиентов на Яндекс Картах</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Отзыв 1: Юлия Игошина -->
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border flex flex-col justify-between shadow-md hover:border-syn-gold transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-syn-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Юлия Игошина</span>
+                <span class="text-[11px] font-mono text-syn-textMuted">Знаток города 7 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-syn-textBody italic leading-relaxed font-medium">
+              «Лучшая мойка и детейлинг центр в центре города! Вежливый персонал, машину каждый раз забираю, словно новую! Безупречно! 10 из 10!»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-syn-textMuted mt-4 block pt-2 border-t border-syn-border/40">8 апреля 2025 • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 2: Игорь Литовченко -->
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border flex flex-col justify-between shadow-md hover:border-syn-gold transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-syn-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Игорь Литовченко</span>
+                <span class="text-[11px] font-mono text-syn-textMuted">Знаток города 3 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-syn-textBody italic leading-relaxed font-medium">
+              «Результат превзошел ожидания! Запись на удобное время. Качество оказанных услуг на высшем уровне. Забрал машину как из салона»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-syn-textMuted mt-4 block pt-2 border-t border-syn-border/40">4 декабря 2024 • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 3: NagornyiVV -->
+        <div class="p-7 rounded-xl bg-syn-surface border border-syn-border flex flex-col justify-between shadow-md hover:border-syn-gold transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-syn-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">NagornyiVV</span>
+                <span class="text-[11px] font-mono text-syn-textMuted">Знаток города 13 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-syn-textBody italic leading-relaxed font-medium">
+              «Обращаюсь в данную детейлинг студию со дня её открытия, все года качество работы специалистов заслуживает твёрдой оценки ПЯТЬ!!! Весь персонал грамотный и ответственный! Рекомендую данное место для посещения!!!»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-syn-textMuted mt-4 block pt-2 border-t border-syn-border/40">21 ноября 2024 • Яндекс Карты</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ И ЛОКАЦИЯ -->
+  <section id="contacts" class="py-14 sm:py-20 border-b border-syn-border bg-[#0C0F15]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+        
+        <div class="space-y-5">
+          <span class="text-xs sm:text-sm uppercase tracking-widest text-syn-gold font-mono font-bold block">ЛОКАЦИЯ И СВЯЗЬ</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold uppercase text-white">Ждем вас в Syndicate</h2>
+
+          <div class="space-y-3.5 text-sm sm:text-base text-syn-textBody font-sans">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-syn-gold shrink-0 mt-0.5"></i>
+              <span>г. Самара, ул. Льва Толстого, д. 97А, корп. 1</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="calendar" class="w-5 h-5 text-syn-gold shrink-0"></i>
+              <span>Ежедневно по предварительной записи</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-syn-gold shrink-0"></i>
+              <a href="tel:+78462053177" class="text-white hover:text-syn-gold font-mono font-bold text-lg transition">+7 (846) 205-31-77</a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://yandex.ru/maps/?text=Самара+Льва+Толстого+97А+Syndicate" target="_blank" class="px-6 py-3.5 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition flex items-center gap-2 shadow-lg gold-glow hover:-translate-y-0.5">
+              <i data-lucide="navigation" class="w-4 h-4 text-slate-950"></i> Маршрут в Яндекс Картах
+            </a>
+            <button onclick="openModal('Запись по локации')" class="px-6 py-3.5 rounded-lg bg-syn-surface hover:bg-syn-card border border-syn-border text-white text-xs sm:text-sm uppercase tracking-wider font-mono font-bold transition hover:border-syn-gold">
+              Забронировать бокс
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-xl bg-syn-surface border border-syn-border text-center shadow-xl">
+          <div class="w-12 h-12 mx-auto rounded-lg bg-syn-card border border-syn-border text-syn-gold flex items-center justify-center mb-3.5">
+            <i data-lucide="calendar-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white mb-1.5">Индивидуальный визит</h3>
+          <p class="text-xs sm:text-sm text-syn-textMuted mb-5 max-w-sm mx-auto leading-relaxed font-normal">
+            Работаем с каждым автомобилем персонально в закрытом чистом боксе. Пожалуйста, согласуйте время визита заранее.
+          </p>
+          <a href="tel:+78462053177" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition shadow-lg gold-glow hover:-translate-y-0.5">
+            <i data-lucide="phone" class="w-4 h-4 text-slate-950"></i> Позвонить в Syndicate
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="py-6 bg-black text-syn-textMuted text-xs font-mono border-t border-syn-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <p>© 2026 Детейлинг студия «Syndicate». г. Самара, ул. Льва Толстого, 97А, корп. 1.</p>
+      <div class="flex items-center gap-5">
+        <a href="tel:+78462053177" class="hover:text-syn-gold transition">Телефон</a>
+        <a href="#calculator" class="hover:text-syn-gold transition">Калькулятор</a>
+        <a href="#reviews" class="hover:text-syn-gold transition">Отзывы</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО ЗАЯВКИ С ВЕБХУКОМ N8N -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-syn-surface rounded-2xl max-w-sm w-full p-6 sm:p-7 relative border border-syn-gold/40 shadow-2xl gold-border-glow">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-syn-textMuted hover:text-white transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <span class="text-[10px] font-mono uppercase tracking-widest text-syn-gold font-bold block mb-1">ПРЕДВАРИТЕЛЬНАЯ БРОНЬ</span>
+      <h3 class="text-2xl font-display font-bold uppercase text-white mb-4">Запись в Syndicate</h3>
+
+      <form class="space-y-3.5 text-xs sm:text-sm">
+        <input type="hidden" name="source" value="Syndicate Детейлинг Самара">
+        <input type="hidden" name="form_type" value="booking_with_calc">
+
+        <div>
+          <label class="block text-syn-textMuted mb-1 text-xs font-mono">Выбранные услуги и смета</label>
+          <textarea id="modalServiceInput" name="service" readonly rows="2" class="w-full bg-syn-card border border-syn-border rounded-lg px-3.5 py-2 text-syn-gold font-mono font-bold focus:outline-none resize-none text-xs"></textarea>
+        </div>
+        <div>
+          <label class="block text-syn-textMuted mb-1 text-xs font-mono">Ваше имя</label>
+          <input type="text" name="client_name" required placeholder="Как к вам обращаться?" class="w-full bg-syn-card border border-syn-border rounded-lg px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-syn-gold">
+        </div>
+        <div>
+          <label class="block text-syn-textMuted mb-1 text-xs font-mono">Телефон для связи</label>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-syn-card border border-syn-border rounded-lg px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-syn-gold font-mono">
+        </div>
+        
+        <button type="submit" class="w-full py-3.5 rounded-lg bg-syn-gold hover:bg-syn-goldHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg gold-glow mt-2 hover:-translate-y-0.5">
+          Подтвердить бронь
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // ЛОГИКА КАЛЬКУЛЯТОРА
+    let selectedServices = [];
+    let totalPrice = 0;
+
+    function calculateTotal() {
+      const checkboxes = document.querySelectorAll('.service-checkbox:checked');
+      selectedServices = [];
+      totalPrice = 0;
+
+      checkboxes.forEach(cb => {
+        const name = cb.getAttribute('data-name');
+        const price = parseInt(cb.getAttribute('data-price'), 10);
+        selectedServices.push({ name, price });
+        totalPrice += price;
+      });
+
+      // Обновление индикаторов
+      document.getElementById('selectedCount').innerText = `${selectedServices.length} услуг`;
+      document.getElementById('totalPriceDisplay').innerText = `${totalPrice.toLocaleString('ru-RU')} ₽`;
+
+      // Рендер списка
+      const listContainer = document.getElementById('selectedServicesList');
+      if (selectedServices.length === 0) {
+        listContainer.innerHTML = '<p class="italic text-syn-textMuted/60">Отметьте необходимые позиции в списке слева для формирования пакета...</p>';
+      } else {
+        listContainer.innerHTML = selectedServices.map(s => `
+          <div class="flex justify-between items-center text-white text-[11px] py-0.5 border-b border-syn-border/40">
+            <span class="truncate pr-2">• ${s.name}</span>
+            <span class="text-syn-gold font-bold shrink-0">${s.price.toLocaleString('ru-RU')} ₽</span>
+          </div>
+        `).join('');
+      }
+    }
+
+    function bookCalculatedPackage() {
+      if (selectedServices.length === 0) {
+        openModal('Индивидуальный расчет комплекса');
+        return;
+      }
+      const names = selectedServices.map(s => s.name).join(', ');
+      const formattedSummary = `Выбрано (${selectedServices.length}): ${names} | Предварительный итог: ${totalPrice.toLocaleString('ru-RU')} ₽`;
+      openModal(formattedSummary);
+    }
+
+    function openModal(serviceSummary) {
+      document.getElementById('modalServiceInput').value = serviceSummary;
+      document.getElementById('bookingModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Скрипт отправки заявок на вебхук n8n -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const N8N_WEBHOOK_URL = 'https://ваш-n8n-сервер.com/webhook-test/lead-entry';
+
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Отправить';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <span style="display:inline-flex;align-items:center;gap:8px;">
+              <svg class="animate-spin" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="4" stroke="currentColor" stroke-dasharray="32" stroke-linecap="round"></circle>
+              </svg>
+              Отправка...
+            </span>
+          `;
+        }
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        payload.timestamp = new Date().toISOString();
+        payload.page_url = window.location.href;
+
+        try {
+          const response = await fetch(N8N_WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (submitBtn) {
+            submitBtn.innerHTML = '✓ Заявка принята!';
+            submitBtn.style.backgroundColor = '#10B981';
+            submitBtn.style.color = '#FFFFFF';
+          }
+          form.reset();
+        } catch (error) {
+          console.error('Ошибка отправки на вебхук:', error);
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Ошибка отправки';
+            submitBtn.style.backgroundColor = '#EF4444';
+            submitBtn.style.color = '#FFFFFF';
+          }
+        } finally {
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.innerHTML = originalBtnText;
+              submitBtn.disabled = false;
+              submitBtn.style.backgroundColor = '';
+              submitBtn.style.color = '';
+            }
+          }, 4000);
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

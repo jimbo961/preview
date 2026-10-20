@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Фаворит Детейлинг — Автокомплекс и детейлинг в Самаре | ул. Структурная, 82</title>
+  <meta name="description" content="Детейлинг-центр Фаворит в Самаре на ул. Структурная, 82. Евромойка Koch Chemie от 700 ₽, наномойка, керамика, «Американский пирог», полировка, удаление вмятин без покраски PDR и кузовной ремонт с видеоотчетами.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jimbo961.github.io/preview/favorit-detailing/">
+  <meta property="og:site_name" content="Фаворит Детейлинг Самара">
+  <meta property="og:title" content="Фаворит Детейлинг Самара — Профессиональный уход и ремонт кузова">
+  <meta property="og:description" content="Немецкая химия Koch Chemie, керамика, PDR-ремонт вмятин, полировка стекол и кузова. Интерактивный расчет стоимости онлайн.">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Oswald + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Palette: Precision Graphite & Acid Lime -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fav: {
+              bg: '#0D1117',
+              surface: '#161C24',
+              card: '#1F2733',
+              border: '#2D3848',
+              borderHover: '#10B981',
+              lime: '#10B981',
+              limeHover: '#059669',
+              limeGlow: 'rgba(16, 185, 129, 0.15)',
+              textMain: '#FFFFFF',
+              textBody: '#E2E8F0',
+              textMuted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Oswald', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-fav-radial {
+      background-color: #0D1117;
+      background-image: 
+        radial-gradient(circle at 80% 12%, rgba(16, 185, 129, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 20% 88%, rgba(45, 56, 72, 0.40) 0%, transparent 50%),
+        linear-gradient(to bottom, #0D1117 0%, #07090D 100%);
+    }
+    .lime-glow {
+      box-shadow: 0 10px 25px -4px rgba(16, 185, 129, 0.35);
+    }
+    .lime-border-glow {
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.20);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-fav-radial text-fav-textMain font-sans antialiased selection:bg-fav-lime selection:text-black min-h-screen overflow-x-hidden">
+
+  <!-- ВЕРХНЯЯ СЛУЖЕБНАЯ СТРОКА -->
+  <div class="bg-black/90 text-fav-textMuted text-[11px] sm:text-xs font-mono tracking-wider py-2 px-3 sm:px-4 border-b border-fav-border/60">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-hidden">
+      <div class="flex items-center gap-1.5 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-fav-lime animate-pulse shrink-0"></span>
+        <span class="font-bold text-white whitespace-nowrap">САМАРА • УЛ. СТРУКТУРНАЯ, 82</span>
+      </div>
+      <div class="hidden lg:block text-fav-textMuted truncate font-medium">
+        АВТОХИМИЯ KOCH CHEMIE • КЕРАМИКА • РЕМОНТ ВМЯТИН БЕЗ ПОКРАСКИ PDR • АНТИКОР
+      </div>
+      <div class="text-right shrink-0 font-bold text-fav-lime whitespace-nowrap">
+        ПО ЗАПИСИ
+      </div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sticky top-0 z-50 bg-[#0D1117]/95 backdrop-blur-md border-b border-fav-border w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+      
+      <!-- Логотип -->
+      <a href="./" onclick="history.replaceState(null, null, window.location.pathname); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2 group shrink-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded bg-fav-lime text-slate-950 flex items-center justify-center font-display font-bold text-base sm:text-lg shadow-sm shrink-0">
+          Ф
+        </div>
+        <div class="leading-none">
+          <span class="text-base sm:text-xl font-display font-bold tracking-wider uppercase text-white">
+            ФАВОРИТ<span class="text-fav-lime font-mono text-xs sm:text-sm lowercase ml-0.5 font-bold">.детейлинг</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Навигация -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-wider text-fav-textMuted font-bold">
+        <a href="#flagships" class="hover:text-fav-lime transition">Флагманы</a>
+        <a href="#calculator" class="hover:text-fav-lime transition text-fav-lime">Калькулятор (25+ услуг)</a>
+        <a href="#advantages" class="hover:text-fav-lime transition">Преимущества</a>
+        <a href="#reviews" class="hover:text-fav-lime transition">Отзывы (41)</a>
+        <a href="#contacts" class="hover:text-fav-lime transition">Контакты</a>
+      </nav>
+
+      <!-- Телефоны и запись -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+79277073163" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-fav-surface border border-fav-border text-xs sm:text-sm font-mono font-bold text-white hover:border-fav-lime transition shadow-sm">
+          <i data-lucide="phone" class="w-4 h-4 text-fav-lime"></i>
+          +7 (927) 707-31-63
+        </a>
+        <button onclick="openBookingModal('Быстрая консультация')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition active:scale-95 shadow-md lime-glow hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+          Записаться
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO СЕКЦИЯ -->
+  <section class="py-12 sm:py-20 border-b border-fav-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Офферная часть -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-fav-surface border border-fav-border text-[11px] sm:text-xs font-mono text-fav-lime font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-fav-lime animate-pulse shrink-0"></span>
+            АВТОКОМПЛЕКС И ДЕТЕЙЛИНГ В САМАРЕ
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-bold uppercase text-white tracking-tight leading-[1.12] sm:leading-[1.05]">
+            НЕМЕЦКИЕ РЕГЛАМЕНТЫ. <br>
+            <span class="text-fav-lime">ТОЧНО В СРОК И БЮДЖЕТ.</span> <br>
+            ОТ МОЙКИ ДО КУЗОВНОГО РЕМОНТА.
+          </h1>
+
+          <p class="text-fav-textBody text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            Студия «Фаворит Детейлинг» на ул. Структурная, 82: правильная мойка по стандартам Koch Chemie, керамика, трехслойный «Американский пирог», беспокрасочное удаление вмятин PDR, антикоррозийная обработка и видеоотчеты по каждому этапу.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 max-w-md">
+            <a href="#calculator" class="px-7 py-4 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 font-display font-bold text-sm uppercase tracking-wider transition active:scale-95 shadow-lg lime-glow hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4 text-slate-950"></i>
+              <span>Рассчитать стоимость онлайн</span>
+            </a>
+            <a href="#flagships" class="px-6 py-4 rounded-lg bg-fav-surface hover:bg-fav-card border border-fav-border text-white font-mono text-xs uppercase tracking-wider font-bold transition text-center hover:border-fav-lime">
+              Флагманские пакеты
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-fav-border/80 flex flex-wrap items-center gap-5 sm:gap-7 text-xs sm:text-sm text-fav-textMuted font-mono font-semibold">
+            <div class="flex items-center gap-2">
+              <i data-lucide="video" class="w-4 h-4 text-fav-lime"></i>
+              <span class="text-white">Видеоотчеты о работе</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-fav-lime"></i>
+              <span class="text-white">Составы Koch Chemie</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="wrench" class="w-4 h-4 text-fav-lime"></i>
+              <span class="text-white">PDR-ремонт без покраски</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Визитная карточка / Live-панель -->
+        <div class="lg:col-span-5 w-full">
+          <div class="p-6 sm:p-7 rounded-2xl bg-fav-surface border-2 border-fav-border space-y-5 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center pb-3 border-b border-fav-border font-mono text-xs">
+              <span class="text-white font-bold uppercase tracking-wider">ФАВОРИТ ДЕТЕЙЛИНГ</span>
+              <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/40 text-[11px]">СТРУКТУРНАЯ, 82</span>
+            </div>
+
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white leading-tight">
+                  Евромойка Koch Chemie
+                </h3>
+                <span class="text-xl sm:text-2xl font-display font-bold text-fav-lime whitespace-nowrap shrink-0">от 700 ₽</span>
+              </div>
+              <p class="text-xs sm:text-sm text-fav-textMuted leading-relaxed">
+                Двухфазная деликатная мойка по европейскому стандарту с оригинальной немецкой химией Кох Химия, бережной губкой и сушкой.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 text-xs sm:text-sm font-mono">
+              <div class="p-3 rounded-lg bg-fav-card border border-fav-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Трехфазная наномойка</span>
+                <span class="text-fav-lime font-bold shrink-0 whitespace-nowrap">1 200 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-fav-card border border-fav-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Покрытие «Американский пирог»</span>
+                <span class="text-white font-bold shrink-0 whitespace-nowrap">5 000 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-fav-card border border-fav-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Ремонт вмятин без покраски</span>
+                <span class="text-fav-lime font-bold shrink-0 whitespace-nowrap">от 1 500 ₽</span>
+              </div>
+              <div class="p-3 rounded-lg bg-fav-card border border-fav-border flex items-center justify-between gap-2">
+                <span class="text-white font-medium truncate">Полировка лобового стекла</span>
+                <span class="text-white font-bold shrink-0 whitespace-nowrap">6 000 ₽</span>
+              </div>
+            </div>
+
+            <a href="#calculator" class="w-full py-3.5 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg lime-glow text-center block">
+              Собрать расчет из 25+ услуг
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК 1: 4 ФЛАГМАНСКИХ КОМПЛЕКСА -->
+  <section id="flagships" class="py-14 sm:py-20 border-b border-fav-border bg-[#0A0D12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-fav-lime font-bold block mb-1.5">ПОПУЛЯРНЫЙ ВЫБОР</span>
+        <h2 class="text-2xl sm:text-4xl font-display font-bold uppercase text-white leading-tight">
+          Флагманские пакеты «Фаворит»
+        </h2>
+        <p class="text-sm sm:text-base text-fav-textBody mt-2 leading-relaxed font-medium">
+          Сбалансированные готовые решения по уходу, реставрации и защите кузова с максимальной выгодой.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Пакет 1: Евро комплекс -->
+        <div class="p-6 rounded-xl bg-fav-surface border border-fav-border hover:border-fav-lime transition flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <div class="w-9 h-9 rounded bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center">
+                <i data-lucide="droplets" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl font-display font-bold text-white whitespace-nowrap">1 500 ₽</span>
+            </div>
+            <h3 class="text-xl font-display font-bold uppercase text-white mb-2 leading-tight">Евро комплекс</h3>
+            <p class="text-xs text-fav-textBody mb-4 leading-relaxed">
+              Двухфазная европейская мойка кузова автохимией Koch Chemie с тщательной уборкой салона и пылесосом.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Кузов + коврики + пороги</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Влажная уборка салона</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Продувка замков и зеркал</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Евро комплекс 1500 ₽')" class="w-full py-2.5 rounded-lg bg-fav-card hover:bg-fav-lime hover:text-slate-950 border border-fav-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать
+          </button>
+        </div>
+
+        <!-- Пакет 2: Американский пирог -->
+        <div class="p-6 rounded-xl bg-fav-surface border-2 border-fav-lime relative flex flex-col justify-between shadow-xl lime-border-glow">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fav-lime text-slate-950 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded shadow whitespace-nowrap">
+            Глубокий глянец
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <div class="w-9 h-9 rounded bg-fav-limeGlow text-fav-lime flex items-center justify-center border border-fav-lime">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl font-display font-bold text-fav-lime whitespace-nowrap">5 000 ₽</span>
+            </div>
+            <h3 class="text-xl font-display font-bold uppercase text-white mb-2 leading-tight">Американский пирог</h3>
+            <p class="text-xs text-fav-textBody mb-4 leading-relaxed">
+              Трехслойное премиальное защитное покрытие: возвращает невероятную гладкость, насыщенный цвет и мокрый блеск.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>3 защитных слоя составов</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Глубокая маскировка паутинки</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Мощный гидрофобный слой</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Восковое покрытие Американский пирог 5000 ₽')" class="w-full py-2.5 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow text-xs">
+            Выбрать
+          </button>
+        </div>
+
+        <!-- Пакет 3: Керамика авто -->
+        <div class="p-6 rounded-xl bg-fav-surface border border-fav-border hover:border-fav-lime transition flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <div class="w-9 h-9 rounded bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl font-display font-bold text-white whitespace-nowrap">от 9 000 ₽</span>
+            </div>
+            <h3 class="text-xl font-display font-bold uppercase text-white mb-2 leading-tight">Керамика кузова</h3>
+            <p class="text-xs text-fav-textBody mb-4 leading-relaxed">
+              Стойкий защитный состав, делающий лак более прочным и устойчивым к реагентам, царапинам и выгоранию.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Укрепление твердости лака</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Защита от дорожной химии</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Легкая мойка в течение года</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Керамика для авто 9000 ₽')" class="w-full py-2.5 rounded-lg bg-fav-card hover:bg-fav-lime hover:text-slate-950 border border-fav-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать
+          </button>
+        </div>
+
+        <!-- Пакет 4: PDR Ремонт вмятин -->
+        <div class="p-6 rounded-xl bg-fav-surface border border-fav-border hover:border-fav-lime transition flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <div class="w-9 h-9 rounded bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center">
+                <i data-lucide="hammer" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xl font-display font-bold text-white whitespace-nowrap">от 1 500 ₽</span>
+            </div>
+            <h3 class="text-xl font-display font-bold uppercase text-white mb-2 leading-tight">Ремонт вмятин (PDR)</h3>
+            <p class="text-xs text-fav-textBody mb-4 leading-relaxed">
+              Беспокрасочное выпрямление вмятин с сохранением заводского окраса. Оплата только за идеальный результат.
+            </p>
+            <ul class="text-xs text-white space-y-2 mb-6 font-mono">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Без шпатлевки и перекраса</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Сохранение заводской толщины</span></li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-fav-lime shrink-0 mt-0.5"></i> <span>Работа за несколько часов</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Ремонт вмятин без покраски 1500 ₽')" class="w-full py-2.5 rounded-lg bg-fav-card hover:bg-fav-lime hover:text-slate-950 border border-fav-border text-white font-mono text-xs uppercase font-bold transition">
+            Выбрать
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- БЛОК 2: ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР СО ВСЕМИ 25+ УСЛУГАМИ И ТАБАМИ -->
+  <section id="calculator" class="py-14 sm:py-20 border-b border-fav-border bg-[#0D1117]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-8 max-w-2xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-fav-lime font-bold block mb-1.5">ПОЛНЫЙ ПРАЙС-ЛИСТ</span>
+        <h2 class="text-2xl sm:text-4xl font-display font-bold uppercase text-white leading-tight">
+          Интерактивный калькулятор услуг
+        </h2>
+        <p class="text-sm sm:text-base text-fav-textBody mt-2 leading-relaxed font-medium">
+          Переключайтесь между категориями, выбирайте нужные услуги и получите итоговую смету с возможностью быстрой записи.
+        </p>
+      </div>
+
+      <!-- Горизонтальные табы -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-6">
+        <button onclick="switchCategory('wash')" id="tab-wash" class="tab-btn px-4 py-2.5 rounded-lg font-mono text-xs uppercase tracking-wider font-bold transition whitespace-nowrap bg-fav-lime text-slate-950 shadow">
+          1. Мойка & Кузов (11)
+        </button>
+        <button onclick="switchCategory('protect')" id="tab-protect" class="tab-btn px-4 py-2.5 rounded-lg font-mono text-xs uppercase tracking-wider font-bold transition whitespace-nowrap bg-fav-surface text-fav-textMuted border border-fav-border hover:border-fav-lime">
+          2. Защита & Полировка (8)
+        </button>
+        <button onclick="switchCategory('interior')" id="tab-interior" class="tab-btn px-4 py-2.5 rounded-lg font-mono text-xs uppercase tracking-wider font-bold transition whitespace-nowrap bg-fav-surface text-fav-textMuted border border-fav-border hover:border-fav-lime">
+          3. Салон & Диски (7)
+        </button>
+        <button onclick="switchCategory('repair')" id="tab-repair" class="tab-btn px-4 py-2.5 rounded-lg font-mono text-xs uppercase tracking-wider font-bold transition whitespace-nowrap bg-fav-surface text-fav-textMuted border border-fav-border hover:border-fav-lime">
+          4. Ремонт & Дополнительно (4)
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Область табов -->
+        <div class="lg:col-span-8 space-y-4">
+          
+          <!-- ТАБ 1: АВТОМОЙКА -->
+          <div id="category-wash" class="category-panel space-y-2.5">
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Евромойка Koch Chemie (двухфазная)" data-price="700" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Евромойка Koch Chemie</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Двухфазная мойка по европейскому стандарту (от 700 до 1200 ₽)</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">700 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Наномойка (деликатная трехфазная)" data-price="1200" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Наномойка трехфазная</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Бережная и деликатная, подходит в том числе для матовых авто</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">1 200 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Керамо мойка кузова" data-price="1500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Керамо мойка</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Специализированная мойка для авто с керамическим покрытием</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Евро комплекс (кузов + салон)" data-price="1500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Евро комплекс</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Двухфазный кузов + уборка салона (от 1500 до 1900 ₽)</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Техническая мойка двигателя" data-price="1000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Мойка двигателя с химией</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Безопасная очистка подкапотного пространства диэлектриком</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Чистка хрома" data-price="500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Чистка хромированных деталей</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Удаление налета и окисления с молдингов и решеток</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Чистка насадок глушителя" data-price="500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Чистка насадок глушителя</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Снятие запекшейся гари, нагара и дорожного налета</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Очищение кузова от битума (комплекс)" data-price="1700" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Очищение кузова от битума</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Комплексное бережное удаление смол и битумных капель</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 700 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Глубокая чистка ЛКП автоскрабом" data-price="3000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Глубокая чистка ЛКП</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Удаление въевшейся металлической пыли и вкраплений</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">3 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Мойка подвески и днища на подкатном" data-price="2000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Мойка подвески и днища</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Специальное подкатное устройство высокого давления</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">2 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Деликатная мойка мотоцикла" data-price="1000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Мойка мотоцикла</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Деликатные составы для мототехники Koch Chemie</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 000 ₽</span>
+            </label>
+          </div>
+
+          <!-- ТАБ 2: ЗАЩИТНЫЕ ПОКРЫТИЯ И ПОЛИРОВКА -->
+          <div id="category-protect" class="category-panel space-y-2.5 hidden">
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Керамическое покрытие для авто" data-price="9000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Керамика для кузова</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Защитный состав для прочности лака и глубокого цвета</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">9 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Покрытие жидким стеклом" data-price="7000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Покрытие жидким стеклом</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Зеркальный блеск и мощная гидрофобность ЛКП</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">7 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Трехслойное покрытие Американский пирог" data-price="5000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Восковое покрытие «Американский пирог»</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Трехслойный комплекс для идеальной гладкости и цвета</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">5 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Покрытие премиальным твердым воском" data-price="2000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Премиальный твердый воск</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Натуральный карнаубский воск для защиты кузова</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">2 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Быстрая керамика (кварц)" data-price="1000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Быстрая керамика (быстрый кварц)</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Экспресс-консервант кузова с диоксидом кремния</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Антидождь (передняя полусфера)" data-price="2500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Антидождь на стекла</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Передняя полусфера: идеальная видимость в любой ливень</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">2 500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Полировка лобового стекла" data-price="6000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Полировка лобового стекла</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Удаление затертостей от щеток и микроцарапин</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">6 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Полировка фар (пара)" data-price="1000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Полировка фар</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Возвращение заводской прозрачности и яркости света</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 000 ₽</span>
+            </label>
+          </div>
+
+          <!-- ТАБ 3: САЛОН, ДИСКИ И ПОДВЕСКА -->
+          <div id="category-interior" class="category-panel space-y-2.5 hidden">
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Химчистка салона" data-price="1000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Химчистка элементов салона</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Локальная или комплексная очистка сидений и пола</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">от 1 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Консервация кожи Koch Chemie" data-price="2000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Консервация кожи Koch Chemie</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Питание и защита кожаных сидений от пересыхания и трещин</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">2 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Консервация пластика интерьера" data-price="1000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Консервация пластика</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Матовый естественный эффект без жирного блеска и пыли</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Шиномонтаж комплексный" data-price="1500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Шиномонтаж</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Комплексный уход и сезонная переобувка колес</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Химчистка колесных дисков" data-price="1500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Химчистка дисков</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Удаление въевшейся металлической колодочной пыли</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Полировка дисков" data-price="3000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Полировка дисков</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Устранение матовости и мелких притертостей</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">3 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Детейлинг подвески" data-price="2000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Детейлинг подвески</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Очистка ходовой от масла, битума и соли с консервацией</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">2 000 ₽</span>
+            </label>
+          </div>
+
+          <!-- ТАБ 4: РЕМОНТ И ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ -->
+          <div id="category-repair" class="category-panel space-y-2.5 hidden">
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Удаление вмятин без покраски (PDR)" data-price="1500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Ремонт вмятин без покраски</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Убираем вмятины бесследно, оплата только за результат</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-fav-lime shrink-0 whitespace-nowrap">1 500 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Ремонт сколов на стекле" data-price="4000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Ремонт сколов на стекле</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Остановка трещин и полимеризация повреждения</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">4 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Предпродажная подготовка авто" data-price="3000" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Предпродажная подготовка</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Приведение авто в безупречный товарный вид для продажи</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">3 000 ₽</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3.5 rounded-lg bg-fav-surface border border-fav-border hover:border-fav-lime/50 cursor-pointer transition select-none group">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="calc-check w-4 h-4 accent-emerald-500 rounded" data-name="Подарочный сертификат" data-price="1500" onchange="recalculate()">
+                <div>
+                  <span class="text-sm font-semibold text-white group-hover:text-fav-lime transition block">Подарочная карта на любую сумму</span>
+                  <span class="text-xs text-fav-textMuted font-mono">Сертификат на детейлинг-услуги близкому человеку</span>
+                </div>
+              </div>
+              <span class="text-sm font-mono font-bold text-white shrink-0 whitespace-nowrap">1 500 ₽</span>
+            </label>
+          </div>
+
+        </div>
+
+        <!-- Боковая плашка сметы -->
+        <div class="lg:col-span-4 sticky top-24">
+          <div class="p-6 rounded-2xl bg-fav-surface border-2 border-fav-lime space-y-5 shadow-2xl lime-border-glow">
+            
+            <div class="pb-3 border-b border-fav-border flex items-center justify-between">
+              <span class="font-mono text-xs uppercase font-bold text-white">РАСЧЕТ СМЕТЫ</span>
+              <span id="calcCount" class="px-2 py-0.5 rounded bg-fav-limeGlow text-fav-lime font-mono text-xs font-bold">0 выбрано</span>
+            </div>
+
+            <div id="calcItemsList" class="text-xs font-mono text-fav-textMuted space-y-1.5 max-h-48 overflow-y-auto pr-1">
+              <p class="italic text-fav-textMuted/60">Отметьте необходимые позиции слева для формирования персонального пакета...</p>
+            </div>
+
+            <div class="pt-3 border-t border-fav-border">
+              <span class="text-xs font-mono text-fav-textMuted block">Предварительный итог:</span>
+              <div class="text-3xl font-display font-bold text-fav-lime" id="calcTotalDisplay">
+                0 ₽
+              </div>
+            </div>
+
+            <button onclick="bookSelectedCalculation()" class="w-full py-4 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg lime-glow hover:-translate-y-0.5 active:scale-95 text-sm">
+              Записаться по этой смете
+            </button>
+
+            <p class="text-[11px] font-mono text-fav-textMuted text-center leading-normal">
+              * Итоговая стоимость может варьироваться от габаритов кузова (седан / кроссовер / внедорожник)
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section id="advantages" class="py-14 sm:py-20 border-b border-fav-border bg-[#0A0D12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-fav-lime font-bold block mb-1">ФАКТЫ О НАС</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Почему выбирают «Фаворит»</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-7 rounded-xl bg-fav-surface border border-fav-border space-y-3 shadow-md hover:border-fav-lime transition">
+          <div class="w-10 h-10 rounded-lg bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center">
+            <i data-lucide="video" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Прозрачные видеоотчеты о работе</h3>
+          <p class="text-sm text-fav-textBody leading-relaxed font-normal">
+            Предоставляем подробные фото- и видеоотчеты скрытых полостей при антикоре, полировке и разборных работах в мессенджер.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-fav-surface border border-fav-border space-y-3 shadow-md hover:border-fav-lime transition">
+          <div class="w-10 h-10 rounded-lg bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">В рамках оговоренного бюджета</h3>
+          <p class="text-sm text-fav-textBody leading-relaxed font-normal">
+            Берем в работу премиальные автомобили (включая Porsche Panamera). Цена и срок фиксируются до начала процедур без сюрпризов.
+          </p>
+        </div>
+
+        <div class="p-7 rounded-xl bg-fav-surface border border-fav-border space-y-3 shadow-md hover:border-fav-lime transition">
+          <div class="w-10 h-10 rounded-lg bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center">
+            <i data-lucide="check-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white">Оригинальные составы Koch Chemie</h3>
+          <p class="text-sm text-fav-textBody leading-relaxed font-normal">
+            Используем только сертифицированную химию немецкого концерна Кох Химия: консервация кожи, пластика и деликатный уход за ЛКП.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНЫЕ С ЯНДЕКС КАРТ) -->
+  <section id="reviews" class="py-14 sm:py-20 border-b border-fav-border bg-[#0D1117]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 max-w-xl">
+        <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-fav-lime font-bold block mb-1">ОЦЕНКИ КЛИЕНТОВ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase text-white">Отзывы на Яндекс Картах</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Отзыв 1: Рамис Батыргареев -->
+        <div class="p-7 rounded-xl bg-fav-surface border border-fav-border flex flex-col justify-between shadow-md hover:border-fav-lime transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-fav-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Рамис Батыргареев</span>
+                <span class="text-[11px] font-mono text-fav-textMuted">Знаток города 7 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-fav-textBody italic leading-relaxed font-medium">
+              «Очень хороший автосервис. Загонял свое авто в данный сервис на антикорозийную обработку и оклейку бронепленкой. Все сделали качественно, предоставили видеоотчеты о работе. 👍👍👍»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-fav-textMuted mt-4 block pt-2 border-t border-fav-border/40">23 мая • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 2: Антон У. -->
+        <div class="p-7 rounded-xl bg-fav-surface border border-fav-border flex flex-col justify-between shadow-md hover:border-fav-lime transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-fav-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Антон У.</span>
+                <span class="text-[11px] font-mono text-fav-textMuted">Знаток города 4 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-fav-textBody italic leading-relaxed font-medium">
+              «Отличная работа. Обращался с кузовным ремонтом на Порше Панамера - ребята все сделали качественно и в срок, и что немаловажно, в рамках ранее оговоренного бюджета»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-fav-textMuted mt-4 block pt-2 border-t border-fav-border/40">14 мая 2025 • Яндекс Карты</span>
+        </div>
+
+        <!-- Отзыв 3: Daniel Alexseevich -->
+        <div class="p-7 rounded-xl bg-fav-surface border border-fav-border flex flex-col justify-between shadow-md hover:border-fav-lime transition">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-fav-border/60 mb-3">
+              <div>
+                <span class="text-base font-bold text-white block">Daniel Alexseevich</span>
+                <span class="text-[11px] font-mono text-fav-textMuted">Знаток города 5 уровня</span>
+              </div>
+              <span class="text-amber-400 text-xs font-mono font-bold">★★★★★</span>
+            </div>
+            <p class="text-sm text-fav-textBody italic leading-relaxed font-medium">
+              «Спасибо ребятам за работы, обратился с полировкой автомобиля, давно не видел чтобы он сиял ! Буду заезжать ещё, рекомендую детелинг»
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-fav-textMuted mt-4 block pt-2 border-t border-fav-border/40">11 мая • Яндекс Карты</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ И ЛОКАЦИЯ -->
+  <section id="contacts" class="py-14 sm:py-20 border-b border-fav-border bg-[#0A0D12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+        
+        <div class="space-y-5">
+          <span class="text-xs sm:text-sm uppercase tracking-widest text-fav-lime font-mono font-bold block">СВЯЗЬ И ЛОКАЦИЯ</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold uppercase text-white">Ждем вас в «Фаворит»</h2>
+
+          <div class="space-y-3.5 text-sm sm:text-base text-fav-textBody font-sans">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-fav-lime shrink-0 mt-0.5"></i>
+              <span>г. Самара, Структурная ул., д. 82</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-fav-lime shrink-0"></i>
+              <span>По предварительной записи</span>
+            </div>
+            
+            <div class="space-y-2 pt-1">
+              <div class="text-xs font-mono text-fav-textMuted uppercase">Телефоны для бронирования:</div>
+              <div class="flex flex-col gap-2 font-mono font-bold">
+                
+                <!-- Телефон 1 -->
+                <a href="tel:+79277073163" class="text-white hover:text-fav-lime transition flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 group">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-fav-lime shrink-0"></i>
+                    <span class="whitespace-nowrap text-base">+7 (927) 707-31-63</span>
+                  </div>
+                  <span class="text-xs text-fav-textMuted font-mono font-normal pl-6 sm:pl-0">
+                    (Администратор Николай)
+                  </span>
+                </a>
+
+                <!-- Телефон 2 -->
+                <a href="tel:+79277568220" class="text-white hover:text-fav-lime transition flex items-center gap-2">
+                  <i data-lucide="phone" class="w-4 h-4 text-fav-lime shrink-0"></i>
+                  <span class="whitespace-nowrap text-base">+7 (927) 756-82-20</span>
+                </a>
+
+                <!-- Телефон 3 -->
+                <a href="tel:+79370663420" class="text-white hover:text-fav-lime transition flex items-center gap-2">
+                  <i data-lucide="phone" class="w-4 h-4 text-fav-lime shrink-0"></i>
+                  <span class="whitespace-nowrap text-base">+7 (937) 066-34-20</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-3">
+            <a href="https://yandex.ru/maps/?text=Самара+Структурная+82+Фаворит+Детейлинг" target="_blank" class="px-6 py-3.5 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 text-xs sm:text-sm uppercase tracking-wider font-display font-bold transition flex items-center gap-2 shadow-lg lime-glow hover:-translate-y-0.5">
+              <i data-lucide="navigation" class="w-4 h-4 text-slate-950"></i> Маршрут в Яндекс Картах
+            </a>
+            <button onclick="openBookingModal('Запись через контакты')" class="px-6 py-3.5 rounded-lg bg-fav-surface hover:bg-fav-card border border-fav-border text-white text-xs sm:text-sm uppercase tracking-wider font-mono font-bold transition hover:border-fav-lime">
+              Забронировать бокс
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-xl bg-fav-surface border border-fav-border text-center shadow-xl">
+          <div class="w-12 h-12 mx-auto rounded-lg bg-fav-card border border-fav-border text-fav-lime flex items-center justify-center mb-3.5">
+            <i data-lucide="message-square" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold uppercase text-white mb-1.5">Прямой чат в мессенджерах</h3>
+          <p class="text-xs sm:text-sm text-fav-textMuted mb-5 max-w-sm mx-auto leading-relaxed font-normal">
+            Отправьте фото повреждения кузова или задайте вопрос по стоимости — мастер Николай оперативно рассчитает смету онлайн.
+          </p>
+          <div class="flex justify-center gap-3">
+            <a href="https://wa.me/79277073163" target="_blank" class="px-5 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold uppercase tracking-wider transition flex items-center gap-2 shadow">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="https://t.me/+79277073163" target="_blank" class="px-5 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-mono text-xs font-bold uppercase tracking-wider transition flex items-center gap-2 shadow">
+              <i data-lucide="send" class="w-4 h-4"></i> Telegram
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="py-6 bg-black text-fav-textMuted text-xs font-mono border-t border-fav-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <p>© 2026 Студия «Фаворит Детейлинг». г. Самара, Структурная ул., 82.</p>
+      <div class="flex items-center gap-5">
+        <a href="tel:+79277073163" class="hover:text-white transition">+7 (927) 707-31-63</a>
+        <a href="#calculator" class="hover:text-white transition">Калькулятор</a>
+        <a href="#reviews" class="hover:text-white transition">Отзывы</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ (С ВЕБХУКОМ N8N) -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-fav-surface rounded-2xl max-w-sm w-full p-6 sm:p-7 relative border border-fav-lime/50 shadow-2xl lime-border-glow">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-fav-textMuted hover:text-white transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <span class="text-[10px] font-mono uppercase tracking-widest text-fav-lime font-bold block mb-1">ЗАПИСЬ В БОКС</span>
+      <h3 class="text-2xl font-display font-bold uppercase text-white mb-4">Бронирование визита</h3>
+
+      <form class="space-y-3.5 text-xs sm:text-sm">
+        <input type="hidden" name="source" value="Фаворит Детейлинг Самара">
+        <input type="hidden" name="form_type" value="booking_calc">
+
+        <div>
+          <label class="block text-fav-textMuted mb-1 text-xs font-mono">Выбранные позиции и смета</label>
+          <textarea id="modalServiceInput" name="service" readonly rows="2" class="w-full bg-fav-card border border-fav-border rounded-lg px-3.5 py-2 text-fav-lime font-mono font-bold focus:outline-none resize-none text-xs"></textarea>
+        </div>
+        <div>
+          <label class="block text-fav-textMuted mb-1 text-xs font-mono">Ваше имя</label>
+          <input type="text" name="client_name" required placeholder="Как вас зовут?" class="w-full bg-fav-card border border-fav-border rounded-lg px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-fav-lime">
+        </div>
+        <div>
+          <label class="block text-fav-textMuted mb-1 text-xs font-mono">Телефон для связи</label>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-fav-card border border-fav-border rounded-xl px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-fav-lime font-mono">
+        </div>
+        
+        <button type="submit" class="w-full py-3.5 rounded-lg bg-fav-lime hover:bg-fav-limeHover text-slate-950 font-display font-bold uppercase tracking-wider transition shadow-lg lime-glow mt-2 hover:-translate-y-0.5">
+          Подтвердить запись
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // ПЕРЕКЛЮЧЕНИЕ ТАБОВ
+    function switchCategory(catId) {
+      document.querySelectorAll('.category-panel').forEach(el => el.classList.add('hidden'));
+      document.getElementById('category-' + catId).classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-fav-lime', 'text-slate-950');
+        btn.classList.add('bg-fav-surface', 'text-fav-textMuted', 'border', 'border-fav-border');
+      });
+
+      const activeBtn = document.getElementById('tab-' + catId);
+      activeBtn.classList.remove('bg-fav-surface', 'text-fav-textMuted', 'border', 'border-fav-border');
+      activeBtn.classList.add('bg-fav-lime', 'text-slate-950');
+    }
+
+    // ЛОГИКА КАЛЬКУЛЯТОРА
+    let selectedPositions = [];
+    let grandTotal = 0;
+
+    function recalculate() {
+      const checkedBoxes = document.querySelectorAll('.calc-check:checked');
+      selectedPositions = [];
+      grandTotal = 0;
+
+      checkedBoxes.forEach(cb => {
+        const name = cb.getAttribute('data-name');
+        const price = parseInt(cb.getAttribute('data-price'), 10);
+        selectedPositions.push({ name, price });
+        grandTotal += price;
+      });
+
+      document.getElementById('calcCount').innerText = `${selectedPositions.length} выбрано`;
+      document.getElementById('calcTotalDisplay').innerText = `${grandTotal.toLocaleString('ru-RU')} ₽`;
+
+      const container = document.getElementById('calcItemsList');
+      if (selectedPositions.length === 0) {
+        container.innerHTML = '<p class="italic text-fav-textMuted/60">Отметьте необходимые позиции слева для формирования персонального пакета...</p>';
+      } else {
+        container.innerHTML = selectedPositions.map(p => `
+          <div class="flex justify-between items-center text-white text-[11px] py-0.5 border-b border-fav-border/40">
+            <span class="truncate pr-2">• ${p.name}</span>
+            <span class="text-fav-lime font-bold shrink-0">${p.price.toLocaleString('ru-RU')} ₽</span>
+          </div>
+        `).join('');
+      }
+    }
+
+    function bookSelectedCalculation() {
+      if (selectedPositions.length === 0) {
+        openBookingModal('Индивидуальный расчет услуг');
+        return;
+      }
+      const namesList = selectedPositions.map(p => p.name).join(', ');
+      const summaryString = `Выбрано (${selectedPositions.length}): ${namesList} | Предварительный итог: ${grandTotal.toLocaleString('ru-RU')} ₽`;
+      openBookingModal(summaryString);
+    }
+
+    function openBookingModal(summary) {
+      document.getElementById('modalServiceInput').value = summary;
+      document.getElementById('bookingModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Скрипт отправки заявок на вебхук n8n -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const N8N_WEBHOOK_URL = 'https://ваш-n8n-сервер.com/webhook-test/lead-entry';
+
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Отправить';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+            <span style="display:inline-flex;align-items:center;gap:8px;">
+              <svg class="animate-spin" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="4" stroke="currentColor" stroke-dasharray="32" stroke-linecap="round"></circle>
+              </svg>
+              Отправка...
+            </span>
+          `;
+        }
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        payload.timestamp = new Date().toISOString();
+        payload.page_url = window.location.href;
+
+        try {
+          const response = await fetch(N8N_WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (submitBtn) {
+            submitBtn.innerHTML = '✓ Заявка отправлена!';
+            submitBtn.style.backgroundColor = '#10B981';
+            submitBtn.style.color = '#FFFFFF';
+          }
+          form.reset();
+        } catch (error) {
+          console.error('Ошибка отправки на вебхук:', error);
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Ошибка отправки';
+            submitBtn.style.backgroundColor = '#EF4444';
+            submitBtn.style.color = '#FFFFFF';
+          }
+        } finally {
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.innerHTML = originalBtnText;
+              submitBtn.disabled = false;
+              submitBtn.style.backgroundColor = '';
+              submitBtn.style.color = '';
+            }
+          }, 4000);
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>
